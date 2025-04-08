@@ -5,10 +5,10 @@
 html, body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
     background: #000000;
     color: white;
     font-size: 30px;
+    font-family: Arial, sans-serif;
 }
 
 section {
@@ -74,3 +74,75 @@ section.about article .description {
   padding: 6.25vw;
   color: #000000;  
 }
+
+/* section service */
+
+section.service .article {
+  display: flex;
+  width: 100%;
+  }
+  
+  section.service figure {
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    flex-basis: 56.25vw ;
+    margin: 0;
+    background: #d0ff94;
+    border-radius:  100px;
+  }
+  section.service figure img {
+    width: 50%;
+  }
+  section.service .text {
+   display: flex;
+   flex-direction: column ;
+   justify-content: center ;
+   flex: 1;
+   background: #1f1a1c;
+   padding: 6.25vw;
+   border-radius: 100px;
+  }
+  
+  section.service .text a {
+    font-family: monospace;
+  }
+
+  /* section service override */
+
+  section.service.service-html figure {
+    background: #d0ff94;
+  }
+  section.service.service-html .text h2,
+  section.service.service-html .text a {
+    background: #d6a3fb;
+  }
+
+  section.service.service-css figure {
+    background: #1c47ff;
+  }
+  section.service.service-css .text h2,
+  section.service.service-css .text a {
+    background: #d0ff94;
+  }
+
+  section.service.service-js figure {
+    background: #d6a3fb;
+  }
+  section.service.service-js .text h2,
+  section.service.service-js .text a {
+    background: #1c47ff;
+  }
+
+  /* section contact */
+  section.contact {
+   align-items: center;
+   justify-content: center;
+   background: linear-gradient(#1c47ff, #d0ff94 60%, #d6a3fb 70%, );
+   border-radius: 100px;
+  }
+
+  section.contact a {
+   font-size: 100px;
+   color: #000000;
+  }
