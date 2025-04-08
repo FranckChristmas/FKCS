@@ -43,3 +43,34 @@ nav ul li a {
   text-decoration: none;
   font-family: monospace  ;
 }
+
+/* section about */
+
+section.about .empty {
+flex-basis: 37.5vw;
+background: #e5e5e5;
+border-radius: 100px;
+}
+
+section.about article {
+  flex : 1;
+  display: flex;
+  flex-direction: column;
+}
+section.about article .title {
+  flex: 2;
+  display: flex;
+  align-items: flex-end;
+  background: #1c47ff;
+  border-radius: 100px;
+  padding: 6.27vw;  
+}
+section.about article .description {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  background: #d6a3fb;
+  border-radius: 100px;
+  padding: 6.25vw;
+  color: #000000;  
+}
