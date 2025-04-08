@@ -1,0 +1,14 @@
+section {
+  background: pink;
+}
+section.text {
+  background: lightblue;
+}
+
+ul li {
+  background: lightgreen;
+}
+
+li {
+  background: lightyellow;
+}
