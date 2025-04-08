@@ -1,14 +1,45 @@
+* {
+    box-sizing: border-box; /* Reset box-sizing to border-box meaning that it takes the border padding and so into the width and height */
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #000000;
+    color: white;
+    font-size: 30px;
+}
+
 section {
-  background: pink;
-}
-section.text {
-  background: lightblue;
+    width: 100%;
+    height: 100vh;
 }
 
-ul li {
-  background: lightgreen;
+nav {
+    position: fixed;
+    width: 100%;
+    height: 100px;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+}
+nav ul {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
-li {
-  background: lightyellow;
+nav ul li {
+    margin-left: 45px;
+    list-style: none;
+} 
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-family: monospace  ;
 }
