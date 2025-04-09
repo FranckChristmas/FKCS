@@ -6,7 +6,7 @@ html, body {
   --border-radius: 100px;
   --blue: #1c47ff;
   --green: #d0ff94;
-  --purple: #d6a3fb;
+  --pink: #d6a3fb;
   --grey: #e5e5e5;
   --gutter: 3.125vw;
 
@@ -88,9 +88,9 @@ section.about {
 }
 
 section.about .empty {
-flex-basis: 37.5vw;
-background: #e5e5e5;
-border-radius: 100px;
+  flex-basis: 37.5vw;
+  background: var(--grey);
+  border-radius: var(--border-radius);
 }
 
 section.about article {
@@ -102,17 +102,17 @@ section.about article .title {
   flex: 2;
   display: flex;
   align-items: flex-end;
-  background: #1c47ff;
-  border-radius: 100px;
-  padding: 6.27vw;  
+  background: var(--blue);
+  border-radius: var(--border-radius);
+  padding: 3.25vw;  
 }
 section.about article .description {
   flex: 1;
   display: flex;
   align-items: center;
-  background: #d6a3fb;
-  border-radius: 100px;
-  padding: 6.25vw;
+  background: var(--pink);
+  border-radius: var(--border-radius);
+  padding: 3.25vw;
   color: #000000;  
 }
 
@@ -130,7 +130,7 @@ section.service article {
     flex-basis: 56.25vw ;
     margin: 0;
     background: #d0ff94;
-    border-radius:  100px;
+    border-radius: var(--border-radius);
   }
   section.service figure img {
     width: 50%;
@@ -141,8 +141,8 @@ section.service article {
    justify-content: center ;
    flex: 1;
    background: #1f1a1c;
-   padding: 6.25vw;
-   border-radius: 100px;
+   padding: 3.25vw;
+   border-radius: var(--border-radius);
   }
   
   section.service .text a {
@@ -152,27 +152,27 @@ section.service article {
   /* section service override */
 
   section.service.service-html figure {
-    background: #d0ff94;
+    background: var(--green);
   }
   section.service.service-html .text h2,
   section.service.service-html .text a {
-    color: #d6a3fb;
+    color: var(--pink);
   }
 
   section.service.service-css figure {
-    background: #1c47ff;
+    background: var(--blue);
   }
   section.service.service-css .text h2,
   section.service.service-css .text a {
-    color: #d0ff94;
+    color: var(--green);
   }
 
   section.service.service-js figure {
-    background: #d6a3fb;
+    background: var(--pink);
   }
   section.service.service-js .text h2,
   section.service.service-js .text a {
-    color: #1c47ff;
+    color: var(--blue);
   }
 
   /* section contact */
@@ -180,8 +180,8 @@ section.service article {
    align-items: center;
    justify-content: center;
    align-content: center;
-   background: linear-gradient(#1c47ff, #d0ff94 60%, #d6a3fb 70%, #e5e5e5);
-   border-radius: 100px;
+   background: linear-gradient(var(--blue), var(--green) 60%, var(--pink) 70%, var(--grey));
+   border-radius: var(--border-radius);
   }
 
   section.contact a {
@@ -214,8 +214,7 @@ section.service article {
     section.service figure {
       flex-basis: 25vh;
       margin: 0;
-      border-radius: 100px;
-    }
+border-radius: var(--border-radius);    }
     section.service figure img {
       width: 25vh;
     }
