@@ -149,6 +149,23 @@ section.service article {
     font-family: "Space Mono", monospace;
   }
 
+  /* section service animation */
+  section.service.service-html figure img {
+   animation-name: float; 
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+@keyframes float {
+  0% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(20px);
+  }
+}
+
   /* section service override */
 
   section.service.service-html figure {
