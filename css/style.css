@@ -180,7 +180,7 @@ section.service article {
    align-items: center;
    justify-content: center;
    align-content: center;
-   background: linear-gradient(#1c47ff, #d0ff94 60%, #d6a3fb 70%);
+   background: linear-gradient(#1c47ff, #d0ff94 60%, #d6a3fb 70%, #e5e5e5);
    border-radius: 100px;
   }
 
@@ -206,6 +206,23 @@ section.service article {
     }
     nav ul li {
       margin-left: 25px;
+    }
+
+    section.service article {
+      flex-direction: column;
+    }
+    section.service figure {
+      flex-basis: 25vh;
+      margin: 0;
+      border-radius: 100px;
+    }
+    section.service figure img {
+      width: 25vh;
+    }
+
+    section.contact a {
+      font-size: 50px;
+      transform: rotate(90deg);
     }
 
   }
