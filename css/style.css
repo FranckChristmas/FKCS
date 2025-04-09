@@ -41,10 +41,15 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
-  font-family: monospace  ;
+  font-family: monospace;
 }
 
 /* section about */
+
+section.about {
+  display: flex;
+
+}
 
 section.about .empty {
 flex-basis: 37.5vw;
@@ -77,7 +82,7 @@ section.about article .description {
 
 /* section service */
 
-section.service .article {
+section.service article {
   display: flex;
   width: 100%;
   }
@@ -115,7 +120,7 @@ section.service .article {
   }
   section.service.service-html .text h2,
   section.service.service-html .text a {
-    background: #d6a3fb;
+    color: #d6a3fb;
   }
 
   section.service.service-css figure {
@@ -123,7 +128,7 @@ section.service .article {
   }
   section.service.service-css .text h2,
   section.service.service-css .text a {
-    background: #d0ff94;
+    color: #d0ff94;
   }
 
   section.service.service-js figure {
@@ -131,14 +136,15 @@ section.service .article {
   }
   section.service.service-js .text h2,
   section.service.service-js .text a {
-    background: #1c47ff;
+    color: #1c47ff;
   }
 
   /* section contact */
   section.contact {
    align-items: center;
    justify-content: center;
-   background: linear-gradient(#1c47ff, #d0ff94 60%, #d6a3fb 70%, );
+   align-content: center;
+   background: linear-gradient(#1c47ff, #d0ff94 60%, #d6a3fb 70%);
    border-radius: 100px;
   }
 
