@@ -93,6 +93,7 @@ section.about .empty {
   flex-basis: 37.5vw;
   background: var(--grey);
   border-radius: var(--border-radius);
+  transition: flex-basis 1s cubic-bezier(.0, .9,.4,.99);
 }
 
 section.about article {
