@@ -7,9 +7,9 @@
     "build": "parcel build",
     "prebuild": "rm -rf dist"
   },
-  "author": "",
+  "author": "François Noell",
   "license": "ISC",
-  "description": "",
+  "description": "portoflio freelance",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.14.4",
     "parcel": "^2.14.4"
