@@ -1,0 +1,17 @@
+{
+  "name": "fkcs",
+  "version": "1.0.0",
+  "source": "src/index.html",
+  "scripts": {
+    "start": "npm run prebuild && parcel",
+    "build": "parcel build",
+    "prebuild": "rm -rf dist"
+  },
+  "author": "François Noell",
+  "license": "ISC",
+  "description": "portoflio freelance",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.14.4",
+    "parcel": "^2.14.4"
+  }
+}
