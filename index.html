@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>FKCS portfolio</title>
+    <title>FKCS</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syne:wght@400..800&display=swap" rel="stylesheet">
@@ -70,6 +70,22 @@
     <section id="contact" class="contact full-screen">
       <a href="mailto:francois.noell@gmail.com">Contact FKCS</a>
     </section>
+
+    <script>
+      let emptyElement = document.querySelector('.empty'); 
+      let figureElements = document.querySelectorAll('figure'); 
+
+      figureElements.forEach(function(element) {
+          console.log(element);
+          element.style.background = 'green';
+      })
+      
+      emptyElement.style.background = 'red'
+      
+      // console.log(figureElements);
+
+      // window.alert('kittens');
+    </script>
   </body>
 </html>
 
