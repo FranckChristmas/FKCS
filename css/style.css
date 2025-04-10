@@ -102,12 +102,13 @@ section.about article {
   flex-direction: column;
 }
 section.about article .title {
-  flex: 2;
+  flex: 1;
   display: flex;
   align-items: flex-end;
   background: var(--blue);
   border-radius: var(--border-radius);
-  padding: 3.25vw;  
+  padding: var(--gutter);  
+  transition: flex-basis 1s cubic-bezier(.0, .9,.4,.99);
 }
 section.about article .description {
   flex: 1;
