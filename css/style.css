@@ -8,7 +8,7 @@ html, body {
   --green: #d0ff94;
   --pink: #d6a3fb;
   --grey: #e5e5e5;
-  --gutter: 3.125vw;
+  --gutter: 3.125vw 6.25vw;
 
     margin: 0;
     padding: 0;
@@ -19,9 +19,11 @@ html, body {
 }
 
 h1 {
-  font-size: 80px;
+  font-size: 70px;
+  line-height: 1em;
+  margin: 0px;
 }
-h1 {
+h2 {
   font-size: 60px;
   margin: : 0px;
 }
@@ -133,7 +135,7 @@ section.service article {
     border-radius: var(--border-radius);
   }
   section.service figure img {
-    width: 50%;
+    width: 40%;
   }
   section.service .text {
    display: flex;
@@ -155,14 +157,15 @@ section.service article {
     animation-duration: 1s;
     animation-iteration-count: infinite;
     animation-direction: alternate;
+    animation-timing-function: cubic-bezier(.77,.28,.42,.93)
   }
 
 @keyframes float {
   0% {
-    transform: translateY(-20px);
+    transform: translateY(-5%);
   }
   100% {
-    transform: translateY(20px);
+    transform: translateY(5%);
   }
 }
 
@@ -205,6 +208,11 @@ section.service article {
    font-size: 100px;
    color: #000000;
    font-weight: bold;
+   transition: color 0.5s cubic-bezier(.77,.28,.42,.93);
+  }
+
+  section.contact a:hover {
+   color: white;
   }
 
   /* responsive */
