@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>FKCS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/FKCS.2e8c441c.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#service">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <section id="about" class="about">   
+      <div class="empty">  </div>
+      <article>
+        <div class="title">
+          <h1>Creative Product Owner</h1>
+        </div>
+        <div class="description">
+          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+          </p>
+        </div>
+      </article>
+    </section>
+
+    <section id="service" class="service service-html sticky">   
+      <article>
+        <figure>
+          <img src="/diamond.16b28a5d.png" width="200" alt="diamond">
+        </figure>
+        <div class="text">
+          <h2>HTML</h2>
+          <p>Pellentesque ultrices erat ut felis vehicula, sit amet vestibulum odio elementum. In id arcu consequat, aliquet justo et, consequat massa. Ut hendrerit metus id magna rutrum dapibus. Morbi sit amet augue tellus. Proin in justo rutrum, viverra dolor ac, fermentum lectus. Sed sed dolor eget diam facilisis aliquam. Morbi euismod elit orci. Cras sed enim eu lacus viverra placerat. Etiam ultricies eget risus eget tincidunt. Aliquam eleifend magna non sapien elementum, ut tempor est condimentum. Maecenas auctor velit non tellus scelerisque, a lacinia odio fermentum. Duis quis metus mollis, hendrerit mi eget, venenatis lectus. Morbi porttitor congue urna, ac luctus lorem pretium non.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="service service-css sticky">   
+      <article>
+        <figure>
+          <img src="/triangle.599192f5.png" width="200" alt="triangle">
+        </figure>
+        <div class="text">
+          <h2>CSS</h2>
+          <p>Pellentesque ultrices erat ut felis vehicula, sit amet vestibulum odio elementum. In id arcu consequat, aliquet justo et, consequat massa. Ut hendrerit metus id magna rutrum dapibus. Morbi sit amet augue tellus. Proin in justo rutrum, viverra dolor ac, fermentum lectus. Sed sed dolor eget diam facilisis aliquam. Morbi euismod elit orci. Cras sed enim eu lacus viverra placerat. Etiam ultricies eget risus eget tincidunt. Aliquam eleifend magna non sapien elementum, ut tempor est condimentum. Maecenas auctor velit non tellus scelerisque, a lacinia odio fermentum. Duis quis metus mollis, hendrerit mi eget, venenatis lectus. Morbi porttitor congue urna, ac luctus lorem pretium non.</p>
+        </div>
+      </article>
+    </section>
+
+    <section class="service service-js sticky">   
+      <article>
+        <figure>
+          <img src="/polygon.a9e72d94.png" width="200" alt="polygon">
+        </figure>
+        <div class="text">
+          <h2>JS</h2>
+          <p>Pellentesque ultrices erat ut felis vehicula, sit amet vestibulum odio elementum. In id arcu consequat, aliquet justo et, consequat massa. Ut hendrerit metus id magna rutrum dapibus. Morbi sit amet augue tellus. Proin in justo rutrum, viverra dolor ac, fermentum lectus. Sed sed dolor eget diam facilisis aliquam. Morbi euismod elit orci. Cras sed enim eu lacus viverra placerat. Etiam ultricies eget risus eget tincidunt. Aliquam eleifend magna non sapien elementum, ut tempor est condimentum. Maecenas auctor velit non tellus scelerisque, a lacinia odio fermentum. Duis quis metus mollis, hendrerit mi eget, venenatis lectus. Morbi porttitor congue urna, ac luctus lorem pretium non.</p>
+        </div>
+      </article>
+    </section>
+
+    <section id="contact" class="contact full-screen">
+      <a href="mailto:francois.noell@gmail.com">Contact FKCS</a>
+    </section>
+
+    <script>let emptyElement = document.querySelector('.about .empty');
+let titleElement = document.querySelector('.about .title');
+let figureElements = document.querySelectorAll('.service figure');
+window.addEventListener('mousemove', handleMouseMove);
+function handleMouseMove(event) {
+    emptyElement.style.flexBasis = event.clientX + 'px';
+    titleElement.style.flexBasis = event.clientY / 2 + 'px';
+    figureElements.forEach(function(element) {
+        element.style.flexBasis = window.innerWidth - event.clientX + 'px';
+    });
+} // console.log(figureElements);
+ // window.alert('kittens');
+
+</script>
+  <script src="/FKCS.59712999.js"></script></body>
+</html>
+
