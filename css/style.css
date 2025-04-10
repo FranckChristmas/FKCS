@@ -133,9 +133,13 @@ section.service article {
     justify-content: center;
     flex-basis: 56.25vw ;
     margin: 0;
-    background: #d0ff94;
+    background: var(--green);
     border-radius: var(--border-radius);
+    max-width: 62.5vw;
+    min-width: 20vw;
+    transition: flex-basis 1s cubic-bezier(.0, .9,.4,.99);
   }
+
   section.service figure img {
     width: 40%;
   }
@@ -145,7 +149,7 @@ section.service article {
    justify-content: center ;
    flex: 1;
    background: #1f1a1c;
-   padding: 3.25vw;
+   padding: var(--gutter);
    border-radius: var(--border-radius);
   }
   
