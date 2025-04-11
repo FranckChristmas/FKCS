@@ -1,6 +1,21 @@
 @font-face {
   font-family: GoboldRegular;
-  src: url("GoboldRegular.167b6fd4.otf") format("truetype");
+  src: url("gobold-regular.4776ecfc.otf") format("truetype");
+}
+
+@font-face {
+  font-family: Mermaid1001;
+  src: url("mermaid.ab8c5498.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Oswald-light;
+  src: url("oswald-light.359b0481.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Oswald-xlight;
+  src: url("oswald-xlight.62d56321.ttf") format("truetype");
 }
 
 * {
@@ -18,13 +33,13 @@ html, body {
   background: #316682;
   margin: 0;
   padding: 0;
-  font-family: Syne, sans-serif;
+  font-family: Mermaid1001;
   font-size: 20px;
 }
 
 h1 {
   margin: 0;
-  font-family: GoboldRegular, monospace;
+  font-family: Oswald-xlight;
   font-size: 70px;
   line-height: 1em;
 }
@@ -35,11 +50,16 @@ h2 {
 }
 
 h3 {
+  letter-spacing: .05em;
   color: #ffcdb2;
   margin: 0;
-  padding: .8rem 0 0 .8rem;
-  font-family: GoboldRegular, monospace;
+  padding: 1.4rem 0 0 .8rem;
+  font-family: Mermaid1001;
   font-size: 50px;
+}
+
+p {
+  font-family: Oswald-xlight;
 }
 
 a {
@@ -96,7 +116,8 @@ nav ul li {
 
 nav ul li a {
   color: #e4e2c3;
-  font-family: GoboldRegular, monospace;
+  font-family: oswald-xlight;
+  font-size: 1.3rem;
   text-decoration: none;
   transition: all .1s ease-in-out;
   display: inline-block;
@@ -164,7 +185,7 @@ section.service figure {
   display: flex;
 }
 
-section.service figure img {
+section.service figure img, svg {
   width: 40%;
 }
 
@@ -182,7 +203,7 @@ section.service .text a {
   font-family: Space Mono, monospace;
 }
 
-section.service.service-html figure img {
+section.service.service-html figure svg {
   animation-name: float;
   animation-duration: 1s;
   animation-timing-function: cubic-bezier(.77, .28, .42, .93);
