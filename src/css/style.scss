@@ -56,6 +56,7 @@ h3 {
 }
 p {
   font-family: 'Oswald-xlight';
+  font-size: 1.8rem;
 }
 
 a {
@@ -72,6 +73,7 @@ section {
     z-index: 2;
     padding: 0.5rem;
 }
+
 
 section.sticky {
     position: sticky;
@@ -101,6 +103,8 @@ section.about .empty {
   background: var(--grey);
   border-radius: var(--border-radius);
   transition: flex-basis 1s cubic-bezier(.0, .9,.4,.99);
+  margin: 1rem;
+
 }
 
 section.about article {
@@ -115,6 +119,7 @@ section.about article .title {
   background: var(--blue);
   border-radius: var(--border-radius);
   padding: var(--gutter);  
+  margin: 1rem 1rem 1rem 0rem;
   transition: flex-basis 1s cubic-bezier(.0, .9,.4,.99);
 }
 section.about article .description {
@@ -124,6 +129,10 @@ section.about article .description {
   background: var(--pink);
   border-radius: var(--border-radius);
   padding: 3.25vw;
+  margin: 0rem 1rem 1rem 0rem;
+
+  // margin: 0rem 1rem;
+
   color: #000000;  
 }
 
@@ -147,7 +156,7 @@ section.service article {
     transition: flex-basis 1s cubic-bezier(.0, .9,.4,.99);
   }
 
-  section.service figure img, svg {
+  section.service figure svg {
     width: 40%;
   }
   section.service .text {
@@ -179,6 +188,35 @@ section.service article {
   }
   100% {
     transform: translateY(5%);
+  }
+}
+
+section.service.service-css figure svg {
+  animation-name: rotating;
+  animation : rotating 5s linear infinite;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+section.service.service-js figure svg {
+  animation-name: rotating;
+  animation : rotating 2s linear infinite;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 
