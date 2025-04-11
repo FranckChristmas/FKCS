@@ -60,6 +60,7 @@ h3 {
 
 p {
   font-family: Oswald-xlight;
+  font-size: 1.8rem;
 }
 
 a {
@@ -138,6 +139,7 @@ section.about .empty {
   background: var(--grey);
   border-radius: var(--border-radius);
   flex-basis: 37.5vw;
+  margin: 1rem;
   transition: flex-basis 1s cubic-bezier(0, .9, .4, .99);
 }
 
@@ -153,6 +155,7 @@ section.about article .title {
   padding: var(--gutter);
   flex: 1;
   align-items: flex-end;
+  margin: 1rem 1rem 1rem 0;
   transition: flex-basis 1s cubic-bezier(0, .9, .4, .99);
   display: flex;
 }
@@ -163,6 +166,7 @@ section.about article .description {
   color: #000;
   flex: 1;
   align-items: center;
+  margin: 0 1rem 1rem 0;
   padding: 3.25vw;
   display: flex;
 }
@@ -185,7 +189,7 @@ section.service figure {
   display: flex;
 }
 
-section.service figure img, svg {
+section.service figure svg {
   width: 40%;
 }
 
@@ -219,6 +223,24 @@ section.service.service-html figure svg {
   100% {
     transform: translateY(5%);
   }
+}
+
+section.service.service-css figure svg {
+  animation: 5s linear infinite rotating;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+section.service.service-js figure svg {
+  animation: 2s linear infinite rotating;
 }
 
 section.service.service-html figure {
