@@ -1,18 +1,23 @@
+@font-face {
+  font-family: 'GoboldRegular';
+  src: url(../fonts/GoboldRegular.otf) format('truetype');
+}
+
 * {
     box-sizing: border-box; /* Reset box-sizing to border-box meaning that it takes the border padding and so into the width and height */
 }
 
 html, body {
   --border-radius: 100px;
-  --blue: #1c47ff;
-  --green: #d0ff94;
-  --pink: #d6a3fb;
-  --grey: #e5e5e5;
+  --blue: #FFCDB2;
+  --green: #FFB4A2;
+  --pink: #E5989B;
+  --grey: #B5828C;
   --gutter: 3.125vw 6.25vw;
 
     margin: 0;
     padding: 0;
-    background: #000000;
+    background: #316682;
     color: white;
     font-size: 20px;
     font-family: "Syne", sans-serif;    
@@ -22,10 +27,18 @@ h1 {
   font-size: 70px;
   line-height: 1em;
   margin: 0px;
+  font-family:  'GoboldRegular', monospace;
 }
 h2 {
   font-size: 60px;
   margin: 0px;
+}
+h3 {
+  font-size: 50px;
+  margin: 0px;
+  font-family: 'GoboldRegular', monospace;
+  color: #FFCDB2;
+  padding: 0.8rem 0rem 0rem 0.8rem;
 }
 
 a {
@@ -40,6 +53,7 @@ section {
     height: calc(100vh - 100px);
     top: 100px;
     z-index: 2;
+    padding: 0.5rem;
 }
 
 section.sticky {
@@ -124,7 +138,7 @@ section.service article {
    flex-direction: column ;
    justify-content: center ;
    flex: 1;
-   background: #1f1a1c;
+   background: #322f30;
    padding: var(--gutter);
    border-radius: var(--border-radius);
   }
