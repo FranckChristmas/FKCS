@@ -4,7 +4,7 @@
 }
 
 @font-face {
-  font-family: Mermaid1001;
+  font-family: Mermaid;
   src: url("mermaid.ab8c5498.ttf") format("truetype");
 }
 
@@ -33,13 +33,13 @@ html, body {
   background: #316682;
   margin: 0;
   padding: 0;
-  font-family: Mermaid1001;
+  font-family: Mermaid;
   font-size: 20px;
 }
 
 h1 {
   margin: 0;
-  font-family: Oswald-xlight;
+  font-family: Mermaid;
   font-size: 70px;
   line-height: 1em;
 }
@@ -51,11 +51,36 @@ h2 {
 
 h3 {
   letter-spacing: .05em;
-  color: #ffcdb2;
+  color: #e48b91;
   margin: 0;
   padding: 1.4rem 0 0 .8rem;
   font-family: Mermaid1001;
   font-size: 50px;
+}
+
+h3.company {
+  padding-bottom: 1rem;
+  display: inline-block;
+  position: relative;
+}
+
+h3.company:after {
+  content: "";
+  pointer-events: none;
+  background: url("wave.5925953f.svg") 0 0 / 50px repeat-x;
+  border-radius: 200px;
+  width: 90%;
+  height: 1rem;
+  animation: 6s linear infinite waveline;
+  position: absolute;
+  bottom: 0;
+  left: .6rem;
+}
+
+@keyframes waveline {
+  to {
+    background-position: -150px;
+  }
 }
 
 p {
@@ -106,7 +131,7 @@ nav ul {
   width: 100%;
   height: 100%;
   margin: 0;
-  padding: 0;
+  padding: 3rem 0;
   display: flex;
 }
 
@@ -173,6 +198,7 @@ section.about article .description {
 
 section.service article {
   width: 100%;
+  margin: 0 1rem 1rem;
   display: flex;
 }
 
@@ -184,7 +210,7 @@ section.service figure {
   align-items: center;
   min-width: 20vw;
   max-width: 62.5vw;
-  margin: 0;
+  margin: 0 1rem 1rem 0;
   transition: flex-basis 1s cubic-bezier(0, .9, .4, .99);
   display: flex;
 }
@@ -235,7 +261,7 @@ section.service.service-css figure svg {
   }
 
   to {
-    transform: rotate(360deg);
+    transform: rotate(-360deg);
   }
 }
 

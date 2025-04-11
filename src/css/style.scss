@@ -3,7 +3,7 @@
   src: url(../fonts/gobold-regular.otf) format('truetype');
 }
 @font-face {
-  font-family: 'Mermaid1001';
+  font-family: 'Mermaid';
   src: url(../fonts/mermaid.ttf) format('truetype');
 }
 @font-face {
@@ -33,14 +33,14 @@ html, body {
     color: white;
     font-size: 20px;
     // font-family: "Syne", sans-serif;   
-    font-family: 'Mermaid1001'; 
+    font-family: 'Mermaid'; 
 }
 
 h1 {
   font-size: 70px;
   line-height: 1em;
   margin: 0px;
-  font-family:  'Oswald-xlight';
+  font-family:  'Mermaid';
 }
 h2 {
   font-size: 60px;
@@ -51,9 +51,38 @@ h3 {
   letter-spacing: 0.05em;
   margin: 0px;
   font-family: 'Mermaid1001';
-  color: #FFCDB2;
+  color: #E48B91;
   padding: 1.4rem 0rem 0rem 0.8rem;
 }
+
+
+/*animation wave unerlining*/
+h3.company {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 1rem;
+
+&::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0.6rem;
+    width: 90%;
+    height: 1rem;
+    background: url(../img/wave.svg) repeat-x;
+    background-size: 50px;
+    animation : waveline 6s linear infinite;
+    pointer-events: none;
+    border-radius: 200px;
+  }
+}
+
+@keyframes waveline {
+  to {
+    background-position: -150px
+  }
+}
+
 p {
   font-family: 'Oswald-xlight';
   font-size: 1.8rem;
@@ -141,6 +170,8 @@ section.about article .description {
 section.service article {
   display: flex;
   width: 100%;
+  margin: 0rem 1rem 1rem 1rem;
+
   }
   
   section.service figure {
@@ -154,6 +185,8 @@ section.service article {
     max-width: 62.5vw;
     min-width: 20vw;
     transition: flex-basis 1s cubic-bezier(.0, .9,.4,.99);
+    margin: 0rem 1rem 1rem 0rem;
+
   }
 
   section.service figure svg {
@@ -216,7 +249,7 @@ section.service.service-js figure svg {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(-360deg);
   }
 }
 
