@@ -21,7 +21,7 @@
 
 html, body {
   --border-radius: 100px;
-  --blue: #FFCDB2;
+  --beige: #FFCDB2;
   --green: #FFB4A2;
   --pink: #E5989B;
   --grey: #B5828C;
@@ -45,6 +45,8 @@ h1 {
 h2 {
   font-size: 60px;
   margin: 0px;
+  letter-spacing: 0.05em;
+
 }
 h3 {
   font-size: 50px;
@@ -132,7 +134,7 @@ section.about .empty {
   background: var(--grey);
   border-radius: var(--border-radius);
   transition: flex-basis 1s cubic-bezier(.0, .9,.4,.99);
-  margin: 1rem;
+  margin: 1rem 1rem 0rem 0rem;
 
 }
 
@@ -145,7 +147,7 @@ section.about article .title {
   flex: 1;
   display: flex;
   align-items: flex-end;
-  background: var(--blue);
+  background: var(--beige);
   border-radius: var(--border-radius);
   padding: var(--gutter);  
   margin: 1rem 1rem 1rem 0rem;
@@ -158,7 +160,7 @@ section.about article .description {
   background: var(--pink);
   border-radius: var(--border-radius);
   padding: 3.25vw;
-  margin: 0rem 1rem 1rem 0rem;
+  margin: 0rem 1rem 0rem 0rem;
 
   // margin: 0rem 1rem;
 
@@ -186,11 +188,21 @@ section.service article {
     min-width: 20vw;
     transition: flex-basis 1s cubic-bezier(.0, .9,.4,.99);
     margin: 0rem 1rem 1rem 0rem;
-
   }
 
-  section.service figure svg {
+  svg {
     width: 40%;
+    transition: transform 0.3s ease;
+
+    rect {
+      fill: var(--grey);
+      transition: fill 0.3s ease;
+
+    }
+   &:hover rect {
+      fill: var(--pink);
+      transition: fill 0.3s ease;
+   }  
   }
   section.service .text {
    display: flex;
@@ -240,11 +252,11 @@ section.service.service-css figure svg {
 
 
 section.service.service-js figure svg {
-  animation-name: rotating;
-  animation : rotating 2s linear infinite;
+  animation-name: poly-rotating;
+  animation : poly-rotating 2s linear infinite;
 }
 
-@keyframes rotating {
+@keyframes poly-rotating {
   from {
     transform: rotate(0deg);
   }
@@ -264,7 +276,7 @@ section.service.service-js figure svg {
   }
 
   section.service.service-css figure {
-    background: var(--blue);
+    background: var(--beige);
   }
   section.service.service-css .text h2,
   section.service.service-css .text a {
@@ -276,7 +288,7 @@ section.service.service-js figure svg {
   }
   section.service.service-js .text h2,
   section.service.service-js .text a {
-    color: var(--blue);
+    color: var(----green);
   }
 
   /* section contact */
@@ -284,7 +296,7 @@ section.service.service-js figure svg {
    align-items: center;
    justify-content: center;
    align-content: center;
-   background: linear-gradient(var(--blue), var(--green) 60%, var(--pink) 70%, var(--grey));
+   background: linear-gradient(var(--beige), var(--green) 60%, var(--pink) 70%, var(--grey));
    border-radius: var(--border-radius);
   }
 

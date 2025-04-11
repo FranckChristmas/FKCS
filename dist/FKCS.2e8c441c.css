@@ -24,7 +24,7 @@
 
 html, body {
   --border-radius: 100px;
-  --blue: #ffcdb2;
+  --beige: #ffcdb2;
   --green: #ffb4a2;
   --pink: #e5989b;
   --grey: #b5828c;
@@ -45,6 +45,7 @@ h1 {
 }
 
 h2 {
+  letter-spacing: .05em;
   margin: 0;
   font-size: 60px;
 }
@@ -164,7 +165,7 @@ section.about .empty {
   background: var(--grey);
   border-radius: var(--border-radius);
   flex-basis: 37.5vw;
-  margin: 1rem;
+  margin: 1rem 1rem 0 0;
   transition: flex-basis 1s cubic-bezier(0, .9, .4, .99);
 }
 
@@ -175,7 +176,7 @@ section.about article {
 }
 
 section.about article .title {
-  background: var(--blue);
+  background: var(--beige);
   border-radius: var(--border-radius);
   padding: var(--gutter);
   flex: 1;
@@ -191,7 +192,7 @@ section.about article .description {
   color: #000;
   flex: 1;
   align-items: center;
-  margin: 0 1rem 1rem 0;
+  margin: 0 1rem 0 0;
   padding: 3.25vw;
   display: flex;
 }
@@ -215,8 +216,19 @@ section.service figure {
   display: flex;
 }
 
-section.service figure svg {
+svg {
   width: 40%;
+  transition: transform .3s;
+}
+
+svg rect {
+  fill: var(--grey);
+  transition: fill .3s;
+}
+
+svg:hover rect {
+  fill: var(--pink);
+  transition: fill .3s;
 }
 
 section.service .text {
@@ -261,12 +273,22 @@ section.service.service-css figure svg {
   }
 
   to {
-    transform: rotate(-360deg);
+    transform: rotate(360deg);
   }
 }
 
 section.service.service-js figure svg {
-  animation: 2s linear infinite rotating;
+  animation: 2s linear infinite poly-rotating;
+}
+
+@keyframes poly-rotating {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
 }
 
 section.service.service-html figure {
@@ -278,7 +300,7 @@ section.service.service-html .text h2, section.service.service-html .text a {
 }
 
 section.service.service-css figure {
-  background: var(--blue);
+  background: var(--beige);
 }
 
 section.service.service-css .text h2, section.service.service-css .text a {
@@ -290,11 +312,11 @@ section.service.service-js figure {
 }
 
 section.service.service-js .text h2, section.service.service-js .text a {
-  color: var(--blue);
+  color: var(----green);
 }
 
 section.contact {
-  background: linear-gradient(var(--blue), var(--green) 60%, var(--pink) 70%, var(--grey));
+  background: linear-gradient(var(--beige), var(--green) 60%, var(--pink) 70%, var(--grey));
   border-radius: var(--border-radius);
   place-content: center;
   align-items: center;
