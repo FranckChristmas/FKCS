@@ -242,13 +242,13 @@ svg:hover path {
   transition: fill .3s;
 }
 
-svg section.service.service-js path {
+svg path.poly {
   fill: var(--grey);
   transition: fill .3s;
 }
 
-svg:hover section.service.service-js path {
-  fill: var(--green);
+svg:hover path.poly {
+  fill: var(--beige);
 }
 
 section.service .text {

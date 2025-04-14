@@ -215,13 +215,13 @@ section.service article {
         transition: fill 0.3s ease; 
      }
 
-      section.service.service-js path {
+      path.poly {
           fill: var(--grey);
           transition: fill 0.3s ease;
     
       }
-      &:hover section.service.service-js path {
-        fill: var(--green);
+      &:hover path.poly {
+        fill: var(--beige);
       }
    
   }
