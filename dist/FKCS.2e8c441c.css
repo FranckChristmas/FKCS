@@ -165,6 +165,7 @@ section.about .empty {
   background: var(--grey);
   border-radius: var(--border-radius);
   flex-basis: 37.5vw;
+  min-width: 15vw;
   margin: 1rem 1rem 0 0;
   transition: flex-basis 1s cubic-bezier(0, .9, .4, .99);
 }
@@ -229,6 +230,25 @@ svg rect {
 svg:hover rect {
   fill: var(--pink);
   transition: fill .3s;
+}
+
+svg path {
+  fill: var(--grey);
+  transition: fill .3s;
+}
+
+svg:hover path {
+  fill: var(--green);
+  transition: fill .3s;
+}
+
+svg path.poly {
+  fill: var(--grey);
+  transition: fill .3s;
+}
+
+svg:hover path.poly {
+  fill: var(--beige);
 }
 
 section.service .text {
