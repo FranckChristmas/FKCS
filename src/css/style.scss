@@ -135,6 +135,7 @@ section.about .empty {
   border-radius: var(--border-radius);
   transition: flex-basis 1s cubic-bezier(.0, .9,.4,.99);
   margin: 1rem 1rem 0rem 0rem;
+  min-width: 15vw;
 
 }
 
@@ -202,8 +203,29 @@ section.service article {
    &:hover rect {
       fill: var(--pink);
       transition: fill 0.3s ease;
-   }  
+   }
+
+      path {
+        fill: var(--grey);
+        transition: fill 0.3s ease;
+  
+      }
+     &:hover path {
+        fill: var(--green);
+        transition: fill 0.3s ease; 
+     }
+
+      section.service.service-js path {
+          fill: var(--grey);
+          transition: fill 0.3s ease;
+    
+      }
+      &:hover section.service.service-js path {
+        fill: var(--green);
+      }
+   
   }
+
   section.service .text {
    display: flex;
    flex-direction: column ;
