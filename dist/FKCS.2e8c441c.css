@@ -261,8 +261,8 @@ section.service .text {
   display: flex;
 }
 
-section.service .text a {
-  font-family: Space Mono, monospace;
+section.service h2 {
+  padding-top: 5rem;
 }
 
 section.service.service-html figure svg {
