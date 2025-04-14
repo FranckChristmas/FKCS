@@ -191,6 +191,8 @@ section.service article {
     margin: 0rem 1rem 1rem 0rem;
   }
 
+
+  /* section to color svg */
   svg {
     width: 40%;
     transition: transform 0.3s ease;
@@ -235,9 +237,8 @@ section.service article {
    padding: var(--gutter);
    border-radius: var(--border-radius);
   }
-  
-  section.service .text a {
-    font-family: "Space Mono", monospace;
+  section.service h2{
+    padding-top: 5rem;
   }
 
   /* section service animation */
