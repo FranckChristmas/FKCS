@@ -62,13 +62,13 @@ h3 {
   font-size: 50px;
 }
 
-h3.company {
+h3, h1 {
   padding-bottom: 1rem;
   display: inline-block;
   position: relative;
 }
 
-h3.company span.random-letter {
+h3 span.random-letter, h1 span.random-letter {
   cursor: default;
   transition: color .3s;
   display: inline;
