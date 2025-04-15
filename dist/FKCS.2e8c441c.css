@@ -71,7 +71,7 @@ h3.company {
 h3.company span.random-letter {
   cursor: default;
   transition: color .3s;
-  display: inline-block;
+  display: inline;
 }
 
 @keyframes waveline {
