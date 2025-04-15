@@ -28,9 +28,13 @@ html, body {
   --green: #ffb4a2;
   --pink: #e5989b;
   --grey: #b5828c;
-  --darkblue: #316682;
-  --othergreen: #15795f;
+  --darkblue: #001c2c;
+  --othergreen: #598659;
   --othergrey: #a1a1a1;
+  --yellow: #f9c74f;
+  --lightgreen: #37e7a6;
+  --lightblue: #90e0ef;
+  --darkgreen: #0077b6;
   --gutter: 3.125vw 6.25vw;
   color: #fff;
   background: #316682;
@@ -57,18 +61,18 @@ h3 {
   letter-spacing: .05em;
   color: var(--beige);
   margin: 0;
-  padding: 1.4rem 0 0 .8rem;
+  padding: 1.4rem 0 2rem .8rem;
   font-family: Mermaid1001;
   font-size: 50px;
 }
 
-h3, h1 {
+h3, h1, a.color {
   padding-bottom: 1rem;
   display: inline-block;
   position: relative;
 }
 
-h3 span.random-letter, h1 span.random-letter {
+h3 span.random-letter, h1 span.random-letter, a.color span.random-letter {
   cursor: default;
   transition: color .3s;
   display: inline;
@@ -128,7 +132,7 @@ nav ul {
   width: 100%;
   height: 100%;
   margin: 0;
-  padding: 3rem 0;
+  padding: 3.5rem 0;
   display: flex;
 }
 
@@ -154,6 +158,7 @@ nav ul li a:hover {
 }
 
 section.about {
+  padding-top: 2rem;
   display: flex;
 }
 

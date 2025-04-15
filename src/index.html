@@ -14,9 +14,9 @@
     <nav>
       <h3 class="company">FKCS</h3>
       <ul>
-        <li><a href="#about" class="navbtn">About</a></li>
-        <li><a href="#service">Services</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about" class="navbtn color">About</a></li>
+        <li><a href="#service" class="color">Services</a></li>
+        <li><a href="#contact" class="color">Contact</a></li>
       </ul>
     </nav>
 
@@ -24,7 +24,7 @@
       <div class="empty">  </div>
       <article>
         <div class="title">
-          <h1>Creative Product Owner</h1>
+          <h1><span>Creative</span><br><span>Product Owner</span></h1>
         </div>
         <div class="description">
           <p>Passionate about everything regarding the web and mobile. My promess is to deliver the best product possible.
@@ -111,7 +111,7 @@
           }).join('');
           element.innerHTML = spans;
         });
-        const colors = ['var(--pink)', 'var(--othergreen)', 'var(--othergrey)', 'var(--darkblue)'];
+        const colors = ['var(--othergreen)', 'var(--othergrey)', 'var(--darkblue)', 'var(--lightblue)', 'var(--darkgreen)', 'var(--yellow)'];
 
         const letters = document.querySelectorAll('.random-letter');
         letters.forEach(letter => {
@@ -127,7 +127,17 @@
       }
       makeSpans('h1, h3');
 
- 
+      const colors = ['var(--othergreen)', 'var(--othergrey)', 'var(--darkblue)', 'var(--lightblue)', 'var(--darkgreen)', 'var(--yellow)'];
+
+      document.querySelectorAll('a.color').forEach(link => {
+        link.addEventListener('mouseover', () => {
+          const randomColor = colors[Math.floor(Math.random() * colors.length)];
+          link.style.color = randomColor;
+        });
+        link.addEventListener('mouseout', () => {
+          link.style.color = ''; // reset
+        });
+      });
       
       // console.log(figureElements);
 
