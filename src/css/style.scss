@@ -25,9 +25,13 @@ html, body {
   --green: #FFB4A2;
   --pink: #E5989B;
   --grey: #B5828C;
-  --darkblue: #316682;
-  --othergreen: #15795f;
+  --darkblue: #001c2c;
+  --othergreen: #598659;
   --othergrey: #a1a1a1;
+  --yellow: #F9C74F;
+  --lightgreen: #37e7a6;
+  --lightblue: #90E0EF;
+  --darkgreen: #0077B6;
   --gutter: 3.125vw 6.25vw;
 
     margin: 0;
@@ -57,14 +61,13 @@ h3 {
   margin: 0px;
   font-family: 'Mermaid1001';
   color: var(--beige);
-  padding: 1.4rem 0rem 0rem 0.8rem;
+  padding: 1.4rem 0rem 2rem 0.8rem;
 
   
 }
 
-
-/*animation wave unerlining*/
-h3, h1 {
+//allow to animate the title text
+h3, h1, a.color {
   position: relative;
   display: inline-block;
   padding-bottom: 1rem;
@@ -76,19 +79,6 @@ h3, h1 {
 }
   
 
-// &::after {
-//     content: '';
-//     position: absolute;
-//     bottom: 0;
-//     left: 0.6rem;
-//     width: 90%;
-//     height: 1rem;
-//     background: url(../img/wave.svg) repeat-x;
-//     background-size: 50px;
-//     animation : waveline 6s linear infinite;
-//     pointer-events: none;
-//     border-radius: 200px;
-//   }
 
 @keyframes waveline {
   to {
@@ -136,8 +126,8 @@ section.full-screen {
 /* section about */
 
 section.about {
+  padding-top: 2rem;
   display: flex;
-
 }
 
 section.about .empty {
