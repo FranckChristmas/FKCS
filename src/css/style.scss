@@ -64,19 +64,19 @@ h3.company {
   display: inline-block;
   padding-bottom: 1rem;
 
-&::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0.6rem;
-    width: 90%;
-    height: 1rem;
-    background: url(../img/wave.svg) repeat-x;
-    background-size: 50px;
-    animation : waveline 6s linear infinite;
-    pointer-events: none;
-    border-radius: 200px;
-  }
+// &::after {
+//     content: '';
+//     position: absolute;
+//     bottom: 0;
+//     left: 0.6rem;
+//     width: 90%;
+//     height: 1rem;
+//     background: url(../img/wave.svg) repeat-x;
+//     background-size: 50px;
+//     animation : waveline 6s linear infinite;
+//     pointer-events: none;
+//     border-radius: 200px;
+//   }
 }
 
 @keyframes waveline {
