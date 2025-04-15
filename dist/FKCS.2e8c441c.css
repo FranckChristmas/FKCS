@@ -65,19 +65,6 @@ h3.company {
   position: relative;
 }
 
-h3.company:after {
-  content: "";
-  pointer-events: none;
-  background: url("wave.5925953f.svg") 0 0 / 50px repeat-x;
-  border-radius: 200px;
-  width: 90%;
-  height: 1rem;
-  animation: 6s linear infinite waveline;
-  position: absolute;
-  bottom: 0;
-  left: .6rem;
-}
-
 @keyframes waveline {
   to {
     background-position: -150px;
