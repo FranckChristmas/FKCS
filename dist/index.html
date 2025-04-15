@@ -92,7 +92,34 @@ function handleMouseMove(event) {
     figureElements.forEach(function(element) {
         element.style.flexBasis = window.innerWidth - event.clientX + 'px';
     });
-} // console.log(figureElements);
+}
+function makeSpans(selector) {
+    const elements = document.querySelectorAll(selector);
+    elements.forEach((element)=>{
+        let text = element.innerText.split('');
+        let spans = text.map((letter)=>{
+            return `<span class="random-letter">${letter}</span>`;
+        }).join('');
+        element.innerHTML = spans;
+    });
+    const colors = [
+        'var(--pink)',
+        'var(--othergreen)',
+        'var(--othergrey)',
+        'var(--darkblue)'
+    ];
+    const letters = document.querySelectorAll('.random-letter');
+    letters.forEach((letter)=>{
+        letter.addEventListener('mouseover', ()=>{
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            letter.style.color = randomColor;
+        });
+        letter.addEventListener('mouseout', ()=>{
+            letter.style.color = '';
+        });
+    });
+}
+makeSpans('h3'); // console.log(figureElements);
  // window.alert('kittens');
 
 </script>
