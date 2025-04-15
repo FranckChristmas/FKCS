@@ -28,6 +28,9 @@ html, body {
   --green: #ffb4a2;
   --pink: #e5989b;
   --grey: #b5828c;
+  --darkblue: #316682;
+  --othergreen: #15795f;
+  --othergrey: #a1a1a1;
   --gutter: 3.125vw 6.25vw;
   color: #fff;
   background: #316682;
@@ -52,7 +55,7 @@ h2 {
 
 h3 {
   letter-spacing: .05em;
-  color: #e48b91;
+  color: var(--beige);
   margin: 0;
   padding: 1.4rem 0 0 .8rem;
   font-family: Mermaid1001;
@@ -63,6 +66,12 @@ h3.company {
   padding-bottom: 1rem;
   display: inline-block;
   position: relative;
+}
+
+h3.company span.random-letter {
+  cursor: default;
+  transition: color .3s;
+  display: inline-block;
 }
 
 @keyframes waveline {
