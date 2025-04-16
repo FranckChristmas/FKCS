@@ -61,7 +61,7 @@ h3 {
   margin: 0px;
   font-family: 'Mermaid1001';
   color: var(--beige);
-  padding: 1.4rem 0rem 2rem 0.8rem;
+  padding: 1rem 0rem 2rem 0.8rem;
 
   
 }
@@ -101,7 +101,7 @@ section {
     display: flex;
     width: 100%;
     height: calc(100vh - 100px);
-    top: 100px;
+    top: 1.4rem;
     z-index: 2;
     padding: 0.5rem;
 }
