@@ -12,6 +12,7 @@
   "description": "portoflio freelance",
   "devDependencies": {
     "@parcel/transformer-sass": "^2.14.4",
-    "parcel": "^2.14.4"
+    "parcel": "^2.14.4",
+    "svgo": "^3.3.2"
   }
 }
