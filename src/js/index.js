@@ -86,10 +86,18 @@ const buttonText = document.querySelector('.button-text');
 const text = buttonText.textContent;
 buttonText.innerHTML = ''; // empty the content of the button text
 
-text.split('').forEach((char, i) => {
-const span = document.createElement('span');
-span.classList.add('char');
-span.textContent = char;
-buttonText.appendChild(span);
-});
+text.split('').forEach((char) => {
+  const span = document.createElement('span');
+  span.classList.add('char');
+  span.textContent = char === ' ' ? '\u00A0' : char; // replace space with non-breaking space
+  buttonText.appendChild(span);
 
+  //ading a listener for each letter
+  span.addEventListener('mouseenter', () => {
+    span.classList.add('animate');
+  });
+    // remove class after animation
+    span.addEventListener('animationend', () => {
+      span.classList.remove('animate');
+    });
+  })

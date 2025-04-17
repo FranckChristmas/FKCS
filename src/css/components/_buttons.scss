@@ -19,11 +19,10 @@
   cursor: pointer;
 }
 
-.chevron-button:hover {
+.chevron-button:hover .button-text {
   color: white;
   transition: all 0.5s ease-in-out;
-  // transform: scaleX(1.02);
-
+  transform: scaleX(1.02);
 }
 
 .collab-text {
@@ -36,35 +35,38 @@
   font-family: "twk-super-italic";
   position: relative;
   z-index: 1;
+  transition: all 0.5s ease-in-out;
+
 }
 
 .button-text:hover {
   transition: all 0.2s ease-in-out;
+
 }
 
-.button-text .char {
+.char {
   display: inline-block;
   transition: transform 0.3s ease;
   will-change: transform;
-
+}
+.char:hover {
+  transform: scaleY(1.1) scaleX(0.8);
 }
 
-.button-text .char:hover {
-  animation: stretch-wriggle 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+.char.animate {
+  animation: squishy-bounce 1s cubic-bezier(0.25, 1.5, 0.5, 1) forwards;
 }
 
-@keyframes stretch-wriggle {
+
+@keyframes squishy-bounce {
   0% {
     transform: scale(1);
   }
   30% {
-    transform: scaleX(0.8) ;
+    transform: scaleY(1.1) scaleX(0.8);
   }
-  // 60% {
-  //   transform: scaleX(1.2) ;
-  // }
   100% {
-    transform: scale(1);
+    transform: scale(1) translateY(0);
   }
 }
 

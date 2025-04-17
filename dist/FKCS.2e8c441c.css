@@ -57,9 +57,10 @@ nav ul li a:hover {
   overflow: hidden;
 }
 
-.chevron-button:hover {
+.chevron-button:hover .button-text {
   color: #fff;
   transition: all .5s ease-in-out;
+  transform: scaleX(1.02);
 }
 
 .collab-text {
@@ -72,6 +73,7 @@ nav ul li a:hover {
 .button-text {
   z-index: 1;
   font-family: twk-super-italic;
+  transition: all .5s ease-in-out;
   position: relative;
 }
 
@@ -79,27 +81,31 @@ nav ul li a:hover {
   transition: all .2s ease-in-out;
 }
 
-.button-text .char {
+.char {
   will-change: transform;
   transition: transform .3s;
   display: inline-block;
 }
 
-.button-text .char:hover {
-  animation: .8s cubic-bezier(.22, 1, .36, 1) forwards stretch-wriggle;
+.char:hover {
+  transform: scaleY(1.1)scaleX(.8);
 }
 
-@keyframes stretch-wriggle {
+.char.animate {
+  animation: 1s cubic-bezier(.25, 1.5, .5, 1) forwards squishy-bounce;
+}
+
+@keyframes squishy-bounce {
   0% {
     transform: scale(1);
   }
 
   30% {
-    transform: scaleX(.8);
+    transform: scaleY(1.1)scaleX(.8);
   }
 
   100% {
-    transform: scale(1);
+    transform: scale(1)translateY(0);
   }
 }
 
