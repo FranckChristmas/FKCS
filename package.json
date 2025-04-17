@@ -1,18 +1,18 @@
 {
   "name": "fkcs",
   "version": "1.0.0",
+  "description": "Portfolio freelance",
   "source": "src/index.html",
   "scripts": {
-    "start": "npm run prebuild && parcel",
+    "start": "parcel",
     "build": "parcel build",
-    "prebuild": "rm -rf dist"
+    "clean": "rm -rf .parcel-cache dist"
   },
   "author": "François Noell",
   "license": "ISC",
-  "description": "portoflio freelance",
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.14.4",
     "parcel": "^2.14.4",
+    "@parcel/transformer-sass": "^2.14.4",
     "svgo": "^3.3.2"
   }
 }

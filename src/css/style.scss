@@ -1,3 +1,6 @@
+@use '_nav.scss' as *;
+@use './components/_buttons.scss' as *;
+
 @font-face {
   font-family: 'GoboldRegular';
   src: url(../fonts/gobold-regular.otf) format('truetype');
@@ -14,6 +17,12 @@
   font-family: 'Oswald-xlight';
   src: url(../fonts/oswald-xlight.ttf) format('truetype');
 }
+@font-face {
+  font-family: 'twk-super-italic';
+  src: url(../fonts/TWKEverett-SuperItalic.otf) format('truetype');
+}
+/* importations */
+
 
 * {
     box-sizing: border-box; /* Reset box-sizing to border-box meaning that it takes the border padding and so into the width and height */
@@ -33,12 +42,12 @@ html, body {
   --lightblue: #90E0EF;
   --darkgreen: #0077B6;
   --gutter: 3.125vw 6.25vw;
+    font-size: 62.5%; // allow to have the equivalence as 1rem = 10px
 
     margin: 0;
     padding: 0;
     background: #316682;
     color: white;
-    font-size: 20px;
     // font-family: "Syne", sans-serif;   
     font-family: 'Mermaid'; 
 }
@@ -91,10 +100,6 @@ p {
   font-size: 1.8rem;
 }
 
-a {
-  text-decoration: none;
-  color: white;
-}
 
 section {
     position: relative;
@@ -119,9 +124,7 @@ section.full-screen {
     z-index: 3;
 }
 
-/* section nav */
 
-@import '_nav.scss';
 
 /* section about */
 
@@ -323,17 +326,6 @@ section.service.service-js figure svg {
    background: var(--lightblue);
    border: white solid 1rem;
    border-radius: var(--border-radius);
-  }
-
-  section.contact a {
-   font-size: 100px;
-   color: #000000;
-   font-weight: bold;
-   transition: color 0.5s cubic-bezier(.77,.28,.42,.93);
-  }
-
-  section.contact a:hover {
-   color: white;
   }
 
   /* responsive */
