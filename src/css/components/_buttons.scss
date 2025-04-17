@@ -3,56 +3,91 @@
 .chevron-button {
   position: relative;
   overflow: hidden;
-  background: white;
+  background: var(--yellow);
   border: 2px solid var(--darkblue);
   padding: 1rem 2rem;
-  font-size: 1.5rem;
-  width: 50rem;
-  height: 20rem;
+  width: 120rem;
+  height: 40rem;
   border-radius: 20rem;
-  border: 2rem solid var(--darkblue);
+  border: 2.2rem solid var(--darkblue);
   cursor: pointer;
   font-family: "twk-super-italic";
   color: var(--darkblue);
-  font-size: 5rem;
+  font-size: 14rem;
   overflow: hidden;
   margin: 4rem;
   cursor: pointer;
 }
 
+.chevron-button:hover {
+  color: white;
+  transition: all 0.2s ease-in-out;
+  font-stretch: 150%;
+}
+
+.collab-text {
+  font-family: "twk-regular-italic";
+  position: relative;
+  font-size: 6rem;
+  z-index: 1;
+}
 .button-text {
+  font-family: "twk-super-italic";
   position: relative;
   z-index: 1;
-  margin: 2rem;
+}
 
+.button-text:hover {
+  transition: all 0.2s ease-in-out;
+  font-stretch: 150%;
+}
+
+.text-wrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  line-height: 10rem;
+  padding-bottom: 8rem;
 }
 
 .chevron-svg {
   position: absolute;
   top: 0;
   left: 0;
-  width: 160%;
+  width: 140%;
   height: 100%;
-  fill:var(--green);
+  fill:var(--darkgreen);
   z-index: 0;
   opacity: 0;
-  transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  transition-delay: 0s;
   pointer-events: none;
 }
 
+
 .chevron-button:hover .chevron-svg {
   opacity: 1;
-}
+  transition-delay: 0s;
 
+}
+.chevron-track {
+  animation: slide-chevron 1s linear infinite;
+  animation-play-state: paused;
+}
 .chevron-button:hover .chevron-track{
-  animation: slide-chevron 2s linear infinite;
+  animation: slide-chevron 1s linear infinite;
+  animation-play-state: running;
 }
 
 @keyframes slide-chevron {
   0% {
-    transform: translateX(0);
+    transform: translateX(-4rem);
   }
   100% {
-    transform: translateX(-40px);
+    transform: translateX(0);
   }
 }
