@@ -59,7 +59,7 @@ document.querySelectorAll('a.color').forEach(link => {
   });
 });
 
-// contact button animation 
+// part contact button to ease the chevron animation
 
 const button = document.querySelector('.chevron-button');
 const track = document.querySelector('.chevron-track');
@@ -67,19 +67,29 @@ const svg = document.querySelector('.chevron-svg');
 console.log('track:', track);
 console.log('svg:', svg);
 button.addEventListener('mouseenter', () => {
-  console.log('mouseenter');
     track.classList.add('active');
   });
 
 button.addEventListener('mouseleave', () => {
-  console.log('mouseleave');
   const handleTransitionEnd = (e) => {
-    console.log('transitionend fired:', e.propertyName);
   if (e.propertyName === 'opacity') {
     track.classList.remove('active');
     svg.removeEventListener('transitionend', handleTransitionEnd);
-    console.log('Animation arrêtée');
   }
 };
 svg.addEventListener('transitionend', handleTransitionEnd);
 });
+
+//part animation of the of the text button 
+
+const buttonText = document.querySelector('.button-text');
+const text = buttonText.textContent;
+buttonText.innerHTML = ''; // empty the content of the button text
+
+text.split('').forEach((char, i) => {
+const span = document.createElement('span');
+span.classList.add('char');
+span.textContent = char;
+buttonText.appendChild(span);
+});
+
