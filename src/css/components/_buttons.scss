@@ -21,8 +21,9 @@
 
 .chevron-button:hover {
   color: white;
-  transition: all 0.2s ease-in-out;
-  font-stretch: 150%;
+  transition: all 0.5s ease-in-out;
+  transform: scaleX(1.02);
+
 }
 
 .collab-text {
@@ -39,7 +40,6 @@
 
 .button-text:hover {
   transition: all 0.2s ease-in-out;
-  font-stretch: 150%;
 }
 
 .text-wrapper {
@@ -63,21 +63,24 @@
   fill:var(--darkgreen);
   z-index: 0;
   opacity: 0;
-  transition: opacity 0.2s ease-in-out;
-  transition-delay: 0s;
+  transition: opacity 0.4s ease-in-out;
   pointer-events: none;
 }
 
 
 .chevron-button:hover .chevron-svg {
   opacity: 1;
-  transition-delay: 0s;
 
 }
 .chevron-track {
   animation: slide-chevron 1s linear infinite;
   animation-play-state: paused;
 }
+
+.chevron-track.active {
+  animation-play-state: running;
+}
+
 .chevron-button:hover .chevron-track{
   animation: slide-chevron 1s linear infinite;
   animation-play-state: running;

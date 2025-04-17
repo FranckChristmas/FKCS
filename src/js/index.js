@@ -1,3 +1,5 @@
+// part to control the mouse movement attached to the different sections
+
 let emptyElement = document.querySelector('.about .empty'); 
 let titleElement = document.querySelector('.about .title'); 
 
@@ -15,6 +17,7 @@ function handleMouseMove( event ) {
   
 }
 
+// part that handle the color change of the letters in the h1 and h3 elements
 
 function makeSpans (selector) {
   const elements = document.querySelectorAll(selector);
@@ -42,6 +45,8 @@ function makeSpans (selector) {
 }
 makeSpans('h1, h3');
 
+// part that handle the color change of the letters on the nav links
+
 const colors = ['var(--darkblue)', 'var(--lightblue)', 'var(--darkgreen)', 'var(--yellow)'];
 
 document.querySelectorAll('a.color').forEach(link => {
@@ -52,4 +57,29 @@ document.querySelectorAll('a.color').forEach(link => {
   link.addEventListener('mouseout', () => {
     link.style.color = ''; // reset
   });
+});
+
+// contact button animation 
+
+const button = document.querySelector('.chevron-button');
+const track = document.querySelector('.chevron-track');
+const svg = document.querySelector('.chevron-svg');
+console.log('track:', track);
+console.log('svg:', svg);
+button.addEventListener('mouseenter', () => {
+  console.log('mouseenter');
+    track.classList.add('active');
+  });
+
+button.addEventListener('mouseleave', () => {
+  console.log('mouseleave');
+  const handleTransitionEnd = (e) => {
+    console.log('transitionend fired:', e.propertyName);
+  if (e.propertyName === 'opacity') {
+    track.classList.remove('active');
+    svg.removeEventListener('transitionend', handleTransitionEnd);
+    console.log('Animation arrêtée');
+  }
+};
+svg.addEventListener('transitionend', handleTransitionEnd);
 });
