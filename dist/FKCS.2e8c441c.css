@@ -40,37 +40,67 @@ nav ul li a:hover {
 }
 
 .chevron-button {
+  background: var(--yellow);
   border: 2px solid var(--darkblue);
-  border: 2rem solid var(--darkblue);
+  border: 2.2rem solid var(--darkblue);
   cursor: pointer;
-  width: 50rem;
-  height: 20rem;
+  width: 120rem;
+  height: 40rem;
   color: var(--darkblue);
   cursor: pointer;
-  background: #fff;
   border-radius: 20rem;
   margin: 4rem;
   padding: 1rem 2rem;
   font-family: twk-super-italic;
-  font-size: 5rem;
+  font-size: 14rem;
   position: relative;
   overflow: hidden;
 }
 
+.chevron-button:hover {
+  color: #fff;
+  font-stretch: 150%;
+  transition: all .2s ease-in-out;
+}
+
+.collab-text {
+  z-index: 1;
+  font-family: twk-regular-italic;
+  font-size: 6rem;
+  position: relative;
+}
+
 .button-text {
   z-index: 1;
-  margin: 2rem;
+  font-family: twk-super-italic;
+  position: relative;
+}
+
+.button-text:hover {
+  font-stretch: 150%;
+  transition: all .2s ease-in-out;
+}
+
+.text-wrapper {
+  z-index: 1;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-bottom: 8rem;
+  line-height: 10rem;
+  display: flex;
   position: relative;
 }
 
 .chevron-svg {
-  width: 160%;
+  width: 140%;
   height: 100%;
-  fill: var(--green);
+  fill: var(--darkgreen);
   z-index: 0;
   opacity: 0;
   pointer-events: none;
-  transition: opacity .3s ease-in-out;
+  transition: opacity .2s ease-in-out;
   position: absolute;
   top: 0;
   left: 0;
@@ -78,19 +108,24 @@ nav ul li a:hover {
 
 .chevron-button:hover .chevron-svg {
   opacity: 1;
+  transition-delay: 0s;
+}
+
+.chevron-track {
+  animation: 1s linear infinite paused slide-chevron;
 }
 
 .chevron-button:hover .chevron-track {
-  animation: 2s linear infinite slide-chevron;
+  animation: 1s linear infinite slide-chevron;
 }
 
 @keyframes slide-chevron {
   0% {
-    transform: translateX(0);
+    transform: translateX(-4rem);
   }
 
   100% {
-    transform: translateX(-40px);
+    transform: translateX(0);
   }
 }
 
@@ -116,7 +151,12 @@ nav ul li a:hover {
 
 @font-face {
   font-family: twk-super-italic;
-  src: url("TWKEverett-SuperItalic.ee413326.otf") format("truetype");
+  src: url("twkeverett-super-italic.880642eb.otf") format("truetype");
+}
+
+@font-face {
+  font-family: twk-regular-italic;
+  src: url("twkeverett-regular-italic.3ed5b3dc.otf") format("truetype");
 }
 
 * {
