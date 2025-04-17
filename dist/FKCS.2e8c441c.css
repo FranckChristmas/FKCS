@@ -39,42 +39,58 @@ nav ul li a:hover {
   transition: all .1s ease-in-out;
 }
 
-button.contact-btn {
+.chevron-button {
+  border: 2px solid var(--darkblue);
   border: 2rem solid var(--darkblue);
   cursor: pointer;
   width: 50rem;
   height: 20rem;
   color: var(--darkblue);
-  background: none;
+  cursor: pointer;
+  background: #fff;
   border-radius: 20rem;
   margin: 4rem;
+  padding: 1rem 2rem;
   font-family: twk-super-italic;
   font-size: 5rem;
   position: relative;
   overflow: hidden;
 }
 
-button.contact-btn:before {
-  content: "";
-  z-index: -1;
-  background-image: linear-gradient(45deg, #f04d4d 11.36%, #000 11.36% 12.5%, #ffd903 12.5% 23.86%, #000 23.86% 25%, #2dc40f 25% 36.36%, #000 36.36% 37.5%, #5ba1fc 37.5% 48.86%, #000 48.86% 50%, #f04d4d 50% 61.36%, #000 61.36% 62.5%, #ffd903 62.5% 73.86%, #000 73.86% 75%, #2dc40f 75% 86.36%, #000 86.36% 87.5%, #5ba1fc 87.5% 98.86%, #000 98.86% 100%);
-  background-size: 30rem 30rem;
-  width: 50rem;
-  height: 20rem;
-  animation: 10s linear infinite barberpole;
-  display: block;
+.button-text {
+  z-index: 1;
+  margin: 2rem;
+  position: relative;
+}
+
+.chevron-svg {
+  width: 160%;
+  height: 100%;
+  fill: var(--green);
+  z-index: 0;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s ease-in-out;
   position: absolute;
   top: 0;
   left: 0;
 }
 
-@keyframes barberpole {
+.chevron-button:hover .chevron-svg {
+  opacity: 1;
+}
+
+.chevron-button:hover .chevron-track {
+  animation: 2s linear infinite slide-chevron;
+}
+
+@keyframes slide-chevron {
   0% {
-    background-position: 0 0;
+    transform: translateX(0);
   }
 
   100% {
-    background-position: 20rem 20rem;
+    transform: translateX(-40px);
   }
 }
 
