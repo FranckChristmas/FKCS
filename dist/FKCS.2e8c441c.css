@@ -52,7 +52,7 @@ nav ul li a:hover {
   margin: 4rem;
   padding: 1rem 2rem;
   font-family: twk-super-italic;
-  font-size: 14rem;
+  font-size: 13rem;
   position: relative;
   overflow: hidden;
 }
@@ -60,7 +60,6 @@ nav ul li a:hover {
 .chevron-button:hover {
   color: #fff;
   transition: all .5s ease-in-out;
-  transform: scaleX(1.02);
 }
 
 .collab-text {
@@ -78,6 +77,30 @@ nav ul li a:hover {
 
 .button-text:hover {
   transition: all .2s ease-in-out;
+}
+
+.button-text .char {
+  will-change: transform;
+  transition: transform .3s;
+  display: inline-block;
+}
+
+.button-text .char:hover {
+  animation: .8s cubic-bezier(.22, 1, .36, 1) forwards stretch-wriggle;
+}
+
+@keyframes stretch-wriggle {
+  0% {
+    transform: scale(1);
+  }
+
+  30% {
+    transform: scaleX(.8);
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 .text-wrapper {
