@@ -59,8 +59,8 @@ nav ul li a:hover {
 
 .chevron-button:hover {
   color: #fff;
-  font-stretch: 150%;
-  transition: all .2s ease-in-out;
+  transition: all .5s ease-in-out;
+  transform: scaleX(1.02);
 }
 
 .collab-text {
@@ -77,7 +77,6 @@ nav ul li a:hover {
 }
 
 .button-text:hover {
-  font-stretch: 150%;
   transition: all .2s ease-in-out;
 }
 
@@ -100,7 +99,7 @@ nav ul li a:hover {
   z-index: 0;
   opacity: 0;
   pointer-events: none;
-  transition: opacity .2s ease-in-out;
+  transition: opacity .4s ease-in-out;
   position: absolute;
   top: 0;
   left: 0;
@@ -108,11 +107,14 @@ nav ul li a:hover {
 
 .chevron-button:hover .chevron-svg {
   opacity: 1;
-  transition-delay: 0s;
 }
 
 .chevron-track {
   animation: 1s linear infinite paused slide-chevron;
+}
+
+.chevron-track.active {
+  animation-play-state: running;
 }
 
 .chevron-button:hover .chevron-track {
