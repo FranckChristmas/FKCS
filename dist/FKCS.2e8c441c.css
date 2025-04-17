@@ -62,7 +62,7 @@ h3 {
   color: var(--beige);
   margin: 0;
   padding: 1rem 0 2rem .8rem;
-  font-family: Mermaid1001;
+  font-family: Mermaid;
   font-size: 50px;
 }
 
@@ -337,8 +337,9 @@ section.service.service-js .text h2, section.service.service-js .text a {
 }
 
 section.contact {
-  background: linear-gradient(var(--beige), var(--green) 60%, var(--pink) 70%, var(--grey));
+  background: var(--lightblue);
   border-radius: var(--border-radius);
+  border: 1rem solid #fff;
   place-content: center;
   align-items: center;
 }

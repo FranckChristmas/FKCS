@@ -59,7 +59,7 @@ h3 {
   font-size: 50px;
   letter-spacing: 0.05em;
   margin: 0px;
-  font-family: 'Mermaid1001';
+  font-family: 'Mermaid';
   color: var(--beige);
   padding: 1rem 0rem 2rem 0.8rem;
 
@@ -320,7 +320,8 @@ section.service.service-js figure svg {
    align-items: center;
    justify-content: center;
    align-content: center;
-   background: linear-gradient(var(--beige), var(--green) 60%, var(--pink) 70%, var(--grey));
+   background: var(--lightblue);
+   border: white solid 1rem;
    border-radius: var(--border-radius);
   }
 
