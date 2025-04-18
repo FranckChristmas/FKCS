@@ -48,17 +48,26 @@ nav ul li a:hover {
   height: 40rem;
   color: var(--darkblue);
   cursor: pointer;
+  box-shadow: 0 0 0 0 var(--darkblue);
   border-radius: 20rem;
   margin: 4rem;
   padding: 1rem 2rem;
   font-family: twk-super-italic;
   font-size: 13rem;
+  transition: box-shadow .8s, transform .3s;
   position: relative;
   overflow: hidden;
 }
 
+.chevron-button:hover {
+  box-shadow: 1rem 2rem 0 1.5rem var(--darkblue);
+}
+
+.chevron-button:not(:hover) {
+  transition-delay: .1s;
+}
+
 .chevron-button:hover .button-text {
-  color: #fff;
   transition: all .5s ease-in-out;
   transform: scaleX(1.02);
 }
@@ -88,11 +97,12 @@ nav ul li a:hover {
 }
 
 .char:hover {
-  transform: scaleY(1.1)scaleX(.8);
+  transition: transform .5s ease-in-out;
+  transform: scaleY(1)scaleX(.8);
 }
 
 .char.animate {
-  animation: 1s cubic-bezier(.25, 1.5, .5, 1) forwards squishy-bounce;
+  animation: 2s cubic-bezier(.25, 1.5, .5, 1) forwards squishy-bounce;
 }
 
 @keyframes squishy-bounce {
@@ -100,12 +110,8 @@ nav ul li a:hover {
     transform: scale(1);
   }
 
-  30% {
-    transform: scaleY(1.1)scaleX(.8);
-  }
-
-  100% {
-    transform: scale(1)translateY(0);
+  50% {
+    transform: scaleY(1)scaleX(.8);
   }
 }
 
@@ -122,12 +128,12 @@ nav ul li a:hover {
 }
 
 .chevron-svg {
-  width: 140%;
-  height: 100%;
-  fill: var(--darkgreen);
+  fill: #fbedbe;
   z-index: 0;
   opacity: 0;
   pointer-events: none;
+  width: 140%;
+  height: 100%;
   transition: opacity .4s ease-in-out;
   position: absolute;
   top: 0;

@@ -1,5 +1,3 @@
-
-
 .chevron-button {
   position: relative;
   overflow: hidden;
@@ -17,10 +15,18 @@
   overflow: hidden;
   margin: 4rem;
   cursor: pointer;
+  transition: box-shadow 0.8s ease, transform 0.3s ease;
+  box-shadow: 0 0 0 0 var(--darkblue);
+}
+
+.chevron-button:hover {
+  box-shadow: 1rem 2rem 0 1.5rem var(--darkblue);
+}
+.chevron-button:not(:hover) {
+  transition-delay: 0.1s; /* delay when shadow is retracting*/
 }
 
 .chevron-button:hover .button-text {
-  color: white;
   transition: all 0.5s ease-in-out;
   transform: scaleX(1.02);
 }
@@ -36,12 +42,10 @@
   position: relative;
   z-index: 1;
   transition: all 0.5s ease-in-out;
-
 }
 
 .button-text:hover {
   transition: all 0.2s ease-in-out;
-
 }
 
 .char {
@@ -50,23 +54,22 @@
   will-change: transform;
 }
 .char:hover {
-  transform: scaleY(1.1) scaleX(0.8);
+  transform: scaleY(1) scaleX(0.8);
+  transition: transform 0.5s ease-in-out;
 }
 
 .char.animate {
-  animation: squishy-bounce 1s cubic-bezier(0.25, 1.5, 0.5, 1) forwards;
+  animation: squishy-bounce 2s cubic-bezier(0.25, 1.5, 0.5, 1) forwards;
 }
-
 
 @keyframes squishy-bounce {
   0% {
     transform: scale(1);
   }
-  30% {
-    transform: scaleY(1.1) scaleX(0.8);
+  50% {
+    transform: scaleY(1) scaleX(0.8);
   }
   100% {
-    transform: scale(1) translateY(0);
   }
 }
 
@@ -88,17 +91,15 @@
   left: 0;
   width: 140%;
   height: 100%;
-  fill:var(--darkgreen);
+  fill: rgb(251, 237, 190);
   z-index: 0;
   opacity: 0;
   transition: opacity 0.4s ease-in-out;
   pointer-events: none;
 }
 
-
 .chevron-button:hover .chevron-svg {
   opacity: 1;
-
 }
 .chevron-track {
   animation: slide-chevron 1s linear infinite;
@@ -109,7 +110,7 @@
   animation-play-state: running;
 }
 
-.chevron-button:hover .chevron-track{
+.chevron-button:hover .chevron-track {
   animation: slide-chevron 1s linear infinite;
   animation-play-state: running;
 }
