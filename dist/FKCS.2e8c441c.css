@@ -25,7 +25,7 @@ nav ul li {
 
 nav ul li a {
   color: #e4e2c3;
-  font-family: oswald-xlight;
+  font-family: twk-regular-italic;
   font-size: 1.3rem;
   text-decoration: none;
   transition: all .1s ease-in-out;
@@ -224,7 +224,7 @@ html, body {
 
 h1 {
   margin: 0;
-  font-family: Mermaid;
+  font-family: twk-super-italic;
   font-size: 70px;
   line-height: 1em;
 }
@@ -240,7 +240,7 @@ h3 {
   color: var(--beige);
   margin: 0;
   padding: 1rem 0 2rem .8rem;
-  font-family: Mermaid;
+  font-family: twk-super-italic;
   font-size: 50px;
 }
 
