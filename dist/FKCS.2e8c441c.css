@@ -53,8 +53,13 @@ nav ul li a:hover {
   padding: 1rem 2rem;
   font-family: twk-super-italic;
   font-size: 13rem;
+  transition: box-shadow .4s, transform .3s;
   position: relative;
   overflow: hidden;
+}
+
+.chevron-button:hover {
+  box-shadow: 2.5rem 3rem 0 2rem var(--darkblue);
 }
 
 .chevron-button:hover .button-text {
@@ -88,7 +93,8 @@ nav ul li a:hover {
 }
 
 .char:hover {
-  transform: scaleY(1.1)scaleX(.8);
+  transition: transform .3s;
+  transform: scaleY(1)scaleX(.8);
 }
 
 .char.animate {
@@ -100,12 +106,8 @@ nav ul li a:hover {
     transform: scale(1);
   }
 
-  30% {
-    transform: scaleY(1.1)scaleX(.8);
-  }
-
-  100% {
-    transform: scale(1)translateY(0);
+  50% {
+    transform: scaleY(1)scaleX(.8);
   }
 }
 
