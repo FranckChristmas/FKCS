@@ -26,7 +26,7 @@ nav ul li {
 nav ul li a {
   color: #e4e2c3;
   font-family: twk-regular-italic;
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   text-decoration: none;
   transition: all .1s ease-in-out;
   display: inline-block;
@@ -217,9 +217,13 @@ html, body {
   color: #fff;
   background: #316682;
   margin: 0;
-  padding: 3rem 0 0;
+  padding: 0;
   font-family: Mermaid;
   font-size: 62.5%;
+}
+
+.wrapper {
+  padding-top: 5rem;
 }
 
 h1 {
@@ -271,7 +275,6 @@ p {
 section {
   z-index: 2;
   width: 100%;
-  height: calc(100vh - 100px);
   padding: .5rem;
   display: flex;
   position: relative;
