@@ -34,7 +34,7 @@
 
 html,
 body {
-  --border-radius: 100px;
+  --border-radius: 10rem;
   --beige: #ffcdb2;
   --green: #ffb4a2;
   --pink: #e5989b;
@@ -62,19 +62,19 @@ body {
 // }
 
 h1 {
-  font-size: 70px;
+  font-size: 7rem;
   line-height: 1em;
   margin: 0px;
   font-family: "twk-super-italic";
 }
 h2 {
-  font-size: 60px;
+  font-size: 6rem;
   margin: 0px;
   letter-spacing: 0.05em;
   font-family: "twk-super-italic";
 }
 h3 {
-  font-size: 50px;
+  font-size: 5rem;
   letter-spacing: 0.05em;
   margin: 0px;
   font-family: "twk-super-italic";
