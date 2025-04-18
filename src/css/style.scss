@@ -1,135 +1,128 @@
-@use '_nav.scss' as *;
-@use './components/_buttons.scss' as *;
+@use "_nav.scss" as *;
+@use "./components/_buttons.scss" as *;
 
 @font-face {
-  font-family: 'GoboldRegular';
-  src: url(../fonts/gobold-regular.otf) format('truetype');
+  font-family: "GoboldRegular";
+  src: url(../fonts/gobold-regular.otf) format("truetype");
 }
 @font-face {
-  font-family: 'Mermaid';
-  src: url(../fonts/mermaid.ttf) format('truetype');
+  font-family: "Mermaid";
+  src: url(../fonts/mermaid.ttf) format("truetype");
 }
 @font-face {
-  font-family: 'Oswald-light';
-  src: url(../fonts/oswald-light.ttf) format('truetype');
+  font-family: "Oswald-light";
+  src: url(../fonts/oswald-light.ttf) format("truetype");
 }
 @font-face {
-  font-family: 'Oswald-xlight';
-  src: url(../fonts/oswald-xlight.ttf) format('truetype');
+  font-family: "Oswald-xlight";
+  src: url(../fonts/oswald-xlight.ttf) format("truetype");
 }
 @font-face {
-  font-family: 'twk-super-italic';
-  src: url(../fonts/twkeverett-super-italic.otf) format('truetype');
+  font-family: "twk-super-italic";
+  src: url(../fonts/twkeverett-super-italic.otf) format("truetype");
 }
 
 @font-face {
-  font-family: 'twk-regular-italic';
-  src: url(../fonts/twkeverett-regular-italic.otf) format('truetype');
+  font-family: "twk-regular-italic";
+  src: url(../fonts/twkeverett-regular-italic.otf) format("truetype");
 }
 /* importations */
 
-
 * {
-    box-sizing: border-box; /* Reset box-sizing to border-box meaning that it takes the border padding and so into the width and height */
+  box-sizing: border-box; /* Reset box-sizing to border-box meaning that it takes the border padding and so into the width and height */
 }
 
-html, body {
+html,
+body {
   --border-radius: 100px;
-  --beige: #FFCDB2;
-  --green: #FFB4A2;
-  --pink: #E5989B;
-  --grey: #B5828C;
+  --beige: #ffcdb2;
+  --green: #ffb4a2;
+  --pink: #e5989b;
+  --grey: #b5828c;
   --darkblue: #001c2c;
   --othergreen: #598659;
   --othergrey: #a1a1a1;
-  --yellow: #F9C74F;
+  --yellow: #f9c74f;
   --lightgreen: #37e7a6;
-  --lightblue: #90E0EF;
-  --darkgreen: #0077B6;
+  --lightblue: #90e0ef;
+  --darkgreen: #0077b6;
   --gutter: 3.125vw 6.25vw;
-    font-size: 62.5%; // allow to have the equivalence as 1rem = 10px
+  font-size: 62.5%; // allow to have the equivalence as 1rem = 10px
 
-    margin: 0;
-    padding: 0;
-    background: #316682;
-    color: white;
-    // font-family: "Syne", sans-serif;   
-    font-family: 'Mermaid'; 
+  margin: 0;
+  padding: 0;
+  background: #316682;
+  color: white;
+  // font-family: "Syne", sans-serif;
+  font-family: "Mermaid";
 }
 
 h1 {
   font-size: 70px;
   line-height: 1em;
   margin: 0px;
-  font-family:  'Mermaid';
+  font-family: "twk-super-italic";
 }
 h2 {
   font-size: 60px;
   margin: 0px;
   letter-spacing: 0.05em;
-
 }
 h3 {
   font-size: 50px;
   letter-spacing: 0.05em;
   margin: 0px;
-  font-family: 'Mermaid';
+  font-family: "twk-super-italic";
   color: var(--beige);
   padding: 1rem 0rem 2rem 0.8rem;
-
-  
 }
 
 //allow to animate the title text
-h3, h1, a.color {
+h3,
+h1,
+a.color {
   position: relative;
   display: inline-block;
   padding-bottom: 1rem;
-  span.random-letter{
+  span.random-letter {
     transition: color 0.3s ease;
     display: inline;
     cursor: default;
   }
 }
-  
-
 
 @keyframes waveline {
   to {
-    background-position: -150px
+    background-position: -150px;
   }
 }
 
 p {
-  font-family: 'Oswald-xlight';
+  font-family: "Oswald-xlight";
   font-size: 1.8rem;
 }
 
-
 section {
-    position: relative;
-    display: flex;
-    width: 100%;
-    height: calc(100vh - 100px);
-    top: 1.4rem;
-    z-index: 2;
-    padding: 0.5rem;
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: calc(100vh - 100px);
+  top: 1.4rem;
+  z-index: 2;
+  padding: 0.5rem;
 }
 
-
 section.sticky {
-    position: sticky;
-    margin-top: 100px;
+  position: sticky;
+  margin-top: 100px;
 }
 
 section.full-screen {
   height: 100vh;
-    top: 0;
-    margin-top: 0;
-    z-index: 3;
+  top: 0;
+  margin-top: 0;
+  z-index: 3;
 }
-
-
 
 /* section about */
 
@@ -142,14 +135,13 @@ section.about .empty {
   flex-basis: 37.5vw;
   background: var(--grey);
   border-radius: var(--border-radius);
-  transition: flex-basis 1s cubic-bezier(.0, .9,.4,.99);
+  transition: flex-basis 1s cubic-bezier(0, 0.9, 0.4, 0.99);
   margin: 1rem 1rem 0rem 0rem;
   min-width: 15vw;
-
 }
 
 section.about article {
-  flex : 1;
+  flex: 1;
   display: flex;
   flex-direction: column;
 }
@@ -159,9 +151,9 @@ section.about article .title {
   align-items: flex-end;
   background: var(--beige);
   border-radius: var(--border-radius);
-  padding: var(--gutter);  
+  padding: var(--gutter);
   margin: 1rem 1rem 1rem 0rem;
-  transition: flex-basis 1s cubic-bezier(.0, .9,.4,.99);
+  transition: flex-basis 1s cubic-bezier(0, 0.9, 0.4, 0.99);
 }
 section.about article .description {
   flex: 1;
@@ -174,7 +166,7 @@ section.about article .description {
 
   // margin: 0rem 1rem;
 
-  color: #000000;  
+  color: #000000;
 }
 
 /* section service */
@@ -183,81 +175,75 @@ section.service article {
   display: flex;
   width: 100%;
   margin: 2.5rem 1rem 1rem 1rem;
+}
 
+section.service figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 56.25vw;
+  margin: 0;
+  background: var(--green);
+  border-radius: var(--border-radius);
+  max-width: 62.5vw;
+  min-width: 20vw;
+  transition: flex-basis 1s cubic-bezier(0, 0.9, 0.4, 0.99);
+  margin: 0rem 1rem 1rem 0rem;
+}
+
+/* section to color svg */
+svg {
+  width: 40%;
+  transition: transform 0.3s ease;
+
+  rect {
+    fill: var(--grey);
+    transition: fill 0.3s ease;
   }
-  
-  section.service figure {
-    display: flex;
-    align-items:center ;
-    justify-content: center;
-    flex-basis: 56.25vw ;
-    margin: 0;
-    background: var(--green);
-    border-radius: var(--border-radius);
-    max-width: 62.5vw;
-    min-width: 20vw;
-    transition: flex-basis 1s cubic-bezier(.0, .9,.4,.99);
-    margin: 0rem 1rem 1rem 0rem;
-  }
-
-
-  /* section to color svg */
-  svg {
-    width: 40%;
-    transition: transform 0.3s ease;
-
-    rect {
-      fill: var(--grey);
-      transition: fill 0.3s ease;
-
-    }
-   &:hover rect {
-      fill: var(--pink);
-      transition: fill 0.3s ease;
-   }
-
-      path {
-        fill: var(--grey);
-        transition: fill 0.3s ease;
-  
-      }
-     &:hover path {
-        fill: var(--green);
-        transition: fill 0.3s ease; 
-     }
-
-      path.poly {
-          fill: var(--grey);
-          transition: fill 0.3s ease;
-    
-      }
-      &:hover path.poly {
-        fill: var(--beige);
-      }
-   
+  &:hover rect {
+    fill: var(--pink);
+    transition: fill 0.3s ease;
   }
 
-  section.service .text {
-   display: flex;
-   flex-direction: column ;
-   justify-content: center ;
-   flex: 1;
-   background: #322f30;
-   padding: var(--gutter);
-   border-radius: var(--border-radius);
+  path {
+    fill: var(--grey);
+    transition: fill 0.3s ease;
   }
-  section.service h2{
-    padding-top: 5rem;
+  &:hover path {
+    fill: var(--green);
+    transition: fill 0.3s ease;
   }
 
-  /* section service animation */
-  section.service.service-html figure svg {
-   animation-name: float; 
-    animation-duration: 1s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: cubic-bezier(.77,.28,.42,.93)
+  path.poly {
+    fill: var(--grey);
+    transition: fill 0.3s ease;
   }
+  &:hover path.poly {
+    fill: var(--beige);
+  }
+}
+
+section.service .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  background: #322f30;
+  padding: var(--gutter);
+  border-radius: var(--border-radius);
+}
+section.service h2 {
+  padding-top: 5rem;
+}
+
+/* section service animation */
+section.service.service-html figure svg {
+  animation-name: float;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.77, 0.28, 0.42, 0.93);
+}
 
 @keyframes float {
   0% {
@@ -270,7 +256,7 @@ section.service article {
 
 section.service.service-css figure svg {
   animation-name: rotating;
-  animation : rotating 5s linear infinite;
+  animation: rotating 5s linear infinite;
 }
 
 @keyframes rotating {
@@ -282,10 +268,9 @@ section.service.service-css figure svg {
   }
 }
 
-
 section.service.service-js figure svg {
   animation-name: poly-rotating;
-  animation : poly-rotating 2s linear infinite;
+  animation: poly-rotating 2s linear infinite;
 }
 
 @keyframes poly-rotating {
@@ -297,74 +282,75 @@ section.service.service-js figure svg {
   }
 }
 
-  /* section service override */
+/* section service override */
 
-  section.service.service-html figure {
-    background: var(--green);
+section.service.service-html figure {
+  background: var(--green);
+}
+section.service.service-html .text h2,
+section.service.service-html .text a {
+  color: var(--pink);
+}
+
+section.service.service-css figure {
+  background: var(--beige);
+}
+section.service.service-css .text h2,
+section.service.service-css .text a {
+  color: var(--green);
+}
+
+section.service.service-js figure {
+  background: var(--pink);
+}
+section.service.service-js .text h2,
+section.service.service-js .text a {
+  color: var(----green);
+}
+
+/* section contact */
+section.contact {
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  background: var(--lightblue);
+  border: white solid 1rem;
+  border-radius: var(--border-radius);
+}
+
+/* responsive */
+
+@media only screen and (max-width: 768px) {
+  html,
+  body {
+    border-radius: 50px;
+    --gutter: 6.25vw;
   }
-  section.service.service-html .text h2,
-  section.service.service-html .text a {
-    color: var(--pink);
+
+  h1 {
+    font-size: 60px;
+  }
+  h2 {
+    font-size: 40px;
+  }
+  nav ul li {
+    margin-left: 25px;
   }
 
-  section.service.service-css figure {
-    background: var(--beige);
+  section.service article {
+    flex-direction: column;
   }
-  section.service.service-css .text h2,
-  section.service.service-css .text a {
-    color: var(--green);
+  section.service figure {
+    flex-basis: 25vh;
+    margin: 0;
+    border-radius: var(--border-radius);
   }
-
-  section.service.service-js figure {
-    background: var(--pink);
-  }
-  section.service.service-js .text h2,
-  section.service.service-js .text a {
-    color: var(----green);
+  section.service figure img {
+    width: 25vh;
   }
 
-  /* section contact */
-  section.contact {
-   align-items: center;
-   justify-content: center;
-   align-content: center;
-   background: var(--lightblue);
-   border: white solid 1rem;
-   border-radius: var(--border-radius);
+  section.contact a {
+    font-size: 50px;
+    transform: rotate(90deg);
   }
-
-  /* responsive */
-
-  @media only screen and (max-width: 768px) {
-    html, body {
-      border-radius: 50px;
-      --gutter: 6.25vw;
-    }
-
-    h1 {
-      font-size: 60px;
-    }
-    h2 {
-      font-size: 40px;
-    }
-    nav ul li {
-      margin-left: 25px;
-    }
-
-    section.service article {
-      flex-direction: column;
-    }
-    section.service figure {
-      flex-basis: 25vh;
-      margin: 0;
-border-radius: var(--border-radius);    }
-    section.service figure img {
-      width: 25vh;
-    }
-
-    section.contact a {
-      font-size: 50px;
-      transform: rotate(90deg);
-    }
-
-  }
+}
