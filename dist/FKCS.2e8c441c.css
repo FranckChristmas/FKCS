@@ -217,13 +217,9 @@ html, body {
   color: #fff;
   background: #316682;
   margin: 0;
-  padding: 0;
+  padding: 3rem 0 0;
   font-family: Mermaid;
   font-size: 62.5%;
-}
-
-.wrapper {
-  padding-top: 5rem;
 }
 
 h1 {
@@ -331,143 +327,6 @@ section.about article .description {
   margin: 0 1rem 0 0;
   padding: 3.25vw;
   display: flex;
-}
-
-section.service article {
-  width: 100%;
-  margin: 1.5rem 1rem 1rem;
-  display: flex;
-}
-
-section.service figure {
-  background: var(--green);
-  border-radius: var(--border-radius);
-  flex-basis: 56.25vw;
-  justify-content: center;
-  align-items: center;
-  min-width: 20vw;
-  max-width: 62.5vw;
-  margin: 0 1rem 1rem 0;
-  transition: flex-basis 1s cubic-bezier(0, .9, .4, .99);
-  display: flex;
-}
-
-svg {
-  width: 40%;
-  transition: transform .3s;
-}
-
-svg rect {
-  fill: var(--grey);
-  transition: fill .3s;
-}
-
-svg:hover rect {
-  fill: var(--pink);
-  transition: fill .3s;
-}
-
-svg path {
-  fill: var(--grey);
-  transition: fill .3s;
-}
-
-svg:hover path {
-  fill: var(--green);
-  transition: fill .3s;
-}
-
-svg path.poly {
-  fill: var(--grey);
-  transition: fill .3s;
-}
-
-svg:hover path.poly {
-  fill: var(--beige);
-}
-
-section.service .text {
-  padding: var(--gutter);
-  border-radius: var(--border-radius);
-  background: #322f30;
-  flex-direction: column;
-  flex: 1;
-  justify-content: center;
-  display: flex;
-}
-
-section.service h2 {
-  padding-top: 5rem;
-}
-
-section.service.service-html figure svg {
-  animation-name: float;
-  animation-duration: 1s;
-  animation-timing-function: cubic-bezier(.77, .28, .42, .93);
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-@keyframes float {
-  0% {
-    transform: translateY(-5%);
-  }
-
-  100% {
-    transform: translateY(5%);
-  }
-}
-
-section.service.service-css figure svg {
-  animation: 5s linear infinite rotating;
-}
-
-@keyframes rotating {
-  from {
-    transform: rotate(0);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-section.service.service-js figure svg {
-  animation: 2s linear infinite poly-rotating;
-}
-
-@keyframes poly-rotating {
-  from {
-    transform: rotate(0);
-  }
-
-  to {
-    transform: rotate(-360deg);
-  }
-}
-
-section.service.service-html figure {
-  background: var(--green);
-}
-
-section.service.service-html .text h2, section.service.service-html .text a {
-  color: var(--pink);
-}
-
-section.service.service-css figure {
-  background: var(--beige);
-}
-
-section.service.service-css .text h2, section.service.service-css .text a {
-  color: var(--green);
-}
-
-section.service.service-js figure {
-  background: var(--pink);
-}
-
-section.service.service-js .text h2, section.service.service-js .text a {
-  color: var(----green);
 }
 
 section.contact {

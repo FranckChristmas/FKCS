@@ -1,0 +1,140 @@
+/* Sections services CSS not used anymore for now */
+
+/* section service */
+
+section.service article {
+  display: flex;
+  width: 100%;
+  margin: 1.5rem 1rem 1rem 1rem;
+}
+
+section.service figure {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 56.25vw;
+  margin: 0;
+  background: var(--green);
+  border-radius: var(--border-radius);
+  max-width: 62.5vw;
+  min-width: 20vw;
+  transition: flex-basis 1s cubic-bezier(0, 0.9, 0.4, 0.99);
+  margin: 0rem 1rem 1rem 0rem;
+}
+
+/* section to color svg */
+svg {
+  width: 40%;
+  transition: transform 0.3s ease;
+
+  rect {
+    fill: var(--grey);
+    transition: fill 0.3s ease;
+  }
+  &:hover rect {
+    fill: var(--pink);
+    transition: fill 0.3s ease;
+  }
+
+  path {
+    fill: var(--grey);
+    transition: fill 0.3s ease;
+  }
+  &:hover path {
+    fill: var(--green);
+    transition: fill 0.3s ease;
+  }
+
+  path.poly {
+    fill: var(--grey);
+    transition: fill 0.3s ease;
+  }
+  &:hover path.poly {
+    fill: var(--beige);
+  }
+}
+
+section.service .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+  background: #322f30;
+  padding: var(--gutter);
+  border-radius: var(--border-radius);
+}
+section.service h2 {
+  padding-top: 5rem;
+}
+
+/* section service animation */
+section.service.service-html figure svg {
+  animation-name: float;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: cubic-bezier(0.77, 0.28, 0.42, 0.93);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(-5%);
+  }
+  100% {
+    transform: translateY(5%);
+  }
+}
+
+section.service.service-css figure svg {
+  animation-name: rotating;
+  animation: rotating 5s linear infinite;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+section.service.service-js figure svg {
+  animation-name: poly-rotating;
+  animation: poly-rotating 2s linear infinite;
+}
+
+@keyframes poly-rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+/* section service override */
+
+section.service.service-html figure {
+  background: var(--green);
+}
+section.service.service-html .text h2,
+section.service.service-html .text a {
+  color: var(--pink);
+}
+
+section.service.service-css figure {
+  background: var(--beige);
+}
+section.service.service-css .text h2,
+section.service.service-css .text a {
+  color: var(--green);
+}
+
+section.service.service-js figure {
+  background: var(--pink);
+}
+section.service.service-js .text h2,
+section.service.service-js .text a {
+  color: var(----green);
+}
