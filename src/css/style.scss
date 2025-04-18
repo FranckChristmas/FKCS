@@ -48,11 +48,11 @@ body {
   --darkgreen: #0077b6;
   --gutter: 3.125vw 6.25vw;
   font-size: 62.5%; // allow to have the equivalence as 1rem = 10px
-
   margin: 0;
   padding: 0;
   background: #316682;
   color: white;
+  padding-top: 3rem;
   // font-family: "Syne", sans-serif;
   font-family: "Mermaid";
 }
@@ -67,6 +67,7 @@ h2 {
   font-size: 60px;
   margin: 0px;
   letter-spacing: 0.05em;
+  font-family: "twk-super-italic";
 }
 h3 {
   font-size: 50px;
@@ -74,7 +75,7 @@ h3 {
   margin: 0px;
   font-family: "twk-super-italic";
   color: var(--beige);
-  padding: 1rem 0rem 2rem 0.8rem;
+  padding: 1rem 0rem 2rem 3rem;
 }
 
 //allow to animate the title text
@@ -99,7 +100,7 @@ a.color {
 
 p {
   font-family: "Oswald-xlight";
-  font-size: 1.8rem;
+  font-size: 3rem;
 }
 
 section {
@@ -114,7 +115,6 @@ section {
 
 section.sticky {
   position: sticky;
-  margin-top: 100px;
 }
 
 section.full-screen {
@@ -127,7 +127,7 @@ section.full-screen {
 /* section about */
 
 section.about {
-  padding-top: 2rem;
+  // padding-top: 6rem;
   display: flex;
 }
 
@@ -136,7 +136,7 @@ section.about .empty {
   background: var(--grey);
   border-radius: var(--border-radius);
   transition: flex-basis 1s cubic-bezier(0, 0.9, 0.4, 0.99);
-  margin: 1rem 1rem 0rem 0rem;
+  margin: 1rem 1rem 0rem 1rem;
   min-width: 15vw;
 }
 
@@ -174,7 +174,7 @@ section.about article .description {
 section.service article {
   display: flex;
   width: 100%;
-  margin: 2.5rem 1rem 1rem 1rem;
+  margin: 1.5rem 1rem 1rem 1rem;
 }
 
 section.service figure {

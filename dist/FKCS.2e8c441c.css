@@ -217,7 +217,7 @@ html, body {
   color: #fff;
   background: #316682;
   margin: 0;
-  padding: 0;
+  padding: 3rem 0 0;
   font-family: Mermaid;
   font-size: 62.5%;
 }
@@ -232,6 +232,7 @@ h1 {
 h2 {
   letter-spacing: .05em;
   margin: 0;
+  font-family: twk-super-italic;
   font-size: 60px;
 }
 
@@ -239,7 +240,7 @@ h3 {
   letter-spacing: .05em;
   color: var(--beige);
   margin: 0;
-  padding: 1rem 0 2rem .8rem;
+  padding: 1rem 0 2rem 3rem;
   font-family: twk-super-italic;
   font-size: 50px;
 }
@@ -264,7 +265,7 @@ h3 span.random-letter, h1 span.random-letter, a.color span.random-letter {
 
 p {
   font-family: Oswald-xlight;
-  font-size: 1.8rem;
+  font-size: 3rem;
 }
 
 section {
@@ -278,7 +279,6 @@ section {
 }
 
 section.sticky {
-  margin-top: 100px;
   position: sticky;
 }
 
@@ -290,7 +290,6 @@ section.full-screen {
 }
 
 section.about {
-  padding-top: 2rem;
   display: flex;
 }
 
@@ -299,7 +298,7 @@ section.about .empty {
   border-radius: var(--border-radius);
   flex-basis: 37.5vw;
   min-width: 15vw;
-  margin: 1rem 1rem 0 0;
+  margin: 1rem 1rem 0;
   transition: flex-basis 1s cubic-bezier(0, .9, .4, .99);
 }
 
@@ -333,7 +332,7 @@ section.about article .description {
 
 section.service article {
   width: 100%;
-  margin: 2.5rem 1rem 1rem;
+  margin: 1.5rem 1rem 1rem;
   display: flex;
 }
 
