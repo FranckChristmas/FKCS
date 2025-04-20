@@ -166,6 +166,57 @@ nav ul li a:hover {
   }
 }
 
+.link {
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  height: 2rem;
+  font-family: twk-regular-italic;
+  text-decoration: none;
+  display: flex;
+  overflow: hidden;
+}
+
+.mask {
+  height: 1.8rem;
+  padding: 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.link-container {
+  transition: transform .4s;
+}
+
+.title {
+  font-size: 2rem;
+  line-height: 2rem;
+  transition: transform .4s;
+  display: block;
+}
+
+.link-title1 {
+  transform-origin: 100%;
+}
+
+.link-title2 {
+  transform-origin: 0;
+  transform: rotate(20deg);
+}
+
+.link:hover .link-container {
+  transform: translateY(-50%);
+}
+
+.link:hover .link-title1 {
+  transform: rotate(20deg);
+}
+
+.link:hover .link-title2 {
+  transform: rotate(0);
+}
+
 @font-face {
   font-family: GoboldRegular;
   src: url("gobold-regular.4776ecfc.otf") format("truetype");
