@@ -138,6 +138,15 @@ section.about .empty {
   min-width: 15vw;
 }
 
+section.about .empty2 {
+  flex-basis: 15vw;
+  background: var(--yellow);
+  border-radius: var(--border-radius);
+  transition: flex-basis 1s cubic-bezier(0, 0.9, 0.4, 0.99);
+  margin: 1rem 1rem 0rem 0rem;
+  min-width: 10vw;
+}
+
 section.about article {
   flex: 1;
   display: flex;

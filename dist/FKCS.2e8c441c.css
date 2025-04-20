@@ -336,6 +336,15 @@ section.about .empty {
   transition: flex-basis 1s cubic-bezier(0, .9, .4, .99);
 }
 
+section.about .empty2 {
+  background: var(--yellow);
+  border-radius: var(--border-radius);
+  flex-basis: 15vw;
+  min-width: 10vw;
+  margin: 1rem 1rem 0 0;
+  transition: flex-basis 1s cubic-bezier(0, .9, .4, .99);
+}
+
 section.about article {
   flex-direction: column;
   flex: 1;
