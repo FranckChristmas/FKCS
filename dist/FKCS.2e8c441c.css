@@ -252,8 +252,8 @@ html, body {
   color: #fff;
   background: #316682;
   margin: 0;
-  padding: 3rem 0 0;
-  font-family: Mermaid;
+  padding: 4rem 0 0;
+  font-family: twk-super-italic;
   font-size: 62.5%;
 }
 
@@ -292,14 +292,9 @@ h3 span.random-letter, h1 span.random-letter, a.color span.random-letter {
   display: inline;
 }
 
-@keyframes waveline {
-  to {
-    background-position: -150px;
-  }
-}
-
 p {
-  font-family: Oswald-xlight;
+  color: #fff;
+  font-family: twk-regular-italic;
   font-size: 3rem;
 }
 
@@ -309,7 +304,6 @@ section {
   padding: .5rem;
   display: flex;
   position: relative;
-  top: 1.4rem;
 }
 
 section.sticky {
@@ -370,6 +364,19 @@ section.about article .description {
   align-items: center;
   margin: 0 1rem 0 0;
   padding: 3.25vw;
+  display: flex;
+}
+
+section.skillset {
+  background: var(--lightgreen);
+  border-radius: var(--border-radius);
+  place-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 1rem 0;
+  padding: .5rem;
+  font-family: twk-super-italic;
+  font-size: 2rem;
   display: flex;
 }
 
