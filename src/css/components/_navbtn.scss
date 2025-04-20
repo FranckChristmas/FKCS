@@ -1,13 +1,14 @@
+/* part to animate the nab link btn */
+
 .link {
   font-family: "twk-regular-italic";
-  width: 20%;
   height: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   text-decoration: none;
-  color: white;
+  color: var(--beige);
 }
 
 .mask {
@@ -34,7 +35,7 @@
 
 .link-title2 {
   transform-origin: left center;
-  transform: rotate(20deg);
+  transform: rotate(50deg);
 }
 
 .link:hover .link-container {
@@ -42,7 +43,7 @@
 }
 
 .link:hover .link-title1 {
-  transform: rotate(20deg);
+  transform: rotate(50deg);
 }
 .link:hover .link-title2 {
   transform: rotate(0);

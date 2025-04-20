@@ -14,21 +14,12 @@ nav {
     height: 100%;
     margin: 0;
     padding: 3rem 0rem;
+    margin-left: 4.5rem;
 
     li {
       margin-left: 4.5rem;
       list-style: none;
 
-      a {
-        overflow: hidden;
-        position: relative;
-        display: inline-block;
-        color: rgb(228, 226, 195);
-        text-decoration: none;
-        font-family: "twk-regular-italic";
-        transition: all 0.1s ease-in-out;
-        font-size: 1.8rem;
-      }
       a:hover {
         transition: all 0.1s ease-in-out;
         color: #f19797;
