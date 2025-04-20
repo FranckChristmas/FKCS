@@ -55,25 +55,25 @@ makeSpans("h1, h3");
 
 // part that handle the color change of the letters on the nav links
 
-const colors = [
-  "var(--darkblue)",
-  "var(--lightblue)",
-  "var(--darkgreen)",
-  "var(--yellow)",
-];
+// const colors = [
+//   "var(--darkblue)",
+//   "var(--lightblue)",
+//   "var(--darkgreen)",
+//   "var(--yellow)",
+// ];
 
-document.querySelectorAll("a.color").forEach((link) => {
-  let timeout;
-  link.addEventListener("mouseover", () => {
-    timeout = setTimeout(() => {
-      const randomColor = colors[Math.floor(Math.random() * colors.length)];
-      link.style.color = randomColor;
-    }, 100);
-  });
-  link.addEventListener("mouseout", () => {
-    link.style.color = ""; // reset
-  });
-});
+// document.querySelectorAll("a.color").forEach((link) => {
+//   let timeout;
+//   link.addEventListener("mouseover", () => {
+//     timeout = setTimeout(() => {
+//       const randomColor = colors[Math.floor(Math.random() * colors.length)];
+//       link.style.color = randomColor;
+//     }, 100);
+//   });
+//   link.addEventListener("mouseout", () => {
+//     link.style.color = ""; // reset
+//   });
+// });
 
 // part contact button to ease the chevron animation
 
