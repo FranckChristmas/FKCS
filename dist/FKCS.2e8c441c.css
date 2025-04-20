@@ -284,7 +284,7 @@ section.sticky {
 section.full-screen {
   z-index: 3;
   height: 100vh;
-  margin-top: 0;
+  margin-top: 3rem;
   top: 0;
 }
 
@@ -321,7 +321,7 @@ section.about article .title {
 section.about article .description {
   background: var(--pink);
   border-radius: var(--border-radius);
-  color: #000;
+  color: var(--darkblue);
   flex: 1;
   align-items: center;
   margin: 0 1rem 0 0;
