@@ -52,9 +52,8 @@ body {
   padding: 0;
   background: #316682;
   color: white;
-  // font-family: "Syne", sans-serif;
-  padding-top: 3rem;
-  font-family: "Mermaid";
+  padding-top: 4rem;
+  font-family: "twk-super-italic";
 }
 
 h1 {
@@ -92,22 +91,16 @@ a.color {
   }
 }
 
-@keyframes waveline {
-  to {
-    background-position: -150px;
-  }
-}
-
 p {
-  font-family: "Oswald-xlight";
+  font-family: "twk-regular-italic";
   font-size: 3rem;
+  color: white;
 }
 
 section {
   position: relative;
   display: flex;
   width: 100%;
-  top: 1.4rem;
   z-index: 2;
   padding: 0.5rem;
 }
@@ -170,8 +163,21 @@ section.about article .description {
   border-radius: var(--border-radius);
   padding: 3.25vw;
   margin: 0rem 1rem 0rem 0rem;
-  // margin: 0rem 1rem;
   color: var(--darkblue);
+}
+
+section.skillset {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  background: var(--lightgreen);
+  border-radius: var(--border-radius);
+  margin: 1rem 0rem 1rem 0rem;
+  font-family: "twk-super-italic";
+  font-size: 2rem;
+  padding: 0.5rem;
+  width: 100%;
 }
 
 /* section contact */
