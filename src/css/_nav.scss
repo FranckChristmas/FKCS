@@ -74,4 +74,24 @@ nav {
     transform: rotate(0);
     color: beige;
   }
+
+  .link-title2.underline {
+    position: relative;
+  }
+  .link-title2.underline::after {
+    content: "";
+    position: absolute;
+    bottom: -0.5rem;
+    left: 0;
+    width: 100%;
+    height: 0.2rem;
+    background-color: beige;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.8s ease;
+  }
+
+  .link:hover .link-title2.underline::after {
+    transform: scaleX(1);
+  }
 }
