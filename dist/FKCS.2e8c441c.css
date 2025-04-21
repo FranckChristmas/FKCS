@@ -228,11 +228,6 @@ nav .link:hover .link-title2.underline:after {
 }
 
 @font-face {
-  font-family: Mermaid;
-  src: url("mermaid.ab8c5498.ttf") format("truetype");
-}
-
-@font-face {
   font-family: Oswald-light;
   src: url("oswald-light.359b0481.ttf") format("truetype");
 }
@@ -393,9 +388,9 @@ section.skillset {
   border-radius: var(--border-radius);
   place-content: center;
   align-items: center;
-  width: 100%;
-  margin: 1rem 0;
-  padding: .5rem;
+  width: calc(100% - 4rem);
+  margin: 2rem;
+  padding: 3rem;
   font-family: twk-super-italic;
   font-size: 2rem;
   display: flex;
