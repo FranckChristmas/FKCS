@@ -6,10 +6,6 @@
   src: url(../fonts/gobold-regular.otf) format("truetype");
 }
 @font-face {
-  font-family: "Mermaid";
-  src: url(../fonts/mermaid.ttf) format("truetype");
-}
-@font-face {
   font-family: "Oswald-light";
   src: url(../fonts/oswald-light.ttf) format("truetype");
 }
@@ -173,11 +169,11 @@ section.skillset {
   align-content: center;
   background: var(--lightgreen);
   border-radius: var(--border-radius);
-  margin: 1rem 0rem 1rem 0rem;
+  margin: 2rem;
   font-family: "twk-super-italic";
   font-size: 2rem;
-  padding: 0.5rem;
-  width: 100%;
+  padding: 3rem;
+  width: calc(100% - 4rem);
 }
 
 /* section contact */
