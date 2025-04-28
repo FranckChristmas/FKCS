@@ -31,11 +31,10 @@ function makeSpans(selector) {
     element.innerHTML = spans;
   });
   const colors = [
-    "var(--othergreen)",
-    "var(--othergrey)",
+    "var(--pink)",
     "var(--darkblue)",
     "var(--lightblue)",
-    "var(--darkgreen)",
+    "var(--lightgreen)",
     "var(--yellow)",
   ];
 
