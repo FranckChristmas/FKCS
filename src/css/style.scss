@@ -124,8 +124,19 @@ section.about {
   display: flex;
 }
 
-section.about .empty-container {
+section.about .wrapper-hello-name {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--border-radius);
+  margin: 1rem;
+  padding: var(--gutter);
+}
+
+section.about .hello {
+  display: flex;
+  flex-basis: 20vw;
+  background: var(--brownred);
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -133,28 +144,8 @@ section.about .empty-container {
   transition: flex-basis 1s cubic-bezier(0, 0.9, 0.4, 0.99);
 }
 
-section.about .empty {
+section.about .francois {
   flex-basis: 37.5vw;
-  background: var(--brownred);
-  border-radius: var(--border-radius);
-  transition: flex-basis 1s cubic-bezier(0, 0.9, 0.4, 0.99);
-  margin: 1rem 1rem 0rem 0rem;
-  min-width: 20vw;
-}
-
-section.about .empty2 {
-  flex-basis: 37.5vw;
-  flex-direction: column;
-  background: var(--brownred);
-  border-radius: var(--border-radius);
-  transition: flex-basis 1s cubic-bezier(0, 0.9, 0.4, 0.99);
-  margin: 1rem 1rem 0rem 0rem;
-  min-width: 20vw;
-}
-
-section.about .empty3 {
-  flex-basis: 20vw;
-  flex-direction: column;
   background: var(--yellow);
   border-radius: var(--border-radius);
   transition: flex-basis 1s cubic-bezier(0, 0.9, 0.4, 0.99);
@@ -162,32 +153,42 @@ section.about .empty3 {
   min-width: 20vw;
 }
 
-section.about article {
-  flex: 1;
+section.about .wrapper-kickass-products {
   display: flex;
+  margin: 0px;
+}
+
+section.about .ideas {
+  flex-basis: 37.5vw;
   flex-direction: column;
-}
-section.about article .title {
-  flex: 1;
-  min-width: 20vw;
-  min-height: 10vh;
-  display: flex;
-  align-items: flex-end;
-  background: var(--beige);
+  background: var(--brownred);
   border-radius: var(--border-radius);
-  padding: var(--gutter);
-  margin: 1rem 1rem 1rem 0rem;
   transition: flex-basis 1s cubic-bezier(0, 0.9, 0.4, 0.99);
+  margin: 1rem 1rem 0rem 0rem;
+  min-width: 20vw;
+  padding: 2rem;
 }
-section.about article .description {
-  flex: 1;
-  display: flex;
-  align-items: center;
+
+section.about .into {
+  flex-basis: 20vw;
+  flex-direction: column;
   background: var(--pink);
   border-radius: var(--border-radius);
-  padding: var(--gutter);
-  // margin: 0rem 1rem 0rem 0rem;
-  color: var(--darkblue);
+  transition: flex-basis 1s cubic-bezier(0, 0.9, 0.4, 0.99);
+  margin: 1rem 1rem 0rem 0rem;
+  min-width: 20vw;
+  padding: 2rem;
+}
+
+section.about .kickass {
+  flex-basis: 20vw;
+  flex-direction: column;
+  background: var(--lightgreen);
+  border-radius: var(--border-radius);
+  transition: flex-basis 1s cubic-bezier(0, 0.9, 0.4, 0.99);
+  margin: 1rem 1rem 0rem 0rem;
+  min-width: 20vw;
+  padding: 2rem;
 }
 
 section.skillset {
