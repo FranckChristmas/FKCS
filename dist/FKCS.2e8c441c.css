@@ -247,6 +247,11 @@ nav .link:hover .link-title2.underline:after {
   src: url("twkeverett-regular-italic.3ed5b3dc.otf") format("truetype");
 }
 
+@font-face {
+  font-family: twk-regular;
+  src: url("twkeverett-regular.c3f83373.otf") format("truetype");
+}
+
 * {
   box-sizing: border-box;
 }
@@ -310,14 +315,13 @@ h3 span.random-letter, h1 span.random-letter, a.color span.random-letter {
 
 p {
   color: #fff;
-  font-family: twk-regular-italic;
+  font-family: twk-regular;
   font-size: 3rem;
 }
 
 section {
   z-index: 2;
-  width: 100%;
-  padding: .5rem;
+  margin: 2rem;
   display: flex;
   position: relative;
 }
@@ -337,20 +341,40 @@ section.about {
   display: flex;
 }
 
+section.about .empty-container {
+  border-radius: var(--border-radius);
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: flex-basis 1s cubic-bezier(0, .9, .4, .99);
+  display: flex;
+}
+
 section.about .empty {
   background: var(--grey);
   border-radius: var(--border-radius);
   flex-basis: 37.5vw;
-  min-width: 15vw;
-  margin: 1rem 1rem 0;
+  min-width: 20vw;
+  margin: 1rem 1rem 0 0;
   transition: flex-basis 1s cubic-bezier(0, .9, .4, .99);
 }
 
 section.about .empty2 {
+  background: var(--grey);
+  border-radius: var(--border-radius);
+  flex-direction: column;
+  flex-basis: 37.5vw;
+  min-width: 20vw;
+  margin: 1rem 1rem 0 0;
+  transition: flex-basis 1s cubic-bezier(0, .9, .4, .99);
+}
+
+section.about .empty3 {
   background: var(--yellow);
   border-radius: var(--border-radius);
-  flex-basis: 15vw;
-  min-width: 10vw;
+  flex-direction: column;
+  flex-basis: 20vw;
+  min-width: 20vw;
   margin: 1rem 1rem 0 0;
   transition: flex-basis 1s cubic-bezier(0, .9, .4, .99);
 }
@@ -364,6 +388,8 @@ section.about article {
 section.about article .title {
   background: var(--beige);
   border-radius: var(--border-radius);
+  min-width: 20vw;
+  min-height: 10vh;
   padding: var(--gutter);
   flex: 1;
   align-items: flex-end;
@@ -375,22 +401,21 @@ section.about article .title {
 section.about article .description {
   background: var(--pink);
   border-radius: var(--border-radius);
+  padding: var(--gutter);
   color: var(--darkblue);
   flex: 1;
   align-items: center;
-  margin: 0 1rem 0 0;
-  padding: 3.25vw;
   display: flex;
 }
 
 section.skillset {
   background: var(--lightgreen);
   border-radius: var(--border-radius);
+  padding: var(--gutter);
   place-content: center;
   align-items: center;
   width: calc(100% - 4rem);
   margin: 2rem;
-  padding: 3rem;
   font-family: twk-super-italic;
   font-size: 2rem;
   display: flex;
