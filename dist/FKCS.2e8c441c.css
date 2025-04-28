@@ -261,7 +261,7 @@ html, body {
   --beige: #ffcdb2;
   --green: #ffb4a2;
   --pink: #e5989b;
-  --grey: #b5828c;
+  --brownred: #b5828c;
   --darkblue: #001c2c;
   --othergreen: #598659;
   --othergrey: #a1a1a1;
@@ -351,7 +351,7 @@ section.about .empty-container {
 }
 
 section.about .empty {
-  background: var(--grey);
+  background: var(--brownred);
   border-radius: var(--border-radius);
   flex-basis: 37.5vw;
   min-width: 20vw;
@@ -360,7 +360,7 @@ section.about .empty {
 }
 
 section.about .empty2 {
-  background: var(--grey);
+  background: var(--brownred);
   border-radius: var(--border-radius);
   flex-direction: column;
   flex-basis: 37.5vw;
