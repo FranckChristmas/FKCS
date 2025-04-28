@@ -341,17 +341,28 @@ section.about {
   display: flex;
 }
 
-section.about .empty-container {
+section.about .wrapper-hello-name {
+  border-radius: var(--border-radius);
+  padding: var(--gutter);
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  display: flex;
+}
+
+section.about .hello {
+  background: var(--brownred);
   border-radius: var(--border-radius);
   flex-direction: column;
+  flex-basis: 20vw;
   justify-content: center;
   align-items: center;
   transition: flex-basis 1s cubic-bezier(0, .9, .4, .99);
   display: flex;
 }
 
-section.about .empty {
-  background: var(--brownred);
+section.about .francois {
+  background: var(--yellow);
   border-radius: var(--border-radius);
   flex-basis: 37.5vw;
   min-width: 20vw;
@@ -359,53 +370,42 @@ section.about .empty {
   transition: flex-basis 1s cubic-bezier(0, .9, .4, .99);
 }
 
-section.about .empty2 {
+section.about .wrapper-kickass-products {
+  margin: 0;
+  display: flex;
+}
+
+section.about .ideas {
   background: var(--brownred);
   border-radius: var(--border-radius);
   flex-direction: column;
   flex-basis: 37.5vw;
   min-width: 20vw;
   margin: 1rem 1rem 0 0;
+  padding: 2rem;
   transition: flex-basis 1s cubic-bezier(0, .9, .4, .99);
 }
 
-section.about .empty3 {
-  background: var(--yellow);
+section.about .into {
+  background: var(--pink);
   border-radius: var(--border-radius);
   flex-direction: column;
   flex-basis: 20vw;
   min-width: 20vw;
   margin: 1rem 1rem 0 0;
+  padding: 2rem;
   transition: flex-basis 1s cubic-bezier(0, .9, .4, .99);
 }
 
-section.about article {
+section.about .kickass {
+  background: var(--lightgreen);
+  border-radius: var(--border-radius);
   flex-direction: column;
-  flex: 1;
-  display: flex;
-}
-
-section.about article .title {
-  background: var(--beige);
-  border-radius: var(--border-radius);
+  flex-basis: 20vw;
   min-width: 20vw;
-  min-height: 10vh;
-  padding: var(--gutter);
-  flex: 1;
-  align-items: flex-end;
-  margin: 1rem 1rem 1rem 0;
+  margin: 1rem 1rem 0 0;
+  padding: 2rem;
   transition: flex-basis 1s cubic-bezier(0, .9, .4, .99);
-  display: flex;
-}
-
-section.about article .description {
-  background: var(--pink);
-  border-radius: var(--border-radius);
-  padding: var(--gutter);
-  color: var(--darkblue);
-  flex: 1;
-  align-items: center;
-  display: flex;
 }
 
 section.skillset {
