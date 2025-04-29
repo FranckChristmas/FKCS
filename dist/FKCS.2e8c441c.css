@@ -277,7 +277,6 @@ html, body {
   --lightgreen: #37e7a6;
   --lightblue: #90e0ef;
   --darkgreen: #0077b6;
-  --gutter: 3.125vw 6.25vw;
   color: #fff;
   background: #316682;
   margin: 0;
@@ -352,44 +351,48 @@ section.about {
 }
 
 .about-wrapper {
+  max-width: var(--grid-width);
   flex-direction: column;
-  gap: 1rem;
+  width: 100%;
   margin: 0 auto;
   display: flex;
 }
 
 .row {
+  gap: var(--gutter);
   height: 40rem;
+  margin: 1.2rem 0;
   display: flex;
 }
 
 .row-top .hello {
   background: var(--brownred);
-  width: 626px;
+  flex-basis: 62.6rem;
 }
 
 .row-top .francois {
   background: var(--yellow);
-  width: 886px;
+  flex-basis: 88.6rem;
 }
 
 .row-bottom .ideas {
   background: var(--beige);
-  width: 496px;
+  flex-basis: 49.6rem;
 }
 
 .row-bottom .into {
   background: var(--pink);
-  width: 366px;
+  flex-basis: 36.6rem;
 }
 
 .row-bottom .kickass {
   background: var(--lightgreen);
-  width: 626px;
+  flex-basis: 62.6rem;
 }
 
 .block {
   border-radius: 7rem;
+  flex: none;
   justify-content: center;
   align-items: center;
   padding: 1rem;
