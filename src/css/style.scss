@@ -182,8 +182,14 @@ section.about {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem;
-  transition: all 0.4s ease;
+  transition: flex-basis 0.4s ease-in-out;
+}
+
+.block,
+.block span,
+.block p {
+  transition: transform 0.3s ease-in-out;
+  will-change: transform;
 }
 
 .hello-text,
