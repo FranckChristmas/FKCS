@@ -395,9 +395,13 @@ section.about {
   flex: none;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
-  transition: all .4s;
+  transition: flex-basis .4s ease-in-out;
   display: flex;
+}
+
+.block, .block span, .block p {
+  will-change: transform;
+  transition: transform .3s ease-in-out;
 }
 
 .hello-text, .francois-text {

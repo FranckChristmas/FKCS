@@ -80,45 +80,56 @@ text.split("").forEach((char) => {
 // part to handle the animation on the about section
 
 const aboutSection = document.querySelector("#about");
-const allDivs = aboutSection.querySelectorAll(
-  ".hello, .francois, .ideas, .into, .kickass"
-);
+const allBlocks = aboutSection.querySelectorAll(".block");
 
-// Stocker les valeurs initiales de flex-basis en vw
-const originalBases = new Map();
+// to store the original flex-basis and font-size
+const originalBases = {};
+const originalFontSizes = {};
 
-allDivs.forEach((div) => {
-  const computedStyle = getComputedStyle(div);
-  const basisInPx = parseFloat(computedStyle.flexBasis);
-  const screenWidth = window.innerWidth;
-  const basisInVw = (basisInPx / screenWidth) * 100;
-  originalBases.set(div, basisInVw);
+allBlocks.forEach((block) => {
+  originalBases[block.className] = block.offsetWidth / 10; // convert px to rem
+
+  const text = block.querySelector("span, p");
+  if (text) {
+    const computedSize = parseFloat(getComputedStyle(text).fontSize) / 10; // convert px to rem
+    originalFontSizes[block.className] = computedSize;
+  }
 });
 
 aboutSection.addEventListener("mousemove", (e) => {
   const { clientX, clientY } = e;
 
-  allDivs.forEach((div) => {
-    const rect = div.getBoundingClientRect();
-    const divCenterX = rect.left + rect.width / 2;
-    const divCenterY = rect.top + rect.height / 2;
+  allBlocks.forEach((block) => {
+    const rect = block.getBoundingClientRect();
+    const centerX = rect.left + rect.width / 2;
+    const centerY = rect.top + rect.height / 2;
 
-    const dx = clientX - divCenterX;
-    const dy = clientY - divCenterY;
+    const dx = clientX - centerX;
+    const dy = clientY - centerY;
     const distance = Math.sqrt(dx * dx + dy * dy);
 
-    const influenceRadius = 1000;
-    const base = originalBases.get(div);
-    const grow = Math.max(0, 1 - distance / influenceRadius);
-    const newBasis = base + grow * 15;
+    const grow = Math.max(0, 1 - distance / 500);
+    const extraWidth = grow * 100;
+    const newBasis = originalBases[block.className] + extraWidth;
+    block.style.flexBasis = `${newBasis}rem`;
 
-    div.style.flexBasis = `${newBasis}vw`;
+    const text = block.querySelector("span, p");
+    if (text) {
+      const baseSize = originalFontSizes[block.className] || 24; // fallback
+      const newFontSize = baseSize + grow * 10;
+      text.style.fontSize = `${newFontSize}rem`;
+    }
   });
 });
 
 aboutSection.addEventListener("mouseleave", () => {
-  allDivs.forEach((div) => {
-    const base = originalBases.get(div);
-    div.style.flexBasis = `${base}vw`;
+  allBlocks.forEach((block) => {
+    block.style.flexBasis = `${originalBases[block.className]}rem`;
+
+    const text = block.querySelector("span, p");
+    if (text) {
+      const baseSize = originalFontSizes[block.className];
+      text.style.fontSize = `${baseSize}rem`;
+    }
   });
 });
