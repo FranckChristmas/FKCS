@@ -1,21 +1,3 @@
-// part to control the mouse movement attached to the different sections
-
-let emptyElement = document.querySelector(".about .empty");
-let titleElement = document.querySelector(".about .title");
-
-let figureElements = document.querySelectorAll(".service figure");
-
-window.addEventListener("mousemove", handleMouseMove);
-
-function handleMouseMove(event) {
-  emptyElement.style.flexBasis = event.clientX + "px";
-  titleElement.style.flexBasis = event.clientY / 2 + "px";
-
-  figureElements.forEach(function (element) {
-    element.style.flexBasis = window.innerWidth - event.clientX + "px";
-  });
-}
-
 // part that handle the color change of the letters in the h1 and h3 elements
 
 function makeSpans(selector) {
@@ -51,28 +33,6 @@ function makeSpans(selector) {
   });
 }
 makeSpans("h1, h3");
-
-// part that handle the color change of the letters on the nav links
-
-// const colors = [
-//   "var(--darkblue)",
-//   "var(--lightblue)",
-//   "var(--darkgreen)",
-//   "var(--yellow)",
-// ];
-
-// document.querySelectorAll("a.color").forEach((link) => {
-//   let timeout;
-//   link.addEventListener("mouseover", () => {
-//     timeout = setTimeout(() => {
-//       const randomColor = colors[Math.floor(Math.random() * colors.length)];
-//       link.style.color = randomColor;
-//     }, 100);
-//   });
-//   link.addEventListener("mouseout", () => {
-//     link.style.color = ""; // reset
-//   });
-// });
 
 // part contact button to ease the chevron animation
 
@@ -114,5 +74,51 @@ text.split("").forEach((char) => {
   // remove class after animation
   span.addEventListener("animationend", () => {
     span.classList.remove("animate");
+  });
+});
+
+// part to handle the animation on the about section
+
+const aboutSection = document.querySelector("#about");
+const allDivs = aboutSection.querySelectorAll(
+  ".hello, .francois, .ideas, .into, .kickass"
+);
+
+// Stocker les valeurs initiales de flex-basis en vw
+const originalBases = new Map();
+
+allDivs.forEach((div) => {
+  const computedStyle = getComputedStyle(div);
+  const basisInPx = parseFloat(computedStyle.flexBasis);
+  const screenWidth = window.innerWidth;
+  const basisInVw = (basisInPx / screenWidth) * 100;
+  originalBases.set(div, basisInVw);
+});
+
+aboutSection.addEventListener("mousemove", (e) => {
+  const { clientX, clientY } = e;
+
+  allDivs.forEach((div) => {
+    const rect = div.getBoundingClientRect();
+    const divCenterX = rect.left + rect.width / 2;
+    const divCenterY = rect.top + rect.height / 2;
+
+    const dx = clientX - divCenterX;
+    const dy = clientY - divCenterY;
+    const distance = Math.sqrt(dx * dx + dy * dy);
+
+    const influenceRadius = 1000;
+    const base = originalBases.get(div);
+    const grow = Math.max(0, 1 - distance / influenceRadius);
+    const newBasis = base + grow * 15;
+
+    div.style.flexBasis = `${newBasis}vw`;
+  });
+});
+
+aboutSection.addEventListener("mouseleave", () => {
+  allDivs.forEach((div) => {
+    const base = originalBases.get(div);
+    div.style.flexBasis = `${base}vw`;
   });
 });
