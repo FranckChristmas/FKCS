@@ -36,10 +36,10 @@
 :root {
   --grid-width: 1728px;
   --columns: 12;
-  --gutter: 24px;
-  --margin: 96px;
+  --gutter: 2.4rem;
+  --margin: 9rem;
   --columns-width: calc(
-    (var(--grid-width) - var(--margin) * (var(--columns) - 1)) / var(--columns)
+    (var(--grid-width) - 2 * var(--margin) - 11 * var(--gutter)) / 12
   );
 }
 
@@ -132,7 +132,6 @@ section.full-screen {
 section.about {
   display: flex;
   justify-content: center;
-  background-color: #316682;
   padding: 1rem 0;
 }
 
@@ -143,74 +142,72 @@ section.about {
   gap: 1rem;
 }
 
-section.about .wrapper-hello-name {
+.row {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: var(--border-radius);
-  margin: 1rem;
+  // gap: var(--gutter);
+  // margin: 0 var(--margin);
+  height: 40rem;
 }
 
-section.about .hello {
-  display: flex;
-  flex-basis: 20vw;
+.row-top .hello {
+  width: 626px;
   background: var(--brownred);
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: var(--border-radius);
-  transition: flex-basis 1s cubic-bezier(0, 0.9, 0.4, 0.99);
-  padding: var(--gutter);
-  margin: 1rem;
 }
 
-section.about .francois {
-  flex-basis: 30vw;
+.row-top .francois {
+  width: 886px;
   background: var(--yellow);
-  border-radius: var(--border-radius);
-  transition: flex-basis 1s cubic-bezier(0, 0.9, 0.4, 0.99);
-  min-width: 15vw;
-  padding: var(--gutter);
-  margin: 1rem;
 }
 
-section.about .wrapper-kickass-products {
-  display: flex;
-  margin: 0px;
+.row-bottom .ideas {
+  width: 496px;
+  background: var(--beige);
 }
 
-section.about .ideas {
-  flex-basis: 37.5vw;
-  flex-direction: column;
-  background: var(--brownred);
-  border-radius: var(--border-radius);
-  transition: flex-basis 1s cubic-bezier(0, 0.9, 0.4, 0.99);
-  min-width: 20vw;
-  padding: var(--gutter);
-  margin: 1rem;
-}
-
-section.about .into {
-  flex-basis: 20vw;
-  flex-direction: column;
+.row-bottom .into {
+  width: 366px;
   background: var(--pink);
-  border-radius: var(--border-radius);
-  transition: flex-basis 1s cubic-bezier(0, 0.9, 0.4, 0.99);
-  min-width: 20vw;
-  padding: var(--gutter);
-  margin: 1rem;
 }
 
-section.about .kickass {
-  flex-basis: 20vw;
-  flex-direction: column;
+.row-bottom .kickass {
+  width: 626px;
   background: var(--lightgreen);
-  border-radius: var(--border-radius);
-  transition: flex-basis 1s cubic-bezier(0, 0.9, 0.4, 0.99);
-  min-width: 20vw;
-  padding: var(--gutter);
-  margin: 1rem;
 }
+
+.block {
+  border-radius: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  transition: all 0.4s ease;
+}
+
+.hello-text,
+.francois-text {
+  font-size: 7rem;
+  font-family: "twk-super-italic";
+  margin: 0;
+  color: white;
+}
+
+p {
+  font-family: "twk-regular";
+  font-size: 3rem;
+  margin: 0;
+  color: white;
+}
+
+// h1 for SEO
+.visually-hidden {
+  position: absolute;
+  left: -9999rem;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+/* -------------------------- section skillset -------------------------*/
 
 section.skillset {
   display: flex;
@@ -226,7 +223,7 @@ section.skillset {
   width: calc(100% - 4rem);
 }
 
-/* section contact */
+/* -------------------------- section contact -------------------------*/
 section.contact {
   align-items: center;
   justify-content: center;
