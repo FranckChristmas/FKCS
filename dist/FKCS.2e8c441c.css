@@ -256,6 +256,14 @@ nav .link:hover .link-title2.underline:after {
   box-sizing: border-box;
 }
 
+:root {
+  --grid-width: 1728px;
+  --columns: 12;
+  --gutter: 24px;
+  --margin: 96px;
+  --columns-width: calc((var(--grid-width)  - var(--margin) * (var(--columns)  - 1)) / var(--columns));
+}
+
 html, body {
   --border-radius: 10rem;
   --beige: #ffcdb2;
@@ -338,12 +346,21 @@ section.full-screen {
 }
 
 section.about {
+  background-color: #316682;
+  justify-content: center;
+  padding: 1rem 0;
+  display: flex;
+}
+
+.about-wrapper {
+  flex-direction: column;
+  gap: 1rem;
+  margin: 0 auto;
   display: flex;
 }
 
 section.about .wrapper-hello-name {
   border-radius: var(--border-radius);
-  padding: var(--gutter);
   justify-content: center;
   align-items: center;
   margin: 1rem;
@@ -353,10 +370,12 @@ section.about .wrapper-hello-name {
 section.about .hello {
   background: var(--brownred);
   border-radius: var(--border-radius);
+  padding: var(--gutter);
   flex-direction: column;
   flex-basis: 20vw;
   justify-content: center;
   align-items: center;
+  margin: 1rem;
   transition: flex-basis 1s cubic-bezier(0, .9, .4, .99);
   display: flex;
 }
@@ -364,9 +383,10 @@ section.about .hello {
 section.about .francois {
   background: var(--yellow);
   border-radius: var(--border-radius);
-  flex-basis: 37.5vw;
-  min-width: 20vw;
-  margin: 1rem 1rem 0 0;
+  min-width: 15vw;
+  padding: var(--gutter);
+  flex-basis: 30vw;
+  margin: 1rem;
   transition: flex-basis 1s cubic-bezier(0, .9, .4, .99);
 }
 
@@ -378,33 +398,33 @@ section.about .wrapper-kickass-products {
 section.about .ideas {
   background: var(--brownred);
   border-radius: var(--border-radius);
+  min-width: 20vw;
+  padding: var(--gutter);
   flex-direction: column;
   flex-basis: 37.5vw;
-  min-width: 20vw;
-  margin: 1rem 1rem 0 0;
-  padding: 2rem;
+  margin: 1rem;
   transition: flex-basis 1s cubic-bezier(0, .9, .4, .99);
 }
 
 section.about .into {
   background: var(--pink);
   border-radius: var(--border-radius);
+  min-width: 20vw;
+  padding: var(--gutter);
   flex-direction: column;
   flex-basis: 20vw;
-  min-width: 20vw;
-  margin: 1rem 1rem 0 0;
-  padding: 2rem;
+  margin: 1rem;
   transition: flex-basis 1s cubic-bezier(0, .9, .4, .99);
 }
 
 section.about .kickass {
   background: var(--lightgreen);
   border-radius: var(--border-radius);
+  min-width: 20vw;
+  padding: var(--gutter);
   flex-direction: column;
   flex-basis: 20vw;
-  min-width: 20vw;
-  margin: 1rem 1rem 0 0;
-  padding: 2rem;
+  margin: 1rem;
   transition: flex-basis 1s cubic-bezier(0, .9, .4, .99);
 }
 
