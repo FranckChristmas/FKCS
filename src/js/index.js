@@ -32,7 +32,7 @@ function makeSpans(selector) {
     });
   });
 }
-makeSpans("h1, h3");
+makeSpans("h1, h3, .hello-text, .francois-text");
 
 // part contact button to ease the chevron animation
 
@@ -55,7 +55,7 @@ button.addEventListener("mouseleave", () => {
   svg.addEventListener("transitionend", handleTransitionEnd);
 });
 
-//part animation of the of the text button
+//part animation of the text contact button
 
 const buttonText = document.querySelector(".button-text");
 const text = buttonText.textContent;
@@ -78,58 +78,71 @@ text.split("").forEach((char) => {
 });
 
 // part to handle the animation on the about section
-
 const aboutSection = document.querySelector("#about");
 const allBlocks = aboutSection.querySelectorAll(".block");
 
-// to store the original flex-basis and font-size
 const originalBases = {};
 const originalFontSizes = {};
 
-allBlocks.forEach((block) => {
-  originalBases[block.className] = block.offsetWidth / 10; // convert px to rem
+// Un identifiant unique par block
+allBlocks.forEach((block, index) => {
+  const key = `block-${index}`;
+  block.dataset.key = key;
+
+  const remBase = parseFloat(
+    getComputedStyle(document.documentElement).fontSize
+  );
+  const basis = getComputedStyle(block).flexBasis;
+  originalBases[key] = parseFloat(basis) / remBase;
 
   const text = block.querySelector("span, p");
   if (text) {
-    const computedSize = parseFloat(getComputedStyle(text).fontSize) / 10; // convert px to rem
-    originalFontSizes[block.className] = computedSize;
+    const computedSize = parseFloat(getComputedStyle(text).fontSize) / 10;
+    originalFontSizes[key] = computedSize;
   }
 });
 
+let animationFrame;
+
 aboutSection.addEventListener("mousemove", (e) => {
-  const { clientX, clientY } = e;
+  if (animationFrame) cancelAnimationFrame(animationFrame);
 
-  allBlocks.forEach((block) => {
-    const rect = block.getBoundingClientRect();
-    const centerX = rect.left + rect.width / 2;
-    const centerY = rect.top + rect.height / 2;
+  animationFrame = requestAnimationFrame(() => {
+    const { clientX, clientY } = e;
 
-    const dx = clientX - centerX;
-    const dy = clientY - centerY;
-    const distance = Math.sqrt(dx * dx + dy * dy);
+    allBlocks.forEach((block) => {
+      const rect = block.getBoundingClientRect();
+      const centerX = rect.left + rect.width / 2;
+      const centerY = rect.top + rect.height / 2;
 
-    const grow = Math.max(0, 1 - distance / 500);
-    const extraWidth = grow * 100;
-    const newBasis = originalBases[block.className] + extraWidth;
-    block.style.flexBasis = `${newBasis}rem`;
+      const dx = clientX - centerX;
+      const dy = clientY - centerY;
+      const distance = Math.sqrt(dx * dx + dy * dy);
 
-    const text = block.querySelector("span, p");
-    if (text) {
-      const baseSize = originalFontSizes[block.className] || 24; // fallback
-      const newFontSize = baseSize + grow * 10;
-      text.style.fontSize = `${newFontSize}rem`;
-    }
+      const grow = Math.max(0, 1 - distance / 500);
+      const extraWidth = grow * 10; // ajustable
+      const key = block.dataset.key;
+      const newBasis = originalBases[key] + extraWidth;
+      block.style.flexBasis = `${newBasis}rem`;
+
+      const text = block.querySelector("span, p");
+      if (text) {
+        const baseSize = originalFontSizes[key] || 3;
+        const newFontSize = baseSize + grow * 1.5; // ajustable
+        text.style.fontSize = `${newFontSize}rem`;
+      }
+    });
   });
 });
 
 aboutSection.addEventListener("mouseleave", () => {
   allBlocks.forEach((block) => {
-    block.style.flexBasis = `${originalBases[block.className]}rem`;
+    const key = block.dataset.key;
+    block.style.flexBasis = `${originalBases[key]}rem`;
 
     const text = block.querySelector("span, p");
     if (text) {
-      const baseSize = originalFontSizes[block.className];
-      text.style.fontSize = `${baseSize}rem`;
+      text.style.fontSize = `${originalFontSizes[key]}rem`;
     }
   });
 });
