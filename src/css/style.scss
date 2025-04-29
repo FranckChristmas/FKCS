@@ -90,7 +90,8 @@ h3 {
 //allow to animate the title text
 h3,
 h1,
-a.color {
+a.color,
+span {
   position: relative;
   display: inline-block;
   padding-bottom: 1rem;
@@ -110,7 +111,7 @@ p {
 section {
   position: relative;
   display: flex;
-  // width: 100%;
+  width: 100%;
   z-index: 2;
   margin: 2rem;
 }
@@ -135,8 +136,7 @@ section.about {
 }
 
 .about-wrapper {
-  max-width: var(--grid-width);
-  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -150,27 +150,32 @@ section.about {
 }
 
 .row-top .hello {
-  flex-basis: 62.6rem;
+  flex: 4;
+  // flex-basis: 62.6rem;
   background: var(--brownred);
 }
 
 .row-top .francois {
-  flex-basis: 88.6rem;
+  flex: 6;
+  // flex-basis: 88.6rem;
   background: var(--yellow);
 }
 
 .row-bottom .ideas {
-  flex-basis: 49.6rem;
+  flex: 3;
+  // flex-basis: 49.6rem;
   background: var(--beige);
 }
 
 .row-bottom .into {
-  flex-basis: 36.6rem;
+  flex: 1;
+  // flex-basis: 36.6rem;
   background: var(--pink);
 }
 
 .row-bottom .kickass {
-  flex-basis: 62.6rem;
+  flex: 6;
+  // flex-basis: 62.6rem;
   background: var(--lightgreen);
 }
 
