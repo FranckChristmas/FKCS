@@ -112,8 +112,6 @@ section {
   position: relative;
   display: flex;
   width: 100%;
-  z-index: 2;
-  margin: 2rem;
 }
 
 section.sticky {
@@ -139,12 +137,13 @@ section.about {
   display: flex;
   flex-direction: column;
   width: 100%;
+  margin: 0 4rem;
 }
 
 .row {
   display: flex;
   gap: var(--gutter);
-  margin: 1.2rem 0; // allow to put a margin between the 2 row at 0.6 rem and the margin of the section as var(--margin)
+  margin: 0.6rem 0; // allow to put a margin between the 2 row at 0.6 rem and the margin of the section as var(--margin)
   height: 20rem;
   width: 100%;
 }
@@ -223,18 +222,24 @@ section.about {
 
 /* -------------------------- section skillset -------------------------*/
 
-section.skillset {
+.skillset-wrapper {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 4rem;
+}
+
+.skillset-title {
   display: flex;
   align-items: center;
   justify-content: center;
   align-content: center;
   background: var(--lightgreen);
   border-radius: var(--border-radius);
-  margin: 2rem;
   font-family: "twk-super-italic";
   font-size: 2rem;
   padding: 8rem;
-  width: calc(100% - 4rem);
 }
 
 /* -------------------------- section contact -------------------------*/
