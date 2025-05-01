@@ -221,6 +221,11 @@ section.about {
 }
 
 /* -------------------------- section skillset -------------------------*/
+section.skillset {
+  display: flex;
+  justify-content: center;
+  // margin: 0 4rem;
+}
 
 .skillset-wrapper {
   max-width: 100%;

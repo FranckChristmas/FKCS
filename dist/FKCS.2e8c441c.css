@@ -425,6 +425,11 @@ section.about {
   overflow: hidden;
 }
 
+section.skillset {
+  justify-content: center;
+  display: flex;
+}
+
 .skillset-wrapper {
   flex-direction: column;
   width: 100%;
