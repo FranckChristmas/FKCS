@@ -445,7 +445,7 @@ section.skillset {
 }
 
 .skillset-title {
-  background: var(--lightgreen);
+  background: var(--yellow);
   border-radius: var(--border-radius);
   place-content: center;
   align-items: center;
@@ -469,7 +469,7 @@ section.highlights {
 }
 
 .highlights-title {
-  background: var(--lightgreen);
+  background: var(--pink);
   border-radius: var(--border-radius);
   place-content: center;
   align-items: center;
