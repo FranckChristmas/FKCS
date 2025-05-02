@@ -51,6 +51,7 @@ body {
   --pink: #e5989b;
   --brownred: #b5828c;
   --darkblue: #001c2c;
+  --darkblue2: #316682;
   --othergreen: #598659;
   --othergrey: #a1a1a1;
   --yellow: #f9c74f;
@@ -60,9 +61,9 @@ body {
   font-size: 62.5%; // allow to have the equivalence as 1rem = 10px
   margin: 0;
   padding: 0;
-  background: #316682;
+  background: var(--darkblue2);
   color: white;
-  padding-top: 4rem;
+  padding-top: 6rem;
   font-family: "twk-super-italic";
 }
 
@@ -122,12 +123,13 @@ section.full-screen {
   height: 100vh;
   top: 0;
   margin-top: 3rem;
-  z-index: 3;
+  z-index: 2;
 }
 
 /* -------------------------- section about -------------------------*/
 
 section.about {
+  // margin-top: 4rem;
   display: flex;
   justify-content: center;
 }
@@ -224,7 +226,7 @@ section.about {
 section.skillset {
   display: flex;
   justify-content: center;
-  // margin: 0 4rem;
+  margin-bottom: 0.6rem; // allow to put a margin between the 2 row at 0.6 rem and the margin of the section as var(--margin)
 }
 
 .skillset-wrapper {
@@ -236,6 +238,33 @@ section.skillset {
 }
 
 .skillset-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  background: var(--lightgreen);
+  border-radius: var(--border-radius);
+  font-family: "twk-super-italic";
+  font-size: 2rem;
+  padding: 8rem;
+}
+
+/* -------------------------- section Highlights -------------------------*/
+section.highlights {
+  display: flex;
+  justify-content: center;
+  // margin: 0 4rem;
+}
+
+.highlights-wrapper {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 4rem;
+}
+
+.highlights-title {
   display: flex;
   align-items: center;
   justify-content: center;
