@@ -24,30 +24,31 @@ nav ul li {
 }
 
 nav .link {
-  height: 2rem;
+  height: 2.5rem;
   color: var(--beige);
   justify-content: center;
   align-items: center;
   font-family: twk-regular-italic;
   text-decoration: none;
   display: flex;
-  overflow: hidden;
 }
 
 nav .mask {
-  height: 2rem;
+  height: 3rem;
   padding: 0;
   position: relative;
   overflow: hidden;
 }
 
 nav .link-container {
+  height: 4rem;
   transition: transform .4s;
 }
 
 nav .title {
+  padding-top: .5rem;
   font-size: 2rem;
-  line-height: 1.5rem;
+  line-height: 1rem;
   transition: transform .4s;
   display: block;
 }
@@ -62,7 +63,7 @@ nav .link-title2 {
 }
 
 nav .link:hover .link-container {
-  transform: translateY(-50%);
+  transform: translateY(-2.8rem);
 }
 
 nav .link:hover .link-title1 {
@@ -75,6 +76,8 @@ nav .link:hover .link-title2 {
 }
 
 nav .link-title2.underline {
+  padding-bottom: .9rem;
+  display: inline-block;
   position: relative;
 }
 
@@ -86,7 +89,7 @@ nav .link-title2.underline:after {
   height: .2rem;
   transition: transform .8s;
   position: absolute;
-  bottom: -.5rem;
+  bottom: -.1rem;
   left: 0;
   transform: scaleX(0);
 }
@@ -455,43 +458,5 @@ section.contact {
   border: 1rem solid #fff;
   place-content: center;
   align-items: center;
-}
-
-@media only screen and (width <= 768px) {
-  html, body {
-    --gutter: 6.25vw;
-    border-radius: 50px;
-  }
-
-  h1 {
-    font-size: 60px;
-  }
-
-  h2 {
-    font-size: 40px;
-  }
-
-  nav ul li {
-    margin-left: 25px;
-  }
-
-  section.service article {
-    flex-direction: column;
-  }
-
-  section.service figure {
-    border-radius: var(--border-radius);
-    flex-basis: 25vh;
-    margin: 0;
-  }
-
-  section.service figure img {
-    width: 25vh;
-  }
-
-  section.contact a {
-    font-size: 50px;
-    transform: rotate(90deg);
-  }
 }
 /*# sourceMappingURL=FKCS.2e8c441c.css.map */
