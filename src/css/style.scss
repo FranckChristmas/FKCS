@@ -142,8 +142,8 @@ section.about {
 
 .row {
   display: flex;
-  gap: var(--gutter);
-  margin: 0.6rem 0; // allow to put a margin between the 2 row at 0.6 rem and the margin of the section as var(--margin)
+  gap: 0.6rem;
+  margin-bottom: 0.6rem; // allow to put a margin between the 2 row at 0.6 rem and the margin of the section as var(--margin)
   height: 20rem;
   width: 100%;
 }

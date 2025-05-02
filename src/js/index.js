@@ -55,7 +55,7 @@ button.addEventListener("mouseleave", () => {
   svg.addEventListener("transitionend", handleTransitionEnd);
 });
 
-//part animation of the text contact button
+//--------------------------part animation of the text contact button---------------------------
 
 const buttonText = document.querySelector(".button-text");
 const text = buttonText.textContent;
@@ -146,3 +146,29 @@ aboutSection.addEventListener("mouseleave", () => {
     }
   });
 });
+
+//--------------------------part of the nav active link---------------------------
+
+const sections = document.querySelectorAll("section[id]");
+const navLinks = document.querySelectorAll(".link");
+
+function activateLinkOnScroll() {
+  let scrollY = window.scrollY;
+
+  sections.forEach((section) => {
+    const sectionTop = section.offsetTop - 100; // manage off-set due to the navbar
+    const sectionHeight = section.offsetHeight;
+    const sectionId = section.getAttribute("id");
+
+    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === `#${sectionId}`) {
+          link.classList.add("active");
+        }
+      });
+    }
+  });
+}
+
+window.addEventListener("scroll", activateLinkOnScroll);
