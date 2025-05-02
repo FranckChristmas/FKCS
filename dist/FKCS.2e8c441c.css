@@ -1,6 +1,6 @@
 nav {
   z-index: 3;
-  background-color: var(--darkblue);
+  background-color: var(--darkblue2);
   width: 100%;
   height: 8rem;
   font-size: 2rem;
@@ -275,16 +275,17 @@ html, body {
   --pink: #e5989b;
   --brownred: #b5828c;
   --darkblue: #001c2c;
+  --darkblue2: #316682;
   --othergreen: #598659;
   --othergrey: #a1a1a1;
   --yellow: #f9c74f;
   --lightgreen: #37e7a6;
   --lightblue: #90e0ef;
   --darkgreen: #0077b6;
+  background: var(--darkblue2);
   color: #fff;
-  background: #316682;
   margin: 0;
-  padding: 4rem 0 0;
+  padding: 6rem 0 0;
   font-family: twk-super-italic;
   font-size: 62.5%;
 }
@@ -341,7 +342,7 @@ section.sticky {
 }
 
 section.full-screen {
-  z-index: 3;
+  z-index: 2;
   height: 100vh;
   margin-top: 3rem;
   top: 0;
@@ -431,6 +432,7 @@ section.about {
 
 section.skillset {
   justify-content: center;
+  margin-bottom: .6rem;
   display: flex;
 }
 
@@ -443,6 +445,30 @@ section.skillset {
 }
 
 .skillset-title {
+  background: var(--lightgreen);
+  border-radius: var(--border-radius);
+  place-content: center;
+  align-items: center;
+  padding: 8rem;
+  font-family: twk-super-italic;
+  font-size: 2rem;
+  display: flex;
+}
+
+section.highlights {
+  justify-content: center;
+  display: flex;
+}
+
+.highlights-wrapper {
+  flex-direction: column;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 4rem;
+  display: flex;
+}
+
+.highlights-title {
   background: var(--lightgreen);
   border-radius: var(--border-radius);
   place-content: center;
