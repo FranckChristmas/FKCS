@@ -28,6 +28,11 @@
   src: url(../fonts/twkeverett-regular.otf) format("truetype");
 }
 
+@font-face {
+  font-family: "roboto-flex";
+  src: url(../fonts/roboto-flex.ttf) format("truetype");
+}
+
 /* importations */
 
 * {
@@ -46,6 +51,7 @@
 html,
 body {
   --border-radius: 10rem;
+  --almostwhite: rgb(255, 241, 241);
   --beige: #ffcdb2;
   --green: #ffb4a2;
   --pink: #e5989b;
@@ -61,7 +67,7 @@ body {
   font-size: 62.5%; // allow to have the equivalence as 1rem = 10px
   margin: 0;
   padding: 0;
-  background: var(--darkblue2);
+  background: var(--darkblue);
   color: white;
   padding-top: 6rem;
   font-family: "twk-super-italic";
@@ -84,7 +90,7 @@ h3 {
   letter-spacing: 0.05em;
   margin: 0px;
   font-family: "twk-super-italic";
-  color: var(--beige);
+  color: var(--almostwhite);
   padding: 1rem 0rem 2rem 3rem;
 }
 
@@ -141,85 +147,19 @@ section.about {
   width: 100%;
   margin: 0 4rem;
 }
+/* -------------------------- section about - TITLE -------------------------*/
 
-.row {
-  display: flex;
-  gap: 0.6rem;
-  margin-bottom: 0.6rem; // allow to put a margin between the 2 row at 0.6 rem and the margin of the section as var(--margin)
-  height: 20rem;
-  width: 100%;
-}
-
-.row-top .hello {
-  flex: 4;
-  // flex-basis: 62.6rem;
-  background: var(--brownred);
-}
-
-.row-top .francois {
-  flex: 6;
-  // flex-basis: 88.6rem;
-  background: var(--yellow);
-}
-
-.row-bottom .ideas {
-  flex: 3;
-  // flex-basis: 49.6rem;
-  background: var(--beige);
-}
-
-.row-bottom .into {
-  flex: 1;
-  // flex-basis: 36.6rem;
-  background: var(--pink);
-}
-
-.row-bottom .kickass {
-  flex: 6;
-  // flex-basis: 62.6rem;
-  background: var(--lightgreen);
-}
-
-.block {
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: auto;
-  border-radius: 7rem;
+.po-title {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: flex-basis 0.4s ease-in-out;
-}
-
-.block,
-.block span,
-.block p {
-  transition: transform 0.3s ease-in-out;
-  will-change: transform;
-}
-
-.hello-text,
-.francois-text {
-  font-size: 7rem;
-  font-family: "twk-super-italic";
-  margin: 0;
-  color: white;
-}
-
-.row-bottom p {
-  font-family: "twk-super-italic";
-  font-size: 3rem;
-  margin: 0;
-  color: white;
-}
-
-// h1 for SEO
-.visually-hidden {
-  position: absolute;
-  left: -9999rem;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
+  align-content: center;
+  font-family: "roboto-flex";
+  font-size: 8rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 100;
+  user-select: none;
 }
 
 /* -------------------------- section skillset -------------------------*/

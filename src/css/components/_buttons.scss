@@ -1,7 +1,7 @@
 .chevron-button {
   position: relative;
   overflow: hidden;
-  background: var(--yellow);
+  background: var(--green);
   border: 2px solid var(--darkblue);
   padding: 1rem 2rem;
   width: 120rem;
@@ -91,7 +91,7 @@
   left: 0;
   width: 140%;
   height: 100%;
-  fill: rgb(251, 237, 190);
+  fill: var(--pink);
   z-index: 0;
   opacity: 0;
   transition: opacity 0.4s ease-in-out;
