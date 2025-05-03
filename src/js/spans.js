@@ -40,4 +40,4 @@ export function colorHoverEffect() {
   });
 }
 
-makeSpans(".po-title, h3, .hello-text, .francois-text");
+makeSpans("h3, .hello-text, .francois-text");

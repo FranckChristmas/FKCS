@@ -29,7 +29,8 @@ nav .link {
   color: var(--almostwhite);
   justify-content: center;
   align-items: center;
-  font-family: twk-regular-italic;
+  font-family: roboto-flex;
+  font-weight: 100;
   text-decoration: none;
   display: flex;
 }
@@ -226,6 +227,19 @@ nav .link:hover .link-title2.underline:after, nav .link.active .link-title2.unde
   }
 }
 
+#po-title {
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-user-select: none;
+  user-select: none;
+  place-content: center;
+  align-items: center;
+  font-family: roboto-flex;
+  font-size: 8rem;
+  font-weight: 100;
+  display: flex;
+}
+
 @font-face {
   font-family: GoboldRegular;
   src: url("gobold-regular.4776ecfc.otf") format("truetype");
@@ -315,8 +329,9 @@ h3 {
   color: var(--almostwhite);
   margin: 0;
   padding: 1rem 0 2rem 3rem;
-  font-family: twk-super-italic;
+  font-family: roboto-flex;
   font-size: 5rem;
+  font-weight: bolder;
 }
 
 h3, h1, a.color, span {
@@ -364,19 +379,6 @@ section.about {
   width: 100%;
   max-width: 100%;
   margin: 0 4rem;
-  display: flex;
-}
-
-.po-title {
-  text-transform: uppercase;
-  text-align: center;
-  -webkit-user-select: none;
-  user-select: none;
-  place-content: center;
-  align-items: center;
-  font-family: roboto-flex;
-  font-size: 8rem;
-  font-weight: 100;
   display: flex;
 }
 
