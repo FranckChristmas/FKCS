@@ -434,30 +434,6 @@ section.skillset {
   display: flex;
 }
 
-section.highlights {
-  justify-content: center;
-  display: flex;
-}
-
-.highlights-wrapper {
-  flex-direction: column;
-  width: 100%;
-  max-width: 100%;
-  margin: 0 4rem;
-  display: flex;
-}
-
-.highlights-title {
-  background: var(--pink);
-  border-radius: var(--border-radius);
-  place-content: center;
-  align-items: center;
-  padding: 8rem;
-  font-family: twk-super-italic;
-  font-size: 2rem;
-  display: flex;
-}
-
 section.contact {
   border-radius: var(--border-radius);
   place-content: center;
