@@ -61,42 +61,69 @@ export function animateVariableFont() {
 }
 
 // ------------------- part for word qualifiers -----------------
-
 export function wordQualifiers() {
   const container = document.getElementById("po-qualifier");
 
   const words = [
     "Agile",
-    "creative",
-    "assertive",
-    "curious",
-    "collaborative",
-    "passionate",
-    "dedicated",
-    "proactive",
+    "Creative",
+    "Assertive",
+    "Curious",
+    "Collaborative",
+    "Passionate",
+    "Dedicated",
+    "Proactive",
   ];
-  let current = 0; // current word index
 
-  const spans = words.map((word, index) => {
-    const span = document.createElement("span");
-    span.className = "word";
-    span.textContent = word;
-    if (index === 0) span.classList.add("in");
-    container.appendChild(span);
-    return span;
+  const wordArray = [];
+  let current = 0;
+
+  words.forEach((word, i) => {
+    const wordSpan = document.createElement("span");
+    wordSpan.className = "word";
+    wordSpan.style.opacity = i === 0 ? 1 : 0;
+    wordSpan.style.position = "absolute";
+
+    const letters = [];
+    word.split("").forEach((char) => {
+      const span = document.createElement("span");
+      span.className = "letter";
+      span.textContent = char;
+      wordSpan.appendChild(span);
+      letters.push(span);
+    });
+
+    container.appendChild(wordSpan);
+    wordArray.push(letters);
   });
 
-  setInterval(() => {
-    const currentWord = spans[current];
-    const next = (current + 1) % spans.length;
-    const nextWord = spans[next];
+  function changeWord() {
+    const cw = wordArray[current];
+    const next = (current + 1) % wordArray.length;
+    const nw = wordArray[next];
 
-    currentWord.classList.remove("in");
-    currentWord.classList.add("out");
-
-    nextWord.classList.add("in");
-    nextWord.classList.remove("out");
+    cw.forEach((_, i) => animateLetterOut(cw, i));
+    nw.forEach((letter, i) => {
+      letter.className = "letter behind";
+      nw[0].parentElement.style.opacity = 1;
+      animateLetterIn(nw, i);
+    });
 
     current = next;
-  }, 2000);
+  }
+
+  function animateLetterOut(letters, i) {
+    setTimeout(() => {
+      letters[i].className = "letter out";
+    }, i * 80);
+  }
+
+  function animateLetterIn(letters, i) {
+    setTimeout(() => {
+      letters[i].className = "letter in";
+    }, 340 + i * 80);
+  }
+
+  changeWord();
+  setInterval(changeWord, 4000);
 }
