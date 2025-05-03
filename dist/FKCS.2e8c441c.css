@@ -35,79 +35,14 @@ nav .link {
   display: flex;
 }
 
-nav .mask {
-  height: 3rem;
-  padding: 0;
-  position: relative;
-  overflow: hidden;
-}
-
-nav .link-container {
-  height: 4rem;
-  transition: transform .4s;
-}
-
-nav .title {
-  padding-top: .5rem;
-  font-size: 2rem;
-  line-height: 1rem;
-  transition: transform .4s;
-  display: block;
-}
-
-nav .link-title1 {
-  transform-origin: 100%;
-}
-
-nav .link-title2 {
-  transform-origin: 0;
-  transform: rotate(50deg);
-}
-
-nav .link-title2.underline {
-  padding-bottom: .9rem;
-  display: inline-block;
-  position: relative;
-}
-
-nav .link:hover .link-container, nav .link.active .link-container {
-  transform: translateY(-2.8rem);
-}
-
-nav .link:hover .link-title1, nav .link.active .link-title1 {
-  transform: rotate(50deg);
-}
-
-nav .link:hover .link-title2, nav .link.active .link-title2 {
-  color: var(--lightblue);
-  transform: rotate(0);
-}
-
-nav .link-title2.underline:after, nav .link.active .link-title2.underline:after {
-  content: "";
-  background-color: var(--lightblue);
-  transform-origin: 0;
-  width: 100%;
-  height: .2rem;
-  transition: transform .8s;
-  position: absolute;
-  bottom: -.1rem;
-  left: 0;
-  transform: scaleX(0);
-}
-
-nav .link:hover .link-title2.underline:after, nav .link.active .link-title2.underline:after {
-  transform: scaleX(1);
-}
-
 .chevron-button {
-  background: var(--green);
+  background: var(--yellow);
   border: 2px solid var(--almostwhite);
   border: 2.2rem solid var(--almostwhite);
   cursor: pointer;
   width: 120rem;
   height: 40rem;
-  color: var(--almostwhite);
+  color: var(--darkblue);
   cursor: pointer;
   box-shadow: 0 0 0 0 var(--almostwhite);
   border-radius: 20rem;
