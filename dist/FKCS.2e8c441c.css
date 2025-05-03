@@ -102,14 +102,14 @@ nav .link:hover .link-title2.underline:after, nav .link.active .link-title2.unde
 
 .chevron-button {
   background: var(--green);
-  border: 2px solid var(--darkblue);
-  border: 2.2rem solid var(--darkblue);
+  border: 2px solid var(--almostwhite);
+  border: 2.2rem solid var(--almostwhite);
   cursor: pointer;
   width: 120rem;
   height: 40rem;
-  color: var(--darkblue);
+  color: var(--almostwhite);
   cursor: pointer;
-  box-shadow: 0 0 0 0 var(--darkblue);
+  box-shadow: 0 0 0 0 var(--almostwhite);
   border-radius: 20rem;
   margin: 4rem;
   padding: 1rem 2rem;
@@ -121,7 +121,7 @@ nav .link:hover .link-title2.underline:after, nav .link.active .link-title2.unde
 }
 
 .chevron-button:hover {
-  box-shadow: 1rem 2rem 0 1.5rem var(--darkblue);
+  box-shadow: 1rem 2rem 0 1.5rem var(--almostgrey);
 }
 
 .chevron-button:not(:hover) {
@@ -277,6 +277,7 @@ nav .link:hover .link-title2.underline:after, nav .link.active .link-title2.unde
 html, body {
   --border-radius: 10rem;
   --almostwhite: #fff1f1;
+  --almostgrey: #d9d9d9;
   --beige: #ffcdb2;
   --green: #ffb4a2;
   --pink: #e5989b;
@@ -446,7 +447,7 @@ section.about {
   transition: all .3s, opacity .3s;
   display: inline-block;
   position: relative;
-  transform: translateZ(2.5rem)rotateX(-90deg);
+  transform: translateZ(1rem)rotateX(-90deg);
 }
 
 .letter.in {
@@ -459,7 +460,7 @@ section.about {
   opacity: 0;
   transition: all .32s ease cubic-bezier(.175, .885, .32, 1.275);
   opacity: 0;
-  transform: rotateX(90deg);
+  transform: rotateX(90deg)translateZ(1rem);
 }
 
 section.skillset {
@@ -512,9 +513,7 @@ section.highlights {
 }
 
 section.contact {
-  background: var(--lightblue);
   border-radius: var(--border-radius);
-  border: 1rem solid #fff;
   place-content: center;
   align-items: center;
 }
