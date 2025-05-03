@@ -2,25 +2,25 @@
   position: relative;
   overflow: hidden;
   background: var(--green);
-  border: 2px solid var(--darkblue);
+  border: 2px solid var(--almostwhite);
   padding: 1rem 2rem;
   width: 120rem;
   height: 40rem;
   border-radius: 20rem;
-  border: 2.2rem solid var(--darkblue);
+  border: 2.2rem solid var(--almostwhite);
   cursor: pointer;
   font-family: "twk-super-italic";
-  color: var(--darkblue);
+  color: var(--almostwhite);
   font-size: 13rem;
   overflow: hidden;
   margin: 4rem;
   cursor: pointer;
   transition: box-shadow 0.8s ease, transform 0.3s ease;
-  box-shadow: 0 0 0 0 var(--darkblue);
+  box-shadow: 0 0 0 0 var(--almostwhite);
 }
 
 .chevron-button:hover {
-  box-shadow: 1rem 2rem 0 1.5rem var(--darkblue);
+  box-shadow: 1rem 2rem 0 1.5rem var(--almostgrey);
 }
 .chevron-button:not(:hover) {
   transition-delay: 0.1s; /* delay when shadow is retracting*/

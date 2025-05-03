@@ -53,6 +53,7 @@ html,
 body {
   --border-radius: 10rem;
   --almostwhite: rgb(255, 241, 241);
+  --almostgrey: #d9d9d9;
   --beige: #ffcdb2;
   --green: #ffb4a2;
   --pink: #e5989b;
@@ -222,7 +223,7 @@ section.about {
   display: inline-block;
   position: relative;
   transform: rotateX(0deg);
-  transform: translateZ(2.5rem) rotateX(-90deg);
+  transform: translateZ(1rem) rotateX(-90deg);
   transform-origin: 50% 50% 2.5rem;
   transform-origin: 50% 50% 2.5rem;
   transform-style: preserve-3d;
@@ -238,12 +239,12 @@ section.about {
 
 .letter.out {
   opacity: 0;
-  transform: rotateX(-90deg);
+  transform: rotateX(-90deg) translateZ(1rem);
   transition: all 0.32s ease cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .letter.out {
-  transform: rotateX(90deg);
+  transform: rotateX(90deg) translateZ(1rem);
   opacity: 0;
 }
 
@@ -306,7 +307,5 @@ section.contact {
   align-items: center;
   justify-content: center;
   align-content: center;
-  background: var(--lightblue);
-  border: white solid 1rem;
   border-radius: var(--border-radius);
 }
