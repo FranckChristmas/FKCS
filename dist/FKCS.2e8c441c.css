@@ -446,7 +446,7 @@ section.about {
   transition: all .3s, opacity .3s;
   display: inline-block;
   position: relative;
-  transform: translateZ(2.5rem);
+  transform: translateZ(2.5rem)rotateX(-90deg);
 }
 
 .letter.in {
@@ -459,7 +459,7 @@ section.about {
   opacity: 0;
   transition: all .32s ease cubic-bezier(.175, .885, .32, 1.275);
   opacity: 0;
-  transform: rotateX(-90deg);
+  transform: rotateX(90deg);
 }
 
 section.skillset {

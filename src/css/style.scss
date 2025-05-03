@@ -222,7 +222,7 @@ section.about {
   display: inline-block;
   position: relative;
   transform: rotateX(0deg);
-  transform: translateZ(2.5rem);
+  transform: translateZ(2.5rem) rotateX(-90deg);
   transform-origin: 50% 50% 2.5rem;
   transform-origin: 50% 50% 2.5rem;
   transform-style: preserve-3d;
@@ -238,12 +238,12 @@ section.about {
 
 .letter.out {
   opacity: 0;
-  transform: rotateX(90deg);
+  transform: rotateX(-90deg);
   transition: all 0.32s ease cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .letter.out {
-  transform: rotateX(-90deg);
+  transform: rotateX(90deg);
   opacity: 0;
 }
 
