@@ -1,6 +1,5 @@
 import { makeSpans, colorHoverEffect } from "./spans.js";
 import { chevronAnimation, animateButtonText } from "./chevronButton.js";
-import { activateLinkOnScroll, setupNavTracking } from "./navActive.js";
 import { animateVariableFont, wordQualifiers } from "./animateTitle.js";
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -8,8 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
   colorHoverEffect();
   chevronAnimation();
   animateButtonText();
-  activateLinkOnScroll();
-  setupNavTracking();
   animateVariableFont();
   wordQualifiers();
 });
