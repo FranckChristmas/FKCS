@@ -227,6 +227,14 @@ nav .link:hover .link-title2.underline:after, nav .link.active .link-title2.unde
   }
 }
 
+.po-title-wrapper {
+  background: red;
+  justify-content: center;
+  align-items: center;
+  margin: 20rem 0 10rem;
+  display: flex;
+}
+
 #po-title {
   text-transform: uppercase;
   text-align: center;
