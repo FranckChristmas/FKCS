@@ -227,27 +227,6 @@ nav .link:hover .link-title2.underline:after, nav .link.active .link-title2.unde
   }
 }
 
-.po-title-wrapper {
-  background: red;
-  justify-content: center;
-  align-items: center;
-  margin: 20rem 0 10rem;
-  display: flex;
-}
-
-#po-title {
-  text-transform: uppercase;
-  text-align: center;
-  -webkit-user-select: none;
-  user-select: none;
-  place-content: center;
-  align-items: center;
-  font-family: roboto-flex;
-  font-size: 8rem;
-  font-weight: 100;
-  display: flex;
-}
-
 @font-face {
   font-family: GoboldRegular;
   src: url("gobold-regular.4776ecfc.otf") format("truetype");
@@ -379,14 +358,30 @@ section.full-screen {
 
 section.about {
   justify-content: center;
+  align-items: center;
+  height: 100vh;
   display: flex;
 }
 
-.about-wrapper {
-  flex-direction: column;
+.about-wrapper .po-title-wrapper {
   width: 100%;
-  max-width: 100%;
-  margin: 0 4rem;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+#po-title {
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-user-select: none;
+  user-select: none;
+  place-content: center;
+  align-items: center;
+  margin: 0;
+  font-family: roboto-flex;
+  font-size: 8rem;
+  font-weight: 100;
   display: flex;
 }
 
