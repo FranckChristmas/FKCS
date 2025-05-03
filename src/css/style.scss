@@ -145,6 +145,7 @@ section.about {
 
 .about-wrapper .po-title-wrapper {
   display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -163,6 +164,40 @@ section.about {
   font-weight: 100;
   user-select: none;
   margin: 0;
+}
+
+#po-qualifier {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  font-family: "roboto-flex";
+  font-size: 8rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 100;
+  letter-spacing: 2rem;
+  user-select: none;
+  margin: 0;
+  padding: 0 0 0 2rem;
+}
+
+.word {
+  position: absolute;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.5s ease-in-out;
+  white-space: nowrap;
+}
+
+.word.in {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.word.out {
+  opacity: 0;
+  transform: translateY(-100%);
 }
 
 /* -------------------------- section skillset -------------------------*/
