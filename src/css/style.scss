@@ -1,5 +1,6 @@
-@use "_nav.scss" as *;
+@use "components/_nav.scss" as *;
 @use "./components/_buttons.scss" as *;
+@use "./potitle.scss" as *;
 
 @font-face {
   font-family: "GoboldRegular";
@@ -89,7 +90,8 @@ h3 {
   font-size: 5rem;
   letter-spacing: 0.05em;
   margin: 0px;
-  font-family: "twk-super-italic";
+  font-family: "roboto-flex";
+  font-weight: bolder;
   color: var(--almostwhite);
   padding: 1rem 0rem 2rem 3rem;
 }
@@ -146,20 +148,6 @@ section.about {
   flex-direction: column;
   width: 100%;
   margin: 0 4rem;
-}
-/* -------------------------- section about - TITLE -------------------------*/
-
-.po-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-  font-family: "roboto-flex";
-  font-size: 8rem;
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: 100;
-  user-select: none;
 }
 
 /* -------------------------- section skillset -------------------------*/
