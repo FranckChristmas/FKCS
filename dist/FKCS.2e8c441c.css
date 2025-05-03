@@ -1,6 +1,6 @@
 nav {
   z-index: 3;
-  background-color: var(--darkblue2);
+  background-color: var(--darkblue);
   width: 100%;
   height: 8rem;
   font-size: 2rem;
@@ -26,7 +26,7 @@ nav ul li {
 
 nav .link {
   height: 2.5rem;
-  color: var(--beige);
+  color: var(--almostwhite);
   justify-content: center;
   align-items: center;
   font-family: twk-regular-italic;
@@ -78,14 +78,14 @@ nav .link:hover .link-title1, nav .link.active .link-title1 {
 }
 
 nav .link:hover .link-title2, nav .link.active .link-title2 {
-  color: beige;
+  color: var(--lightblue);
   transform: rotate(0);
 }
 
 nav .link-title2.underline:after, nav .link.active .link-title2.underline:after {
   content: "";
+  background-color: var(--lightblue);
   transform-origin: 0;
-  background-color: beige;
   width: 100%;
   height: .2rem;
   transition: transform .8s;
@@ -100,7 +100,7 @@ nav .link:hover .link-title2.underline:after, nav .link.active .link-title2.unde
 }
 
 .chevron-button {
-  background: var(--yellow);
+  background: var(--green);
   border: 2px solid var(--darkblue);
   border: 2.2rem solid var(--darkblue);
   cursor: pointer;
@@ -188,12 +188,12 @@ nav .link:hover .link-title2.underline:after, nav .link.active .link-title2.unde
 }
 
 .chevron-svg {
-  fill: #fbedbe;
+  width: 140%;
+  height: 100%;
+  fill: var(--pink);
   z-index: 0;
   opacity: 0;
   pointer-events: none;
-  width: 140%;
-  height: 100%;
   transition: opacity .4s ease-in-out;
   position: absolute;
   top: 0;
@@ -256,6 +256,11 @@ nav .link:hover .link-title2.underline:after, nav .link.active .link-title2.unde
   src: url("twkeverett-regular.c3f83373.otf") format("truetype");
 }
 
+@font-face {
+  font-family: roboto-flex;
+  src: url("roboto-flex.7e254c46.ttf") format("truetype");
+}
+
 * {
   box-sizing: border-box;
 }
@@ -270,6 +275,7 @@ nav .link:hover .link-title2.underline:after, nav .link.active .link-title2.unde
 
 html, body {
   --border-radius: 10rem;
+  --almostwhite: #fff1f1;
   --beige: #ffcdb2;
   --green: #ffb4a2;
   --pink: #e5989b;
@@ -282,7 +288,7 @@ html, body {
   --lightgreen: #37e7a6;
   --lightblue: #90e0ef;
   --darkgreen: #0077b6;
-  background: var(--darkblue2);
+  background: var(--darkblue);
   color: #fff;
   margin: 0;
   padding: 6rem 0 0;
@@ -306,7 +312,7 @@ h2 {
 
 h3 {
   letter-spacing: .05em;
-  color: var(--beige);
+  color: var(--almostwhite);
   margin: 0;
   padding: 1rem 0 2rem 3rem;
   font-family: twk-super-italic;
@@ -361,73 +367,17 @@ section.about {
   display: flex;
 }
 
-.row {
-  gap: .6rem;
-  width: 100%;
-  height: 20rem;
-  margin-bottom: .6rem;
-  display: flex;
-}
-
-.row-top .hello {
-  background: var(--brownred);
-  flex: 4;
-}
-
-.row-top .francois {
-  background: var(--yellow);
-  flex: 6;
-}
-
-.row-bottom .ideas {
-  background: var(--beige);
-  flex: 3;
-}
-
-.row-bottom .into {
-  background: var(--pink);
-  flex: 1;
-}
-
-.row-bottom .kickass {
-  background: var(--lightgreen);
-  flex: 6;
-}
-
-.block {
-  border-radius: 7rem;
-  flex: none;
-  justify-content: center;
+.po-title {
+  text-transform: uppercase;
+  text-align: center;
+  -webkit-user-select: none;
+  user-select: none;
+  place-content: center;
   align-items: center;
-  transition: flex-basis .4s ease-in-out;
+  font-family: roboto-flex;
+  font-size: 8rem;
+  font-weight: 100;
   display: flex;
-}
-
-.block, .block span, .block p {
-  will-change: transform;
-  transition: transform .3s ease-in-out;
-}
-
-.hello-text, .francois-text {
-  color: #fff;
-  margin: 0;
-  font-family: twk-super-italic;
-  font-size: 7rem;
-}
-
-.row-bottom p {
-  color: #fff;
-  margin: 0;
-  font-family: twk-super-italic;
-  font-size: 3rem;
-}
-
-.visually-hidden {
-  width: 1px;
-  height: 1px;
-  position: absolute;
-  left: -9999rem;
-  overflow: hidden;
 }
 
 section.skillset {

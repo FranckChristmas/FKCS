@@ -7,7 +7,7 @@ nav {
   top: 0;
   left: 0;
   font-size: 2rem;
-  background-color: var(--darkblue2);
+  background-color: var(--darkblue);
   ul {
     display: flex;
     align-items: center;
@@ -34,7 +34,7 @@ nav {
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: var(--beige);
+    color: var(--almostwhite);
   }
 
   .mask {
@@ -84,7 +84,7 @@ nav {
   .link:hover .link-title2,
   .link.active .link-title2 {
     transform: rotate(0);
-    color: beige;
+    color: var(--lightblue);
   }
 
   .link-title2.underline::after,
@@ -95,7 +95,7 @@ nav {
     left: 0;
     width: 100%;
     height: 0.2rem;
-    background-color: beige;
+    background-color: var(--lightblue);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.8s ease;

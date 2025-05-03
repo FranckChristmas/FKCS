@@ -1,0 +1,85 @@
+.row {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 0.6rem; // allow to put a margin between the 2 row at 0.6 rem and the margin of the section as var(--margin)
+  height: 20rem;
+  width: 100%;
+}
+
+.row-top .hello {
+  flex: 4;
+  // flex-basis: 62.6rem;
+  background: var(--brownred);
+}
+
+.row-top .francois {
+  flex: 6;
+  // flex-basis: 88.6rem;
+  background: var(--yellow);
+}
+
+.row-bottom .ideas {
+  flex: 3;
+  // flex-basis: 49.6rem;
+  background: var(--beige);
+}
+
+.row-bottom .into {
+  flex: 1;
+  // flex-basis: 36.6rem;
+  background: var(--pink);
+}
+
+.row-bottom .kickass {
+  flex: 6;
+  // flex-basis: 62.6rem;
+  background: var(--lightgreen);
+}
+
+.block {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+  border-radius: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: flex-basis 0.4s ease-in-out;
+}
+
+.empty1 {
+  flex: 1;
+  flex-basis: 2rem;
+  background: var(--lightblue);
+}
+
+.block,
+.block span,
+.block p {
+  transition: transform 2s ease-in-out;
+  will-change: transform;
+}
+
+.hello-text,
+.francois-text {
+  font-size: 7rem;
+  font-family: "twk-super-italic";
+  margin: 0;
+  color: white;
+}
+
+.row-bottom p {
+  font-family: "twk-super-italic";
+  font-size: 3rem;
+  margin: 0;
+  color: white;
+}
+
+// h1 for SEO
+// .visually-hidden {
+//   position: absolute;
+//   left: -9999rem;
+//   width: 1px;
+//   height: 1px;
+//   overflow: hidden;
+// }
