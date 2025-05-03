@@ -35,6 +35,16 @@ nav .link {
   display: flex;
 }
 
+nav.hovering .link {
+  opacity: .5;
+  transition: all .1s ease-in-out;
+}
+
+nav.hovering li:hover .link {
+  opacity: 1;
+  transition: all .1s ease-in-out;
+}
+
 .chevron-button {
   background: var(--yellow);
   border: 2px solid var(--almostwhite);
@@ -126,7 +136,7 @@ nav .link {
 .chevron-svg {
   width: 140%;
   height: 100%;
-  fill: var(--pink);
+  fill: var(--chevrons);
   z-index: 0;
   opacity: 0;
   pointer-events: none;
@@ -221,7 +231,8 @@ html, body {
   --darkblue2: #316682;
   --othergreen: #598659;
   --othergrey: #a1a1a1;
-  --yellow: #f9c74f;
+  --yellow: #ffb300;
+  --chevrons: #c5abb9;
   --lightgreen: #37e7a6;
   --lightblue: #90e0ef;
   --darkgreen: #0077b6;
@@ -286,7 +297,7 @@ section.sticky {
 }
 
 section.full-screen {
-  z-index: 2;
+  z-index: 1;
   height: 100vh;
   margin-top: 3rem;
   top: 0;
