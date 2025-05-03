@@ -137,17 +137,32 @@ section.full-screen {
 /* -------------------------- section about -------------------------*/
 
 section.about {
-  // margin-top: 4rem;
+  height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-.about-wrapper {
-  max-width: 100%;
+.about-wrapper .po-title-wrapper {
   display: flex;
-  flex-direction: column;
+  margin: 0;
+  padding: 0;
   width: 100%;
-  margin: 0 4rem;
+  height: 100%;
+}
+
+#po-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  font-family: "roboto-flex";
+  font-size: 8rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 100;
+  user-select: none;
+  margin: 0;
 }
 
 /* -------------------------- section skillset -------------------------*/
