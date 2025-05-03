@@ -103,10 +103,18 @@ export function wordQualifiers() {
     const nw = wordArray[next];
 
     cw.forEach((_, i) => animateLetterOut(cw, i));
+
     nw.forEach((letter, i) => {
-      letter.className = "letter behind";
+      letter.classList.remove("in", "out");
+      letter.classList.add("behind");
       nw[0].parentElement.style.opacity = 1;
       animateLetterIn(nw, i);
+    });
+    nw.forEach((letter, i) => {
+      setTimeout(() => {
+        letter.classList.remove("behind");
+        letter.classList.add("in");
+      }, 340 + i * 80);
     });
 
     current = next;
