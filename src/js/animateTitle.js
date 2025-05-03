@@ -18,15 +18,15 @@ export function animateVariableFont() {
         const dy = mouse.y - (rect.top + rect.height / 2);
         const distance = Math.sqrt(dx * dx + dy * dy);
 
-        const wght = Math.max(100, 300 - distance);
+        const wght = Math.max(100, 900 - distance * 5);
         const wdth = Math.min(120, 70 + distance / 200);
         const opsz = Math.min(144, 8 + distance / 10);
-        const spacing = Math.min(0.5, distance / 1000);
+        // const spacing = Math.min(0.5, distance / 3000);
 
         this.span.style.fontVariationSettings = `'wght' ${wght.toFixed(
           0
         )}, 'wdth' ${wdth.toFixed(0)}, 'opsz' ${opsz.toFixed(0)}`;
-        this.span.style.marginRight = `${spacing}em`;
+        // this.span.style.marginRight = `${spacing}em`;
       },
     };
   }
@@ -58,4 +58,45 @@ export function animateVariableFont() {
   }
 
   animate();
+}
+
+// ------------------- part for word qualifiers -----------------
+
+export function wordQualifiers() {
+  const container = document.getElementById("po-qualifier");
+
+  const words = [
+    "Agile",
+    "creative",
+    "assertive",
+    "curious",
+    "collaborative",
+    "passionate",
+    "dedicated",
+    "proactive",
+  ];
+  let current = 0; // current word index
+
+  const spans = words.map((word, index) => {
+    const span = document.createElement("span");
+    span.className = "word";
+    span.textContent = word;
+    if (index === 0) span.classList.add("in");
+    container.appendChild(span);
+    return span;
+  });
+
+  setInterval(() => {
+    const currentWord = spans[current];
+    const next = (current + 1) % spans.length;
+    const nextWord = spans[next];
+
+    currentWord.classList.remove("in");
+    currentWord.classList.add("out");
+
+    nextWord.classList.add("in");
+    nextWord.classList.remove("out");
+
+    current = next;
+  }, 2000);
 }

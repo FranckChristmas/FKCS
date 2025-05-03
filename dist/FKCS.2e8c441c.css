@@ -364,6 +364,7 @@ section.about {
 }
 
 .about-wrapper .po-title-wrapper {
+  flex-direction: column;
   width: 100%;
   height: 100%;
   margin: 0;
@@ -383,6 +384,40 @@ section.about {
   font-size: 8rem;
   font-weight: 100;
   display: flex;
+}
+
+#po-qualifier {
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2rem;
+  -webkit-user-select: none;
+  user-select: none;
+  place-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0 0 0 2rem;
+  font-family: roboto-flex;
+  font-size: 8rem;
+  font-weight: 100;
+  display: flex;
+}
+
+.word {
+  opacity: 0;
+  white-space: nowrap;
+  transition: all .5s ease-in-out;
+  position: absolute;
+  transform: translateY(100%);
+}
+
+.word.in {
+  opacity: 1;
+  transform: translateY(0%);
+}
+
+.word.out {
+  opacity: 0;
+  transform: translateY(-100%);
 }
 
 section.skillset {
