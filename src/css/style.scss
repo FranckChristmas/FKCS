@@ -275,34 +275,6 @@ section.skillset {
   font-size: 2rem;
   padding: 8rem;
 }
-
-/* -------------------------- section Highlights -------------------------*/
-section.highlights {
-  display: flex;
-  justify-content: center;
-  // margin: 0 4rem;
-}
-
-.highlights-wrapper {
-  max-width: 100%;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: 0 4rem;
-}
-
-.highlights-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-  background: var(--pink);
-  border-radius: var(--border-radius);
-  font-family: "twk-super-italic";
-  font-size: 2rem;
-  padding: 8rem;
-}
-
 /* -------------------------- section contact -------------------------*/
 section.contact {
   align-items: center;
