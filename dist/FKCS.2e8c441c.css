@@ -223,6 +223,16 @@ ul#accordion li:nth-child(2n) {
   transition: font-size .65s cubic-bezier(.37, .07, .02, 1.01) 80ms, font-variation-settings .65s cubic-bezier(.37, .07, .02, 1.01) 80ms;
 }
 
+h4.heading4-description {
+  font-variation-settings: "wght" 500, "wdth" 100, "ital" 1;
+  text-rendering: optimizeSpeed;
+  letter-spacing: .05em;
+  margin: 0;
+  font-family: Compressa-micro;
+  font-size: 2vw;
+  line-height: 1.2em;
+}
+
 .highlight-title {
   font-variation-settings: "wght" 800, "wdth" 100, "ital" 1;
   text-rendering: optimizeSpeed;
@@ -232,25 +242,44 @@ ul#accordion li:nth-child(2n) {
   line-height: 1.2em;
 }
 
-.highlight-description, .highlight-context, .highlight-stack {
+.highlight-description {
+  font-variation-settings: "wght" 300, "wdth" 100, "ital" 1;
+  text-rendering: optimizeSpeed;
+  letter-spacing: .05em;
+  font-family: Compressa-micro;
+  font-size: .2vw;
+  line-height: 1.2em;
+}
+
+.highlight-context, .highlight-stack {
   font-variation-settings: "wght" 300, "wdth" 100, "ital" 1;
   text-rendering: optimizeSpeed;
   letter-spacing: .05em;
   font-family: Compressa-micro;
   font-size: 1vw;
   line-height: 1.2em;
+  transition: font-size .3s, opacity .3s, transform .3s;
 }
 
 ul#accordion li .highlight-title, ul#accordion li .highlight-description {
   opacity: 0;
   pointer-events: none;
-  transition: opacity .3s, transform .3s;
+  transition: opacity .5s, transform .3s, font-size .3s;
   transform: translateY(2rem);
 }
 
-ul#accordion li:hover .highlight-title, ul#accordion li:hover .highlight-description {
+ul#accordion li:hover .highlight-title {
   opacity: 1;
   pointer-events: auto;
+  font-size: 2vw;
+  transform: translateY(0);
+}
+
+ul#accordion li:hover .highlight-description {
+  opacity: 1;
+  pointer-events: auto;
+  font-size: 1vw;
+  transition: font-size .3s, opacity .3s, transform .3s;
   transform: translateY(0);
 }
 
