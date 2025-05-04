@@ -52,7 +52,7 @@ ul#accordion li:nth-child(even) {
   // white-space: nowrap;
 }
 
-h4.heading4-description {
+h4.heading4-respo {
   font-family: "Compressa-micro";
   font-variation-settings: "wght" 500, "wdth" 100, "ital" 1;
   text-rendering: optimizeSpeed;
@@ -62,37 +62,32 @@ h4.heading4-description {
   margin: 0;
 }
 
-.highlight-title {
+.highlight-title,
+.role,
+.highlight-respo {
   font-family: "Compressa-micro";
-  font-variation-settings: "wght" 800, "wdth" 100, "ital" 1;
+  font-variation-settings: "wght" 500, "wdth" 100, "ital" 1;
   text-rendering: optimizeSpeed;
-  font-size: 2vw;
+  font-size: 0vw;
   line-height: 1.2em;
   letter-spacing: 0.05em;
 }
 
-.highlight-description {
+ul#accordion li .highlight-context,
+ul#accordion li .highlight-stack {
   font-family: "Compressa-micro";
   font-variation-settings: "wght" 300, "wdth" 100, "ital" 1;
   text-rendering: optimizeSpeed;
-  font-size: 0.2vw;
-  line-height: 1.2em;
-  letter-spacing: 0.05em;
-}
-
-.highlight-context,
-.highlight-stack {
-  font-family: "Compressa-micro";
-  font-variation-settings: "wght" 300, "wdth" 100, "ital" 1;
-  text-rendering: optimizeSpeed;
-  font-size: 1vw;
+  font-size: 0vw;
   transition: font-size 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
   line-height: 1.2em;
   letter-spacing: 0.05em;
 }
 
 ul#accordion li .highlight-title,
-ul#accordion li .highlight-description {
+ul#accordion li .highlight-respo,
+ul#accordion li .role,
+ul#accordion li h4.heading4-respo {
   opacity: 0;
   transform: translateY(2rem);
   transition: opacity 0.5s ease, transform 0.3s ease, font-size 0.3s ease;
@@ -106,11 +101,34 @@ ul#accordion li:hover .highlight-title {
   font-size: 2vw;
 }
 
-ul#accordion li:hover .highlight-description {
+ul#accordion li:hover .highlight-context {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
   font-size: 1vw;
+}
+
+ul#accordion li:hover .highlight-respo {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  font-size: 1vw;
+  transition: font-size 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+
+ul#accordion li:hover .role {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  font-size: 3vw;
+  transition: font-size 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
+}
+
+ul#accordion li:hover .heading4-respo {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  font-size: 3vw;
   transition: font-size 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
 }
 

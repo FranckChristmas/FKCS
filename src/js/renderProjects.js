@@ -11,17 +11,11 @@ export function renderProjects(projects) {
     const respoTitle = renderRichText(project.data.respo_title);
     const stackTitle = renderRichText(project.data.stack_title);
     const context = renderRichText(project.data.context);
-    // const responsibilities = renderRichText(project.data.responsibilities);
+    const responsibilities = renderRichText(project.data.responsibilities);
     const stack = renderRichText(project.data.stack);
 
-    // const context = Array.isArray(project.data.context)
-    //   ? project.data.context.map((p) => p.text).join("<br>")
-    //   : "";
-    const responsibilities = Array.isArray(project.data.responsibilities)
-      ? project.data.responsibilities.map((p) => p.text).join("<br>")
-      : "";
-    // const stack = Array.isArray(project.data.stack)
-    //   ? project.data.stack.map((p) => p.text).join("<br>")
+    // const responsibilities = Array.isArray(project.data.responsibilities)
+    //   ? project.data.responsibilities.map((p) => p.text).join("<br>")
     //   : "";
 
     function renderRichText(blocks) {
@@ -29,10 +23,11 @@ export function renderProjects(projects) {
       return blocks
         .map((block) => {
           if (block.type === "heading4")
-            return `<h4 class="heading4-description">${block.text}</h4>`;
+            return `<h4 class="heading4-respo">${block.text}</h4>`;
           if (block.type === "paragraph")
-            return `<p class="highlight-description">${block.text}</p>`;
-          if (block.type === "list-item") return `<li>${block.text}</li>`;
+            return `<p class="highlight-respo">${block.text}</p>`;
+          if (block.type === "list-item")
+            return `<p class="highlight-respo">${block.text}</p>`;
         })
         .join("");
     }
@@ -41,12 +36,12 @@ export function renderProjects(projects) {
 
     const li = document.createElement("li");
     li.innerHTML = `<h3 class="variable-text highlight-date">${period}</h3>
-            <span class="highlight-title role"> ${role}</span>
+            <span class="role"> ${role}</span>
             <span class="highlight-title">${client} | ${sector}</span>
-            <div class="highlight-description">
+            <div>
               <p class="highlight-context">${contextTitle} ${context}</p>
               <p class="highlight-stack">${stackTitle} ${stack}</p>
-              <p class="highlight-description">${respoTitle}  </br>   ${responsibilities}</p>
+              <p class="highlight-respo">${respoTitle}  </br>   ${responsibilities}</p>
             </div>
       `;
     container.appendChild(li);
