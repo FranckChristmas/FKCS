@@ -65,14 +65,14 @@ export function wordQualifiers() {
   const container = document.getElementById("po-qualifier");
 
   const words = [
-    "Agile",
-    "Creative",
-    "Assertive",
-    "Curious",
-    "Collaborative",
-    "Passionate",
-    "Dedicated",
-    "Proactive",
+    "agile.",
+    "creative.",
+    "Assertive.",
+    "Curious.",
+    "Collaborative.",
+    "Passionate.",
+    "Dedicated.",
+    "Proactive.",
   ];
 
   const wordArray = [];
@@ -114,7 +114,7 @@ export function wordQualifiers() {
       setTimeout(() => {
         letter.classList.remove("behind");
         letter.classList.add("in");
-      }, 200 + i * 60);
+      }, 340 + i * 130);
     });
 
     current = next;
@@ -123,15 +123,15 @@ export function wordQualifiers() {
   function animateLetterOut(letters, i) {
     setTimeout(() => {
       letters[i].className = "letter out";
-    }, i * 80);
+    }, i * 130);
   }
 
   function animateLetterIn(letters, i) {
     setTimeout(() => {
       letters[i].className = "letter in";
-    }, 200 + i * 60);
+    }, 340 + i * 130);
   }
 
   changeWord();
-  setInterval(changeWord, 4000);
+  setInterval(changeWord, 3000);
 }

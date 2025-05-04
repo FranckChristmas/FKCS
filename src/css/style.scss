@@ -203,9 +203,9 @@ section.about {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-family: "compressa-micro";
+  font-family: "roboto-flex";
   font-size: 8rem;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-weight: 500;
   letter-spacing: 1rem;
   position: absolute;
@@ -229,25 +229,29 @@ section.about {
   display: inline-block;
   position: relative;
   // transform: rotateX(0deg);
-  transform: translateY(-4rem) translateZ(3rem);
-  // transform: rotateX(-90deg);
-  transform-origin: 50% 50% 1rem;
-  transform-origin: 50% 50% 1rem;
+  transform: translateZ(3rem);
+  transform: rotateX(-90deg);
+  transform-origin: 50% 50% 2.5rem;
   transform-style: preserve-3d;
-  transition: all 0.2s ease, opacity 0.2s ease;
+  transition: all 0.2s, opacity 0.2s ease;
   opacity: 0;
 }
 
 .letter.in {
   transform: rotateX(0deg) translateY(0);
   opacity: 1;
-  transition: all 0.2s ease cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .letter.out {
   opacity: 0;
   transform: translateY(4rem) translateZ(2rem);
-  transition: all 0.2s ease cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.letter.behind {
+  transform: translateY(-4rem) translateZ(-2rem);
+  transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
 /* -------------------------- section skillset -------------------------*/
