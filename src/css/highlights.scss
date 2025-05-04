@@ -52,6 +52,16 @@ ul#accordion li:nth-child(even) {
   // white-space: nowrap;
 }
 
+h4.heading4-description {
+  font-family: "Compressa-micro";
+  font-variation-settings: "wght" 500, "wdth" 100, "ital" 1;
+  text-rendering: optimizeSpeed;
+  font-size: 2vw;
+  line-height: 1.2em;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
 .highlight-title {
   font-family: "Compressa-micro";
   font-variation-settings: "wght" 800, "wdth" 100, "ital" 1;
@@ -65,7 +75,7 @@ ul#accordion li:nth-child(even) {
   font-family: "Compressa-micro";
   font-variation-settings: "wght" 300, "wdth" 100, "ital" 1;
   text-rendering: optimizeSpeed;
-  font-size: 1vw;
+  font-size: 0.2vw;
   line-height: 1.2em;
   letter-spacing: 0.05em;
 }
@@ -76,6 +86,7 @@ ul#accordion li:nth-child(even) {
   font-variation-settings: "wght" 300, "wdth" 100, "ital" 1;
   text-rendering: optimizeSpeed;
   font-size: 1vw;
+  transition: font-size 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
   line-height: 1.2em;
   letter-spacing: 0.05em;
 }
@@ -84,15 +95,23 @@ ul#accordion li .highlight-title,
 ul#accordion li .highlight-description {
   opacity: 0;
   transform: translateY(2rem);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition: opacity 0.5s ease, transform 0.3s ease, font-size 0.3s ease;
   pointer-events: none;
 }
 
-ul#accordion li:hover .highlight-title,
+ul#accordion li:hover .highlight-title {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  font-size: 2vw;
+}
+
 ul#accordion li:hover .highlight-description {
   opacity: 1;
   transform: translateY(0);
   pointer-events: auto;
+  font-size: 1vw;
+  transition: font-size 0.3s ease, opacity 0.3s ease, transform 0.3s ease;
 }
 
 ul#accordion li:hover {
