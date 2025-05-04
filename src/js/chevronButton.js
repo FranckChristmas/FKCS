@@ -3,8 +3,6 @@ export function chevronAnimation() {
   const button = document.querySelector(".chevron-button");
   const track = document.querySelector(".chevron-track");
   const svg = document.querySelector(".chevron-svg");
-  console.log("track:", track);
-  console.log("svg:", svg);
   button.addEventListener("mouseenter", () => {
     track.classList.add("active");
   });

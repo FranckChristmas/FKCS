@@ -262,7 +262,7 @@ ul#accordion li:hover {
 
 ul#accordion li:hover .highlight-date {
   font-variation-settings: "wght" 800, "wdth" 1, "ital" 1;
-  font-size: 12vw;
+  font-size: 8vw;
 }
 
 ul#accordion:hover li:not(:hover) h3 {
@@ -369,6 +369,10 @@ h3 {
   font-family: compressa-micro;
   font-size: 5rem;
   font-weight: bolder;
+}
+
+.company {
+  padding: 1.6rem 0 0 3rem;
 }
 
 h3, h1, a.color, span {

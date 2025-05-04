@@ -104,7 +104,7 @@ ul#accordion li:hover {
 //allow to hide the text when not hovered and only showing the one hovered
 ul#accordion li:hover .highlight-date {
   font-variation-settings: "wght" 800, "wdth" 1, "ital" 1;
-  font-size: 12vw;
+  font-size: 8vw;
 }
 
 ul#accordion:hover li:not(:hover) h3 {
