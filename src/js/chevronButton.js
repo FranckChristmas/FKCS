@@ -17,10 +17,10 @@ export function chevronAnimation() {
     svg.addEventListener("transitionend", handleTransitionEnd);
   });
 }
-//--------------------------part animation of the button text---------------------------
+//--------------------------part animation of the button text [NOT USED]---------------------------
 
 export function animateButtonText() {
-  const buttonText = document.querySelector(".button-text");
+  const buttonText = document.querySelector(""); // Add the correct selector for the button text !!!!!!!! not used for now
   const text = buttonText.textContent;
   buttonText.innerHTML = ""; // empty the content of the button text
 

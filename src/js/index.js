@@ -1,13 +1,17 @@
 import { makeSpans, colorHoverEffect } from "./spans.js";
-import { chevronAnimation, animateButtonText } from "./chevronButton.js";
-import { animateVariableFont, wordQualifiers } from "./animateTitle.js";
+import { chevronAnimation } from "./chevronButton.js";
+import {
+  animateVariableFont,
+  animateVariableFont2,
+  wordQualifiers,
+} from "./animateTitle.js";
 import { navAnimation } from "./navAnimation.js";
 import { fetchProjects } from "./prismic.js";
 import { renderProjects } from "./renderProjects.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
   chevronAnimation();
-  animateButtonText();
+  // animateButtonText();
   wordQualifiers();
   navAnimation();
 
@@ -23,6 +27,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   makeSpans("h1, h3");
   colorHoverEffect();
   animateVariableFont();
+  animateVariableFont2();
 
   console.log("Prismic data :", projects);
 });
