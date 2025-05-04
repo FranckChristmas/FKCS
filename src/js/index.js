@@ -10,10 +10,19 @@ document.addEventListener("DOMContentLoaded", async () => {
   animateButtonText();
   wordQualifiers();
   navAnimation();
+
   const projects = await fetchProjects();
+
+  projects.sort((a, b) => {
+    // Sort by start_date
+    const dateA = new Date(a.data.start_date);
+    const dateB = new Date(b.data.start_date);
+    return dateA - dateB; // Sort in descending order
+  });
   renderProjects(projects);
   makeSpans("h1, h3");
   colorHoverEffect();
   animateVariableFont();
+
   console.log("📦 Données projets Prismic :", projects);
 });
