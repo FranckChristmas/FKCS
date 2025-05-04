@@ -172,15 +172,20 @@ nav.hovering li:hover .link {
   }
 }
 
-body {
-  background-color: #41393e;
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
+.highlights-wrapper {
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.highlight-section-title {
+  text-transform: uppercase;
+  font-variation-settings: "wght" 300, "wdth" 100, "ital" 1;
+  margin-bottom: 3rem;
+  font-family: Compressa-micro;
+  font-size: 10rem;
+  display: flex;
 }
 
 ul#accordion {
@@ -194,7 +199,6 @@ ul#accordion {
 ul#accordion li {
   background-color: #ffffff0d;
   flex-flow: column;
-  justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
@@ -500,12 +504,12 @@ section.about {
 .letter.out {
   opacity: 0;
   transition: all .3s cubic-bezier(.55, .055, .675, .19);
-  transform: translateY(1rem)rotateX(90deg);
+  transform: translateY(20rem)rotateX(90deg);
 }
 
 .letter.behind {
   transition: all .3s cubic-bezier(.55, .055, .675, .19);
-  transform: translateY(-4rem)translateZ(-2rem);
+  transform: translateY(-8rem)translateZ(-2rem);
 }
 
 section.skillset {

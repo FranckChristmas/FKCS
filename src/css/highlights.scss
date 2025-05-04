@@ -1,0 +1,103 @@
+.highlights-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.highlight-section-title {
+  display: flex;
+  font-family: "Compressa-micro";
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  font-size: 10rem;
+  font-variation-settings: "wght" 300, "wdth" 100, "ital" 1;
+}
+
+ul#accordion {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+ul#accordion li {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 2em;
+  background-color: rgba(255, 255, 255, 0.05);
+
+  transition: width 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s;
+}
+
+ul#accordion li:nth-child(even) {
+  background-color: transparent;
+}
+
+.highlight-date {
+  font-family: "Compressa-micro";
+  font-variation-settings: "wght" 300, "wdth" 5, "ital" 1;
+  text-rendering: optimizeSpeed;
+  font-size: 2vw;
+  line-height: 1.2em;
+  letter-spacing: 0.05em;
+  transition: font-size 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s,
+    font-variation-settings 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s;
+  // white-space: nowrap;
+}
+
+.highlight-title {
+  font-family: "Compressa-micro";
+  font-variation-settings: "wght" 800, "wdth" 100, "ital" 1;
+  text-rendering: optimizeSpeed;
+  font-size: 2vw;
+  line-height: 1.2em;
+  letter-spacing: 0.05em;
+}
+
+.highlight-description {
+  font-family: "Compressa-micro";
+  font-variation-settings: "wght" 300, "wdth" 100, "ital" 1;
+  text-rendering: optimizeSpeed;
+  font-size: 1vw;
+  line-height: 1.2em;
+  letter-spacing: 0.05em;
+}
+
+ul#accordion li .highlight-title,
+ul#accordion li .highlight-description {
+  opacity: 0;
+  transform: translateY(2rem);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+ul#accordion li:hover .highlight-title,
+ul#accordion li:hover .highlight-description {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+ul#accordion li:hover {
+  width: 800%;
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+//allow to hide the text when not hovered and only showing the one hovered
+ul#accordion li:hover .highlight-date {
+  font-variation-settings: "wght" 800, "wdth" 1, "ital" 1;
+  font-size: 12vw;
+}
+
+ul#accordion:hover li:not(:hover) h3 {
+  font-variation-settings: "wght" 100, "wdth" 5, "ital" 1;
+  font-size: 2vw;
+}
