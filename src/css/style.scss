@@ -1,6 +1,6 @@
 @use "components/_nav.scss" as *;
 @use "./components/_buttons.scss" as *;
-@use "./projects.scss" as *;
+@use "./highlights.scss" as *;
 
 @font-face {
   font-family: "GoboldRegular";
@@ -245,12 +245,12 @@ section.about {
 
 .letter.out {
   opacity: 0;
-  transform: translateY(1rem) rotateX(90deg);
+  transform: translateY(20rem) rotateX(90deg);
   transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
 .letter.behind {
-  transform: translateY(-4rem) translateZ(-2rem);
+  transform: translateY(-8rem) translateZ(-2rem);
   transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
