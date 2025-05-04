@@ -228,7 +228,7 @@ ul#accordion li:hover {
 
 ul#accordion li:hover h3 {
   font-variation-settings: "wght" 800, "wdth" 200, "ital" 1;
-  font-size: 16vw;
+  font-size: 12vw;
 }
 
 @font-face {
@@ -397,7 +397,7 @@ section.about {
   position: relative;
 }
 
-#po-title {
+#po-title, .po-a {
   text-transform: uppercase;
   text-align: center;
   -webkit-user-select: none;
@@ -422,8 +422,8 @@ section.about {
 }
 
 #po-qualifier {
-  text-transform: uppercase;
-  letter-spacing: 2rem;
+  text-transform: capitalize;
+  letter-spacing: 1rem;
   pointer-events: none;
   flex-direction: row;
   justify-content: center;
@@ -432,7 +432,7 @@ section.about {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: compressa-micro;
+  font-family: roboto-flex;
   font-size: 8rem;
   font-weight: 500;
   display: flex;
@@ -449,11 +449,10 @@ section.about {
 }
 
 .letter {
-  transform-origin: 50% 50% 1rem;
-  transform-origin: 50% 50% 1rem;
+  transform-origin: 50% 50% 2.5rem;
   transform-style: preserve-3d;
   opacity: 0;
-  transition: all .3s, opacity .3s;
+  transition: all .2s, opacity .2s;
   display: inline-block;
   position: relative;
   transform: rotateX(-90deg);
@@ -461,15 +460,19 @@ section.about {
 
 .letter.in {
   opacity: 1;
-  transition: all .38s ease cubic-bezier(.175, .885, .32, 1.275);
-  transform: rotateX(0);
+  transition: all .5s cubic-bezier(.175, .885, .32, 1.275);
+  transform: rotateX(0)translateY(0);
 }
 
 .letter.out {
   opacity: 0;
-  transition: all .32s ease cubic-bezier(.175, .885, .32, 1.275);
-  opacity: 0;
-  transform: rotateX(90deg);
+  transition: all .2s cubic-bezier(.55, .055, .675, .19);
+  transform: translateY(4rem)translateZ(2rem);
+}
+
+.letter.behind {
+  transition: all .3s cubic-bezier(.55, .055, .675, .19);
+  transform: translateY(-4rem)translateZ(-2rem);
 }
 
 section.skillset {
