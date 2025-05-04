@@ -192,7 +192,6 @@ ul#accordion {
 }
 
 ul#accordion li {
-  color: #a88045;
   background-color: #ffffff0d;
   flex-flow: column;
   justify-content: center;
@@ -210,25 +209,61 @@ ul#accordion li:nth-child(2n) {
   background-color: #0000;
 }
 
-ul#accordion li h3 {
+.highlight-date {
   font-variation-settings: "wght" 300, "wdth" 5, "ital" 1;
   text-rendering: optimizeSpeed;
   letter-spacing: .05em;
   font-family: Compressa-micro;
-  font-size: 8vw;
+  font-size: 2vw;
   line-height: 1.2em;
   transition: font-size .65s cubic-bezier(.37, .07, .02, 1.01) 80ms, font-variation-settings .65s cubic-bezier(.37, .07, .02, 1.01) 80ms;
+}
+
+.highlight-title {
+  font-variation-settings: "wght" 800, "wdth" 100, "ital" 1;
+  text-rendering: optimizeSpeed;
+  letter-spacing: .05em;
+  font-family: Compressa-micro;
+  font-size: 2vw;
+  line-height: 1.2em;
+}
+
+.highlight-description {
+  font-variation-settings: "wght" 300, "wdth" 100, "ital" 1;
+  text-rendering: optimizeSpeed;
+  letter-spacing: .05em;
+  font-family: Compressa-micro;
+  font-size: 1vw;
+  line-height: 1.2em;
+}
+
+ul#accordion li .highlight-title, ul#accordion li .highlight-description {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .3s, transform .3s;
+  transform: translateY(2rem);
+}
+
+ul#accordion li:hover .highlight-title, ul#accordion li:hover .highlight-description {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateY(0);
 }
 
 ul#accordion li:hover {
   pointer-events: auto;
   cursor: pointer;
-  width: 600%;
+  width: 800%;
 }
 
-ul#accordion li:hover h3 {
-  font-variation-settings: "wght" 800, "wdth" 200, "ital" 1;
+ul#accordion li:hover .highlight-date {
+  font-variation-settings: "wght" 800, "wdth" 1, "ital" 1;
   font-size: 12vw;
+}
+
+ul#accordion:hover li:not(:hover) h3 {
+  font-variation-settings: "wght" 100, "wdth" 5, "ital" 1;
+  font-size: 2vw;
 }
 
 @font-face {
@@ -415,10 +450,9 @@ section.about {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 10rem;
+  height: 100%;
   display: flex;
   position: relative;
-  overflow: hidden;
 }
 
 #po-qualifier {
@@ -426,14 +460,14 @@ section.about {
   letter-spacing: 1rem;
   pointer-events: none;
   flex-direction: row;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
   font-family: roboto-flex;
-  font-size: 8rem;
+  font-size: 30rem;
   font-weight: 500;
   display: flex;
   position: absolute;
@@ -452,7 +486,6 @@ section.about {
   transform-origin: 50% 50% 2.5rem;
   transform-style: preserve-3d;
   opacity: 0;
-  transition: all .2s, opacity .2s;
   display: inline-block;
   position: relative;
   transform: rotateX(-90deg);
@@ -466,8 +499,8 @@ section.about {
 
 .letter.out {
   opacity: 0;
-  transition: all .2s cubic-bezier(.55, .055, .675, .19);
-  transform: translateY(4rem)translateZ(2rem);
+  transition: all .3s cubic-bezier(.55, .055, .675, .19);
+  transform: translateY(1rem)rotateX(90deg);
 }
 
 .letter.behind {
