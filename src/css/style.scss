@@ -266,6 +266,13 @@ section.about {
   justify-content: center;
   align-items: center;
 }
+.about-wrapper {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 80%;
+}
 .about-me {
   font-family: "compressa-micro";
   font-size: 3rem;
