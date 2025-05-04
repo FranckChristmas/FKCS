@@ -27,22 +27,22 @@ nav ul li {
 nav .link {
   height: 2.5rem;
   color: var(--almostwhite);
+  opacity: 1;
   justify-content: center;
   align-items: center;
-  font-family: roboto-flex;
-  font-weight: 100;
+  font-family: compressa-micro;
+  font-weight: 300;
   text-decoration: none;
+  transition: all .2s ease-in-out;
   display: flex;
 }
 
 nav.hovering .link {
-  opacity: .5;
-  transition: all .1s ease-in-out;
+  opacity: .7;
 }
 
 nav.hovering li:hover .link {
   opacity: 1;
-  transition: all .1s ease-in-out;
 }
 
 .chevron-button {
@@ -172,6 +172,41 @@ nav.hovering li:hover .link {
   }
 }
 
+.highlights-wrapper {
+  border-left: 2px solid #ccc;
+  margin-left: 2rem;
+  padding-left: 2rem;
+  position: relative;
+}
+
+.highlights-item {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.highlights-dot {
+  background-color: #007bff;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  top: .3rem;
+  left: -1.1rem;
+}
+
+.highlights-date {
+  color: #007bff;
+  margin-bottom: .3rem;
+  font-weight: bold;
+}
+
+.highlights-content {
+  background: #2b2b2b;
+  border-radius: .5rem;
+  padding: 1rem;
+  box-shadow: 0 2px 4px #0000001a;
+}
+
 @font-face {
   font-family: GoboldRegular;
   src: url("gobold-regular.4776ecfc.otf") format("truetype");
@@ -205,6 +240,11 @@ nav.hovering li:hover .link {
 @font-face {
   font-family: roboto-flex;
   src: url("roboto-flex.7e254c46.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: compressa-micro;
+  src: url("Compressa-micro.27467470.ttf") format("truetype");
 }
 
 * {
@@ -263,7 +303,7 @@ h3 {
   color: var(--almostwhite);
   margin: 0;
   padding: 1rem 0 2rem 3rem;
-  font-family: roboto-flex;
+  font-family: compressa-micro;
   font-size: 5rem;
   font-weight: bolder;
 }
@@ -341,9 +381,9 @@ section.about {
   place-content: center;
   align-items: center;
   margin: 0;
-  font-family: roboto-flex;
+  font-family: compressa-micro;
   font-size: 8rem;
-  font-weight: 100;
+  font-weight: 200;
   display: flex;
 }
 
@@ -368,9 +408,9 @@ section.about {
   height: 100%;
   margin: 0;
   padding: 0;
-  font-family: roboto-flex;
+  font-family: compressa-micro;
   font-size: 8rem;
-  font-weight: 100;
+  font-weight: 500;
   display: flex;
   position: absolute;
   top: 0;
@@ -380,20 +420,19 @@ section.about {
 .word {
   justify-content: center;
   width: 100%;
-  min-width: 40rem;
   display: flex;
   position: absolute;
 }
 
 .letter {
-  transform-origin: 50% 50% 2.5rem;
-  transform-origin: 50% 50% 2.5rem;
+  transform-origin: 50% 50% 1rem;
+  transform-origin: 50% 50% 1rem;
   transform-style: preserve-3d;
   opacity: 0;
   transition: all .3s, opacity .3s;
   display: inline-block;
   position: relative;
-  transform: translateZ(1rem)rotateX(-90deg);
+  transform: rotateX(-90deg);
 }
 
 .letter.in {
@@ -406,7 +445,7 @@ section.about {
   opacity: 0;
   transition: all .32s ease cubic-bezier(.175, .885, .32, 1.275);
   opacity: 0;
-  transform: rotateX(90deg)translateZ(1rem);
+  transform: rotateX(90deg);
 }
 
 section.skillset {

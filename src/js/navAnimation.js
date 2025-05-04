@@ -1,7 +1,8 @@
 export function navAnimation() {
-  console.log("navAnimation");
   const nav = document.querySelector(".nav");
   const links = document.querySelectorAll("nav .link");
+
+  let hoverTimeout;
 
   function updateHovering() {
     const isAnyHovered = Array.from(links).some((link) =>
@@ -11,10 +12,13 @@ export function navAnimation() {
   }
 
   links.forEach((link) => {
-    link.addEventListener("mouseover", updateHovering);
+    link.addEventListener("mouseover", () => {
+      clearTimeout(hoverTimeout);
+      updateHovering();
+    });
+
     link.addEventListener("mouseout", () => {
-      // Petit délai pour laisser le temps de passer d’un <span> à l’autre
-      setTimeout(updateHovering, 20);
+      hoverTimeout = setTimeout(updateHovering, 80);
     });
   });
 }
