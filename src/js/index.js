@@ -6,15 +6,14 @@ import { fetchProjects } from "./prismic.js";
 import { renderProjects } from "./renderProjects.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
-  makeSpans("h1, h3");
   colorHoverEffect();
   chevronAnimation();
   animateButtonText();
-  animateVariableFont();
   wordQualifiers();
   navAnimation();
-
   const projects = await fetchProjects();
   renderProjects(projects);
+  makeSpans("h1, h3");
+  animateVariableFont();
   console.log("📦 Données projets Prismic :", projects);
 });
