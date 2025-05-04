@@ -1,6 +1,6 @@
 @use "components/_nav.scss" as *;
 @use "./components/_buttons.scss" as *;
-@use "./potitle.scss" as *;
+@use "./projects.scss" as *;
 
 @font-face {
   font-family: "GoboldRegular";
@@ -32,6 +32,11 @@
 @font-face {
   font-family: "roboto-flex";
   src: url(../fonts/roboto-flex.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "compressa-micro";
+  src: url(../fonts/Compressa-micro.ttf) format("truetype");
 }
 
 /* importations */
@@ -92,7 +97,7 @@ h3 {
   font-size: 5rem;
   letter-spacing: 0.05em;
   margin: 0px;
-  font-family: "roboto-flex";
+  font-family: "compressa-micro";
   font-weight: bolder;
   color: var(--almostwhite);
   padding: 1rem 0rem 2rem 3rem;
@@ -173,11 +178,11 @@ section.about {
   align-items: center;
   justify-content: center;
   align-content: center;
-  font-family: "roboto-flex";
+  font-family: "compressa-micro";
   font-size: 8rem;
   text-transform: uppercase;
   text-align: center;
-  font-weight: 100;
+  font-weight: 200;
   user-select: none;
   margin: 0;
 }
@@ -197,10 +202,10 @@ section.about {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-family: "roboto-flex";
+  font-family: "compressa-micro";
   font-size: 8rem;
   text-transform: uppercase;
-  font-weight: 100;
+  font-weight: 500;
   letter-spacing: 2rem;
   position: absolute;
   width: 100%;
@@ -217,16 +222,15 @@ section.about {
   width: 100%;
   display: flex;
   justify-content: center;
-  min-width: 40rem;
 }
 
 .letter {
   display: inline-block;
   position: relative;
   transform: rotateX(0deg);
-  transform: translateZ(1rem) rotateX(-90deg);
-  transform-origin: 50% 50% 2.5rem;
-  transform-origin: 50% 50% 2.5rem;
+  transform: rotateX(-90deg);
+  transform-origin: 50% 50% 1rem;
+  transform-origin: 50% 50% 1rem;
   transform-style: preserve-3d;
   transition: all 0.3s ease, opacity 0.3s ease;
   opacity: 0;
@@ -245,7 +249,7 @@ section.about {
 }
 
 .letter.out {
-  transform: rotateX(90deg) translateZ(1rem);
+  transform: rotateX(90deg);
   opacity: 0;
 }
 

@@ -28,23 +28,23 @@ nav {
   /* part to animate the nab link btn */
 
   .link {
-    font-family: "roboto-flex";
-    font-weight: 100;
+    font-family: "compressa-micro";
+    font-weight: 300;
     height: 2.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
     color: var(--almostwhite);
+    opacity: 1;
+    transition: all 0.2s ease-in-out;
   }
 }
 
 nav.hovering .link {
-  opacity: 0.5;
-  transition: all 0.1s ease-in-out;
+  opacity: 0.7; /* Tous deviennent un peu plus transparents */
 }
 
 nav.hovering li:hover .link {
   opacity: 1;
-  transition: all 0.1s ease-in-out;
 }
