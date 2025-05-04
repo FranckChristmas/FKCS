@@ -79,6 +79,7 @@ body {
   color: white;
   padding-top: 6rem;
   font-family: "twk-super-italic";
+  scroll-behavior: smooth; // allow to have a smooth scroll epsecially for the nav links
 }
 
 h1 {
@@ -131,6 +132,7 @@ section {
   position: relative;
   display: flex;
   width: 100%;
+  scroll-margin-top: 8rem;
 }
 
 section.sticky {
