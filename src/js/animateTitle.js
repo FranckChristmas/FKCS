@@ -18,7 +18,7 @@ export function animateVariableFont() {
         const dy = mouse.y - (rect.top + rect.height / 2);
         const distance = Math.sqrt(dx * dx + dy * dy);
 
-        const wght = Math.max(300, 1200 - distance * 2);
+        const wght = Math.max(200, 1200 - distance * 2);
         const wdth = Math.min(120, 70 + distance / 200);
         const opsz = Math.min(144, 8 + distance / 10);
         const spacing = Math.min(1, distance / 1000);
@@ -114,7 +114,7 @@ export function wordQualifiers() {
       setTimeout(() => {
         letter.classList.remove("behind");
         letter.classList.add("in");
-      }, 340 + i * 80);
+      }, 100 + i * 120);
     });
 
     current = next;
@@ -123,13 +123,13 @@ export function wordQualifiers() {
   function animateLetterOut(letters, i) {
     setTimeout(() => {
       letters[i].className = "letter out";
-    }, i * 80);
+    }, i * 120);
   }
 
   function animateLetterIn(letters, i) {
     setTimeout(() => {
       letters[i].className = "letter in";
-    }, 340 + i * 80);
+    }, 100 + i * 120);
   }
 
   changeWord();

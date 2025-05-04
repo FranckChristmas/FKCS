@@ -173,7 +173,8 @@ section.about {
   margin: 0 auto;
 }
 
-#po-title {
+#po-title,
+.po-a {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -206,7 +207,7 @@ section.about {
   font-size: 8rem;
   text-transform: uppercase;
   font-weight: 500;
-  letter-spacing: 2rem;
+  letter-spacing: 1rem;
   position: absolute;
   width: 100%;
   height: 100%;
@@ -227,30 +228,26 @@ section.about {
 .letter {
   display: inline-block;
   position: relative;
-  transform: rotateX(0deg);
-  transform: rotateX(-90deg);
+  // transform: rotateX(0deg);
+  transform: translateY(-2rem) translateZ(3rem);
+  // transform: rotateX(-90deg);
   transform-origin: 50% 50% 1rem;
   transform-origin: 50% 50% 1rem;
   transform-style: preserve-3d;
-  transition: all 0.3s ease, opacity 0.3s ease;
+  transition: all 0.2s ease, opacity 0.2s ease;
   opacity: 0;
 }
 
 .letter.in {
-  transform: rotateX(0deg);
+  transform: rotateX(0deg) translateY(0);
   opacity: 1;
-  transition: all 0.38s ease cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.3s ease cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .letter.out {
   opacity: 0;
-  transform: rotateX(-90deg) translateZ(1rem);
-  transition: all 0.32s ease cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-.letter.out {
-  transform: rotateX(90deg);
-  opacity: 0;
+  transform: translateY(3rem) translateZ(2rem);
+  transition: all 0.5s ease cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 /* -------------------------- section skillset -------------------------*/
