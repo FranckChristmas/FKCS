@@ -70,6 +70,16 @@ ul#accordion li:nth-child(even) {
   letter-spacing: 0.05em;
 }
 
+.highlight-context,
+.highlight-stack {
+  font-family: "Compressa-micro";
+  font-variation-settings: "wght" 300, "wdth" 100, "ital" 1;
+  text-rendering: optimizeSpeed;
+  font-size: 1vw;
+  line-height: 1.2em;
+  letter-spacing: 0.05em;
+}
+
 ul#accordion li .highlight-title,
 ul#accordion li .highlight-description {
   opacity: 0;
@@ -99,5 +109,6 @@ ul#accordion li:hover .highlight-date {
 
 ul#accordion:hover li:not(:hover) h3 {
   font-variation-settings: "wght" 100, "wdth" 5, "ital" 1;
-  font-size: 2vw;
+  font-size: 1vw;
+  text-align: center;
 }
