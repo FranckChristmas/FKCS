@@ -556,6 +556,14 @@ section.about {
   display: flex;
 }
 
+.about-wrapper {
+  width: 100%;
+  max-width: 80%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
 .about-me {
   letter-spacing: .05em;
   margin: 0 auto;
