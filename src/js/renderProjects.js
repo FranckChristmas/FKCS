@@ -41,7 +41,8 @@ export function renderProjects(projects) {
 
     const li = document.createElement("li");
     li.innerHTML = `<h3 class="variable-text highlight-date">${period}</h3>
-            <span class="highlight-title">${client} - ${role} | ${sector}</span>
+            <span class="highlight-title role"> ${role}</span>
+            <span class="highlight-title">${client} | ${sector}</span>
             <div class="highlight-description">
               <p class="highlight-context">${contextTitle} </br>  ${context}</p>
               <p class="highlight-stack">${stackTitle} </br> ${stack}</p>
