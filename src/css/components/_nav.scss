@@ -25,7 +25,7 @@ nav {
     }
   }
 
-  /* part to animate the nab link btn */
+  /* part to animate the nav link btn */
 
   .link {
     font-family: "compressa-micro";
@@ -42,7 +42,7 @@ nav {
 }
 
 nav.hovering .link {
-  opacity: 0.7; /* Tous deviennent un peu plus transparents */
+  opacity: 0.7; /* everything becomes transparent */
 }
 
 nav.hovering li:hover .link {

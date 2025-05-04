@@ -371,6 +371,7 @@ html, body {
   --darkgreen: #0077b6;
   background: var(--darkblue);
   color: #fff;
+  scroll-behavior: smooth;
   margin: 0;
   padding: 6rem 0 0;
   font-family: twk-super-italic;
@@ -424,6 +425,7 @@ p {
 
 section {
   width: 100%;
+  scroll-margin-top: 8rem;
   display: flex;
   position: relative;
 }
