@@ -55,7 +55,7 @@ nav.hovering li:hover .link {
   color: var(--darkblue);
   cursor: pointer;
   box-shadow: 0 0 0 0 var(--almostwhite);
-  border-radius: 20rem;
+  border-radius: 6rem;
   margin: 4rem;
   padding: 1rem 2rem;
   font-family: twk-super-italic;
@@ -66,7 +66,7 @@ nav.hovering li:hover .link {
 }
 
 .chevron-button:hover {
-  box-shadow: 1rem 2rem 0 1.5rem var(--almostgrey);
+  box-shadow: 1.5rem 2rem 0 1.5rem var(--almostgrey);
 }
 
 .chevron-button:not(:hover) {
@@ -80,14 +80,16 @@ nav.hovering li:hover .link {
 
 .collab-text {
   z-index: 1;
-  font-family: twk-regular-italic;
+  font-family: compressa-micro;
   font-size: 6rem;
   position: relative;
 }
 
 .button-text {
+  font-variation-settings: "wght" 1500, "wdth" 80, "ital" 0;
+  text-transform: uppercase;
   z-index: 1;
-  font-family: twk-super-italic;
+  font-family: compressa-micro;
   transition: all .5s ease-in-out;
   position: relative;
 }
@@ -441,14 +443,14 @@ section.full-screen {
   top: 0;
 }
 
-section.about {
+section.home {
   justify-content: center;
   align-items: center;
   height: 100vh;
   display: flex;
 }
 
-.about-wrapper {
+.home-wrapper {
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -545,6 +547,22 @@ section.about {
 .letter.behind {
   transition: all .3s cubic-bezier(.55, .055, .675, .19);
   transform: translateY(-8rem)translateZ(-2rem);
+}
+
+section.about {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  display: flex;
+}
+
+.about-me {
+  letter-spacing: .05em;
+  margin: 0 auto;
+  padding: 0 5rem;
+  font-family: compressa-micro;
+  font-size: 3rem;
+  line-height: 1.2em;
 }
 
 section.skillset {

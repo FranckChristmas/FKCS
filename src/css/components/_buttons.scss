@@ -6,7 +6,7 @@
   padding: 1rem 2rem;
   width: 120rem;
   height: 40rem;
-  border-radius: 20rem;
+  border-radius: 6rem;
   border: 2.2rem solid var(--almostwhite);
   cursor: pointer;
   font-family: "twk-super-italic";
@@ -20,7 +20,7 @@
 }
 
 .chevron-button:hover {
-  box-shadow: 1rem 2rem 0 1.5rem var(--almostgrey);
+  box-shadow: 1.5rem 2rem 0 1.5rem var(--almostgrey);
 }
 .chevron-button:not(:hover) {
   transition-delay: 0.1s; /* delay when shadow is retracting*/
@@ -32,14 +32,16 @@
 }
 
 .collab-text {
-  font-family: "twk-regular-italic";
+  font-family: "compressa-micro";
   position: relative;
   font-size: 6rem;
   z-index: 1;
 }
 .button-text {
-  font-family: "twk-super-italic";
+  font-family: "compressa-micro";
+  font-variation-settings: "wght" 1500, "wdth" 80, "ital" 0;
   position: relative;
+  text-transform: uppercase;
   z-index: 1;
   transition: all 0.5s ease-in-out;
 }

@@ -146,16 +146,16 @@ section.full-screen {
   z-index: 1;
 }
 
-/* -------------------------- section about -------------------------*/
+/* -------------------------- section home -------------------------*/
 
-section.about {
+section.home {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.about-wrapper {
+.home-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -257,6 +257,22 @@ section.about {
 .letter.behind {
   transform: translateY(-8rem) translateZ(-2rem);
   transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+/* -------------------------- section about -------------------------*/
+section.about {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-me {
+  font-family: "compressa-micro";
+  font-size: 3rem;
+  margin: 0 auto;
+  padding: 0 5rem;
+  line-height: 1.2em;
+  letter-spacing: 0.05em;
 }
 
 /* -------------------------- section skillset -------------------------*/
