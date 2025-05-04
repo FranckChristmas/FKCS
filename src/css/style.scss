@@ -229,7 +229,7 @@ section.about {
   display: inline-block;
   position: relative;
   // transform: rotateX(0deg);
-  transform: translateY(-2rem) translateZ(3rem);
+  transform: translateY(-4rem) translateZ(3rem);
   // transform: rotateX(-90deg);
   transform-origin: 50% 50% 1rem;
   transform-origin: 50% 50% 1rem;
@@ -241,13 +241,13 @@ section.about {
 .letter.in {
   transform: rotateX(0deg) translateY(0);
   opacity: 1;
-  transition: all 0.3s ease cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transition: all 0.2s ease cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .letter.out {
   opacity: 0;
-  transform: translateY(3rem) translateZ(2rem);
-  transition: all 0.5s ease cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform: translateY(4rem) translateZ(2rem);
+  transition: all 0.2s ease cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 /* -------------------------- section skillset -------------------------*/

@@ -114,7 +114,7 @@ export function wordQualifiers() {
       setTimeout(() => {
         letter.classList.remove("behind");
         letter.classList.add("in");
-      }, 100 + i * 120);
+      }, 200 + i * 60);
     });
 
     current = next;
@@ -123,13 +123,13 @@ export function wordQualifiers() {
   function animateLetterOut(letters, i) {
     setTimeout(() => {
       letters[i].className = "letter out";
-    }, i * 120);
+    }, i * 80);
   }
 
   function animateLetterIn(letters, i) {
     setTimeout(() => {
       letters[i].className = "letter in";
-    }, 100 + i * 120);
+    }, 200 + i * 60);
   }
 
   changeWord();

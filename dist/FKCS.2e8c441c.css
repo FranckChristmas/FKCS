@@ -228,7 +228,7 @@ ul#accordion li:hover {
 
 ul#accordion li:hover h3 {
   font-variation-settings: "wght" 800, "wdth" 200, "ital" 1;
-  font-size: 16vw;
+  font-size: 12vw;
 }
 
 @font-face {
@@ -456,19 +456,19 @@ section.about {
   transition: all .2s, opacity .2s;
   display: inline-block;
   position: relative;
-  transform: translateY(-2rem)translateZ(3rem);
+  transform: translateY(-4rem)translateZ(3rem);
 }
 
 .letter.in {
   opacity: 1;
-  transition: all .3s ease cubic-bezier(.175, .885, .32, 1.275);
+  transition: all .2s ease cubic-bezier(.175, .885, .32, 1.275);
   transform: rotateX(0)translateY(0);
 }
 
 .letter.out {
   opacity: 0;
-  transition: all .5s ease cubic-bezier(.175, .885, .32, 1.275);
-  transform: translateY(3rem)translateZ(2rem);
+  transition: all .2s ease cubic-bezier(.175, .885, .32, 1.275);
+  transform: translateY(4rem)translateZ(2rem);
 }
 
 section.skillset {
