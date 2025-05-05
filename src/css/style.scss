@@ -133,7 +133,7 @@ section {
   position: relative;
   display: flex;
   width: 100%;
-  scroll-margin-top: 8rem;
+  scroll-margin-top: 8rem; // allow to have a margin on the top of the section when we scroll to it, because of the size of the navbar
 }
 
 section.sticky {

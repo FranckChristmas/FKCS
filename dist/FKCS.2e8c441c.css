@@ -173,10 +173,10 @@ nav.hovering li:hover .link {
   }
 }
 
-#highlights {
+section#highlights {
   width: 100%;
+  scroll-margin-top: 8rem;
   display: flex;
-  overflow: hidden;
 }
 
 .highlights-wrapper {
@@ -223,6 +223,7 @@ ul#accordion li.accordion-item {
   flex-flow: column;
   align-items: center;
   width: 100%;
+  padding-top: 3rem;
   transition: width .65s cubic-bezier(.37, .07, .02, 1.01) 80ms, max-height .65s cubic-bezier(.37, .07, .02, 1.01) 80ms;
   display: flex;
   position: relative;
@@ -463,9 +464,8 @@ html, body {
   background: var(--darkblue);
   color: #fff;
   scroll-behavior: smooth;
-  padding: 0;
   margin: 0;
-  padding-top: 6rem;
+  padding: 6rem 0 0;
   font-family: twk-super-italic;
   font-size: 62.5%;
 }
