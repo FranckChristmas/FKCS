@@ -38,7 +38,6 @@ export function renderProjects(projects) {
             html += `</ul>`;
             inList = false;
           }
-
           if (block.type === "heading4") {
             html += `<h4 class="heading4-respo accordion-hidden">${block.text}</h4>`;
           } else if (block.type === "paragraph") {
