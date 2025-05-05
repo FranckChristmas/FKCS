@@ -20,28 +20,50 @@ export function renderProjects(projects) {
 
     function renderRichText(blocks) {
       if (!Array.isArray(blocks)) return "";
-      return blocks
-        .map((block) => {
-          if (block.type === "heading4")
-            return `<h4 class="heading4-respo">${block.text}</h4>`;
-          if (block.type === "paragraph")
-            return `<p class="highlight-respo">${block.text}</p>`;
-          if (block.type === "list-item")
-            return `<p class="highlight-respo">${block.text}</p>`;
-        })
-        .join("");
+
+      let html = "";
+      let inList = false;
+
+      blocks.forEach((block, index) => {
+        const next = blocks[index + 1];
+
+        if (block.type === "list-item") {
+          if (!inList) {
+            html += `<ul class="highlight-respo accordion-hidden">`;
+            inList = true;
+          }
+          html += `<li class="highlight-respo accordion-hidden">${block.text}</li>`;
+          if (next || next.type !== "list-item") {
+            html += `</ul>`;
+            inList = false;
+          }
+        } else {
+          if (inList) {
+            html += `</ul>`;
+            inList = false;
+          }
+
+          if (block.type === "heading4") {
+            html += `<h4 class="heading4-respo accordion-hidden">${block.text}</h4>`;
+          } else if (block.type === "paragraph") {
+            html += `<p class="highlight-respo">${block.text}</p>`;
+          }
+        }
+      });
+      return html;
     }
 
     console.log("📦 Données titres Prismic :", project.data);
 
     const li = document.createElement("li");
+    li.classList.add("accordion-item");
     li.innerHTML = `<h3 class="variable-text highlight-date">${period}</h3>
-            <span class="role"> ${role}</span>
-            <span class="highlight-title">${client} | ${sector}</span>
+            <span class="role accordion-hidden"> ${role}</span>
+            <span class="highlight-title accordion-hidden">${client} | ${sector}</span>
             <div>
-              <p class="highlight-context">${contextTitle} ${context}</p>
-              <p class="highlight-stack">${stackTitle} ${stack}</p>
-              <p class="highlight-respo">${respoTitle}  </br>   ${responsibilities}</p>
+              <p class="highlight-context accordion-hidden">${contextTitle} ${context}</p>
+              <p class="highlight-respo accordion-hidden">${respoTitle} ${responsibilities}</p>
+              <p class="highlight-stack accordion-hidden">${stackTitle} ${stack}</p>
             </div>
       `;
     container.appendChild(li);

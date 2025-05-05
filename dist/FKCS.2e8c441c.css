@@ -196,10 +196,18 @@ ul#accordion {
   justify-content: space-between;
   width: 100%;
   height: 100%;
+  padding-inline-start: 0;
   display: flex;
 }
 
 ul#accordion li {
+  margin: 0;
+  padding: 0;
+  line-height: 4rem;
+  list-style: square;
+}
+
+ul#accordion li.accordion-item {
   background-color: #ffffff0d;
   flex-flow: column;
   align-items: center;
@@ -230,7 +238,7 @@ h4.heading4-respo {
   font-variation-settings: "wght" 500, "wdth" 100, "ital" 1;
   text-rendering: optimizeSpeed;
   letter-spacing: .05em;
-  margin: 0;
+  margin: 0 0 1rem;
   font-family: Compressa-micro;
   font-size: 2vw;
   line-height: 1.2em;
@@ -255,7 +263,7 @@ ul#accordion li .highlight-context, ul#accordion li .highlight-stack {
   transition: font-size .3s, opacity .3s, transform .3s;
 }
 
-ul#accordion li .highlight-title, ul#accordion li .highlight-respo, ul#accordion li .role, ul#accordion li h4.heading4-respo {
+.accordion-hidden {
   opacity: 0;
   pointer-events: none;
   transition: opacity .5s, transform .3s, font-size .3s;
@@ -298,12 +306,12 @@ ul#accordion li:hover {
   width: 800%;
 }
 
-ul#accordion li:hover .highlight-date {
+ul#accordion li.accordion-item:hover .highlight-date {
   font-variation-settings: "wght" 800, "wdth" 1, "ital" 1;
   font-size: 8vw;
 }
 
-ul#accordion:hover li:not(:hover) h3 {
+ul#accordion:hover li.accordion-item:not(:hover) h3 {
   font-variation-settings: "wght" 100, "wdth" 5, "ital" 1;
   text-align: center;
   font-size: 1vw;
@@ -381,8 +389,9 @@ html, body {
   background: var(--darkblue);
   color: #fff;
   scroll-behavior: smooth;
+  padding: 0;
   margin: 0;
-  padding: 6rem 0 0;
+  padding-top: 6rem;
   font-family: twk-super-italic;
   font-size: 62.5%;
 }

@@ -20,9 +20,17 @@ ul#accordion {
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
+  padding-inline-start: 0;
 }
 
 ul#accordion li {
+  list-style: square;
+  line-height: 4rem;
+  margin: 0;
+  padding: 0;
+}
+
+ul#accordion li.accordion-item {
   position: relative;
   overflow: hidden;
   display: flex;
@@ -60,6 +68,7 @@ h4.heading4-respo {
   line-height: 1.2em;
   letter-spacing: 0.05em;
   margin: 0;
+  margin-bottom: 1rem;
 }
 
 .highlight-title,
@@ -84,10 +93,7 @@ ul#accordion li .highlight-stack {
   letter-spacing: 0.05em;
 }
 
-ul#accordion li .highlight-title,
-ul#accordion li .highlight-respo,
-ul#accordion li .role,
-ul#accordion li h4.heading4-respo {
+.accordion-hidden {
   opacity: 0;
   transform: translateY(2rem);
   transition: opacity 0.5s ease, transform 0.3s ease, font-size 0.3s ease;
@@ -139,12 +145,12 @@ ul#accordion li:hover {
 }
 
 //allow to hide the text when not hovered and only showing the one hovered
-ul#accordion li:hover .highlight-date {
+ul#accordion li.accordion-item:hover .highlight-date {
   font-variation-settings: "wght" 800, "wdth" 1, "ital" 1;
   font-size: 8vw;
 }
 
-ul#accordion:hover li:not(:hover) h3 {
+ul#accordion:hover li.accordion-item:not(:hover) h3 {
   font-variation-settings: "wght" 100, "wdth" 5, "ital" 1;
   font-size: 1vw;
   text-align: center;
