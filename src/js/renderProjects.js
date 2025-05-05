@@ -53,6 +53,7 @@ export function renderProjects(projects) {
 
     const li = document.createElement("li");
     li.classList.add("accordion-item");
+
     li.innerHTML = `<h3 class="variable-text highlight-date">${period}</h3>
             <span class="role accordion-hidden"> ${role}</span>
             <span class="highlight-title accordion-hidden">${client} | ${sector}</span>
