@@ -28,15 +28,16 @@ export function renderAbout(about) {
   }
 
   container.innerHTML = `
+      <div class="about-image-wrapper">
       ${
         imageUrl
-          ? `<img src="${imageUrl}" alt="${imageAlt}" class="about-image" />`
+          ? `<img class="about-image" src="${imageUrl}" alt="${imageAlt}"  />`
           : ""
       }
+      </div>
       <div class="about-title-wrapper">
         <h2 class="about-title">${title}</h2>
         <p class="about-description">${aboutText}</p>
       </div>
   `;
-  console.log("📦 Données API Prismic AboutMe :", about.data);
 }

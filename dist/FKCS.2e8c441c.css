@@ -176,6 +176,7 @@ nav.hovering li:hover .link {
 #highlights {
   width: 100%;
   display: flex;
+  overflow: hidden;
 }
 
 .highlights-wrapper {
@@ -196,7 +197,7 @@ nav.hovering li:hover .link {
 
 ul#accordion {
   flex-flow: row;
-  justify-content: space-between;
+  justify-content: center;
   width: 100%;
   min-height: 100vh;
   padding-inline-start: 0;
@@ -212,12 +213,17 @@ ul#accordion li {
   list-style: square;
 }
 
+.accordion-inner {
+  box-sizing: border-box;
+  width: 100%;
+}
+
 ul#accordion li.accordion-item {
   background-color: #ffffff0d;
   flex-flow: column;
   align-items: center;
   width: 100%;
-  padding: 2em;
+  padding: 2em 5rem;
   transition: width .65s cubic-bezier(.37, .07, .02, 1.01) 80ms, max-height .65s cubic-bezier(.37, .07, .02, 1.01) 80ms;
   display: flex;
   position: relative;
@@ -338,8 +344,25 @@ ul#accordion:hover li.accordion-item:not(:hover) h3 {
   position: relative;
 }
 
+.about-image-wrapper {
+  justify-content: center;
+  width: 100%;
+  max-width: 400px;
+  height: 100%;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.about-image {
+  object-fit: cover;
+  border-radius: 10%;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
 .about-title-wrapper {
-  align-items: left;
   flex-direction: column;
   justify-content: center;
   margin: auto auto auto 5rem;
@@ -355,6 +378,7 @@ ul#accordion:hover li.accordion-item:not(:hover) h3 {
 
 .about-description {
   color: #fff;
+  margin: 0;
   font-family: compressa-micro;
   font-size: 4rem;
 }
