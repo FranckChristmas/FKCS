@@ -30,7 +30,7 @@ export async function fetchAboutMe() {
     const apiData = await apiRes.json(); // convert to JSON
     const masterRef = apiData.refs.find((ref) => ref.id === "master").ref;
     const response = await fetch(
-      `${API_ENDPOINT}/documents/search?ref=${masterRef}&type=about`
+      `${API_ENDPOINT}/documents/search?ref=${masterRef}&q=[[at(document.type,"about")]]`
     );
     if (!response.ok) {
       throw new Error("Failed to fetch about me");
