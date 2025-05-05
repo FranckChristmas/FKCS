@@ -130,8 +130,6 @@ nav.hovering li:hover .link {
   justify-content: center;
   align-items: center;
   height: 100%;
-  padding-bottom: 8rem;
-  line-height: 10rem;
   display: flex;
   position: relative;
 }
@@ -173,6 +171,12 @@ nav.hovering li:hover .link {
   100% {
     transform: translateX(0);
   }
+}
+
+#highlights {
+  width: 100%;
+  height: 100vh;
+  display: flex;
 }
 
 .highlights-wrapper {
@@ -234,23 +238,16 @@ ul#accordion li:nth-child(2n) {
   transition: font-size .65s cubic-bezier(.37, .07, .02, 1.01) 80ms, font-variation-settings .65s cubic-bezier(.37, .07, .02, 1.01) 80ms;
 }
 
-h4.heading4-respo {
-  font-variation-settings: "wght" 500, "wdth" 100, "ital" 1;
-  text-rendering: optimizeSpeed;
-  letter-spacing: .05em;
-  margin: 0 0 1rem;
-  font-family: Compressa-micro;
-  font-size: 2vw;
-  line-height: 1.2em;
-}
-
 .highlight-title, .role, .highlight-respo {
   font-variation-settings: "wght" 500, "wdth" 100, "ital" 1;
   text-rendering: optimizeSpeed;
   letter-spacing: .05em;
+  opacity: 0;
   font-family: Compressa-micro;
-  font-size: 0;
+  font-size: 1vw;
   line-height: 1.2em;
+  transition: font-size .5s, opacity .5s, transform .6s;
+  transform: scale(0);
 }
 
 ul#accordion li .highlight-context, ul#accordion li .highlight-stack {
@@ -260,43 +257,50 @@ ul#accordion li .highlight-context, ul#accordion li .highlight-stack {
   font-family: Compressa-micro;
   font-size: 0;
   line-height: 1.2em;
-  transition: font-size .3s, opacity .3s, transform .3s;
+  transition: font-size .5s, opacity .5s, transform .6s;
 }
 
-.accordion-hidden {
+.heading4-respo.accordion-hidden {
+  font-variation-settings: "wght" 500, "wdth" 100, "ital" 1;
+  text-rendering: optimizeSpeed;
+  letter-spacing: .05em;
   opacity: 0;
   pointer-events: none;
-  transition: opacity .5s, transform .3s, font-size .3s;
-  transform: translateY(2rem);
+  margin: 0 0 1rem;
+  font-family: Compressa-micro;
+  font-size: 2vw;
+  line-height: 1.2em;
+  transition: opacity .5s, transform .6s, font-size .5s;
+  transform: scale(0);
 }
 
 ul#accordion li:hover .highlight-title {
   opacity: 1;
   pointer-events: auto;
   font-size: 2vw;
-  transform: translateY(0);
+  transform: translateY(0)scale(1);
 }
 
 ul#accordion li:hover .highlight-context {
   opacity: 1;
   pointer-events: auto;
   font-size: 1vw;
-  transform: translateY(0);
+  transform: translateY(0)scale(1);
 }
 
 ul#accordion li:hover .highlight-respo {
   opacity: 1;
   pointer-events: auto;
   font-size: 1vw;
-  transition: font-size .3s, opacity .3s, transform .3s;
-  transform: translateY(0);
+  transition: font-size .5s, opacity .5s, transform .6s;
+  transform: translateY(0)scale(1);
 }
 
 ul#accordion li:hover .role, ul#accordion li:hover .heading4-respo {
   opacity: 1;
   pointer-events: auto;
   font-size: 3vw;
-  transition: font-size .3s, opacity .3s, transform .3s;
+  transition: font-size .5s, opacity .5s, transform .6s;
   transform: translateY(0);
 }
 
