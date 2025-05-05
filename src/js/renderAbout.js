@@ -1,5 +1,5 @@
 export function renderAbout(about) {
-  const container = document.querySelector(".about-me");
+  const container = document.querySelector(".about-wrapper");
 
   if (!about) {
     container.innerHTML = "<p>not available..</p>";
@@ -16,7 +16,7 @@ export function renderAbout(about) {
     aboutText = about.data.about_text
       .map((block) => {
         if (block.type === "paragraph" || block.type === "preformatted") {
-          return `<p>${block.text}</p>`;
+          return `${block.text}`;
         } else if (block.type === "heading4") {
           return `<h4>${block.text}</h4>`;
         } else if (block.type === "list-item") {
@@ -33,9 +33,10 @@ export function renderAbout(about) {
           ? `<img src="${imageUrl}" alt="${imageAlt}" class="about-image" />`
           : ""
       }
-      <h2 class="about-title">${title}</h2>
-      <div class="about-description">${aboutText}</div>
-    </div>
+      <div class="about-title-wrapper">
+        <h2 class="about-title">${title}</h2>
+        <p class="about-description">${aboutText}</p>
+      </div>
   `;
   console.log("📦 Données API Prismic AboutMe :", about.data);
 }
