@@ -6,8 +6,9 @@ import {
   wordQualifiers,
 } from "./animateTitle.js";
 import { navAnimation } from "./navAnimation.js";
-import { fetchProjects } from "./prismic.js";
+import { fetchProjects, fetchAboutMe } from "./prismic.js";
 import { renderProjects } from "./renderProjects.js";
+import { renderAbout } from "./renderAbout.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
   chevronAnimation();
@@ -16,6 +17,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   navAnimation();
 
   const projects = await fetchProjects();
+  const aboutMe = await fetchAboutMe();
+  console.log("🧠 projects complet :");
+  console.log(JSON.stringify(projects, null, 2));
 
   projects.sort((a, b) => {
     // Sort by start_date
@@ -24,10 +28,9 @@ document.addEventListener("DOMContentLoaded", async () => {
     return dateB - dateA; // Sort in descending order
   });
   renderProjects(projects);
+  renderAbout(aboutMe);
   makeSpans("h1, h3");
   colorHoverEffect();
   animateVariableFont();
   animateVariableFont2();
-
-  console.log("Prismic data :", projects);
 });

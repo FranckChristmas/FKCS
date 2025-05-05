@@ -21,7 +21,7 @@
 
 ul#accordion {
   width: 100%;
-  height: 100%;
+  // height: 100%; blocking the height growth at the hover
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -42,12 +42,12 @@ ul#accordion li.accordion-item {
   flex-flow: column nowrap;
   align-items: center;
   width: 100%;
-  height: 100%;
+  max-height: 100vh;
   padding: 2em;
   background-color: rgba(255, 255, 255, 0.05);
-
   transition: width 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s,
-    height 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s;
+    max-height 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s;
+  overflow: hidden;
 }
 
 ul#accordion li:nth-child(even) {
@@ -148,7 +148,7 @@ ul#accordion li:hover .heading4-respo {
 
 ul#accordion li:hover {
   width: 600%;
-  height: 120%;
+  max-height: 150vh;
   pointer-events: auto;
   cursor: default;
 }
