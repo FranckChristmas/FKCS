@@ -82,9 +82,9 @@ export function animateVariableFont2() {
         const dy = mouse.y - (rect.top + rect.height / 2);
         const distance = Math.sqrt(dx * dx + dy * dy);
 
-        const wght = Math.max(700, 1200 - distance * 2);
-        const wdth = Math.min(120, 50 + distance / 200);
-        const opsz = Math.min(144, 8 + distance / 10);
+        const wght = Math.max(800, 1200 - distance * 2);
+        const wdth = Math.min(10, 0 + distance / 2000);
+        const opsz = Math.min(10, 8 + distance / 5);
         const spacing = Math.min(1, distance / 1000);
 
         this.span.style.fontVariationSettings = `'wght' ${wght.toFixed(

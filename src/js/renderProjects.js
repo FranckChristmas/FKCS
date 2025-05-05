@@ -14,10 +14,6 @@ export function renderProjects(projects) {
     const responsibilities = renderRichText(project.data.responsibilities);
     const stack = renderRichText(project.data.stack);
 
-    // const responsibilities = Array.isArray(project.data.responsibilities)
-    //   ? project.data.responsibilities.map((p) => p.text).join("<br>")
-    //   : "";
-
     function renderRichText(blocks) {
       if (!Array.isArray(blocks)) return "";
 
@@ -62,7 +58,7 @@ export function renderProjects(projects) {
             <span class="highlight-title accordion-hidden">${client} | ${sector}</span>
             <div>
               <p class="highlight-context accordion-hidden">${contextTitle} ${context}</p>
-              <p class="highlight-respo accordion-hidden">${respoTitle} ${responsibilities}</p>
+              <div class="highlight-respo accordion-hidden">${respoTitle} ${responsibilities}</div>
               <p class="highlight-stack accordion-hidden">${stackTitle} ${stack}</p>
             </div>
       `;
