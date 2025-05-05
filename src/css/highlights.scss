@@ -46,7 +46,8 @@ ul#accordion li.accordion-item {
   padding: 2em;
   background-color: rgba(255, 255, 255, 0.05);
 
-  transition: width 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s;
+  transition: width 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s,
+    height 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s;
 }
 
 ul#accordion li:nth-child(even) {
@@ -140,15 +141,16 @@ ul#accordion li:hover .role {
 ul#accordion li:hover .heading4-respo {
   opacity: 1;
   pointer-events: auto;
-  font-size: 3vw;
+  font-size: 2vw;
   transform: translateY(0);
   transition: font-size 0.5s ease, opacity 0.5s ease, transform 0.6s ease;
 }
 
 ul#accordion li:hover {
-  width: 800%;
+  width: 600%;
+  height: 120%;
   pointer-events: auto;
-  cursor: pointer;
+  cursor: default;
 }
 
 //allow to hide the text when not hovered and only showing the one hovered
