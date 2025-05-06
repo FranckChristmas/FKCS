@@ -1,4 +1,4 @@
-.site-footer ul {
+.footer ul {
   display: flex;
   justify-content: center;
   gap: 5rem;
@@ -10,4 +10,28 @@ li svg {
   width: 2rem;
   height: auto;
   color: var(--almostwhite);
+}
+.link {
+  font-family: "compressa-micro";
+  font-weight: 300;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--almostwhite);
+  opacity: 1;
+  transition: all 0.2s ease-in-out;
+}
+
+.footer .footer-link a {
+  transition: opacity 0.2s ease-in-out;
+}
+
+.footer.hovering .footer-link a {
+  opacity: 0.7; /* everything becomes transparent */
+}
+
+.footer.hovering .footer-link a:hover {
+  opacity: 1;
 }

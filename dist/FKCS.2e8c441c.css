@@ -173,7 +173,7 @@ nav.hovering li:hover .link {
   }
 }
 
-.site-footer ul {
+.footer ul {
   justify-content: center;
   gap: 5rem;
   margin-bottom: 5rem;
@@ -186,6 +186,31 @@ li svg {
   width: 2rem;
   height: auto;
   color: var(--almostwhite);
+}
+
+.link {
+  height: 2.5rem;
+  color: var(--almostwhite);
+  opacity: 1;
+  justify-content: center;
+  align-items: center;
+  font-family: compressa-micro;
+  font-weight: 300;
+  text-decoration: none;
+  transition: all .2s ease-in-out;
+  display: flex;
+}
+
+.footer .footer-link a {
+  transition: opacity .2s ease-in-out;
+}
+
+.footer.hovering .footer-link a {
+  opacity: .7;
+}
+
+.footer.hovering .footer-link a:hover {
+  opacity: 1;
 }
 
 section#highlights {
