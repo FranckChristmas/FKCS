@@ -5,7 +5,11 @@ import {
   animateVariableFont2,
   wordQualifiers,
 } from "./animateTitle.js";
-import { navAnimation } from "./navAnimation.js";
+import {
+  setupHoverEffect,
+  setupNavAndFooterBehavior,
+  setupNavTracking,
+} from "./hoverEffect.js";
 import { fetchProjects, fetchAboutMe } from "./prismic.js";
 import { renderProjects } from "./renderProjects.js";
 import { renderAbout } from "./renderAbout.js";
@@ -14,7 +18,6 @@ document.addEventListener("DOMContentLoaded", async () => {
   chevronAnimation();
   // animateButtonText();
   wordQualifiers();
-  navAnimation();
 
   const projects = await fetchProjects();
   const aboutMe = await fetchAboutMe();
@@ -27,6 +30,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     const dateB = new Date(b.data.start_date);
     return dateB - dateA; // Sort in descending order
   });
+  setupHoverEffect;
+  setupNavTracking();
+  setupNavAndFooterBehavior();
+
   renderProjects(projects);
   renderAbout(aboutMe);
   makeSpans("h1, h3");
