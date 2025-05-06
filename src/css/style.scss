@@ -3,43 +3,7 @@
 @use "./components/_footer.scss" as *;
 @use "./highlights.scss" as *;
 @use "./about.scss" as *;
-
-@font-face {
-  font-family: "GoboldRegular";
-  src: url(../fonts/gobold-regular.otf) format("truetype");
-}
-@font-face {
-  font-family: "Oswald-light";
-  src: url(../fonts/oswald-light.ttf) format("truetype");
-}
-@font-face {
-  font-family: "Oswald-xlight";
-  src: url(../fonts/oswald-xlight.ttf) format("truetype");
-}
-@font-face {
-  font-family: "twk-super-italic";
-  src: url(../fonts/twkeverett-super-italic.otf) format("truetype");
-}
-
-@font-face {
-  font-family: "twk-regular-italic";
-  src: url(../fonts/twkeverett-regular-italic.otf) format("truetype");
-}
-
-@font-face {
-  font-family: "twk-regular";
-  src: url(../fonts/twkeverett-regular.otf) format("truetype");
-}
-
-@font-face {
-  font-family: "roboto-flex";
-  src: url(../fonts/roboto-flex.ttf) format("truetype");
-}
-
-@font-face {
-  font-family: "compressa-micro";
-  src: url(../fonts/Compressa-micro.ttf) format("truetype");
-}
+@use "./base.scss" as *;
 
 /* importations */
 
