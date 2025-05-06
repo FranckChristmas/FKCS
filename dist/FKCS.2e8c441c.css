@@ -173,6 +173,11 @@ nav.hovering li:hover .link {
   }
 }
 
+.site-footer ul {
+  justify-content: center;
+  display: flex;
+}
+
 section#highlights {
   width: 100%;
   scroll-margin-top: 8rem;
