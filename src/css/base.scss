@@ -143,6 +143,18 @@ body {
   scroll-behavior: smooth; // allow to have a smooth scroll epsecially for the nav links
 }
 
+.link {
+  font-family: "compressa-micro";
+  font-weight: 300;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: var(--almostwhite);
+  opacity: 1;
+  transition: all 0.3s ease-in-out;
+}
 //--------------------------------- standard sections ----------------------------------
 
 section {

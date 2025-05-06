@@ -24,21 +24,8 @@ nav ul li {
   list-style: none;
 }
 
-nav .link {
-  height: 2.5rem;
-  color: var(--almostwhite);
-  opacity: 1;
-  justify-content: center;
-  align-items: center;
-  font-family: compressa-micro;
-  font-weight: 300;
-  text-decoration: none;
-  transition: all .2s ease-in-out;
-  display: flex;
-}
-
-nav.hovering .link {
-  opacity: .7;
+nav:hover .link {
+  opacity: .3;
 }
 
 nav.hovering li:hover .link {
@@ -188,25 +175,9 @@ li svg {
   color: var(--almostwhite);
 }
 
-.link {
-  height: 2.5rem;
-  color: var(--almostwhite);
-  opacity: 1;
-  justify-content: center;
-  align-items: center;
-  font-family: compressa-micro;
-  font-weight: 300;
-  text-decoration: none;
-  transition: all .2s ease-in-out;
-  display: flex;
-}
-
-.footer .footer-link a {
-  transition: opacity .2s ease-in-out;
-}
-
-.footer.hovering .footer-link a {
-  opacity: .7;
+.footer:hover .footer-link a {
+  opacity: .3;
+  transition: opacity .3s ease-in-out;
 }
 
 .footer.hovering .footer-link a:hover {
@@ -561,6 +532,19 @@ html, body {
   padding: 6rem 0 0;
   font-family: twk-super-italic;
   font-size: 62.5%;
+}
+
+.link {
+  height: 2.5rem;
+  color: var(--almostwhite);
+  opacity: 1;
+  justify-content: center;
+  align-items: center;
+  font-family: compressa-micro;
+  font-weight: 300;
+  text-decoration: none;
+  transition: all .3s ease-in-out;
+  display: flex;
 }
 
 section {
