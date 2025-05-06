@@ -134,7 +134,7 @@ export function wordQualifiers() {
     "creative.",
     "Assertive.",
     "Curious.",
-    "Collaborative.",
+    "Team-player.",
     "Passionate.",
     "Dedicated.",
     "Proactive.",
