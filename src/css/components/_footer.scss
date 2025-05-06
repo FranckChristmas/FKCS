@@ -1,4 +1,13 @@
 .site-footer ul {
   display: flex;
   justify-content: center;
+  gap: 5rem;
+  padding: 2rem;
+  margin-bottom: 5rem;
+  text-decoration: none;
+}
+li svg {
+  width: 2rem;
+  height: auto;
+  color: var(--almostwhite);
 }
