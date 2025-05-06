@@ -1,3 +1,43 @@
+// this file hadle reset & normalize, variables, typography, base styles, containers, helpers, grid
+
+//---------------------------------Reset----------------------------------
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+//---------------------------------variables----------------------------------
+
+:root {
+  --grid-width: 1728px;
+  --columns: 12;
+  --gutter: 2.4rem;
+  --margin: 9rem;
+  --columns-width: calc(
+    (var(--grid-width) - 2 * var(--margin) - 11 * var(--gutter)) / 12
+  );
+  --border-radius: 10rem;
+  --almostwhite: rgb(255, 241, 241);
+  --almostgrey: #d9d9d9;
+  --beige: #ffcdb2;
+  --green: #ffb4a2;
+  --pink: #e5989b;
+  --brownred: #b5828c;
+  --darkblue: #001c2c;
+  --darkblue2: #316682;
+  --othergreen: #598659;
+  --othergrey: #a1a1a1;
+  --yellow: #ffb300;
+  --chevrons: #ffefbc;
+  --lightgreen: #37e7a6;
+  --lightblue: #90e0ef;
+  --darkgreen: #0077b6;
+}
+
+//---------------------------------Fonts----------------------------------
 @font-face {
   font-family: "GoboldRegular";
   src: url(../fonts/gobold-regular.otf) format("truetype");
@@ -33,4 +73,96 @@
 @font-face {
   font-family: "compressa-micro";
   src: url(../fonts/Compressa-micro.ttf) format("truetype");
+}
+
+//---------------------------------Typography----------------------------------
+
+h1 {
+  font-size: 7rem;
+  line-height: 1em;
+  margin: 0px;
+  font-family: "twk-super-italic";
+}
+h2 {
+  font-size: 6rem;
+  margin: 0px;
+  letter-spacing: 0.05em;
+  font-family: "twk-super-italic";
+}
+h3 {
+  font-size: 5rem;
+  letter-spacing: 0.05em;
+  margin: 0px;
+  font-family: "compressa-micro";
+  font-weight: bolder;
+  color: var(--almostwhite);
+}
+
+.company {
+  padding: 1.6rem 0 0 3rem;
+}
+
+//allow to animate the title text
+h3,
+h1,
+a.color,
+span {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 1rem;
+  span.random-letter {
+    transition: color 0.3s ease;
+    display: inline;
+    cursor: default;
+  }
+}
+
+p {
+  font-family: "twk-regular";
+  font-size: 3rem;
+  color: white;
+}
+//---------------------------------basic styles----------------------------------
+
+html,
+body {
+  font-size: 62.5%; // allow to have the equivalence as 1rem = 10px as basically the font-size is 16px
+  margin: 0;
+  padding: 0;
+  background: var(--darkblue);
+  color: white;
+  padding-top: 6rem;
+  font-family: "twk-super-italic";
+  scroll-behavior: smooth; // allow to have a smooth scroll epsecially for the nav links
+}
+
+//--------------------------------- standard sections ----------------------------------
+
+section {
+  position: relative;
+  display: flex;
+  width: 100%;
+  scroll-margin-top: 8rem; // allow to have a margin on the top of the section when we scroll to it, because of the size of the navbar
+}
+
+section.sticky {
+  position: sticky;
+}
+
+section.full-screen {
+  height: 100vh;
+  top: 0;
+  margin-top: 3rem;
+  z-index: 1;
+}
+
+//--------------------------------- utilities ----------------------------------
+
+.hidden {
+  display: none !important; // allow to hide  elements that shouldn"t be displayed
+}
+.sr-only {
+  // allow to hide elements that should be read only for screen reader
+  position: absolute;
+  left: -9999px;
 }
