@@ -9,5 +9,19 @@
 li svg {
   width: 3rem;
   height: auto;
+  display: block;
+
   color: var(--almostwhite);
+}
+
+.behance {
+  padding-top: 0.6rem;
+}
+
+// .linkedin {
+//   padding-top: 2rem;
+// }
+.linkedin svg {
+  display: block;
+  transform: translateY(-0.3rem);
 }
