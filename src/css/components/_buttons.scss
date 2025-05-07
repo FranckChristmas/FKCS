@@ -1,7 +1,7 @@
 .chevron-button {
   position: relative;
   overflow: hidden;
-  background: var(--yellow);
+  background: var(--darkblue);
   border: 2px solid var(--almostwhite);
   padding: 1rem 2rem;
   width: 120rem;
@@ -10,17 +10,19 @@
   border: 2.2rem solid var(--almostwhite);
   cursor: pointer;
   font-family: "twk-super-italic";
-  color: var(--darkblue);
+  color: var(--lightblue);
   font-size: 13rem;
   overflow: hidden;
   margin: 4rem;
   cursor: pointer;
-  transition: box-shadow 0.8s ease, transform 0.3s ease;
+  transition: box-shadow 0.8s ease, transform 0.3s ease, background 0.3s ease;
   box-shadow: 0 0 0 0 var(--almostwhite);
 }
 
 .chevron-button:hover {
   box-shadow: 1.5rem 2rem 0 1.5rem var(--almostgrey);
+  color: var(--yellow);
+  background: var(--darkblue2);
 }
 .chevron-button:not(:hover) {
   transition-delay: 0.1s; /* delay when shadow is retracting*/
@@ -92,7 +94,7 @@
   left: 0;
   width: 140%;
   height: 100%;
-  fill: var(--chevrons);
+  fill: var(--lightblue);
   z-index: 0;
   opacity: 0;
   transition: opacity 0.4s ease-in-out;

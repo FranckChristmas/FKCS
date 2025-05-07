@@ -25,13 +25,13 @@ nav ul li {
 }
 
 .chevron-button {
-  background: var(--yellow);
+  background: var(--darkblue);
   border: 2px solid var(--almostwhite);
   border: 2.2rem solid var(--almostwhite);
   cursor: pointer;
   width: 120rem;
   height: 40rem;
-  color: var(--darkblue);
+  color: var(--lightblue);
   cursor: pointer;
   box-shadow: 0 0 0 0 var(--almostwhite);
   border-radius: 6rem;
@@ -39,13 +39,15 @@ nav ul li {
   padding: 1rem 2rem;
   font-family: twk-super-italic;
   font-size: 13rem;
-  transition: box-shadow .8s, transform .3s;
+  transition: box-shadow .8s, transform .3s, background .3s;
   position: relative;
   overflow: hidden;
 }
 
 .chevron-button:hover {
   box-shadow: 1.5rem 2rem 0 1.5rem var(--almostgrey);
+  color: var(--yellow);
+  background: var(--darkblue2);
 }
 
 .chevron-button:not(:hover) {
@@ -116,7 +118,7 @@ nav ul li {
 .chevron-svg {
   width: 140%;
   height: 100%;
-  fill: var(--chevrons);
+  fill: var(--lightblue);
   z-index: 0;
   opacity: 0;
   pointer-events: none;
