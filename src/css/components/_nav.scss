@@ -8,6 +8,13 @@ nav {
   left: 0;
   font-size: 2rem;
   background-color: var(--darkblue);
+
+  .link {
+    display: flex;
+    padding: 1rem;
+    // align-items: center;
+    // justify-content: center;
+  }
   ul {
     display: flex;
     align-items: center;
