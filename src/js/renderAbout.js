@@ -16,7 +16,7 @@ export function renderAbout(about) {
     aboutText = about.data.about_text
       .map((block) => {
         if (block.type === "paragraph" || block.type === "preformatted") {
-          return `${block.text}`;
+          return `${block.text}<br>`;
         } else if (block.type === "heading4") {
           return `<h4>${block.text}</h4>`;
         } else if (block.type === "list-item") {
