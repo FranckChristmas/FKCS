@@ -25,11 +25,3 @@ nav {
     }
   }
 }
-
-nav:hover .link {
-  opacity: 0.3; /* everything becomes transparent */
-}
-
-nav.hovering li:hover .link {
-  opacity: 1;
-}
