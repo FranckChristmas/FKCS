@@ -6,7 +6,7 @@
   padding: 1rem 2rem;
   width: 120rem;
   height: 40rem;
-  border-radius: 6rem;
+  border-radius: 8rem;
   border: 2.2rem solid var(--almostwhite);
   cursor: pointer;
   font-family: "twk-super-italic";
@@ -20,7 +20,7 @@
 }
 
 .chevron-button:hover {
-  box-shadow: 1.5rem 2rem 0 1.5rem var(--almostgrey);
+  box-shadow: 2rem 2rem 0 0rem var(--almostgrey); //box-shadow: offset-x offset-y blur-radius spread-radius color;
   color: var(--yellow);
   background: var(--darkblue);
 }
