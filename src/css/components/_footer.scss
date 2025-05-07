@@ -1,11 +1,17 @@
 .footer ul {
   display: flex;
   justify-content: center;
-  gap: 5rem;
+  gap: 4rem;
   padding: 2rem;
   margin-bottom: 5rem;
   text-decoration: none;
 }
+
+.footer-link a {
+  display: flex;
+  padding: 1rem;
+}
+
 li svg {
   width: 3rem;
   height: auto;
