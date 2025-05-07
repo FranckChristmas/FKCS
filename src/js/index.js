@@ -5,11 +5,7 @@ import {
   animateVariableFont2,
   wordQualifiers,
 } from "./animateTitle.js";
-import {
-  setupHoverEffect,
-  setupNavAndFooterBehavior,
-  setupNavTracking,
-} from "./hoverEffect.js";
+import { setupNavAndFooterBehavior } from "./hoverEffect.js";
 import { fetchProjects, fetchAboutMe } from "./prismic.js";
 import { renderProjects } from "./renderProjects.js";
 import { renderAbout } from "./renderAbout.js";
@@ -30,8 +26,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     const dateB = new Date(b.data.start_date);
     return dateB - dateA; // Sort in descending order
   });
-  setupHoverEffect;
-  setupNavTracking();
   setupNavAndFooterBehavior();
 
   renderProjects(projects);

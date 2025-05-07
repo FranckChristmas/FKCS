@@ -1,0 +1,17 @@
+.nav .link,
+.footer-link a {
+  opacity: 1;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.nav.hovering .link,
+.footer.hovering .footer-link a {
+  opacity: 0.3;
+  transition: opacity 0.3s ease-out;
+}
+
+.nav.hovering .link:hover,
+.footer.hovering .footer-link a:hover {
+  opacity: 1;
+  transition: opacity 0.2s ease-in;
+}

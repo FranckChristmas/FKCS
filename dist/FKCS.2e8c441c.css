@@ -24,14 +24,6 @@ nav ul li {
   list-style: none;
 }
 
-nav:hover .link {
-  opacity: .3;
-}
-
-nav.hovering li:hover .link {
-  opacity: 1;
-}
-
 .chevron-button {
   background: var(--yellow);
   border: 2px solid var(--almostwhite);
@@ -170,18 +162,9 @@ nav.hovering li:hover .link {
 }
 
 li svg {
-  width: 2rem;
+  width: 3rem;
   height: auto;
   color: var(--almostwhite);
-}
-
-.footer:hover .footer-link a {
-  opacity: .3;
-  transition: opacity .3s ease-in-out;
-}
-
-.footer.hovering .footer-link a:hover {
-  opacity: 1;
 }
 
 section#highlights {
@@ -572,6 +555,21 @@ section.full-screen {
 .sr-only {
   position: absolute;
   left: -9999px;
+}
+
+.nav .link, .footer-link a {
+  opacity: 1;
+  transition: opacity .8s ease-in-out;
+}
+
+.nav.hovering .link, .footer.hovering .footer-link a {
+  opacity: .3;
+  transition: opacity .3s ease-out;
+}
+
+.nav.hovering .link:hover, .footer.hovering .footer-link a:hover {
+  opacity: 1;
+  transition: opacity .2s ease-in;
 }
 
 section.home {

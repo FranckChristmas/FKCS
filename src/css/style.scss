@@ -5,9 +5,8 @@
 @use "./highlights.scss" as *;
 @use "./about.scss" as *;
 @use "./base.scss" as *;
-
+@use "./components/_nav-transition.scss" as *;
 /* -------------------------- section home -------------------------*/
-
 section.home {
   height: 100vh;
   display: flex;

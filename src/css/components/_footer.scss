@@ -7,16 +7,7 @@
   text-decoration: none;
 }
 li svg {
-  width: 2rem;
+  width: 3rem;
   height: auto;
   color: var(--almostwhite);
-}
-
-.footer:hover .footer-link a {
-  opacity: 0.3;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.footer.hovering .footer-link a:hover {
-  opacity: 1;
 }
