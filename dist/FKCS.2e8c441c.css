@@ -41,7 +41,7 @@ nav ul li {
   color: var(--lightblue);
   cursor: pointer;
   box-shadow: 0 0 0 0 var(--almostwhite);
-  border-radius: 6rem;
+  border-radius: 8rem;
   margin: 4rem;
   padding: 1rem 2rem;
   font-family: twk-super-italic;
@@ -52,7 +52,7 @@ nav ul li {
 }
 
 .chevron-button:hover {
-  box-shadow: 1.5rem 2rem 0 1.5rem var(--almostgrey);
+  box-shadow: 2rem 2rem 0 0rem var(--almostgrey);
   color: var(--yellow);
   background: var(--darkblue);
 }
