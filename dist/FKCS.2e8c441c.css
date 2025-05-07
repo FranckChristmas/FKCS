@@ -47,7 +47,7 @@ nav ul li {
 .chevron-button:hover {
   box-shadow: 1.5rem 2rem 0 1.5rem var(--almostgrey);
   color: var(--yellow);
-  background: var(--darkblue2);
+  background: var(--darkblue);
 }
 
 .chevron-button:not(:hover) {
@@ -118,7 +118,7 @@ nav ul li {
 .chevron-svg {
   width: 140%;
   height: 100%;
-  fill: var(--lightblue);
+  fill: var(--darkblue2);
   z-index: 0;
   opacity: 0;
   pointer-events: none;
@@ -167,6 +167,16 @@ li svg {
   width: 3rem;
   height: auto;
   color: var(--almostwhite);
+  display: block;
+}
+
+.behance {
+  padding-top: .6rem;
+}
+
+.linkedin svg {
+  display: block;
+  transform: translateY(-.3rem);
 }
 
 section#highlights {
