@@ -633,6 +633,7 @@ section.full-screen {
 .tooltip__content {
   opacity: 0;
   color: #000;
+  justify-content: center;
   position: absolute;
   top: 1rem;
   left: 1rem;
