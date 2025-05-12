@@ -6,6 +6,18 @@
   position: relative;
 }
 
+.tooltip-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 90rem;
+  height: 100%;
+}
+
 .tooltip {
   position: relative;
   display: inline-block; /* ✅ c'est un bloc centré */
@@ -19,30 +31,43 @@
 
 .tooltip__base {
   position: absolute;
-  bottom: calc(100% + 0.5rem); /* au-dessus du bouton */
-  transform: scale(0.5);
+  bottom: 0.6rem;
+  left: 50%;
+  margin-left: -150px;
+  width: 300px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   opacity: 0;
   pointer-events: none;
-  z-index: 1;
 }
 
 .tooltip__shape {
-  width: 300px;
-  height: auto;
-  fill: var(--almostgrey, #ccc);
+  //shape that screens the tooltip text
+  position: absolute;
+  width: 100%; // helps the tooltip to be centered when using absolute positionning w/ left: 50% for the tooltip__base
+  height: 100%;
+  top: 0;
+  left: 0;
+  fill: var(--lightgreen);
 }
 
 .tooltip__content {
-  position: absolute;
+  //tooltip text
+  color: #4a4a4a;
+  display: flex;
+  position: relative;
+  align-items: center;
   justify-content: center;
-
-  top: 1rem;
-  left: 1rem;
+  width: 65%;
+  padding: 0 1em;
   opacity: 0;
-  color: black;
+  font-size: 0.85em;
 }
 
 .tooltip__trigger-text {
   font-size: 2rem;
-  color: #333;
+  color: var(--almostgrey);
+  font-family: compressa-micro;
 }
