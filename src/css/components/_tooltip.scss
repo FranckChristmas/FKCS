@@ -1,0 +1,36 @@
+// .tooltip
+//   .tooltip--dori
+//   .tooltip__trigger
+//   .tooltip__base
+//   .tooltip__shape
+//   .tooltip__content {
+// }
+.tooltip {
+  position: relative;
+  // width: max-content;
+  display: flex;
+  justify-content: center;
+}
+
+.tooltip__base {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  pointer-events: none;
+}
+
+.tooltip__shape {
+  width: 300px;
+  height: auto;
+  fill: var(--almostgrey, #ccc);
+}
+
+.tooltip__content {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  color: black;
+}
+.tooltip__trigger-text {
+  position: relative;
+}

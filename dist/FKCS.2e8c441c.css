@@ -596,6 +596,36 @@ section.full-screen {
   transition: opacity .2s ease-in;
 }
 
+.tooltip {
+  justify-content: center;
+  display: flex;
+  position: relative;
+}
+
+.tooltip__base {
+  pointer-events: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+}
+
+.tooltip__shape {
+  width: 300px;
+  height: auto;
+  fill: var(--almostgrey, #ccc);
+}
+
+.tooltip__content {
+  color: #000;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+}
+
+.tooltip__trigger-text {
+  position: relative;
+}
+
 section.home {
   justify-content: center;
   align-items: center;
