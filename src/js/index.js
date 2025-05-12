@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   const projects = await fetchProjects();
   const aboutMe = await fetchAboutMe();
-  console.log("🧠 projects complet :");
-  console.log(JSON.stringify(projects, null, 2));
+  // console.log("🧠 projects complet :");
+  // console.log(JSON.stringify(projects, null, 2));
 
   projects.sort((a, b) => {
     // Sort by start_date
@@ -27,7 +27,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     return dateB - dateA; // Sort in descending order
   });
   setupNavAndFooterBehavior();
-
   renderProjects(projects);
   renderAbout(aboutMe);
   makeSpans("h1, h3");
