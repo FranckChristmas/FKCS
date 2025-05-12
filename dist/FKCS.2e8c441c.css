@@ -596,17 +596,32 @@ section.full-screen {
   transition: opacity .2s ease-in;
 }
 
-.tooltip {
+.tooltip-section {
   justify-content: center;
+  align-items: center;
+  height: 100vh;
   display: flex;
   position: relative;
 }
 
+.tooltip {
+  display: inline-block;
+  position: relative;
+}
+
+.tooltip__trigger {
+  z-index: 2;
+  cursor: pointer;
+  position: relative;
+}
+
 .tooltip__base {
+  opacity: 0;
   pointer-events: none;
+  z-index: 1;
   position: absolute;
-  top: 100%;
-  left: 0;
+  bottom: calc(100% + .5rem);
+  transform: scale(.5);
 }
 
 .tooltip__shape {
@@ -616,6 +631,7 @@ section.full-screen {
 }
 
 .tooltip__content {
+  opacity: 0;
   color: #000;
   position: absolute;
   top: 1rem;
@@ -623,7 +639,8 @@ section.full-screen {
 }
 
 .tooltip__trigger-text {
-  position: relative;
+  color: #333;
+  font-size: 2rem;
 }
 
 section.home {

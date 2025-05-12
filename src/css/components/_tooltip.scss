@@ -1,22 +1,29 @@
-// .tooltip
-//   .tooltip--dori
-//   .tooltip__trigger
-//   .tooltip__base
-//   .tooltip__shape
-//   .tooltip__content {
-// }
-.tooltip {
-  position: relative;
-  // width: max-content;
+.tooltip-section {
+  height: 100vh; /* cette section seule fait 100% écran */
   display: flex;
   justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block; /* ✅ c'est un bloc centré */
+}
+
+.tooltip__trigger {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
 }
 
 .tooltip__base {
   position: absolute;
-  top: 100%;
-  left: 0;
+  bottom: calc(100% + 0.5rem); /* au-dessus du bouton */
+  transform: scale(0.5);
+  opacity: 0;
   pointer-events: none;
+  z-index: 1;
 }
 
 .tooltip__shape {
@@ -29,8 +36,11 @@
   position: absolute;
   top: 1rem;
   left: 1rem;
+  opacity: 0;
   color: black;
 }
+
 .tooltip__trigger-text {
-  position: relative;
+  font-size: 2rem;
+  color: #333;
 }
