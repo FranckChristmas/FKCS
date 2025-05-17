@@ -733,7 +733,7 @@ section.home {
   margin: 0;
   padding: 0;
   font-family: roboto-flex;
-  font-size: 30rem;
+  font-size: clamp(4rem, 10vw, 30rem);
   font-weight: 500;
   display: flex;
   position: absolute;
