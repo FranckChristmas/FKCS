@@ -64,7 +64,7 @@ export class TooltipDori {
 
     animate(this.base, {
       opacity: 0,
-      delay: 50,
+      delay: 20,
       duration: 100,
       easing: "linear",
     });
