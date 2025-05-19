@@ -9,7 +9,7 @@ import { setupNavAndFooterBehavior } from "./hoverEffect.js";
 import { fetchProjects, fetchAboutMe } from "./prismic.js";
 import { renderProjects } from "./renderProjects.js";
 import { renderAbout } from "./renderAbout.js";
-import { TooltipDori } from "./tooltip.js";
+import { Tooltip } from "./tooltip.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
   chevronAnimation();
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   const aboutMe = await fetchAboutMe();
   // console.log("🧠 projects complet :");
   // console.log(JSON.stringify(projects, null, 2));
-  new TooltipDori(".tooltip--dori");
+  new Tooltip(".tooltip--dori");
   projects.sort((a, b) => {
     // Sort by start_date
     const dateA = new Date(a.data.start_date);

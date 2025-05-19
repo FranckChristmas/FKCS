@@ -50,12 +50,12 @@
   height: 100%;
   top: 0;
   left: 0;
-  fill: var(--lightgreen);
+  fill: var(--darkblue2);
 }
 
 .tooltip__content {
   //tooltip text
-  color: #4a4a4a;
+  color: var(--almostwhite);
   display: flex;
   position: relative;
   align-items: center;
