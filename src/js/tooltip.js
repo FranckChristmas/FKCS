@@ -24,21 +24,26 @@ export class Tooltip {
     // background animation in
     animate(this.base, {
       duration: 800,
-      ease: eases.outElastic(1, 0.5),
-      translateY: [60, 0],
+      ease: eases.outElastic(1, 0.38),
+      translateY: [10, 0],
       scale: [0.5, 1],
       begin: () => {
         this.base.style.pointerEvents = "auto";
       },
-      opacity: [0, 1],
+    });
+
+    animate(this.base, {
+      opacity: 1,
+      ease: "linear",
+      duration: 100,
     });
 
     // path animation
     animate(this.path, {
       duration: 300,
       delay: 50,
-      ease: eases.outElastic(1, 0.5),
-      elasticity: 500,
+      ease: eases.outElastic(1, 0.38),
+      elasticity: 800,
       d: "M 22,74.2 22,202 C 22,202 82,202 103,202 124,202 184,202 184,202 L 200,219 216,202 C 216,202 274,202 297,202 320,202 378,202 378,202 L 378,74.2 C 378,74.2 318,73.7 200,73.7 82,73.7 22,74.2 22,74.2 Z",
     });
 
@@ -56,7 +61,7 @@ export class Tooltip {
     animate(this.base, {
       duration: 200,
       ease: eases.outQuad,
-      translateY: 20,
+      translateY: 100,
       scale: 0.2,
       complete: () => {
         this.base.style.pointerEvents = "none";
