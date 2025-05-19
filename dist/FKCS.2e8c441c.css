@@ -462,21 +462,6 @@ ul, ol {
 }
 
 @font-face {
-  font-family: twk-super-italic;
-  src: url("twkeverett-super-italic.880642eb.otf") format("truetype");
-}
-
-@font-face {
-  font-family: twk-regular-italic;
-  src: url("twkeverett-regular-italic.3ed5b3dc.otf") format("truetype");
-}
-
-@font-face {
-  font-family: twk-regular;
-  src: url("twkeverett-regular.c3f83373.otf") format("truetype");
-}
-
-@font-face {
   font-family: roboto-flex;
   src: url("roboto-flex.7e254c46.ttf") format("truetype");
 }
@@ -488,7 +473,7 @@ ul, ol {
 
 h1 {
   margin: 0;
-  font-family: twk-super-italic;
+  font-family: compressa-micro;
   font-size: 7rem;
   line-height: 1em;
 }
@@ -496,7 +481,7 @@ h1 {
 h2 {
   letter-spacing: .05em;
   margin: 0;
-  font-family: twk-super-italic;
+  font-family: compressa-micro;
   font-size: 6rem;
 }
 
@@ -527,7 +512,7 @@ h3 span.random-letter, h1 span.random-letter, a.color span.random-letter, span s
 
 p {
   color: #fff;
-  font-family: twk-regular;
+  font-family: compressa-micro;
   font-size: 3rem;
 }
 
@@ -537,7 +522,7 @@ html, body {
   scroll-behavior: smooth;
   margin: 0;
   padding: 6rem 0 0;
-  font-family: twk-super-italic;
+  font-family: compressa-micro;
   font-size: 62.5%;
 }
 
@@ -657,7 +642,7 @@ section.full-screen {
   align-items: center;
   width: 65%;
   padding: 0 1em;
-  font-size: .85em;
+  font-size: 3em;
   display: flex;
   position: relative;
 }
@@ -818,7 +803,7 @@ section.skillset {
   place-content: center;
   align-items: center;
   padding: 8rem;
-  font-family: twk-super-italic;
+  font-family: compressa-micro;
   font-size: 2rem;
   display: flex;
 }
