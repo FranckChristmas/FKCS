@@ -57,20 +57,6 @@ ol {
   font-family: "Oswald-xlight";
   src: url(../fonts/oswald-xlight.ttf) format("truetype");
 }
-@font-face {
-  font-family: "twk-super-italic";
-  src: url(../fonts/twkeverett-super-italic.otf) format("truetype");
-}
-
-@font-face {
-  font-family: "twk-regular-italic";
-  src: url(../fonts/twkeverett-regular-italic.otf) format("truetype");
-}
-
-@font-face {
-  font-family: "twk-regular";
-  src: url(../fonts/twkeverett-regular.otf) format("truetype");
-}
 
 @font-face {
   font-family: "roboto-flex";
@@ -88,13 +74,13 @@ h1 {
   font-size: 7rem;
   line-height: 1em;
   margin: 0px;
-  font-family: "twk-super-italic";
+  font-family: "compressa-micro";
 }
 h2 {
   font-size: 6rem;
   margin: 0px;
   letter-spacing: 0.05em;
-  font-family: "twk-super-italic";
+  font-family: "compressa-micro";
 }
 h3 {
   font-size: 5rem;
@@ -125,7 +111,7 @@ span {
 }
 
 p {
-  font-family: "twk-regular";
+  font-family: "compressa-micro";
   font-size: 3rem;
   color: white;
 }
@@ -139,7 +125,7 @@ body {
   background: var(--darkblue);
   color: white;
   padding-top: 6rem;
-  font-family: "twk-super-italic";
+  font-family: "compressa-micro";
   scroll-behavior: smooth; // allow to have a smooth scroll epsecially for the nav links
 }
 
