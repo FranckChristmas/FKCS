@@ -622,7 +622,7 @@ section.full-screen {
   margin-left: -150px;
   display: flex;
   position: absolute;
-  bottom: .6rem;
+  bottom: -50%;
   left: 50%;
 }
 

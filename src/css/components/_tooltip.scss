@@ -1,5 +1,5 @@
 .tooltip-section {
-  height: 100vh; /* cette section seule fait 100% écran */
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,7 +20,7 @@
 
 .tooltip {
   position: relative;
-  display: inline-block; /* ✅ c'est un bloc centré */
+  display: inline-block; /* centered block */
 }
 
 .tooltip__trigger {
@@ -31,7 +31,7 @@
 
 .tooltip__base {
   position: absolute;
-  bottom: 0.6rem;
+  bottom: -50%;
   left: 50%;
   margin-left: -150px;
   width: 300px;
