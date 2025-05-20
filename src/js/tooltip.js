@@ -1,14 +1,14 @@
 import { animate, eases } from "animejs";
 
 export class Tooltip {
-  constructor(tooltipSelector) {
-    this.tooltip = document.querySelector(tooltipSelector);
+  constructor(tooltipElement) {
+    this.tooltip = tooltipElement;
     if (!this.tooltip) {
       console.error(`Tooltip not found: ${tooltipSelector}`);
       return;
     }
     this.base = this.tooltip.querySelector(".tooltip__base"); // Ajout important
-    this.path = this.tooltip.querySelector("path");
+    this.path = this.base.querySelector("path");
     this.content = this.tooltip.querySelector(".tooltip__content");
     this.trigger = this.tooltip.querySelector(".tooltip__trigger");
 
@@ -61,12 +61,17 @@ export class Tooltip {
     animate(this.base, {
       duration: 200,
       ease: eases.outQuad,
-      translateY: 100,
+      translateY: 50,
       scale: 0.2,
       complete: () => {
         this.base.style.pointerEvents = "none";
       },
-      opacity: [1, 0],
+    });
+
+    animate(this.base, {
+      opacity: 0,
+      ease: "linear",
+      duration: 100,
     });
 
     // path animation

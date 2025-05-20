@@ -1,4 +1,4 @@
-export function setupNavAndFooterBehavior() {
+export function NavFooterHover() {
   const areas = [{ selector: ".nav" }, { selector: ".footer" }];
 
   areas.forEach(({ selector }) => {
@@ -9,8 +9,10 @@ export function setupNavAndFooterBehavior() {
       element.classList.add("hovering");
     });
 
-    element.addEventListener("mouseleave", () => {
-      element.classList.remove("hovering");
+    element.addEventListener("mouseleave", (e) => {
+      if (!element.contains(e.relatedTarget)) {
+        element.classList.remove("hovering");
+      }
     });
   });
 }
