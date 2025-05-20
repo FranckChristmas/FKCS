@@ -55,7 +55,6 @@
 
 .tooltip__content {
   //tooltip text
-  color: var(--almostwhite);
   display: flex;
   position: relative;
   text-align: center;
@@ -64,10 +63,11 @@
   padding: 1em 1em 1.8em; // top/left+right/bottom
   opacity: 0;
   font-size: 3em;
+  color: var(--yellow);
 }
 
 .tooltip__trigger-text {
   font-size: 1rem;
-  color: var(--almostgrey);
+  color: var(--darkblue3);
   font-family: compressa-micro;
 }

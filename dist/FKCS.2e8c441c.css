@@ -641,11 +641,11 @@ section.full-screen {
 }
 
 .tooltip__content {
-  color: var(--almostwhite);
   text-align: center;
   opacity: 0;
-  justify-content: center;
   width: 80%;
+  color: var(--yellow);
+  justify-content: center;
   padding: 1em 1em 1.8em;
   font-size: 3em;
   display: flex;
@@ -653,7 +653,7 @@ section.full-screen {
 }
 
 .tooltip__trigger-text {
-  color: var(--almostgrey);
+  color: var(--darkblue3);
   font-family: compressa-micro;
   font-size: 1rem;
 }
