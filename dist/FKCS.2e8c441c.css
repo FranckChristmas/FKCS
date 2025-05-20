@@ -448,6 +448,7 @@ ul, ol {
   --lightgreen: #37e7a6;
   --lightblue: #90e0ef;
   --darkgreen: #0077b6;
+  --darkblue3: #1a2532;
 }
 
 @font-face {
@@ -633,7 +634,7 @@ section.full-screen {
 .tooltip__shape {
   width: 100%;
   height: 100%;
-  fill: var(--darkblue2);
+  fill: var(--darkblue3);
   position: absolute;
   top: 0;
   left: 0;
@@ -641,11 +642,11 @@ section.full-screen {
 
 .tooltip__content {
   color: var(--almostwhite);
+  text-align: center;
   opacity: 0;
   justify-content: center;
-  align-items: center;
   width: 80%;
-  padding: 1em 1em 1.5em;
+  padding: 1em 1em 1.8em;
   font-size: 3em;
   display: flex;
   position: relative;

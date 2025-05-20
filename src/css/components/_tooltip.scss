@@ -50,7 +50,7 @@
   height: 100%;
   top: 0;
   left: 0;
-  fill: var(--darkblue2);
+  fill: var(--darkblue3);
 }
 
 .tooltip__content {
@@ -58,10 +58,10 @@
   color: var(--almostwhite);
   display: flex;
   position: relative;
-  align-items: center;
+  text-align: center;
   justify-content: center;
   width: 80%;
-  padding: 1em 1em 1.5em; // top/left+right/bottom
+  padding: 1em 1em 1.8em; // top/left+right/bottom
   opacity: 0;
   font-size: 3em;
 }
