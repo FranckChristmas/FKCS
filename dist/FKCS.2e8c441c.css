@@ -626,7 +626,7 @@ section.full-screen {
   margin-left: -150px;
   display: flex;
   position: absolute;
-  bottom: -20%;
+  bottom: 0%;
   left: 50%;
 }
 
@@ -644,8 +644,8 @@ section.full-screen {
   opacity: 0;
   justify-content: center;
   align-items: center;
-  width: 65%;
-  padding: 0 1em;
+  width: 80%;
+  padding: 1em 1em 1.5em;
   font-size: 3em;
   display: flex;
   position: relative;
@@ -654,7 +654,7 @@ section.full-screen {
 .tooltip__trigger-text {
   color: var(--almostgrey);
   font-family: compressa-micro;
-  font-size: 2rem;
+  font-size: 1rem;
 }
 
 section.home {

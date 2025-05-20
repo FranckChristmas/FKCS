@@ -31,7 +31,7 @@
 
 .tooltip__base {
   position: absolute;
-  bottom: -20%;
+  bottom: 0%;
   left: 50%;
   margin-left: -150px;
   width: 300px;
@@ -60,14 +60,14 @@
   position: relative;
   align-items: center;
   justify-content: center;
-  width: 65%;
-  padding: 0 1em;
+  width: 80%;
+  padding: 1em 1em 1.5em; // top/left+right/bottom
   opacity: 0;
   font-size: 3em;
 }
 
 .tooltip__trigger-text {
-  font-size: 2rem;
+  font-size: 1rem;
   color: var(--almostgrey);
   font-family: compressa-micro;
 }
