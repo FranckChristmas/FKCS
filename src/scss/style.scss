@@ -7,6 +7,7 @@
 @use "./base.scss" as *;
 @use "./components/_nav-transition.scss" as *;
 @use "./components/_tooltip.scss" as *;
+@use "./variable.scss" as *;
 /* -------------------------- section home -------------------------*/
 section.home {
   height: 100vh;
