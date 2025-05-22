@@ -25,7 +25,7 @@ export class Tooltip {
     animate(this.base, {
       duration: 800,
       ease: eases.outElastic(1, 0.38),
-      translateY: [10, 0],
+      translateY: [60, 0],
       scale: [0.5, 1],
       begin: () => {
         this.base.style.pointerEvents = "auto";
@@ -40,10 +40,10 @@ export class Tooltip {
 
     // path animation
     animate(this.path, {
-      duration: 300,
+      duration: 1200,
       delay: 50,
-      ease: eases.outElastic(1, 0.38),
-      elasticity: 800,
+      ease: eases.outElastic(0.5, 0.38),
+      elasticity: 700,
       d: "M 22,74.2 22,202 C 22,202 82,202 103,202 124,202 184,202 184,202 L 200,219 216,202 C 216,202 274,202 297,202 320,202 378,202 378,202 L 378,74.2 C 378,74.2 318,73.7 200,73.7 82,73.7 22,74.2 22,74.2 Z",
     });
 
