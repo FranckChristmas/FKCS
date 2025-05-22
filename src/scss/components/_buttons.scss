@@ -2,12 +2,11 @@
   position: relative;
   overflow: hidden;
   background: var(--darkblue);
-  border: 2px solid var(--almostwhite);
   padding: 1rem 2rem;
-  width: 120rem;
-  height: 40rem;
-  border-radius: 8rem;
-  border: 2.2rem solid var(--almostwhite);
+  width: clamp(20rem, 80vw, 120rem);
+  height: clamp(6rem, 20vw, 40rem);
+  border-radius: clamp(0.2rem, 4vw, 8rem);
+  border: clamp(0.3rem, 1vw, 2.2rem) solid var(--almostwhite);
   cursor: pointer;
   font-family: "twk-super-italic";
   color: var(--lightblue);
