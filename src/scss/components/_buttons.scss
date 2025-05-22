@@ -11,7 +11,6 @@
   cursor: pointer;
   font-family: "twk-super-italic";
   color: var(--lightblue);
-  font-size: 13rem;
   overflow: hidden;
   margin: 4rem;
   cursor: pointer;
@@ -41,7 +40,7 @@
 }
 .button-text {
   font-family: "compressa-micro";
-  font-size: 20rem;
+  font-size: clamp(4rem, 10vw, 30rem);
   font-variation-settings: "wght" 1500, "wdth" 80, "ital" 0;
   position: relative;
   text-transform: uppercase;
