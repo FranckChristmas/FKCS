@@ -12,7 +12,7 @@ export async function fetchProjects() {
     if (!response.ok) {
       throw new Error("Failed to fetch projects");
     }
-    console.log("📦 Données API Prismic Projects :", apiData, masterRef);
+    // console.log("📦 Données API Prismic Projects :", apiData, masterRef);
 
     const data = await response.json();
     return data.results;
