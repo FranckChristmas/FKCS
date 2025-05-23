@@ -1,9 +1,11 @@
+@use "../mixin.scss" as *;
+
 .chevron-button {
   position: relative;
   overflow: hidden;
   background: var(--darkblue);
   padding: 1rem 2rem;
-  width: clamp(20rem, 60vw, 110rem);
+  width: clamp(20rem, 50vw, 110rem);
   height: clamp(6rem, 20vw, 40rem);
   border-radius: clamp(0.2rem, 4vw, 8rem);
   border: clamp(0.3rem, 1vw, 2.2rem) solid var(--almostwhite);
@@ -19,8 +21,7 @@
 }
 
 .chevron-button:hover {
-  box-shadow: 2rem 2rem 0 0rem var(--almostgrey); //box-shadow: offset-x offset-y blur-radius spread-radius color;
-  color: var(--yellow);
+  @include chevron-box-shadow;
   background: var(--darkblue);
 }
 .chevron-button:not(:hover) {
@@ -30,6 +31,7 @@
 .chevron-button:hover .button-text {
   transition: all 0.5s ease-in-out;
   transform: scaleX(1.02);
+  color: var(--yellow);
 }
 
 .collab-text {
@@ -40,7 +42,7 @@
 }
 .button-text {
   font-family: "compressa-micro";
-  font-size: clamp(4rem, 10vw, 25rem);
+  font-size: clamp(3.5rem, 9vw, 25rem);
   font-variation-settings: "wght" 1500, "wdth" 80, "ital" 0;
   position: relative;
   text-transform: uppercase;
