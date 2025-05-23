@@ -3,18 +3,19 @@
   overflow: hidden;
   background: var(--darkblue);
   padding: 1rem 2rem;
-  width: clamp(20rem, 80vw, 120rem);
+  width: clamp(20rem, 60vw, 110rem);
   height: clamp(6rem, 20vw, 40rem);
   border-radius: clamp(0.2rem, 4vw, 8rem);
   border: clamp(0.3rem, 1vw, 2.2rem) solid var(--almostwhite);
   cursor: pointer;
-  font-family: "twk-super-italic";
   color: var(--lightblue);
   overflow: hidden;
   margin: 4rem;
-  cursor: pointer;
   transition: box-shadow 0.8s ease, transform 0.3s ease, background 0.3s ease;
   box-shadow: 0 0 0 0 var(--almostwhite);
+  justify-content: center;
+  align-items: center;
+  display: flex;
 }
 
 .chevron-button:hover {
@@ -39,7 +40,7 @@
 }
 .button-text {
   font-family: "compressa-micro";
-  font-size: clamp(4rem, 10vw, 30rem);
+  font-size: clamp(4rem, 10vw, 25rem);
   font-variation-settings: "wght" 1500, "wdth" 80, "ital" 0;
   position: relative;
   text-transform: uppercase;
@@ -90,7 +91,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 140%;
+  width: 100%;
   height: 100%;
   fill: var(--darkblue2);
   z-index: 0;
