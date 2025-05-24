@@ -1,0 +1,18 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+}
+.welcome-wrapper {
+  overflow: hidden;
+}
+
+.welcome {
+  display: block;
+  font-size: clamp(4rem, 10vw, 20rem);
+  transform-origin: left;
+  text-transform: uppercase;
+}

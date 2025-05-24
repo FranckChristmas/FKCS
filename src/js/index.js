@@ -10,6 +10,7 @@ import { fetchProjects, fetchAboutMe } from "./prismic.js";
 import { renderProjects } from "./renderProjects.js";
 import { renderAbout } from "./renderAbout.js";
 import { Tooltip } from "./tooltip.js";
+import "./welcomeAnimation.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
   chevronAnimation();

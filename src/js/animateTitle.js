@@ -95,7 +95,7 @@ export function animateVariableFont2() {
     };
   }
 
-  // select all elements with the class "variable-text"
+  // select all elements with the class "button-text"
   const elements = document.querySelectorAll(".button-text");
   const allLetters = [];
 
