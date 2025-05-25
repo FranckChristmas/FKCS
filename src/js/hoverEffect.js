@@ -1,4 +1,4 @@
-export function NavFooterHover() {
+export function hover() {
   const areas = [{ selector: ".nav" }, { selector: ".footer" }];
 
   areas.forEach(({ selector }) => {
