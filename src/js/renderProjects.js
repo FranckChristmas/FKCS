@@ -48,7 +48,7 @@ export function renderProjects(projects) {
       return html;
     }
 
-    console.log("📦 Données titres Prismic :", project.data);
+    // console.log("📦 Données titres Prismic :", project.data);
 
     const li = document.createElement("li");
     li.classList.add("accordion-item");

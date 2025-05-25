@@ -40,5 +40,5 @@ export function renderAbout(about) {
         <p class="about-description">${aboutText}</p>
       </div>
   `;
-  console.log("📦 Données about Prismic :", about.data);
+  // console.log("📦 Données about Prismic :", about.data);
 }
