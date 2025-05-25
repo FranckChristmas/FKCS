@@ -7,7 +7,9 @@
   position: relative;
 }
 .welcome-wrapper {
-  overflow: hidden;
+  overflow: visible;
+  width: 100%;
+  transform-style: preserve-3d; // allow 3d
 }
 
 .welcome {

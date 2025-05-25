@@ -39,8 +39,8 @@ welcomeTitle.forEach((title) => {
       stagger: 0.02,
       scrollTrigger: {
         trigger: title,
-        start: "top bottom",
-        end: "bottom top",
+        start: "top 100%",
+        end: "center 30%",
         scrub: true,
       },
     }
