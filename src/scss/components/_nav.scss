@@ -25,36 +25,11 @@ nav {
     font-size: 4rem;
     color: var(--almostwhite);
     cursor: pointer;
+    z-index: 4;
   }
   .company {
     margin: 0;
     text-align: center;
-  }
-
-  .menu {
-    position: fixed;
-    background: var(--darkblue);
-    list-style: none;
-    padding: 2rem;
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-1rem);
-    transition: opacity 0.5s ease, transform 0.3s ease;
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    padding-bottom: 25rem;
-    z-index: 9999;
-
-    &.visible {
-      opacity: 1;
-      transform: translateY(0);
-      pointer-events: auto;
-    }
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
   }
 
   .link {
@@ -64,7 +39,34 @@ nav {
     margin: 12rem 0;
   }
 }
-// body.menu-open {
-//   overflow: hidden;
-//   height: 100vh;
-// }
+body.menu-open {
+  overflow: hidden;
+  height: 100vh;
+}
+
+.menu {
+  position: fixed;
+  background: var(--darkblue);
+  list-style: none;
+  padding: 2rem;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-1rem);
+  transition: opacity 0.5s ease, transform 0.3s ease;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+  padding: 0;
+
+  &.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
