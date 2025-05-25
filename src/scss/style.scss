@@ -9,7 +9,7 @@
 @use "./highlights.scss" as *;
 @use "./base.scss" as *;
 @use "./variable.scss" as *;
-@use "./mixin.scss" as *;
+@use "./mixins.scss" as *;
 /* -------------------------- section home -------------------------*/
 section.home {
   height: 100vh;

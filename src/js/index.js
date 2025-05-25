@@ -5,7 +5,7 @@ import {
   animateVariableFont2,
   wordQualifiers,
 } from "./animateTitle.js";
-import { NavFooterHover } from "./hoverEffect.js";
+// import { NavFooterHover } from "./hoverEffect.js";
 import { fetchProjects, fetchAboutMe } from "./prismic.js";
 import { renderProjects } from "./renderProjects.js";
 import { renderAbout } from "./renderAbout.js";
