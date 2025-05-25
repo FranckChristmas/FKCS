@@ -5,12 +5,13 @@ import {
   animateVariableFont2,
   wordQualifiers,
 } from "./animateTitle.js";
-// import { NavFooterHover } from "./hoverEffect.js";
+import { hover } from "./hoverEffect.js";
 import { fetchProjects, fetchAboutMe } from "./prismic.js";
 import { renderProjects } from "./renderProjects.js";
 import { renderAbout } from "./renderAbout.js";
 import { Tooltip } from "./tooltip.js";
 import "./welcomeAnimation.js";
+import "./navAnimation.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
   chevronAnimation();
@@ -27,7 +28,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const dateB = new Date(b.data.start_date);
     return dateB - dateA; // Sort in descending order
   });
-  NavFooterHover();
+  hover();
   renderProjects(projects);
   renderAbout(aboutMe);
   makeSpans("h1, h3");
