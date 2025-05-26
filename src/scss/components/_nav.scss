@@ -20,6 +20,7 @@ nav {
   .burger {
     position: absolute;
     right: 2rem;
+    padding-top: 1rem;
     background: none;
     border: none;
     font-size: 4rem;
@@ -33,7 +34,6 @@ nav {
     color: var(--almostwhite);
     width: 8rem;
     height: auto;
-    // padding-top: 10rem;
   }
 
   .company {
