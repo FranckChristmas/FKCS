@@ -117,7 +117,7 @@ p {
 html,
 body {
   font-size: 62.5%; // allow to have the equivalence as 1rem = 10px as basically the font-size is 16px
-  overflow-x: hidden;
+  overflow-x: hidden; //solve the nav bar pb to boverflowing the header out
   margin: 0;
   padding: 0;
   width: 100%;
