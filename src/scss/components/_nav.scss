@@ -19,7 +19,7 @@ nav {
   }
   .burger {
     position: absolute;
-    left: 2rem;
+    right: 2rem;
     background: none;
     border: none;
     font-size: 4rem;
@@ -54,7 +54,7 @@ body.menu-open {
   transform: translateY(-1rem);
   transition: opacity 0.5s ease, transform 0.3s ease;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100vw;
   height: 100vh;
   z-index: 3;
