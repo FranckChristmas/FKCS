@@ -12,6 +12,7 @@ import { renderAbout } from "./renderAbout.js";
 import { Tooltip } from "./tooltip.js";
 import "./welcomeAnimation.js";
 import "./navAnimation.js";
+import "./iconMenuAnimation.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
   chevronAnimation();
