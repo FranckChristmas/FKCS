@@ -1,3 +1,6 @@
+// animation for the navigation menu to appear and disappear smoothly
+// nb the scroll position is preserved when the menu is open due to the recorded scroll position in scrollPosition
+
 let scrollY = 0;
 
 const burger = document.querySelector(".burger");

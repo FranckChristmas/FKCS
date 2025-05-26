@@ -23,10 +23,19 @@ nav {
     background: none;
     border: none;
     font-size: 4rem;
+    transform: translateY(-5%);
     color: var(--almostwhite);
     cursor: pointer;
     z-index: 4;
   }
+
+  .burger-icon {
+    color: var(--almostwhite);
+    width: 8rem;
+    height: auto;
+    // padding-top: 10rem;
+  }
+
   .company {
     margin: 0;
     text-align: center;
