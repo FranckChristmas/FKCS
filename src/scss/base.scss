@@ -7,7 +7,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  outline: 1px solid red; // temporaire pour visualiser les débordements
+  // outline: 1px solid red; // to check the box-sizing
 }
 
 ul,
@@ -117,6 +117,7 @@ p {
 html,
 body {
   font-size: 62.5%; // allow to have the equivalence as 1rem = 10px as basically the font-size is 16px
+  overflow-x: hidden;
   margin: 0;
   padding: 0;
   width: 100%;
