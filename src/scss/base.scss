@@ -7,6 +7,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  outline: 1px solid red; // temporaire pour visualiser les débordements
 }
 
 ul,
@@ -118,6 +119,7 @@ body {
   font-size: 62.5%; // allow to have the equivalence as 1rem = 10px as basically the font-size is 16px
   margin: 0;
   padding: 0;
+  width: 100%;
   background: var(--darkblue);
   color: white;
   padding-top: 6rem;
@@ -127,11 +129,6 @@ body {
 
 .link {
   font-family: "compressa-micro";
-  font-weight: 300;
-  height: 2.5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   text-decoration: none;
   color: var(--almostwhite);
   opacity: 1;

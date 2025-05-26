@@ -14,8 +14,8 @@ nav {
     justify-content: center;
     align-items: center;
     height: 8rem;
-    padding: 0 2rem;
-    width: 100vw;
+    // padding: 0 2rem;
+    width: 100%;
   }
   .burger {
     position: absolute;
@@ -36,12 +36,14 @@ nav {
     color: var(--almostwhite);
     text-decoration: none;
     font-size: clamp(4rem, 10vw, 30rem);
-    margin: 12rem 0;
+    margin: clamp(2rem, 8vh, 12rem) 0;
   }
 }
+
 body.menu-open {
   overflow: hidden;
   height: 100vh;
+  padding-top: 0 !important;
 }
 
 .menu {
@@ -54,8 +56,8 @@ body.menu-open {
   transform: translateY(-1rem);
   transition: opacity 0.5s ease, transform 0.3s ease;
   top: 0;
-  right: 0;
-  width: 100vw;
+  left: 0;
+  width: 100%;
   height: 100vh;
   z-index: 3;
   padding: 0;
