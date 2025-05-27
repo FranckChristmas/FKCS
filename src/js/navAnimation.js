@@ -159,6 +159,5 @@ document.addEventListener("click", (e) => {
   if (!menu.classList.contains("visible")) return;
   if (!menu.contains(e.target) && !burger.contains(e.target)) {
     triggerClose();
-    console.log("Clicked outside the menu, closing it");
   }
 });
