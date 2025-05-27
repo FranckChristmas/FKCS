@@ -1,0 +1,42 @@
+footer {
+  z-index: 0;
+  position: relative;
+}
+
+.footer ul {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  padding: 2rem;
+  margin-bottom: 5rem;
+  text-decoration: none;
+}
+
+.footer-link a {
+  display: flex;
+  padding: 1rem;
+}
+
+li svg {
+  width: 3rem;
+  height: auto;
+  display: block;
+
+  color: var(--almostwhite);
+}
+
+.behance {
+  padding-top: 0.6rem;
+}
+
+.instagram {
+  padding-top: -3rem;
+}
+
+// .linkedin {
+//   padding-top: 2rem;
+// }
+.linkedin svg {
+  display: block;
+  transform: translateY(-0.3rem);
+}

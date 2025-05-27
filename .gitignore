@@ -1,0 +1,28 @@
+# Ignorer le dossier node_modules
+node_modules/
+
+# Ignorer les fichiers d'environnement sensibles
+.env
+
+# Ignorer les fichiers de logs
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Ignorer les dépendances installées localement
+package-lock.json
+yarn.lock
+
+# Ignorer les fichiers de build
+dist/
+build/
+public/
+
+# Ignorer les fichiers de cache
+.cache/
+.DS_Store
+.vscode/
+.idea/
+
+#ignore les fichier temporaires de parcel
+.parcel-cache/

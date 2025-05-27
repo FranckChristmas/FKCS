@@ -1,0 +1,174 @@
+section#highlights {
+  scroll-margin-top: 8rem;
+  width: 100%;
+  display: flex;
+}
+
+.highlights-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+.highlight-section-title {
+  display: flex;
+  font-family: "Compressa-micro";
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+  font-size: 10rem;
+  font-variation-settings: "wght" 300, "wdth" 100, "ital" 1;
+}
+
+ul#accordion {
+  width: 100%;
+  display: flex;
+  justify-content: center; // tous les éléments sont centrés
+  flex-flow: row nowrap;
+  padding-inline-start: 0;
+  min-height: 100vh;
+  transition: width 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s,
+    min-height 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s;
+  overflow: hidden;
+}
+
+ul#accordion li {
+  list-style: square;
+  line-height: 4rem;
+  margin: 0;
+  padding: 0;
+}
+
+.accordion-inner {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+ul#accordion li.accordion-item {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width: 100%;
+  padding-top: 3rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  transition: width 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s,
+    max-height 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s;
+  overflow: hidden;
+  // padding: 2em 5rem; // padding sans impacter la largeur de l'item
+}
+
+ul#accordion li:nth-child(even) {
+  background-color: transparent;
+}
+
+.highlight-date {
+  font-family: "Compressa-micro";
+  font-variation-settings: "wght" 300, "wdth" 5, "ital" 1;
+  text-rendering: optimizeSpeed;
+  font-size: 2vw;
+  line-height: 1.2em;
+  letter-spacing: 0.05em;
+  transition: font-size 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s,
+    font-variation-settings 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s;
+  // white-space: nowrap;
+}
+
+.highlight-title,
+.role,
+.highlight-respo {
+  font-family: "Compressa-micro";
+  font-variation-settings: "wght" 500, "wdth" 100, "ital" 1;
+  text-rendering: optimizeSpeed;
+  font-size: 1vw;
+  line-height: 1.2em;
+  letter-spacing: 0.05em;
+  opacity: 0;
+  transform: scale(0);
+  transition: font-size 0.5s ease, opacity 0.5s ease, transform 0.6s ease;
+}
+
+ul#accordion li .highlight-context,
+ul#accordion li .highlight-stack {
+  font-family: "Compressa-micro";
+  font-variation-settings: "wght" 300, "wdth" 100, "ital" 1;
+  text-rendering: optimizeSpeed;
+  font-size: 0vw;
+  transition: font-size 0.5s ease, opacity 0.5s ease, transform 0.6s ease;
+  line-height: 1.2em;
+  letter-spacing: 0.05em;
+}
+
+.heading4-respo.accordion-hidden {
+  font-family: "Compressa-micro";
+  font-variation-settings: "wght" 500, "wdth" 100, "ital" 1;
+  // transform: scale(0) translateY(2rem);
+  // transition: font-size 0.5s ease, opacity 0.5s ease, transform 0.6s ease;
+  text-rendering: optimizeSpeed;
+  line-height: 1.2em;
+  letter-spacing: 0.05em;
+  margin: 0;
+  margin-bottom: 1rem;
+  font-size: 2vw;
+  transform: scale(0);
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.6s ease, font-size 0.5s ease;
+  pointer-events: none;
+}
+
+ul#accordion li:hover .highlight-title {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+  font-size: 2vw;
+}
+
+ul#accordion li:hover .highlight-context {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+  font-size: 1vw;
+}
+
+ul#accordion li:hover .highlight-respo {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+  font-size: 1vw;
+  transition: font-size 0.5s ease, opacity 0.5s ease, transform 0.6s ease;
+}
+
+ul#accordion li:hover .role {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  font-size: 3vw;
+  transition: font-size 0.5s ease, opacity 0.5s ease, transform 0.6s ease;
+}
+
+ul#accordion li:hover .heading4-respo {
+  opacity: 1;
+  pointer-events: auto;
+  font-size: 2vw;
+  transform: translateY(0);
+  transition: font-size 0.5s ease, opacity 0.5s ease, transform 0.6s ease;
+}
+
+ul#accordion li:hover {
+  width: 600%;
+  pointer-events: auto;
+  cursor: default;
+}
+
+//allow to hide the text when not hovered and only showing the one hovered
+ul#accordion li.accordion-item:hover .highlight-date {
+  font-variation-settings: "wght" 800, "wdth" 1, "ital" 1;
+  font-size: 8vw;
+}
+
+ul#accordion:hover li.accordion-item:not(:hover) h3 {
+  font-variation-settings: "wght" 100, "wdth" 5, "ital" 1;
+  font-size: 1vw;
+  text-align: center;
+}

@@ -1,0 +1,178 @@
+/* importations */
+@use "components/_nav.scss" as *;
+@use "./components/_buttons.scss" as *;
+@use "./components/_footer.scss" as *;
+@use "./components/_about.scss" as *;
+@use "./components/_nav-transition.scss" as *;
+@use "./components/_tooltip.scss" as *;
+@use "./components/_welcome.scss" as *;
+@use "./highlights.scss" as *;
+@use "./base.scss" as *;
+@use "./variable.scss" as *;
+@use "./mixins.scss" as *;
+/* -------------------------- section home -------------------------*/
+section.home {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 90rem;
+  height: 100%;
+}
+
+.po-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: auto;
+  max-width: 90rem;
+  position: relative;
+  margin: 0 auto;
+}
+
+#po-title,
+.po-a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  font-family: "compressa-micro";
+  font-size: 8rem;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 200;
+  user-select: none;
+  margin: 0;
+}
+
+.po-qualifier-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+#po-qualifier {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: "roboto-flex";
+  font-size: clamp(4rem, 10vw, 30rem);
+  text-transform: capitalize;
+  font-weight: 500;
+  letter-spacing: 1rem;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  padding: 0;
+  margin: 0;
+}
+
+.word {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.letter {
+  display: inline-block;
+  position: relative;
+  // transform: rotateX(0deg);
+  transform: translateZ(3rem);
+  transform: rotateX(-90deg);
+  transform-origin: 50% 50% 2.5rem;
+  transform-style: preserve-3d;
+  // transition: all 0.2s, opacity 0.2s ease;
+  opacity: 0;
+}
+
+.letter.in {
+  transform: rotateX(0deg) translateY(0);
+  opacity: 1;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.letter.out {
+  opacity: 0;
+  transform: translateY(20rem) rotateX(90deg);
+  transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+.letter.behind {
+  transform: translateY(-8rem) translateZ(-2rem);
+  transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+/* -------------------------- section about -------------------------*/
+section.about {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-wrapper {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  max-width: 80%;
+}
+.about-me {
+  font-family: "compressa-micro";
+  font-size: 3rem;
+  margin: 0 auto;
+  padding: 0 5rem;
+  line-height: 1.2em;
+  letter-spacing: 0.05em;
+}
+
+/* -------------------------- section skillset -------------------------*/
+section.skillset {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.6rem; // allow to put a margin between the 2 row at 0.6 rem and the margin of the section as var(--margin)
+}
+
+.skillset-wrapper {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 4rem;
+}
+
+.skillset-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  background: var(--yellow);
+  border-radius: var(--border-radius);
+  font-family: "compressa-micro";
+  font-size: 2rem;
+  padding: 8rem;
+}
+/* -------------------------- section contact -------------------------*/
+section.contact {
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+}

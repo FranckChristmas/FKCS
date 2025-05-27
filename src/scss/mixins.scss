@@ -1,0 +1,38 @@
+@use "./variable.scss" as *;
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: $breakpoint-sm) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media (max-width: $breakpoint-md) {
+      @content;
+    }
+  } @else if $breakpoint == lg {
+    @media (max-width: $breakpoint-lg) {
+      @content;
+    }
+  } @else if $breakpoint == xl {
+    @media (max-width: $breakpoint-xl) {
+      @content;
+    }
+  }
+}
+
+@mixin chevron-box-shadow {
+  //box-shadow for chevron button on contact section
+  box-shadow: 2rem 2rem 0 0 var(--almostgrey);
+
+  @include respond-to(lg) {
+    box-shadow: 1.5rem 1.5rem 0 0 var(--almostgrey);
+  }
+
+  @include respond-to(md) {
+    box-shadow: 1rem 1rem 0 0 var(--almostgrey);
+  }
+
+  @include respond-to(sm) {
+    box-shadow: 0.5rem 0.5rem 0 0 var(--almostgrey);
+  }
+}

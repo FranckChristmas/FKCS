@@ -1,0 +1,129 @@
+@use "../mixins.scss" as *;
+
+.chevron-button {
+  position: relative;
+  overflow: hidden;
+  background: var(--darkblue);
+  padding: 1rem 2rem;
+  width: clamp(20rem, 50vw, 110rem);
+  height: clamp(6rem, 20vw, 40rem);
+  border-radius: clamp(0.2rem, 4vw, 8rem);
+  border: clamp(0.3rem, 1vw, 2.2rem) solid var(--almostwhite);
+  cursor: pointer;
+  color: var(--lightblue);
+  overflow: hidden;
+  margin: 4rem;
+  transition: box-shadow 0.8s ease, transform 0.3s ease, background 0.3s ease;
+  box-shadow: 0 0 0 0 var(--almostwhite);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.chevron-button:hover {
+  @include chevron-box-shadow;
+  background: var(--darkblue);
+}
+.chevron-button:not(:hover) {
+  transition-delay: 0.1s; /* delay when shadow is retracting*/
+}
+
+.chevron-button:hover .button-text {
+  transition: all 0.5s ease-in-out;
+  transform: scaleX(1.02);
+  color: var(--yellow);
+}
+
+.collab-text {
+  font-family: "compressa-micro";
+  position: relative;
+  font-size: 6rem;
+  z-index: 1;
+}
+.button-text {
+  font-family: "compressa-micro";
+  font-size: clamp(3.5rem, 9vw, 25rem);
+  font-variation-settings: "wght" 1500, "wdth" 80, "ital" 0;
+  position: relative;
+  text-transform: uppercase;
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
+}
+
+.button-text:hover {
+  transition: all 0.2s ease-in-out;
+}
+
+.char {
+  display: inline-block;
+  transition: transform 0.3s ease;
+  will-change: transform;
+}
+.char:hover {
+  transform: scaleY(1) scaleX(0.8);
+  transition: transform 0.5s ease-in-out;
+}
+
+.char.animate {
+  animation: squishy-bounce 2s cubic-bezier(0.25, 1.5, 0.5, 1) forwards;
+}
+
+@keyframes squishy-bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scaleY(1) scaleX(0.8);
+  }
+  100% {
+  }
+}
+
+.text-wrapper {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.chevron-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  fill: var(--darkblue2);
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+  pointer-events: none;
+}
+
+.chevron-button:hover .chevron-svg {
+  opacity: 1;
+}
+.chevron-track {
+  animation: slide-chevron 1s linear infinite;
+  animation-play-state: paused;
+}
+
+.chevron-track.active {
+  animation-play-state: running;
+}
+
+.chevron-button:hover .chevron-track {
+  animation: slide-chevron 1s linear infinite;
+  animation-play-state: running;
+}
+
+@keyframes slide-chevron {
+  0% {
+    transform: translateX(-4rem);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
