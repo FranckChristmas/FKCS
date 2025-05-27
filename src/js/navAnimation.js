@@ -23,7 +23,15 @@ function closeMenu() {
   document.documentElement.style.scrollBehavior = ""; // Re-enable smooth scroll
 }
 
-burger.addEventListener("click", () => {
+// Toggle the menu when clicking on the burger icon
+menu.addEventListener("click", (e) => {
+  console.log("Menu clicked");
+  e.stopPropagation();
+  closeMenu();
+});
+
+burger.addEventListener("click", (e) => {
+  e.stopPropagation();
   const isOpen = menu.classList.contains("visible");
 
   if (isOpen) {
@@ -44,7 +52,10 @@ burger.addEventListener("click", () => {
 
 // Close the menu when clicking on a link
 menuLinks.forEach((link) => {
-  link.addEventListener("click", closeMenu);
+  link.addEventListener("click", (e) => {
+    e.stopPropagation();
+    closeMenu();
+  });
 });
 
 // Close the menu when clicking outside of it
