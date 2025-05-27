@@ -41,17 +41,17 @@ const burger = document.querySelector(".burger");
 burger.addEventListener("mouseenter", () => {
   if (!burger.classList.contains("open")) {
     gsap.to(".line-1", {
-      duration: 0.2,
+      duration: 0.3,
       ease: "expo.in",
       morphSVG: { shape: "M6 1L24 1" },
     });
     gsap.to(".line-2", {
       duration: 0.4,
-      ease: "expo.in",
+      ease: "circ.in",
       morphSVG: { shape: "M0 7L30 7" },
     });
     gsap.to(".line-3", {
-      duration: 0.2,
+      duration: 0.3,
       ease: "expo.in",
       morphSVG: { shape: "M6 13H24" },
     });
