@@ -1,3 +1,4 @@
+// nob here are all the loaded module at the start of the app
 import { makeSpans, colorHoverEffect } from "./spans.js";
 import { chevronAnimation } from "./chevronButton.js";
 import {
@@ -11,7 +12,7 @@ import { renderProjects } from "./renderProjects.js";
 import { renderAbout } from "./renderAbout.js";
 import { Tooltip } from "./tooltip.js";
 import "./welcomeAnimation.js";
-import "./navAnimation.js";
+import { closeMenu } from "./navAnimation.js";
 import "./iconMenuAnimation.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
