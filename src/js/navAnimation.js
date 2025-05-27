@@ -51,7 +51,6 @@ function openTransition(callback) {
 function closeTransition(callback) {
   layer.style.opacity = "1";
   gsap.set(layer, { yPercent: 100 });
-  console.log("Closing transition");
   const tl = gsap.timeline({
     onComplete: () => {
       layer.style.opacity = 0;
@@ -82,6 +81,9 @@ function closeTransition(callback) {
 //----------------------rest of the code----------------------
 
 function closeMenu() {
+  if (!menu.classList.contains("visible")) return;
+  console.log("Closing menu");
+
   menu.classList.add("no-transition");
   menu.classList.remove("visible");
   requestAnimationFrame(() => {
@@ -154,6 +156,7 @@ menuLinks.forEach((link) => {
 
 // Close the menu when clicking outside of it
 document.addEventListener("click", (e) => {
+  if (!menu.classList.contains("visible")) return;
   if (!menu.contains(e.target) && !burger.contains(e.target)) {
     triggerClose();
     console.log("Clicked outside the menu, closing it");
