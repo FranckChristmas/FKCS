@@ -10,10 +10,7 @@ gsap.registerPlugin(MorphSVGPlugin);
 const burger = document.querySelector(".burger");
 const menu = document.querySelector(".menu");
 const menuLinks = document.querySelectorAll(".menu a");
-console.log("Liens détectés dans le menu :");
-menuLinks.forEach((link) => {
-  console.log(`➡ ${link.textContent} – href=${link.getAttribute("href")}`);
-});
+menuLinks.forEach((link) => {});
 let scrollY = 0;
 
 handleBurgerHover(); // Initialize burger hover effect
