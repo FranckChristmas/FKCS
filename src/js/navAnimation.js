@@ -59,18 +59,21 @@ function closeTransition(callback) {
       layer.style.opacity = 0;
     },
   });
-
-  tl.fromTo(
-    layer,
-    {
-      yPercent: 100,
-    },
-    {
-      yPercent: 0,
-      duration: 0.5,
-      ease: "power2.inOut",
-    }
-  )
+  tl.add(() => {
+    burger.classList.remove("open");
+    animateBurger(false);
+  }, "+=0.18") // display the menu at the start
+    .fromTo(
+      layer,
+      {
+        yPercent: 100,
+      },
+      {
+        yPercent: 0,
+        duration: 0.5,
+        ease: "power2.inOut",
+      }
+    )
     .add(() => {
       closeMenu(); // Hide the menu at the start
     })
@@ -114,7 +117,7 @@ burger.addEventListener("click", (e) => {
 
   if (isOpen) {
     closeTransition(() => {
-      burger.classList.remove("open");
+      // remove the callback
       animateBurger(false);
     });
   } else {
