@@ -2,16 +2,17 @@
 // nb the scroll position is preserved when the menu is open due to the recorded scroll position in scrollPosition
 
 // ---------------------------------------------- SAVED// animation for the burger icon to open and close the menu
-import { animateBurger } from "./iconMenuAnimation";
+import { animateBurger, handleBurgerHover } from "./iconMenuAnimation";
 import gsap from "gsap";
 import { MorphSVGPlugin } from "gsap/MorphSVGPlugin";
 gsap.registerPlugin(MorphSVGPlugin);
 
-let scrollY = 0;
-
 const burger = document.querySelector(".burger");
 const menu = document.querySelector(".menu");
 const menuLinks = document.querySelectorAll(".menu a");
+let scrollY = 0;
+
+handleBurgerHover(); // Initialize burger hover effect
 
 //handle the menu transition layer to have an animation when opening and closing the menu
 const layer = document.querySelector(".menu-transition-layer");
@@ -38,11 +39,7 @@ function openTransition(callback) {
     }
   )
     .add(() => {
-      burger.classList.add("open");
-      animateBurger(true);
-    }, "-=0.11") // display the menu at the start
-    .add(() => {
-      if (callback) callback(); // Affiche le menu au milieu
+      if (callback) callback(); // display the menu at the end
     })
     .to(layer, {
       yPercent: 100,
@@ -99,7 +96,7 @@ function closeMenu() {
     menu.classList.remove("no-transition");
   });
   document.body.classList.remove("menu-open");
-  burger.classList.toggle("open");
+  burger.classList.remove("open");
   animateBurger(burger.classList.contains("visible"));
 
   const scrollPosition = parseInt(document.body.style.top || "0") * -1;
@@ -116,10 +113,7 @@ burger.addEventListener("click", (e) => {
   const isOpen = menu.classList.contains("visible");
 
   if (isOpen) {
-    closeTransition(() => {
-      // remove the callback
-      animateBurger(false);
-    });
+    closeTransition(() => {});
   } else {
     scrollY = window.scrollY;
     openTransition(() => {
@@ -128,10 +122,13 @@ burger.addEventListener("click", (e) => {
       requestAnimationFrame(() => {
         menu.classList.remove("no-transition");
       });
-      document.body.classList.toggle("menu-open");
+      document.body.classList.add("menu-open");
       document.body.style.position = "fixed";
       document.body.style.top = `-${scrollY}px`;
+    });
+    requestAnimationFrame(() => {
       burger.classList.add("open");
+      animateBurger(true);
     });
   }
 });
