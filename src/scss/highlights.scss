@@ -16,7 +16,7 @@ section#highlights {
   font-family: "Compressa-micro";
   text-transform: uppercase;
   margin-bottom: 3rem;
-  font-size: 10rem;
+  font-size: clamp(5rem, 5vw, 10rem);
   font-variation-settings: "wght" 300, "wdth" 100, "ital" 1;
 }
 
