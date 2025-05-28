@@ -10,6 +10,10 @@ gsap.registerPlugin(MorphSVGPlugin);
 const burger = document.querySelector(".burger");
 const menu = document.querySelector(".menu");
 const menuLinks = document.querySelectorAll(".menu a");
+console.log("Liens détectés dans le menu :");
+menuLinks.forEach((link) => {
+  console.log(`➡ ${link.textContent} – href=${link.getAttribute("href")}`);
+});
 let scrollY = 0;
 
 handleBurgerHover(); // Initialize burger hover effect
@@ -48,7 +52,7 @@ function openTransition(callback) {
     });
 }
 
-function closeTransition(callback) {
+function closeTransition(targetElement = null) {
   layer.style.opacity = "1";
   gsap.set(layer, { yPercent: 100 });
   const tl = gsap.timeline({
@@ -78,9 +82,11 @@ function closeTransition(callback) {
       yPercent: -100,
       duration: 0.5,
       ease: "power2.inOut",
-    })
-    .add(() => {
-      if (callback) callback(); // Hide the menu at the end
+      onStart: () => {
+        if (targetElement) {
+          targetElement.scrollIntoView({ behavior: "instant" });
+        }
+      },
     });
 }
 
@@ -101,8 +107,6 @@ function closeMenu() {
   const scrollPosition = parseInt(document.body.style.top || "0") * -1;
   document.body.style.position = "";
   document.body.style.top = "";
-
-  document.documentElement.style.scrollBehavior = "auto"; // Disable smooth scroll temporarily
   window.scrollTo(0, scrollPosition);
   document.documentElement.style.scrollBehavior = ""; // Re-enable smooth scroll
 }
@@ -135,29 +139,20 @@ burger.addEventListener("click", (e) => {
 });
 
 // function that takes back the closeTransition function + // closeMenu function to avoid code duplication and inject just below in the closing usecases
-function triggerClose() {
-  closeTransition(() => {
-    // closeMenu();
-    burger.classList.remove("open");
-    animateBurger(false);
-  });
+function triggerClose(targetElement) {
+  closeTransition(targetElement);
 }
 
 // Close the menu when clicking on a link
-menuLinks.forEach((link) => {
-  link.addEventListener("click", (e) => {
-    e.preventDefault();
-    const targetId = link.getAttribute("href");
-    const targetElement = document.querySelector(targetId);
-    triggerClose();
-    setTimeout(() => {
-      if (targetElement) {
-        targetElement.scrollIntoView({ behavior: "instant" });
-      }
-    }, 300); // Delay to allow the menu to close before scrolling
-  });
-});
+menu.addEventListener("click", (e) => {
+  const link = e.target.closest("a[href^='#']");
+  if (!link) return;
 
+  e.preventDefault();
+  const targetId = link.getAttribute("href");
+  const targetElement = document.querySelector(targetId);
+  triggerClose(targetElement);
+});
 // Close the menu when clicking outside of it
 document.addEventListener("click", (e) => {
   if (!menu.classList.contains("visible")) return;
@@ -168,7 +163,6 @@ document.addEventListener("click", (e) => {
 
 // Toggle the menu when clicking on the burger icon
 menu.addEventListener("click", (e) => {
-  console.log("Menu clicked");
   e.stopPropagation();
   triggerClose();
 });

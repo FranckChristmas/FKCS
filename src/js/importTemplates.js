@@ -7,7 +7,6 @@ export async function importSocialsLinks(targetSelector) {
     const html = await res.text();
     const container = document.querySelector(targetSelector);
     if (container) container.innerHTML = html;
-    console.log(`Social links imported into ${targetSelector}`);
   } catch (error) {
     console.error("Error importing social links:", error);
   }
