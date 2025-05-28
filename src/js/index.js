@@ -11,7 +11,7 @@ import { fetchProjects, fetchAboutMe } from "./prismic.js";
 import { renderProjects } from "./renderProjects.js";
 import { renderAbout } from "./renderAbout.js";
 import { Tooltip } from "./tooltip.js";
-import "./welcomeAnimation.js";
+import "./textAnimation.js";
 import { closeMenu } from "./navAnimation.js";
 import "./iconMenuAnimation.js";
 
