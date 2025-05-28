@@ -88,7 +88,6 @@ function closeTransition(callback) {
 
 function closeMenu() {
   if (!menu.classList.contains("visible")) return;
-  console.log("Closing menu");
 
   menu.classList.add("no-transition");
   menu.classList.remove("visible");

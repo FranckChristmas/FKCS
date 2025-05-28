@@ -21,7 +21,7 @@ export function makeSpans(selector) {
 export function colorHoverEffect() {
   const colors = [
     "var(--pink)",
-    "var(--darkblue)",
+    "var(--purple)",
     "var(--lightblue)",
     "var(--lightgreen)",
     "var(--yellow)",
