@@ -25,10 +25,10 @@ export function renderProjects(projects) {
 
         if (block.type === "list-item") {
           if (!inList) {
-            html += `<ul class="highlight-respo accordion-hidden">`;
+            html += `<ul class="projects-respo accordion-hidden">`;
             inList = true;
           }
-          html += `<li class="highlight-respo accordion-hidden">${block.text}</li>`;
+          html += `<li class="projects-respo accordion-hidden">${block.text}</li>`;
           if (next || next.type !== "list-item") {
             html += `</ul>`;
             inList = false;
@@ -41,7 +41,7 @@ export function renderProjects(projects) {
           if (block.type === "heading4") {
             html += `<h4 class="heading4-respo accordion-hidden">${block.text}</h4>`;
           } else if (block.type === "paragraph") {
-            html += `<p class="highlight-respo">${block.text}</p>`;
+            html += `<p class="projects-respo">${block.text}</p>`;
           }
         }
       });
@@ -53,13 +53,13 @@ export function renderProjects(projects) {
     const li = document.createElement("li");
     li.classList.add("accordion-item");
 
-    li.innerHTML = `<h3 class="variable-text highlight-date">${period}</h3>
+    li.innerHTML = `<h3 class="variable-text projects-date">${period}</h3>
             <span class="role accordion-hidden"> ${role}</span>
-            <span class="highlight-title accordion-hidden">${client} | ${sector}</span>
+            <span class="projects-title accordion-hidden">${client} | ${sector}</span>
             <div>
-              <p class="highlight-context accordion-hidden">${contextTitle} ${context}</p>
-              <div class="highlight-respo accordion-hidden">${respoTitle} ${responsibilities}</div>
-              <p class="highlight-stack accordion-hidden">${stackTitle} ${stack}</p>
+              <p class="projects-context accordion-hidden">${contextTitle} ${context}</p>
+              <div class="projects-respo accordion-hidden">${respoTitle} ${responsibilities}</div>
+              <p class="projects-stack accordion-hidden">${stackTitle} ${stack}</p>
             </div>
       `;
     container.appendChild(li);

@@ -1,17 +1,17 @@
-section#highlights {
+section#projects {
   scroll-margin-top: 8rem;
   width: 100%;
   display: flex;
 }
 
-.highlights-wrapper {
+.projects-wrapper {
   display: flex;
   flex-direction: column;
   align-content: center;
   align-items: center;
 }
 
-.highlight-section-title {
+.projects-section-title {
   display: flex;
   font-family: "Compressa-micro";
   text-transform: uppercase;
@@ -63,7 +63,7 @@ ul#accordion li:nth-child(even) {
   background-color: transparent;
 }
 
-.highlight-date {
+.projects-date {
   font-family: "Compressa-micro";
   font-variation-settings: "wght" 300, "wdth" 5, "ital" 1;
   text-rendering: optimizeSpeed;
@@ -75,9 +75,9 @@ ul#accordion li:nth-child(even) {
   // white-space: nowrap;
 }
 
-.highlight-title,
+.projects-title,
 .role,
-.highlight-respo {
+.projects-respo {
   font-family: "Compressa-micro";
   font-variation-settings: "wght" 500, "wdth" 100, "ital" 1;
   text-rendering: optimizeSpeed;
@@ -89,8 +89,8 @@ ul#accordion li:nth-child(even) {
   transition: font-size 0.5s ease, opacity 0.5s ease, transform 0.6s ease;
 }
 
-ul#accordion li .highlight-context,
-ul#accordion li .highlight-stack {
+ul#accordion li .projects-context,
+ul#accordion li .projects-stack {
   font-family: "Compressa-micro";
   font-variation-settings: "wght" 300, "wdth" 100, "ital" 1;
   text-rendering: optimizeSpeed;
@@ -117,21 +117,21 @@ ul#accordion li .highlight-stack {
   pointer-events: none;
 }
 
-ul#accordion li:hover .highlight-title {
+ul#accordion li:hover .projects-title {
   opacity: 1;
   transform: translateY(0) scale(1);
   pointer-events: auto;
   font-size: 2vw;
 }
 
-ul#accordion li:hover .highlight-context {
+ul#accordion li:hover .projects-context {
   opacity: 1;
   transform: translateY(0) scale(1);
   pointer-events: auto;
   font-size: 1vw;
 }
 
-ul#accordion li:hover .highlight-respo {
+ul#accordion li:hover .projects-respo {
   opacity: 1;
   transform: translateY(0) scale(1);
   pointer-events: auto;
@@ -162,7 +162,7 @@ ul#accordion li:hover {
 }
 
 //allow to hide the text when not hovered and only showing the one hovered
-ul#accordion li.accordion-item:hover .highlight-date {
+ul#accordion li.accordion-item:hover .projects-date {
   font-variation-settings: "wght" 800, "wdth" 1, "ital" 1;
   font-size: 8vw;
 }
