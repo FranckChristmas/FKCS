@@ -38,8 +38,7 @@ li svg {
   transform: translateY(-0.3rem);
 }
 
-.footer-socials ul,
-.menu-socials ul {
+.footer-socials ul {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -77,5 +76,38 @@ li svg {
 }
 // --------------------------- menu socials ---------------------------
 .menu-socials ul {
-  padding-top: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 2rem 2rem 8rem 2rem;
+
+  li {
+    list-style: none;
+    display: flex;
+  }
+
+  .link-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      display: flex;
+      padding: 0.5rem;
+
+      svg {
+        width: 2.5rem;
+        height: auto;
+        display: block;
+        color: var(--almostwhite);
+        transition: transform 0.2s ease;
+      }
+    }
+  }
+}
+
+.menu-socials ul li {
+  opacity: 0.6;
 }
