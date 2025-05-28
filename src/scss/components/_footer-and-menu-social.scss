@@ -3,7 +3,7 @@ footer {
   position: relative;
 }
 
-.footer ul {
+.footer {
   display: flex;
   justify-content: center;
   gap: 4rem;
@@ -39,4 +39,12 @@ li svg {
 .linkedin svg {
   display: block;
   transform: translateY(-0.3rem);
+}
+// --------------------------- menu socials ---------------------------
+.menu-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem;
 }
