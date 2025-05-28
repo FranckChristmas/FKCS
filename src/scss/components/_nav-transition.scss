@@ -5,7 +5,7 @@
 }
 
 .nav.hovering .link:not(:hover),
-.footer-socials.hovering .footer-link a:not(:hover),
+.footer-socials.hovering .link-social:not(:hover),
 .menu-socials.hovering .link-social:not(:hover) {
   opacity: 0.3;
   transition: opacity 0.3s ease-out;
