@@ -14,6 +14,7 @@ import { Tooltip } from "./tooltip.js";
 import "./textAnimation.js";
 import { closeMenu } from "./navAnimation.js";
 import "./iconMenuAnimation.js";
+import { importSocialsLinks } from "./importTemplates.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
   chevronAnimation();
@@ -33,6 +34,9 @@ document.addEventListener("DOMContentLoaded", async () => {
   hover();
   renderProjects(projects);
   renderAbout(aboutMe);
+  importSocialsLinks(".menu-socials");
+  importSocialsLinks(".footer-socials");
+
   makeSpans("h1, h3");
   colorHoverEffect();
   animateVariableFont();
