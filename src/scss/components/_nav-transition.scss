@@ -4,14 +4,16 @@
   transition: opacity 0.8s ease-in-out;
 }
 
-.nav.hovering .link,
-.footer.hovering .footer-link a {
+.nav.hovering .link:not(:hover),
+.footer-socials.hovering .footer-link a:not(:hover),
+.menu-socials.hovering .link-social:not(:hover) {
   opacity: 0.3;
   transition: opacity 0.3s ease-out;
 }
 
-.nav.hovering .link:hover,
-.footer.hovering .footer-link a:hover {
+.nav .link:hover,
+.footer-socials .footer-link a:hover,
+.menu-socials .link-social:hover {
   opacity: 1;
   transition: opacity 0.2s ease-in;
 }
