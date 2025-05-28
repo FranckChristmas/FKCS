@@ -3,7 +3,6 @@
 
 // ---------------------------------------------- SAVED// animation for the burger icon to open and close the menu
 import { animateBurger } from "./iconMenuAnimation";
-
 import gsap from "gsap";
 import { MorphSVGPlugin } from "gsap/MorphSVGPlugin";
 gsap.registerPlugin(MorphSVGPlugin);
@@ -38,6 +37,10 @@ function openTransition(callback) {
       ease: "power2.inOut",
     }
   )
+    .add(() => {
+      burger.classList.add("open");
+      animateBurger(true);
+    }, "-=0.11") // display the menu at the start
     .add(() => {
       if (callback) callback(); // Affiche le menu au milieu
     })
@@ -125,9 +128,7 @@ burger.addEventListener("click", (e) => {
       document.body.classList.toggle("menu-open");
       document.body.style.position = "fixed";
       document.body.style.top = `-${scrollY}px`;
-
       burger.classList.add("open");
-      animateBurger(true);
     });
   }
 });
