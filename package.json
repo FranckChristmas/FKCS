@@ -2,11 +2,12 @@
   "name": "fkcs",
   "version": "1.0.0",
   "description": "Portfolio freelance",
-  "source": "src/html/index.html",
+  "source": "src/index.html",
   "scripts": {
     "start": "parcel",
-    "build": "parcel build src/index.html --no-optimize",
-    "clean": "rm -rf .parcel-cache dist"
+    "build": "parcel build src/index.html --no-optimize && npm run copy-static",
+    "clean": "rm -rf .parcel-cache dist",
+    "copy-static": "cp -R static/html dist/html"
   },
   "author": "François Noell",
   "license": "ISC",
