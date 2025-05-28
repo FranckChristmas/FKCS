@@ -69,12 +69,15 @@ function closeTransition(callback) {
     }
   )
     .add(() => {
-      if (callback) callback(); // Affiche le menu au milieu
+      closeMenu(); // Hide the menu at the start
     })
     .to(layer, {
       yPercent: -100,
       duration: 0.5,
       ease: "power2.inOut",
+    })
+    .add(() => {
+      if (callback) callback(); // Hide the menu at the end
     });
 }
 
@@ -102,20 +105,12 @@ function closeMenu() {
   document.documentElement.style.scrollBehavior = ""; // Re-enable smooth scroll
 }
 
-// Toggle the menu when clicking on the burger icon
-menu.addEventListener("click", (e) => {
-  console.log("Menu clicked");
-  e.stopPropagation();
-  closeMenu();
-});
-
 burger.addEventListener("click", (e) => {
   e.stopPropagation();
   const isOpen = menu.classList.contains("visible");
 
   if (isOpen) {
     closeTransition(() => {
-      closeMenu();
       burger.classList.remove("open");
       animateBurger(false);
     });
@@ -137,10 +132,10 @@ burger.addEventListener("click", (e) => {
   }
 });
 
-// function thatv takes back the closeTransition function + // closeMenu function to avoid code duplication and inject just below in the closing usecases
+// function that takes back the closeTransition function + // closeMenu function to avoid code duplication and inject just below in the closing usecases
 function triggerClose() {
   closeTransition(() => {
-    closeMenu();
+    // closeMenu();
     burger.classList.remove("open");
     animateBurger(false);
   });
@@ -149,8 +144,15 @@ function triggerClose() {
 // Close the menu when clicking on a link
 menuLinks.forEach((link) => {
   link.addEventListener("click", (e) => {
-    e.stopPropagation();
+    e.preventDefault();
+    const targetId = link.getAttribute("href");
+    const targetElement = document.querySelector(targetId);
     triggerClose();
+    setTimeout(() => {
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: "instant" });
+      }
+    }, 600); // Delay to allow the menu to close before scrolling
   });
 });
 
@@ -160,4 +162,11 @@ document.addEventListener("click", (e) => {
   if (!menu.contains(e.target) && !burger.contains(e.target)) {
     triggerClose();
   }
+});
+
+// Toggle the menu when clicking on the burger icon
+menu.addEventListener("click", (e) => {
+  console.log("Menu clicked");
+  e.stopPropagation();
+  triggerClose();
 });
