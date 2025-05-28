@@ -5,32 +5,35 @@ gsap.registerPlugin(MorphSVGPlugin);
 export function animateBurger(isOpen) {
   if (isOpen) {
     gsap.to(".line-1", {
-      duration: 0.2,
+      duration: 0.31,
       ease: "expo.in",
-      morphSVG: { shape: "M0 1L30 1" },
+      morphSVG: { shape: "M12 1L1.93715e-07 0.999999" },
     });
     gsap.to(".line-2", {
-      duration: 0.4,
-      ease: "expo.in",
-      morphSVG: { shape: "M6 7L24 7" },
+      duration: 0.32,
+      ease: "circ.in",
+      morphSVG: { shape: "M12 4L1.93715e-07 4" },
     });
     gsap.to(".line-3", {
-      duration: 0.2,
+      duration: 0.33,
       ease: "expo.in",
-      morphSVG: { shape: "M0 13H30" },
+      morphSVG: { shape: "M12 7L1.93715e-07 7" },
     });
   } else {
     gsap.to(".line-1", {
-      duration: 0.2,
-      morphSVG: { shape: "M1 10.1249L16.5157 1.00004" },
+      duration: 0.31,
+      ease: "expo.in",
+      morphSVG: { shape: "M12 1L1.93715e-07 0.999999" },
     });
     gsap.to(".line-2", {
-      duration: 0.2,
-      morphSVG: { shape: "M11 9.00024H29" },
+      duration: 0.32,
+      ease: "circ.in",
+      morphSVG: { shape: "M15 2.5L3 2.5" },
     });
     gsap.to(".line-3", {
-      duration: 0.3,
-      morphSVG: { shape: "M12 4.00024L41.1534 11.0768" },
+      duration: 0.33,
+      ease: "expo.in",
+      morphSVG: { shape: "M18 4L6 4" },
     });
   }
 }
@@ -43,17 +46,17 @@ burger.addEventListener("mouseenter", () => {
     gsap.to(".line-1", {
       duration: 0.3,
       ease: "expo.in",
-      morphSVG: { shape: "M6 1L24 1" },
+      morphSVG: { shape: "M12 1L1.93715e-07 0.999999" },
     });
     gsap.to(".line-2", {
-      duration: 0.4,
+      duration: 0.31,
       ease: "circ.in",
-      morphSVG: { shape: "M0 7L30 7" },
+      morphSVG: { shape: "M12 2.5L1.93715e-07 2.5" },
     });
     gsap.to(".line-3", {
-      duration: 0.3,
+      duration: 0.32,
       ease: "expo.in",
-      morphSVG: { shape: "M6 13H24" },
+      morphSVG: { shape: "M12 4L1.93715e-07 4" },
     });
   }
 });
@@ -62,13 +65,19 @@ burger.addEventListener("mouseenter", () => {
 burger.addEventListener("mouseleave", () => {
   if (!burger.classList.contains("open")) {
     gsap.to(".line-1", {
-      duration: 0.3,
-      morphSVG: "M1 10.1249L16.5157 1.00004",
+      duration: 0.31,
+      ease: "expo.in",
+      morphSVG: { shape: "M12 1L1.93715e-07 0.999999" },
     });
     gsap.to(".line-2", {
-      duration: 0.3,
-      morphSVG: "M12 4.00024L41.1534 11.0768",
+      duration: 0.32,
+      ease: "circ.in",
+      morphSVG: { shape: "M15 2.5L3 2.5" },
     });
-    gsap.to(".line-3", { duration: 0.3, morphSVG: "M11 9.00024H29" });
+    gsap.to(".line-3", {
+      duration: 0.33,
+      ease: "expo.in",
+      morphSVG: { shape: "M18 4L6 4" },
+    });
   }
 });
