@@ -2,7 +2,7 @@
   "name": "fkcs",
   "version": "1.0.0",
   "description": "Portfolio freelance",
-  "source": "src/index.html",
+  "source": "src/html/index.html",
   "scripts": {
     "start": "parcel",
     "build": "parcel build src/index.html --no-optimize",
