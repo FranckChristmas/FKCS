@@ -19,7 +19,7 @@ nav {
   }
   .burger {
     position: absolute;
-    right: 4rem;
+    right: clamp(2rem, 3vw, 4rem);
     background: none;
     border: none;
     font-size: 4rem;
@@ -32,7 +32,7 @@ nav {
   .burger-icon {
     padding-top: 2rem;
     color: var(--almostwhite);
-    width: 12rem;
+    width: clamp(6rem, 8vw, 12rem);
     height: auto;
     z-index: 5;
   }
