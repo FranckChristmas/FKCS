@@ -1,5 +1,9 @@
 export function hover() {
-  const areas = [{ selector: ".nav" }, { selector: ".footer" }];
+  const areas = [
+    { selector: ".nav" },
+    { selector: ".footer-socials" },
+    { selector: ".menu-socials" },
+  ];
 
   areas.forEach(({ selector }) => {
     const element = document.querySelector(selector);
