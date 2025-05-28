@@ -21,17 +21,17 @@ export function animateBurger(isOpen) {
     });
   } else {
     gsap.to(".line-1", {
-      duration: 0.31,
+      duration: 0.15,
       ease: "expo.in",
       morphSVG: { shape: "M12 1L1.93715e-07 0.999999" },
     });
     gsap.to(".line-2", {
-      duration: 0.32,
+      duration: 0.18,
       ease: "circ.in",
       morphSVG: { shape: "M15 2.5L3 2.5" },
     });
     gsap.to(".line-3", {
-      duration: 0.33,
+      duration: 0.21,
       ease: "expo.in",
       morphSVG: { shape: "M18 4L6 4" },
     });
@@ -50,12 +50,12 @@ export function handleBurgerHover() {
         morphSVG: { shape: "M12 1L1.93715e-07 0.999999" },
       });
       gsap.to(".line-2", {
-        duration: 0.11,
+        duration: 0.15,
         ease: "circ.in",
         morphSVG: { shape: "M12 2.5L1.93715e-07 2.5" },
       });
       gsap.to(".line-3", {
-        duration: 0.12,
+        duration: 0.18,
         ease: "circ.in",
         morphSVG: { shape: "M12 4L1.93715e-07 4" },
       });
@@ -65,17 +65,17 @@ export function handleBurgerHover() {
   burger.addEventListener("mouseleave", () => {
     if (!burger.classList.contains("open")) {
       gsap.to(".line-1", {
-        duration: 0.4,
+        duration: 0.2,
         ease: "expo.in",
         morphSVG: { shape: "M12 1L1.93715e-07 0.999999" },
       });
       gsap.to(".line-2", {
-        duration: 0.45,
+        duration: 0.25,
         ease: "circ.in",
         morphSVG: { shape: "M15 2.5L3 2.5" },
       });
       gsap.to(".line-3", {
-        duration: 0.5,
+        duration: 0.3,
         ease: "expo.in",
         morphSVG: { shape: "M18 4L6 4" },
       });

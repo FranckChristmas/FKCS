@@ -115,20 +115,22 @@ burger.addEventListener("click", (e) => {
     closeTransition(() => {});
   } else {
     scrollY = window.scrollY;
-    openTransition(() => {
-      menu.classList.add("no-transition");
-      menu.classList.add("visible");
-      requestAnimationFrame(() => {
-        menu.classList.remove("no-transition");
+
+    burger.classList.add("open");
+    animateBurger(true);
+
+    setTimeout(() => {
+      openTransition(() => {
+        menu.classList.add("no-transition");
+        menu.classList.add("visible");
+        requestAnimationFrame(() => {
+          menu.classList.remove("no-transition");
+        });
+        document.body.classList.add("menu-open");
+        document.body.style.position = "fixed";
+        document.body.style.top = `-${scrollY}px`;
       });
-      document.body.classList.add("menu-open");
-      document.body.style.position = "fixed";
-      document.body.style.top = `-${scrollY}px`;
-    });
-    requestAnimationFrame(() => {
-      burger.classList.add("open");
-      animateBurger(true);
-    });
+    }, 300);
   }
 });
 
@@ -152,7 +154,7 @@ menuLinks.forEach((link) => {
       if (targetElement) {
         targetElement.scrollIntoView({ behavior: "instant" });
       }
-    }, 600); // Delay to allow the menu to close before scrolling
+    }, 300); // Delay to allow the menu to close before scrolling
   });
 });
 
