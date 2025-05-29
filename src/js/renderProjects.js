@@ -56,7 +56,7 @@ export function renderProjects(projects) {
     li.innerHTML = `<h3 class="variable-text projects-date">${period}</h3>
             <span class="role accordion-hidden"> ${role}</span>
             <span class="projects-title accordion-hidden">${client} | ${sector}</span>
-            <div>
+            <div class="accordion-content">
               <p class="projects-context accordion-hidden">${contextTitle} ${context}</p>
               <div class="projects-respo accordion-hidden">${respoTitle} ${responsibilities}</div>
               <p class="projects-stack accordion-hidden">${stackTitle} ${stack}</p>

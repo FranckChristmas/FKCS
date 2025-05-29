@@ -56,7 +56,6 @@ ul#accordion li.accordion-item {
   transition: width 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s,
     max-height 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s;
   overflow: hidden;
-  // padding: 2em 5rem; // padding sans impacter la largeur de l'item
 }
 
 ul#accordion li:nth-child(even) {
@@ -67,7 +66,7 @@ ul#accordion li:nth-child(even) {
   font-family: "Compressa-micro";
   font-variation-settings: "wght" 300, "wdth" 5, "ital" 1;
   text-rendering: optimizeSpeed;
-  font-size: 2vw;
+  font-size: clamp(2rem, 2vw, 5rem);
   line-height: 1.2em;
   letter-spacing: 0.05em;
   transition: font-size 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s,
@@ -171,4 +170,45 @@ ul#accordion:hover li.accordion-item:not(:hover) h3 {
   font-variation-settings: "wght" 100, "wdth" 5, "ital" 1;
   font-size: 1vw;
   text-align: center;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 4rem;
+}
+@media (max-width: 480px) {
+  .accordion-content {
+    width: 100vw !important;
+  }
+  .projects-date {
+    font-size: 5rem !important;
+  }
+
+  ul#accordion {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    flex-wrap: nowrap !important;
+    overflow: visible;
+  }
+  ul#accordion li.accordion-item {
+    width: 100% !important;
+  }
+
+  // Désactiver les effets "hover" cassés sur mobile
+  ul#accordion li:hover {
+    width: 100% !important;
+    cursor: default;
+  }
+
+  ul#accordion li:hover .projects-title,
+  ul#accordion li:hover .projects-context,
+  ul#accordion li:hover .projects-respo,
+  ul#accordion li:hover .role,
+  ul#accordion li:hover .heading4-respo {
+    font-size: 1.6rem !important;
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+  }
 }
