@@ -63,7 +63,7 @@ export function renderProjects(projects) {
             </div>
       `;
     container.appendChild(li);
-    if (window.innerWidth <= 480) {
+    if (window.matchMedia("(max-width: 480px)").matches) {
       const date = li.querySelector(".projects-date");
       date.style.cursor = "pointer";
       date.addEventListener("click", () => {
