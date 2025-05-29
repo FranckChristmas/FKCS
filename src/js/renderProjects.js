@@ -1,4 +1,5 @@
 export function renderProjects(projects) {
+  console.log("📦 Rendering projects:", projects, window.innerWidth);
   const container = document.getElementById("accordion");
   container.innerHTML = ""; // Clear previous content
 
@@ -64,6 +65,7 @@ export function renderProjects(projects) {
       `;
     container.appendChild(li);
     if (window.matchMedia("(max-width: 480px)").matches) {
+      console.log("📱 Mobile view detected, changing to horizontal projects");
       const date = li.querySelector(".projects-date");
       date.style.cursor = "pointer";
       date.addEventListener("click", () => {
