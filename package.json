@@ -7,7 +7,7 @@
     "start": "parcel",
     "build": "parcel build src/index.html --no-optimize && npm run copy-static",
     "clean": "rm -rf .parcel-cache dist",
-    "copy-static": "cp -R static/html dist/html"
+    "copy-static": "cp -R dist/html"
   },
   "author": "François Noell",
   "license": "ISC",
