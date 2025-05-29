@@ -185,6 +185,16 @@ ul#accordion:hover li.accordion-item:not(:hover) h3 {
     font-size: 5rem !important;
   }
 
+  li.accordion-item .accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+  }
+  li.accordion-item.open .accordion-content {
+    max-height: 1000px;
+    overflow: auto;
+  }
+
   ul#accordion {
     flex-direction: column !important;
     align-items: stretch !important;

@@ -63,5 +63,20 @@ export function renderProjects(projects) {
             </div>
       `;
     container.appendChild(li);
+    if (window.innerWidth <= 480) {
+      const date = li.querySelector(".projects-date");
+      date.style.cursor = "pointer";
+      date.addEventListener("click", () => {
+        // Fermer tous les autres items ouverts
+        document.querySelectorAll("li.accordion-item.open").forEach((item) => {
+          if (item !== li) {
+            item.classList.remove("open");
+          }
+        });
+
+        // Ouvrir ou fermer l'élément cliqué
+        li.classList.toggle("open");
+      });
+    }
   });
 }
