@@ -27,32 +27,6 @@ section.about {
   max-width: 80%;
 }
 
-/* -------------------------- section skillset -------------------------*/
-section.skillset {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 0.6rem; // allow to put a margin between the 2 row at 0.6 rem and the margin of the section as var(--margin)
-}
-
-.skillset-wrapper {
-  max-width: 100%;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  margin: 0 4rem;
-}
-
-.skillset-title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  align-content: center;
-  background: var(--yellow);
-  border-radius: var(--border-radius);
-  font-family: "compressa-micro";
-  font-size: 2rem;
-  padding: 8rem;
-}
 /* -------------------------- section contact -------------------------*/
 section.contact {
   display: flex;
