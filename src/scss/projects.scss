@@ -177,7 +177,7 @@ ul#accordion:hover li.accordion-item:not(:hover) h3 {
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   gap: 4rem;
 }
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   .accordion-content {
     width: 100vw !important;
   }
