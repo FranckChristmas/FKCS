@@ -53,15 +53,16 @@ export function renderProjects(projects) {
     const li = document.createElement("li");
     li.classList.add("accordion-item");
 
-    li.innerHTML = `<h3 class="variable-text projects-date">${period}</h3>
-            <span class="role accordion-hidden"> ${role}</span>
+    li.innerHTML = `<div class="accordion-inner">
+      <h3 class="variable-text projects-date">${period}</h3>
+       <span class="role accordion-hidden"> ${role}</span>
             <span class="projects-title accordion-hidden">${client} | ${sector}</span>
             <div class="accordion-content">
               <p class="projects-context accordion-hidden">${contextTitle} ${context}</p>
               <div class="projects-respo accordion-hidden">${respoTitle} ${responsibilities}</div>
               <p class="projects-stack accordion-hidden">${stackTitle} ${stack}</p>
             </div>
-      `;
+      </div>`;
     container.appendChild(li);
     if (window.matchMedia("(max-width: 600px)").matches) {
       const date = li.querySelector(".projects-date");

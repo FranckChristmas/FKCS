@@ -40,6 +40,9 @@ ul#accordion li {
 }
 
 .accordion-inner {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
   width: 100%;
   box-sizing: border-box;
 }
@@ -63,6 +66,7 @@ ul#accordion li:nth-child(even) {
 }
 
 .projects-date {
+  text-align: center;
   font-family: "Compressa-micro";
   font-variation-settings: "wght" 300, "wdth" 5, "ital" 1;
   text-rendering: optimizeSpeed;
