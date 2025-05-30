@@ -43,13 +43,20 @@
 
 .about-title {
   font-family: "compressa-micro";
-  font-size: 3vw;
+  font-size: clamp(3rem, 3vw, 6rem);
   color: #ffffff;
 }
 
 .about-description {
   font-family: "compressa-micro";
-  font-size: 2vw;
+  font-size: clamp(2rem, 3vw, 5rem);
   color: #ffffff;
   margin: 0;
+}
+
+@media (max-width: 600px) {
+  .about-wrapper {
+    flex-direction: column; /* Colonne pour les petits écrans */
+    align-items: center; /* Centrer le contenu */
+  }
 }
