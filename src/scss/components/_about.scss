@@ -32,7 +32,7 @@
   display: block;
 }
 
-.about-title-wrapper {
+.about-text-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -58,5 +58,10 @@
   .about-wrapper {
     flex-direction: column; /* Colonne pour les petits écrans */
     align-items: center; /* Centrer le contenu */
+  }
+  .about-text-wrapper {
+    margin-left: 0;
+    text-align: left;
+    gap: 2rem;
   }
 }

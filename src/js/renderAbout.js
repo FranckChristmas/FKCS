@@ -35,7 +35,7 @@ export function renderAbout(about) {
           : ""
       }
       </div>
-      <div class="about-title-wrapper">
+      <div class="about-text-wrapper">
         <h2 class="about-title">${title}</h2>
         <p class="about-description">${aboutText}</p>
       </div>
