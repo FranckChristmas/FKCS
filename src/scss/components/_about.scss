@@ -55,13 +55,19 @@
 }
 
 @media (max-width: 600px) {
+  .about-title {
+    text-align: center; /* Centrer le titre */
+  }
+
   .about-wrapper {
     flex-direction: column; /* Colonne pour les petits écrans */
     align-items: center; /* Centrer le contenu */
   }
   .about-text-wrapper {
     margin-left: 0;
-    text-align: left;
     gap: 2rem;
+  }
+  .about-description {
+    text-align: left; /* Centrer le texte */
   }
 }
