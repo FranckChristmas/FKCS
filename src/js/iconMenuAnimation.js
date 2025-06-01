@@ -65,17 +65,17 @@ export function handleBurgerHover() {
   burger.addEventListener("mouseleave", () => {
     if (!burger.classList.contains("open")) {
       gsap.to(".line-1", {
-        duration: 0.2,
+        duration: 0.5,
         ease: "power1.out",
         morphSVG: { shape: "M12 1L1.93715e-07 0.999999" },
       });
       gsap.to(".line-2", {
-        duration: 0.25,
+        duration: 0.55,
         ease: "power1.out",
         morphSVG: { shape: "M15 2.5L3 2.5" },
       });
       gsap.to(".line-3", {
-        duration: 0.3,
+        duration: 0.8,
         ease: "power1.out",
         morphSVG: { shape: "M18 4L6 4" },
       });

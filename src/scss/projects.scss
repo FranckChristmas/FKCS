@@ -35,7 +35,6 @@ ul#accordion {
 
 ul#accordion li {
   list-style: square;
-  line-height: clamp(2rem, 60vw, 6em);
   margin: 0;
   padding: 0;
 }
@@ -54,7 +53,7 @@ ul#accordion li {
   justify-content: center;
   align-content: center;
   margin: 0 auto;
-  padding-inline: clamp(5rem, 5vw, 15rem);
+  padding-inline: clamp(5rem, 5vw, 10rem);
   width: 100%;
 }
 
@@ -105,10 +104,11 @@ ul#accordion li:nth-child(even) {
   font-variation-settings: "wght" 150, "wdth" 150, "ital" 1;
   text-rendering: optimizeSpeed;
   font-size: 1vw;
-  line-height: 1.2em;
+  will-change: transform, opacity;
+  word-break: break-word;
   letter-spacing: 0.05em;
   opacity: 0;
-  transform: scale(0);
+  backface-visibility: hidden;
   transition: font-size 0.5s ease, opacity 0.5s ease, transform 0.6s ease;
 }
 .projects-title,
@@ -120,7 +120,6 @@ ul#accordion li:nth-child(even) {
   line-height: 1.2em;
   letter-spacing: 0.05em;
   opacity: 0;
-  transform: scale(0);
   transition: font-size 0.5s ease, opacity 0.5s ease, transform 0.6s ease;
 }
 
@@ -144,7 +143,7 @@ ul#accordion li .projects-stack {
   margin-bottom: 1rem;
   padding-top: 2rem;
   font-size: 2vw;
-  transform: scale(0);
+
   opacity: 0;
   transition: opacity 0.5s ease, transform 0.6s ease, font-size 0.5s ease;
   pointer-events: none;
@@ -152,7 +151,7 @@ ul#accordion li .projects-stack {
 
 ul#accordion li:hover .projects-title {
   opacity: 1;
-  transform: translateY(0) scale(1);
+  transform: translateY(0);
   pointer-events: auto;
   font-size: 2vw;
   text-align: center;
@@ -161,17 +160,17 @@ ul#accordion li:hover .projects-title {
 
 ul#accordion li:hover .projects-context {
   opacity: 1;
-  transform: translateY(0) scale(1);
+  transform: translateY(0);
   pointer-events: auto;
   font-size: 1vw;
 }
 
 ul#accordion li:hover .projects-respo {
   opacity: 1;
-  transform: translateY(0) scale(1);
+  transform: translateY(0);
+  white-space: pre-wrap;
   pointer-events: auto;
-  font-size: 1vw;
-  transition: font-size 0.5s ease, opacity 0.5s ease, transform 0.6s ease;
+  transition: font-size 0.5s ease, opacity 0.5s ease, transform 0.3s ease;
 }
 
 ul#accordion li:hover .role {
@@ -188,7 +187,6 @@ ul#accordion li:hover .heading4-respo {
   pointer-events: auto;
   font-size: 2vw;
   padding-left: 2rem;
-
   transform: translateY(0);
   transition: font-size 0.5s ease, opacity 0.5s ease, transform 0.6s ease;
 }
@@ -241,7 +239,7 @@ ul#accordion:hover li.accordion-item:not(:hover) h3 {
     transition: max-height 0.4s ease;
   }
   li.accordion-item.open .accordion-content {
-    max-height: 1000px;
+    max-height: 1000rem;
     overflow: auto;
     pointer-events: auto;
     padding-bottom: 5rem;
@@ -274,7 +272,6 @@ ul#accordion:hover li.accordion-item:not(:hover) h3 {
   ul#accordion li:hover .heading4-respo {
     font-size: 1.6rem !important;
     opacity: 1;
-    transform: scale(1);
     pointer-events: auto;
   }
   .accordion-inner {
