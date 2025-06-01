@@ -203,6 +203,7 @@ ul#accordion:hover li.accordion-item:not(:hover) h3 {
     justify-content: center;
     margin: 0 auto;
     padding: 0 3rem;
+
     width: 100%;
   }
   .projects-date {
@@ -218,9 +219,6 @@ ul#accordion:hover li.accordion-item:not(:hover) h3 {
     max-height: 1000px;
     overflow: auto;
     pointer-events: auto;
-  }
-
-  .accordion-item open {
     padding-bottom: 5rem;
   }
 
