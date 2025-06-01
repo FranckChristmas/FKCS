@@ -35,7 +35,7 @@ ul#accordion {
 
 ul#accordion li {
   list-style: square;
-  line-height: 7rem;
+  line-height: clamp(2rem, 60vw, 6em);
   margin: 0;
   padding: 0;
 }
@@ -139,7 +139,6 @@ ul#accordion li .projects-stack {
   font-family: "Compressa-micro";
   font-variation-settings: "wght" 500, "wdth" 100, "ital" 1;
   text-rendering: optimizeSpeed;
-  line-height: 1.2em;
   letter-spacing: 0.05em;
   margin: 0;
   margin-bottom: 1rem;
