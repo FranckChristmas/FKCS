@@ -7,7 +7,6 @@ section#projects {
 .projects-wrapper {
   display: flex;
   flex-direction: column;
-  align-content: center;
   align-items: center;
   width: 100%;
 }
@@ -24,7 +23,7 @@ section#projects {
 ul#accordion {
   width: 100%;
   display: flex;
-  justify-content: center; // tous les éléments sont centrés
+  justify-content: center;
   flex-flow: row nowrap;
   padding-inline-start: 0;
   min-height: 100vh;
@@ -43,16 +42,8 @@ ul#accordion li {
 .accordion-inner {
   display: flex;
   flex-direction: column;
-  align-content: center;
   width: 100%;
   box-sizing: border-box;
-}
-
-.accordion-content,
-.projects-title,
-.role {
-  padding-left: 10rem;
-  padding-right: 10rem;
 }
 
 .accordion-content {
@@ -62,18 +53,17 @@ ul#accordion li {
   justify-content: center;
   align-content: center;
   margin: 0 auto;
-  padding: 0 5rem;
+  padding-inline: clamp(5rem, 5vw, 15rem);
   width: 100%;
 }
 
 ul#accordion li.accordion-item {
   position: relative;
-  overflow: hidden;
   display: flex;
-  flex-flow: column nowrap;
+  flex-direction: column;
   align-items: center;
   width: 100%;
-  padding-top: 3rem;
+  padding-top: 2rem;
   background-color: rgba(255, 255, 255, 0.05);
   transition: width 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s,
     max-height 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s;
@@ -94,7 +84,6 @@ ul#accordion li:nth-child(even) {
   letter-spacing: 0.05em;
   transition: font-size 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s,
     font-variation-settings 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s;
-  // white-space: nowrap;
 }
 
 .projects-title,
@@ -144,6 +133,8 @@ ul#accordion li:hover .projects-title {
   transform: translateY(0) scale(1);
   pointer-events: auto;
   font-size: 2vw;
+  text-align: center;
+  padding-bottom: clamp(4rem, 5vw, 8rem);
 }
 
 ul#accordion li:hover .projects-context {
@@ -167,6 +158,7 @@ ul#accordion li:hover .role {
   pointer-events: auto;
   font-size: 3vw;
   transition: font-size 0.5s ease, opacity 0.5s ease, transform 0.6s ease;
+  text-align: center;
 }
 
 ul#accordion li:hover .heading4-respo {
@@ -205,6 +197,13 @@ ul#accordion:hover li.accordion-item:not(:hover) h3 {
 @media (max-width: 600px) {
   .accordion-content {
     width: 100vw !important;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0 3rem;
+    width: 100%;
   }
   .projects-date {
     font-size: 5rem !important;
@@ -218,6 +217,11 @@ ul#accordion:hover li.accordion-item:not(:hover) h3 {
   li.accordion-item.open .accordion-content {
     max-height: 1000px;
     overflow: auto;
+    pointer-events: auto;
+  }
+
+  .accordion-item open {
+    padding-bottom: 5rem;
   }
 
   ul#accordion {
