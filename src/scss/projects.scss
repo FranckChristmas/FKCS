@@ -26,7 +26,8 @@ ul#accordion {
   justify-content: center;
   flex-flow: row nowrap;
   padding-inline-start: 0;
-  min-height: 100vh;
+  align-items: stretch;
+  height: auto;
   transition: width 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s,
     min-height 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s;
   overflow: hidden;
@@ -67,11 +68,15 @@ ul#accordion li {
 
 ul#accordion li.accordion-item {
   position: relative;
+  align-self: stretch;
   display: flex;
+  flex: 1 1 auto;
   flex-direction: column;
+  flex-grow: 1;
   align-items: center;
   width: 100%;
   padding-top: 2rem;
+  height: clamp(100rem, 120vh, 300rem);
   background-color: rgba(255, 255, 255, 0.05);
   transition: width 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s,
     max-height 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s;
@@ -183,6 +188,8 @@ ul#accordion li:hover .heading4-respo {
   opacity: 1;
   pointer-events: auto;
   font-size: 2vw;
+  padding-left: 2rem;
+
   transform: translateY(0);
   transition: font-size 0.5s ease, opacity 0.5s ease, transform 0.6s ease;
 }
@@ -212,6 +219,7 @@ ul#accordion:hover li.accordion-item:not(:hover) h3 {
 
 //RESPONSIVE
 // ------------------------------------------------------------
+
 @media (max-width: 600px) {
   .accordion-content {
     width: 100vw !important;
@@ -245,12 +253,14 @@ ul#accordion:hover li.accordion-item:not(:hover) h3 {
     align-items: stretch !important;
     flex-wrap: nowrap !important;
     overflow: visible;
+    min-height: auto;
   }
   ul#accordion li {
     line-height: 4rem;
   }
   ul#accordion li.accordion-item {
     width: 100% !important;
+    height: auto !important;
   }
 
   ul#accordion li:hover {
