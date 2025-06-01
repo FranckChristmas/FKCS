@@ -14,7 +14,9 @@ function splitTextToChars(el, className = "char") {
   });
 }
 
-const welcomeTitle = [...document.querySelectorAll(".welcome[data-welcome]")];
+const welcomeTitle = [
+  ...document.querySelectorAll(".projects-section-title[data-projects]"),
+];
 
 welcomeTitle.forEach((title) => {
   splitTextToChars(title);
