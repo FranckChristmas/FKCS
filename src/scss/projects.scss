@@ -9,6 +9,7 @@ section#projects {
   flex-direction: column;
   align-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .projects-section-title {
@@ -45,6 +46,24 @@ ul#accordion li {
   align-content: center;
   width: 100%;
   box-sizing: border-box;
+}
+
+.accordion-content,
+.projects-title,
+.role {
+  padding-left: 10rem;
+  padding-right: 10rem;
+}
+
+.accordion-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  align-content: center;
+  margin: 0 auto;
+  padding: 0 5rem;
+  width: 100%;
 }
 
 ul#accordion li.accordion-item {
@@ -179,8 +198,10 @@ ul#accordion:hover li.accordion-item:not(:hover) h3 {
 .project-list {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  gap: 4rem;
 }
+
+//RESPONSIVE
+// ------------------------------------------------------------
 @media (max-width: 600px) {
   .accordion-content {
     width: 100vw !important;
@@ -209,7 +230,6 @@ ul#accordion:hover li.accordion-item:not(:hover) h3 {
     width: 100% !important;
   }
 
-  // Désactiver les effets "hover" cassés sur mobile
   ul#accordion li:hover {
     width: 100% !important;
     cursor: default;
@@ -224,5 +244,9 @@ ul#accordion:hover li.accordion-item:not(:hover) h3 {
     opacity: 1;
     transform: scale(1);
     pointer-events: auto;
+  }
+  .accordion-inner {
+    width: 100% !important;
+    box-sizing: border-box;
   }
 }
