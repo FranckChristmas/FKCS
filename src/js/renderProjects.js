@@ -25,11 +25,11 @@ export function renderProjects(projects) {
 
         if (block.type === "list-item") {
           if (!inList) {
-            html += `<ul class="projects-respo accordion-hidden">`;
+            html += `<ul class="projects-line accordion-hidden">`;
             inList = true;
           }
-          html += `<li class="projects-respo accordion-hidden">${block.text}</li>`;
-          if (next || next.type !== "list-item") {
+          html += `<li class="projects-respo-item accordion-hidden">${block.text}</li>`;
+          if (!next || next.type !== "list-item") {
             html += `</ul>`;
             inList = false;
           }
@@ -54,8 +54,8 @@ export function renderProjects(projects) {
     li.classList.add("accordion-item");
 
     li.innerHTML = `<div class="accordion-inner">
-      <h3 class="variable-text projects-date">${period}</h3>
-      <div class="accordion-content">
+    <h3 class="variable-text projects-date">${period}</h3>
+    <div class="accordion-content">
       <div class="role-title-wrapper">
       <span class="role accordion-hidden"> ${role}</span>
       <span class="projects-title accordion-hidden">${client} | ${sector}</span>
