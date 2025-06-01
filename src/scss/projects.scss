@@ -34,7 +34,7 @@ ul#accordion {
 
 ul#accordion li {
   list-style: square;
-  line-height: 4rem;
+  line-height: 7rem;
   margin: 0;
   padding: 0;
 }
@@ -54,6 +54,14 @@ ul#accordion li {
   align-content: center;
   margin: 0 auto;
   padding-inline: clamp(5rem, 5vw, 15rem);
+  width: 100%;
+}
+
+.role-title-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   width: 100%;
 }
 
@@ -86,11 +94,22 @@ ul#accordion li:nth-child(even) {
     font-variation-settings 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s;
 }
 
-.projects-title,
-.role,
 .projects-respo {
+  padding-left: 2rem;
   font-family: "Compressa-micro";
-  font-variation-settings: "wght" 500, "wdth" 100, "ital" 1;
+  font-variation-settings: "wght" 150, "wdth" 150, "ital" 1;
+  text-rendering: optimizeSpeed;
+  font-size: 1vw;
+  line-height: 1.2em;
+  letter-spacing: 0.05em;
+  opacity: 0;
+  transform: scale(0);
+  transition: font-size 0.5s ease, opacity 0.5s ease, transform 0.6s ease;
+}
+.projects-title,
+.role {
+  font-family: "Compressa-micro";
+  font-variation-settings: "wght" 800, "wdth" 100, "ital" 1;
   text-rendering: optimizeSpeed;
   font-size: 1vw;
   line-height: 1.2em;
@@ -114,13 +133,12 @@ ul#accordion li .projects-stack {
 .heading4-respo.accordion-hidden {
   font-family: "Compressa-micro";
   font-variation-settings: "wght" 500, "wdth" 100, "ital" 1;
-  // transform: scale(0) translateY(2rem);
-  // transition: font-size 0.5s ease, opacity 0.5s ease, transform 0.6s ease;
   text-rendering: optimizeSpeed;
   line-height: 1.2em;
   letter-spacing: 0.05em;
   margin: 0;
   margin-bottom: 1rem;
+  padding-top: 2rem;
   font-size: 2vw;
   transform: scale(0);
   opacity: 0;
@@ -203,6 +221,7 @@ ul#accordion:hover li.accordion-item:not(:hover) h3 {
     justify-content: center;
     margin: 0 auto;
     padding: 0 3rem;
+
     width: 100%;
   }
   .projects-date {
@@ -218,9 +237,6 @@ ul#accordion:hover li.accordion-item:not(:hover) h3 {
     max-height: 1000px;
     overflow: auto;
     pointer-events: auto;
-  }
-
-  .accordion-item open {
     padding-bottom: 5rem;
   }
 
@@ -229,6 +245,9 @@ ul#accordion:hover li.accordion-item:not(:hover) h3 {
     align-items: stretch !important;
     flex-wrap: nowrap !important;
     overflow: visible;
+  }
+  ul#accordion li {
+    line-height: 4rem;
   }
   ul#accordion li.accordion-item {
     width: 100% !important;
