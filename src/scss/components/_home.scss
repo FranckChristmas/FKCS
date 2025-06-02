@@ -1,7 +1,7 @@
 /* -------------------------- section home -------------------------*/
 section.home {
-  padding-top: clamp(8rem, 30rem, 50rem);
-  height: 20vh;
+  padding-top: clamp(3rem, 3vw, 8rem);
+  height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -95,4 +95,20 @@ section.home {
 .letter.behind {
   transform: translateY(-8rem) translateZ(-2rem);
   transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
+}
+
+@media (max-width: 600) {
+  section.home {
+    height: 20vh;
+    padding-top: 12rem;
+    margin-bottom: 5rem;
+  }
+
+  #po-qualifier {
+    font-size: clamp(3rem, 10vw, 20rem);
+    letter-spacing: 0.5rem;
+  }
+  .po-qualifier-wrapper {
+    margin-bottom: 15rem;
+  }
 }

@@ -1,9 +1,15 @@
+section.about {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
 .about-wrapper {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 4rem; /* espace entre image et texte */
+  gap: clamp(2rem, 4vw, 8rem); /* space between image and text */
 }
 
 .about-me {
@@ -22,6 +28,7 @@
   position: relative;
   justify-content: center;
   display: flex;
+  padding-bottom: 7.5rem;
 }
 .about-image {
   border-radius: 10%;
@@ -38,7 +45,7 @@
   justify-content: center;
   position: relative;
   margin: auto;
-  margin-left: 5rem;
+  // margin-left: 5rem;
 }
 
 .about-title {
@@ -47,9 +54,19 @@
   color: #ffffff;
 }
 
+.about-subtitle {
+  font-family: "compressa-micro";
+  font-size: clamp(2rem, 2vw, 5rem);
+  color: #ffffff;
+  margin: 0.5rem 0; /* espace entre le titre et la description */
+}
+
 .about-description {
   font-family: "compressa-micro";
   font-size: clamp(2rem, 3vw, 5rem);
+  line-height: 1.5;
+  font-variation-settings: "wght" 300, "wdth" 100, "ital" 1;
+
   color: #ffffff;
   margin: 0;
 }

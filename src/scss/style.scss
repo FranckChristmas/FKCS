@@ -13,12 +13,7 @@
 @use "./mixins.scss" as *;
 
 /* -------------------------- section about -------------------------*/
-section.about {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .about-wrapper {
   display: flex;
   margin: 0;
