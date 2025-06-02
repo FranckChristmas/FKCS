@@ -10,6 +10,7 @@ export function renderAbout(about) {
   const imageAlt = about?.data?.profile_picture?.alt || "profil picture";
 
   const title = about.data.my_name?.[0]?.text || "About Me";
+  const description = about.data.subtitle?.[0]?.text || "headline";
 
   let aboutText = "";
   if (Array.isArray(about.data.about_text)) {
@@ -37,6 +38,7 @@ export function renderAbout(about) {
       </div>
       <div class="about-text-wrapper">
         <h2 class="about-title">${title}</h2>
+        <h3 class="about-subtitle">${description}</h3>
         <p class="about-description">${aboutText}</p>
       </div>
   `;
