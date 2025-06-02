@@ -60,6 +60,7 @@ export function renderProjects(projects) {
       <span class="role"> ${role}</span>
       <span class="projects-title">${client} | ${sector}</span>
       </div>
+      <div class="projects-all-description-wrapper">
       <div class="projects-context-wrapper">
       <p class="projects-context">${contextTitle} ${context}</p>
       </div>
@@ -67,6 +68,7 @@ export function renderProjects(projects) {
               <p class="projects-respo">${respoTitle} ${responsibilities}</p>
       </div>
               <p class="projects-stack">${stackTitle} ${stack}</p>
+              </div>
         </div>
       </div>`;
     container.appendChild(li);

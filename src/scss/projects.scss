@@ -58,7 +58,7 @@ ul#accordion li {
   justify-content: center;
   align-content: center;
   margin: 0 auto;
-  padding-inline: clamp(5rem, 5vw, 10rem);
+  padding-inline: clamp(5rem, 8vw, 20rem);
   width: 100%;
 }
 
@@ -135,6 +135,15 @@ p.projects-respo-item {
   }
 }
 
+ul.accordion.project-all-description-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  // padding-left: clamp(5rem, 10vw, 20rem);
+  width: 100%;
+}
+
 .projects-title,
 .role {
   font-family: "Compressa-micro";
@@ -147,8 +156,8 @@ p.projects-respo-item {
   transition: font-size 0.5s ease, opacity 0.5s ease, transform 0.6s ease;
 }
 
-ul#accordion li .projects-context,
-ul#accordion li .projects-stack {
+ul#accordion.projects-context,
+ul#accordion .projects-stack {
   font-family: "Compressa-micro";
   font-variation-settings: "wght" 300, "wdth" 100, "ital" 1;
   text-rendering: optimizeSpeed;
@@ -210,7 +219,7 @@ ul#accordion li:hover .heading4-respo {
 }
 
 ul#accordion li:hover {
-  width: 800%;
+  width: 600%;
   pointer-events: auto;
   cursor: default;
 }

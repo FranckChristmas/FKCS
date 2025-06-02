@@ -80,8 +80,13 @@ function closeTransition(targetElement = null) {
       duration: 0.5,
       ease: "power2.inOut",
       onStart: () => {
-        if (targetElement) {
+        if (
+          targetElement &&
+          typeof targetElement.scrollIntoView === "function"
+        ) {
           targetElement.scrollIntoView({ behavior: "instant" });
+        } else if (targetElement !== null) {
+          console.warn("targetElement not valid :", targetElement);
         }
       },
     });
@@ -113,7 +118,7 @@ burger.addEventListener("click", (e) => {
   const isOpen = menu.classList.contains("visible");
 
   if (isOpen) {
-    closeTransition(() => {});
+    closeTransition();
   } else {
     scrollY = window.scrollY;
 
