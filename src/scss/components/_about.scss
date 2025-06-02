@@ -1,5 +1,5 @@
 section.about {
-  height: 100vh;
+  height: 70vh;
   display: flex;
   justify-content: center;
   align-items: flex-start;
@@ -50,8 +50,9 @@ section.about {
 
 .about-title {
   font-family: "compressa-micro";
-  font-size: clamp(3rem, 3vw, 6rem);
+  font-size: clamp(4rem, 4vw, 8rem);
   color: #ffffff;
+  padding-bottom: 4rem;
 }
 
 .about-subtitle {
@@ -72,6 +73,10 @@ section.about {
 }
 
 @media (max-width: 600px) {
+  section.about {
+    height: 80vh; /* Ajuster la hauteur pour les petits écrans */
+    padding: 2rem; /* Ajouter un peu de marge */
+  }
   .about-title {
     text-align: center; /* Centrer le titre */
   }
@@ -79,6 +84,10 @@ section.about {
   .about-wrapper {
     flex-direction: column; /* Colonne pour les petits écrans */
     align-items: center; /* Centrer le contenu */
+  }
+
+  .about-image-wrapper {
+    padding-bottom: 4rem;
   }
   .about-text-wrapper {
     margin-left: 0;
