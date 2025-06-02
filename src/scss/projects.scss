@@ -110,21 +110,29 @@ p.projects-respo {
   will-change: transform, opacity;
   letter-spacing: 0.05em;
   opacity: 0;
-  font-size: clamp(2rem, 2vw, 5rem);
   transform: translateY(2rem);
   transition: font-size 0.5s ease, opacity 0.5s ease, transform 0.6s ease;
   padding-left: 2rem;
   padding-bottom: 0.2rem;
+  font-size: clamp(2rem, 2vw, 3rem);
 }
 
 p.projects-respo-item {
   font-variation-settings: "wght" 150, "wdth" 150, "ital" 1;
-  padding-left: 2rem;
-  max-width: 200ch;
+  padding-left: 5rem;
+  max-width: 250ch;
   white-space: normal;
   opacity: 0;
   line-height: 4rem;
-  font-size: 3rem;
+  font-size: clamp(2rem, 2vw, 3rem);
+  &::before {
+    content: "◆";
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding-left: 2rem;
+    font-size: clamp(1rem, 1.5vw, 2rem);
+  }
 }
 
 .projects-title,
@@ -171,11 +179,12 @@ ul#accordion li:hover {
   p.projects-respo,
   .projects-title,
   .heading4-respo,
-  .projects-respo-item {
+  .projects-respo-item,
+  .role {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
-    transition: opacity 0.5s ease, transform 0.6s ease;
+    transition: opacity 1.2s ease, transform 0.6s ease;
   }
 }
 
@@ -190,9 +199,6 @@ ul#accordion li:hover .projects-context {
 }
 
 ul#accordion li:hover .role {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
   font-size: 3vw;
   transition: font-size 0.5s ease, opacity 0.5s ease, transform 0.6s ease;
   text-align: center;

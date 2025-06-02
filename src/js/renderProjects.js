@@ -25,17 +25,17 @@ export function renderProjects(projects) {
 
         if (block.type === "list-item") {
           if (!inList) {
-            html += `<ul class="projects-line">`;
+            html += `<div class="projects-line">`;
             inList = true;
           }
           html += `<p class="projects-respo-item">${block.text}</p>`;
           if (!next || next.type !== "list-item") {
-            html += `</ul>`;
+            html += `</div>`;
             inList = false;
           }
         } else {
           if (inList) {
-            html += `</ul>`;
+            html += `</div>`;
             inList = false;
           }
           if (block.type === "heading4") {
