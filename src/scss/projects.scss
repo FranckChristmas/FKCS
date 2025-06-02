@@ -36,7 +36,12 @@ ul#accordion {
 ul#accordion li {
   list-style: square;
   margin: 0;
-  padding: 0;
+}
+
+.projects-respo-wrapper {
+  width: 100%;
+  white-space: nowrap;
+  max-width: 150ch;
 }
 
 .accordion-inner {
@@ -63,10 +68,6 @@ ul#accordion li {
   align-items: center;
   justify-content: center;
   width: 100%;
-}
-
-.projects-context-wrapper {
-  padding-left: 2rem;
 }
 
 ul#accordion li.accordion-item {
@@ -102,23 +103,30 @@ ul#accordion li:nth-child(even) {
     font-variation-settings 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s;
 }
 
-.projects-respo {
+p.projects-respo {
   font-family: "Compressa-micro";
   font-variation-settings: "wght" 150, "wdth" 150, "ital" 1;
   text-rendering: optimizeSpeed;
-  font-size: 1vw;
   will-change: transform, opacity;
-  word-break: break-word;
   letter-spacing: 0.05em;
   opacity: 0;
-  backface-visibility: hidden;
+  font-size: clamp(2rem, 2vw, 5rem);
+  transform: translateY(2rem);
   transition: font-size 0.5s ease, opacity 0.5s ease, transform 0.6s ease;
-  white-space: nowrap;
+  padding-left: 2rem;
+  padding-bottom: 0.2rem;
 }
 
-li.projects-respo-item {
+p.projects-respo-item {
+  font-variation-settings: "wght" 150, "wdth" 150, "ital" 1;
   padding-left: 2rem;
+  max-width: 200ch;
+  white-space: normal;
+  opacity: 0;
+  line-height: 4rem;
+  font-size: 3rem;
 }
+
 .projects-title,
 .role {
   font-family: "Compressa-micro";
@@ -142,7 +150,7 @@ ul#accordion li .projects-stack {
   letter-spacing: 0.05em;
 }
 
-.heading4-respo.accordion-hidden {
+ul#accordion .heading4-respo {
   font-family: "Compressa-micro";
   font-variation-settings: "wght" 500, "wdth" 100, "ital" 1;
   text-rendering: optimizeSpeed;
@@ -156,31 +164,29 @@ ul#accordion li .projects-stack {
   pointer-events: none;
 }
 
+// HOVER EFFECTS to make appear all the content of the accordion
+ul#accordion li:hover {
+  .accordion-content,
+  .projects-context,
+  p.projects-respo,
+  .projects-title,
+  .heading4-respo,
+  .projects-respo-item {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+    transition: opacity 0.5s ease, transform 0.6s ease;
+  }
+}
+
 ul#accordion li:hover .projects-title {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
   font-size: 2vw;
   text-align: center;
   padding-bottom: clamp(4rem, 5vw, 8rem);
 }
 
 ul#accordion li:hover .projects-context {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
   font-size: 1vw;
-}
-
-ul#accordion li:hover .projects-respo {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-  font-size: clamp(1.6vw, 1.6vw, 2vw);
-  min-height: 5rem;
-  line-height: 5rem;
-  text-overflow: ellipsis;
-  transition: font-size 0.5s ease, opacity 0.5s ease, transform 0.3s ease;
 }
 
 ul#accordion li:hover .role {
@@ -193,15 +199,12 @@ ul#accordion li:hover .role {
 }
 
 ul#accordion li:hover .heading4-respo {
-  opacity: 1;
-  pointer-events: auto;
   font-size: 2vw;
-  transform: translateY(0);
   transition: font-size 0.5s ease, opacity 0.5s ease, transform 0.6s ease;
 }
 
 ul#accordion li:hover {
-  width: 1000%;
+  width: 800%;
   pointer-events: auto;
   cursor: default;
 }

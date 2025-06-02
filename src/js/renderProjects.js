@@ -25,10 +25,10 @@ export function renderProjects(projects) {
 
         if (block.type === "list-item") {
           if (!inList) {
-            html += `<ul class="projects-line accordion-hidden">`;
+            html += `<ul class="projects-line">`;
             inList = true;
           }
-          html += `<li class="projects-respo-item">${block.text}</li>`;
+          html += `<p class="projects-respo-item">${block.text}</p>`;
           if (!next || next.type !== "list-item") {
             html += `</ul>`;
             inList = false;
@@ -39,7 +39,7 @@ export function renderProjects(projects) {
             inList = false;
           }
           if (block.type === "heading4") {
-            html += `<h4 class="heading4-respo accordion-hidden">${block.text}</h4>`;
+            html += `<h4 class="heading4-respo">${block.text}</h4>`;
           } else if (block.type === "paragraph") {
             html += `<p class="projects-respo">${block.text}</p>`;
           }
@@ -57,14 +57,16 @@ export function renderProjects(projects) {
     <h3 class="variable-text projects-date">${period}</h3>
     <div class="accordion-content">
       <div class="role-title-wrapper">
-      <span class="role accordion-hidden"> ${role}</span>
-      <span class="projects-title accordion-hidden">${client} | ${sector}</span>
+      <span class="role"> ${role}</span>
+      <span class="projects-title">${client} | ${sector}</span>
       </div>
       <div class="projects-context-wrapper">
-      <p class="projects-context accordion-hidden">${contextTitle} ${context}</p>
+      <p class="projects-context">${contextTitle} ${context}</p>
       </div>
-              <div class="projects-respo">${respoTitle} ${responsibilities}</div>
-              <p class="projects-stack accordion-hidden">${stackTitle} ${stack}</p>
+      <div class="projects-respo-wrapper">
+              <p class="projects-respo">${respoTitle} ${responsibilities}</p>
+      </div>
+              <p class="projects-stack">${stackTitle} ${stack}</p>
         </div>
       </div>`;
     container.appendChild(li);
