@@ -37,7 +37,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   importSocialsLinks(".menu-socials");
   importSocialsLinks(".footer-socials");
 
-  makeSpans("h1, h3");
+  makeSpans("h1");
   colorHoverEffect();
   animateVariableFont();
   animateVariableFont2();

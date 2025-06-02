@@ -40,3 +40,8 @@ export function animateButtonText() {
     });
   });
 }
+
+const contactButton = document.querySelector(".chevron-button");
+contactButton.addEventListener("click", () => {
+  window.location.href = "mailto:francois.noell@gmail.com";
+});

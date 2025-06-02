@@ -1,8 +1,8 @@
 /* -------------------------- section home -------------------------*/
 section.home {
-  padding-top: clamp(3rem, 3vw, 8rem);
-  margin-bottom: clamp(3rem, 3vw, 8rem);
-  height: 50vh;
+  // padding-top: clamp(3rem, 3vw, 8rem);
+  // margin-bottom: clamp(3rem, 3vw, 8rem);
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -100,7 +100,6 @@ section.home {
 
 @media (max-width: 600) {
   section.home {
-    height: 20vh;
     padding-top: 12rem;
     margin-bottom: 5rem;
   }
