@@ -126,6 +126,7 @@ body {
   color: white;
   padding-top: 6rem;
   font-family: "compressa-micro";
+  scroll-padding-top: 8rem; //say to the browser to have a padding on the top of the section when we scroll to it, because of the size of the navbar
   // scroll-behavior: smooth; // allow to have a smooth scroll epsecially for the nav links
 }
 
