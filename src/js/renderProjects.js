@@ -72,6 +72,7 @@ export function renderProjects(projects) {
         </div>
       </div>`;
     container.appendChild(li);
+    //---------------- responsive part -------------
     if (window.matchMedia("(max-width: 600px)").matches) {
       const date = li.querySelector(".projects-date");
       const content = li.querySelector(".accordion-content");
