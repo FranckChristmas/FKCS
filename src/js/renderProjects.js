@@ -74,17 +74,36 @@ export function renderProjects(projects) {
     container.appendChild(li);
     if (window.matchMedia("(max-width: 600px)").matches) {
       const date = li.querySelector(".projects-date");
+      const content = li.querySelector(".accordion-content");
+
       date.style.cursor = "pointer";
+
       date.addEventListener("click", () => {
-        // Fermer tous les autres items ouverts
+        const isOpen = li.classList.contains("open");
+
+        // Fermer tous les autres
         document.querySelectorAll("li.accordion-item.open").forEach((item) => {
           if (item !== li) {
             item.classList.remove("open");
+            const innerContent = item.querySelector(".accordion-content");
+            innerContent.style.maxHeight = null; // Collapse
           }
         });
 
-        // Ouvrir ou fermer l'élément cliqué
-        li.classList.toggle("open");
+        if (!isOpen) {
+          li.classList.add("open");
+          content.style.maxHeight = content.scrollHeight + "px";
+
+          // Attendre ~350ms que le contenu soit vraiment visible
+          setTimeout(() => {
+            const liTop = li.getBoundingClientRect().top + window.scrollY;
+            const offset = 80; // ta nav fait 8rem
+            window.scrollTo({
+              top: liTop - offset,
+              behavior: "smooth",
+            });
+          }, 400);
+        }
       });
     }
   });

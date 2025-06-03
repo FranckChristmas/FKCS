@@ -266,8 +266,7 @@ ul#accordion:hover li.accordion-item:not(:hover) h3 {
     transition: max-height 0.4s ease;
   }
   li.accordion-item.open .accordion-content {
-    max-height: 1000rem;
-    overflow: auto;
+    max-height: 2500rem;
     pointer-events: auto;
     padding-bottom: 5rem;
   }
@@ -285,6 +284,7 @@ ul#accordion:hover li.accordion-item:not(:hover) h3 {
   ul#accordion li.accordion-item {
     width: 100% !important;
     height: auto !important;
+    pointer-events: auto;
   }
 
   ul#accordion li:hover {
@@ -292,11 +292,17 @@ ul#accordion:hover li.accordion-item:not(:hover) h3 {
     cursor: default;
   }
 
-  ul#accordion li:hover .projects-title,
-  ul#accordion li:hover .projects-context,
-  ul#accordion li:hover .projects-respo,
-  ul#accordion li:hover .role,
-  ul#accordion li:hover .heading4-respo {
+  .role {
+    overflow: visible;
+    line-height: 1.3em;
+    padding-top: 1.5rem;
+  }
+
+  ul#accordion li.open .projects-title,
+  ul#accordion li.open .projects-context,
+  ul#accordion li.open .projects-respo,
+  ul#accordion li.open .role,
+  ul#accordion li.open .heading4-respo {
     font-size: 1.6rem !important;
     opacity: 1;
     pointer-events: auto;

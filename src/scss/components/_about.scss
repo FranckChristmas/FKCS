@@ -74,7 +74,7 @@ section.about {
 
 @media (max-width: 600px) {
   section.about {
-    height: 80vh; /* Ajuster la hauteur pour les petits écrans */
+    height: auto; /* Ajuster la hauteur pour les petits écrans */
     padding: 2rem; /* Ajouter un peu de marge */
   }
   .about-title {
