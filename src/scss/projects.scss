@@ -34,8 +34,8 @@ ul#accordion {
 }
 
 ul#accordion li {
-  list-style: square;
   margin: 0;
+  transition: none !important; // juste pour test
 }
 
 .projects-respo-wrapper {
@@ -85,6 +85,7 @@ ul#accordion li.accordion-item {
   transition: width 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s,
     max-height 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s;
   overflow: hidden;
+  overflow-anchor: none;
 }
 
 ul#accordion li:nth-child(even) {
@@ -92,15 +93,25 @@ ul#accordion li:nth-child(even) {
 }
 
 .projects-date {
+  display: block; // ou inline-block
   text-align: center;
   font-family: "Compressa-micro";
   font-variation-settings: "wght" 300, "wdth" 5, "ital" 1;
   text-rendering: optimizeSpeed;
   font-size: clamp(2rem, 2vw, 5rem);
-  line-height: 1.2em;
+  line-height: 1;
   letter-spacing: 0.05em;
+  margin-top: 0;
+  margin-bottom: 0;
   transition: font-size 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s,
     font-variation-settings 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s;
+}
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    .projects-date {
+      transition: font-size 0.65s ease; // ou `none` si besoin
+    }
+  }
 }
 
 p.projects-respo {
@@ -228,6 +239,8 @@ ul#accordion li:hover {
 ul#accordion li.accordion-item:hover .projects-date {
   font-variation-settings: "wght" 800, "wdth" 1, "ital" 1;
   font-size: 8vw;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 ul#accordion:hover li.accordion-item:not(:hover) h3 {
