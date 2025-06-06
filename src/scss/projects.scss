@@ -35,11 +35,6 @@ ul#accordion {
   overflow: hidden;
 }
 
-ul#accordion li {
-  list-style: square;
-  margin: 0;
-}
-
 .projects-respo-wrapper {
   width: 100%;
   white-space: nowrap;
@@ -60,7 +55,7 @@ ul#accordion li {
   justify-content: center;
   align-content: center;
   margin: 0 auto;
-  padding-inline: clamp(5rem, 8vw, 20rem);
+  padding-inline: clamp(3rem, 5vw, 10rem);
   width: 100%;
 }
 
@@ -82,7 +77,7 @@ ul#accordion li.accordion-item {
   align-items: center;
   width: 100%;
   padding-top: 2rem;
-  height: clamp(100rem, 120vh, 300rem);
+  height: clamp(100rem, 130vh, 300rem);
   background-color: rgba(255, 255, 255, 0.05);
   transition: width 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s,
     max-height 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s;
@@ -105,28 +100,31 @@ ul#accordion li:nth-child(even) {
     font-variation-settings 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s;
 }
 
-p.projects-respo {
+.projects-respo {
   font-family: "Compressa-micro";
   font-variation-settings: "wght" 150, "wdth" 150, "ital" 1;
   text-rendering: optimizeSpeed;
-  will-change: transform, opacity;
   letter-spacing: 0.05em;
   opacity: 0;
-  transform: translateY(2rem);
-  transition: font-size 0.5s ease, opacity 0.5s ease, transform 0.6s ease;
   padding-left: 2rem;
   padding-bottom: 0.2rem;
+  transition: font-size 0.5s ease, opacity 0.5s ease, transform 0.6s ease,
+    font-variation-settings 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s;
   font-size: clamp(2rem, 2vw, 3rem);
 }
 
-p.projects-respo-item {
+.projects-respo-item {
   font-variation-settings: "wght" 150, "wdth" 150, "ital" 1;
   padding-left: 5rem;
   max-width: 250ch;
   white-space: normal;
   opacity: 0;
-  line-height: 4rem;
+  line-height: 6rem;
   font-size: clamp(2rem, 2vw, 3rem);
+  transition: font-size 0.5s ease, opacity 0.5s ease, transform 0.6s ease,
+    font-variation-settings 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s;
+  transform: translateY(2rem);
+
   &::before {
     content: "◆";
     position: absolute;
@@ -138,12 +136,11 @@ p.projects-respo-item {
 }
 
 ul.accordion.project-all-description-wrapper {
-  display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  // padding-left: clamp(5rem, 10vw, 20rem);
+  align-items: center;
   width: 100%;
+  display: flex;
 }
 
 .projects-title,
@@ -155,21 +152,24 @@ ul.accordion.project-all-description-wrapper {
   line-height: 1.2em;
   letter-spacing: 0.05em;
   opacity: 0;
-  transition: font-size 0.5s ease, opacity 0.5s ease, transform 0.6s ease;
+  transition: font-size 0.5s ease, opacity 0.5s ease, transform 0.6s ease,
+    font-variation-settings 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s;
 }
 
-ul#accordion.projects-context,
-ul#accordion .projects-stack {
+.projects-context,
+.projects-stack {
   font-family: "Compressa-micro";
   font-variation-settings: "wght" 300, "wdth" 100, "ital" 1;
   text-rendering: optimizeSpeed;
-  font-size: 0vw;
-  transition: font-size 0.5s ease, opacity 0.5s ease, transform 0.6s ease;
+  font-size: 1vw;
   line-height: 1.2em;
   letter-spacing: 0.05em;
+  opacity: 0;
+  transition: font-size 0.5s ease, opacity 0.5s ease, transform 0.6s ease,
+    font-variation-settings 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s;
 }
 
-ul#accordion .heading4-respo {
+.heading4-respo {
   font-family: "Compressa-micro";
   font-variation-settings: "wght" 500, "wdth" 100, "ital" 1;
   text-rendering: optimizeSpeed;
@@ -179,7 +179,9 @@ ul#accordion .heading4-respo {
   font-size: 2vw;
   padding-left: 2rem;
   opacity: 0;
-  transition: opacity 0.5s ease, transform 0.6s ease, font-size 0.5s ease;
+  transition: opacity 0.5s ease, transform 0.6s ease, font-size 0.5s ease,
+    font-variation-settings 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s;
+
   pointer-events: none;
 }
 
@@ -187,15 +189,16 @@ ul#accordion .heading4-respo {
 ul#accordion li:hover {
   .accordion-content,
   .projects-context,
-  p.projects-respo,
+  .projects-respo,
   .projects-title,
   .heading4-respo,
   .projects-respo-item,
-  .role {
+  .role,
+  .projects-stack {
     opacity: 1;
     transform: translateY(0);
     pointer-events: auto;
-    transition: opacity 1.2s ease, transform 0.6s ease;
+    // transition: opacity 1.2s ease, transform 0.6s ease;
   }
 }
 
@@ -234,11 +237,11 @@ ul#accordion li.accordion-item:hover .projects-date {
   margin-bottom: 0;
 }
 
-ul#accordion:hover li.accordion-item:not(:hover) h3 {
-  font-variation-settings: "wght" 100, "wdth" 5, "ital" 1;
-  font-size: 1vw;
-  text-align: center;
-}
+// ul#accordion:hover li.accordion-item:not(:hover) h3 {
+//   font-variation-settings: "wght" 100, "wdth" 5, "ital" 1;
+//   font-size: 1vw;
+//   text-align: center;
+// }
 
 .project-list {
   display: grid;
@@ -321,6 +324,6 @@ html.safari .projects-date {
   transform: scale(1);
   transition: transform 0.6s ease;
 }
-html.safari ul#accordion li.accordion-item:hover .projects-date {
+html.safari li:hover .projects-date {
   transform: scale(1.3);
 }

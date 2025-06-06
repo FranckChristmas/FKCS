@@ -59,7 +59,6 @@ export function renderProjects(projects) {
       <div class="role-title-wrapper">
       <span class="role"> ${role}</span>
       <span class="projects-title">${client} | ${sector}</span>
-      </div>
       <div class="projects-all-description-wrapper">
       <div class="projects-context-wrapper">
       <p class="projects-context">${contextTitle} ${context}</p>
@@ -70,6 +69,7 @@ export function renderProjects(projects) {
               <p class="projects-stack">${stackTitle} ${stack}</p>
               </div>
         </div>
+      </div>
       </div>`;
     container.appendChild(li);
     //---------------- responsive part -------------
