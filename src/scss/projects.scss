@@ -77,7 +77,7 @@ ul#accordion li.accordion-item {
   align-items: center;
   width: 100%;
   padding-top: 2rem;
-  height: clamp(100rem, 130vh, 300rem);
+  height: clamp(100rem, 140vh, 300rem);
   background-color: rgba(255, 255, 255, 0.05);
   transition: width 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s,
     max-height 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s;
