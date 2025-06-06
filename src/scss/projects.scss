@@ -1,3 +1,5 @@
+@use "./mixins.scss" as *;
+
 section#projects {
   scroll-margin-top: 8rem;
   width: 100%;
@@ -230,8 +232,6 @@ ul#accordion li.accordion-item:hover .projects-date {
   font-size: 8vw;
   margin-top: 0;
   margin-bottom: 0;
-  transition: font-size 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s,
-    font-variation-settings 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s;
 }
 
 ul#accordion:hover li.accordion-item:not(:hover) h3 {
@@ -313,4 +313,14 @@ ul#accordion:hover li.accordion-item:not(:hover) h3 {
     width: 100% !important;
     box-sizing: border-box;
   }
+}
+
+// specific to browsers
+
+html.safari .projects-date {
+  transform: scale(1);
+  transition: transform 0.6s ease;
+}
+html.safari ul#accordion li.accordion-item:hover .projects-date {
+  transform: scale(1.3);
 }
