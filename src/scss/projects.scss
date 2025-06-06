@@ -307,23 +307,36 @@ ul#accordion li.accordion-item:hover .projects-date {
   }
   .role {
     padding-top: 3rem;
+    padding-bottom: 1rem;
   }
 
-  ul#accordion li.open .projects-title,
-  ul#accordion li.open .projects-context,
-  ul#accordion li.open .projects-respo,
-  ul#accordion li.open .role,
-  ul#accordion li.open .heading4-respo {
-    font-size: 1.6rem !important;
-    opacity: 1;
-    pointer-events: auto;
-  }
-  .accordion-inner {
-    width: 100% !important;
-    box-sizing: border-box;
+  ul#accordion li.open {
+    .projects-title,
+    .projects-context,
+    .projects-respo,
+    .projects-respo-item,
+    .heading4-respo {
+      font-size: 1.6rem !important;
+      opacity: 1;
+      line-height: 3rem;
+      pointer-events: auto;
+    }
+
+    .role {
+      font-size: 2rem !important;
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .projects-title {
+      padding-bottom: 1rem !important;
+    }
+
+    .accordion-inner {
+      width: 100% !important;
+      box-sizing: border-box;
+    }
   }
 }
-
 // specific to browsers
 
 html.safari .projects-date {
