@@ -15,8 +15,10 @@ import "./textAnimation.js";
 import { closeMenu } from "./navAnimation.js";
 import "./iconMenuAnimation.js";
 import { importSocialsLinks } from "./importTemplates.js";
+import { detectBrowser } from "./detectBrowser.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
+  detectBrowser();
   chevronAnimation();
   // animateButtonText();
   wordQualifiers();

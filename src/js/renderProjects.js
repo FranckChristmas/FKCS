@@ -54,7 +54,7 @@ export function renderProjects(projects) {
     li.classList.add("accordion-item");
 
     li.innerHTML = `<div class="accordion-inner">
-    <h3 class="variable-text projects-date">${period}</h3>
+    <h3 class="projects-date">${period}</h3>
     <div class="accordion-content">
       <div class="role-title-wrapper">
       <span class="role"> ${role}</span>
