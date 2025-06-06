@@ -57,14 +57,14 @@ export function renderProjects(projects) {
     <h3 class="projects-date">${period}</h3>
     <div class="accordion-content">
       <div class="role-title-wrapper">
-      <span class="role"> ${role}</span>
-      <span class="projects-title">${client} | ${sector}</span>
-      <div class="projects-all-description-wrapper">
-      <div class="projects-context-wrapper">
-      <p class="projects-context">${contextTitle} ${context}</p>
+        <span class="role"> ${role}</span>
+        <span class="projects-title">${client} | ${sector}</span>
+        <div class="projects-all-description-wrapper">
+        <div class="projects-context-wrapper">
+        <p class="projects-context">${contextTitle} ${context}</p>
       </div>
       <div class="projects-respo-wrapper">
-              <p class="projects-respo">${respoTitle} ${responsibilities}</p>
+        <p class="projects-respo">${respoTitle} ${responsibilities}</p>
       </div>
               <p class="projects-stack">${stackTitle} ${stack}</p>
               </div>
@@ -73,6 +73,7 @@ export function renderProjects(projects) {
       </div>`;
     container.appendChild(li);
     //---------------- responsive part -------------
+
     if (window.matchMedia("(max-width: 600px)").matches) {
       const date = li.querySelector(".projects-date");
       const content = li.querySelector(".accordion-content");
@@ -82,23 +83,25 @@ export function renderProjects(projects) {
       date.addEventListener("click", () => {
         const isOpen = li.classList.contains("open");
 
-        // Fermer tous les autres
+        // close all other open items
         document.querySelectorAll("li.accordion-item.open").forEach((item) => {
           if (item !== li) {
             item.classList.remove("open");
             const innerContent = item.querySelector(".accordion-content");
-            innerContent.style.maxHeight = null; // Collapse
+            innerContent.style.maxHeight = null;
           }
         });
 
         if (!isOpen) {
           li.classList.add("open");
+          li.id = "test-li";
+          li.style.removeProperty("maxHeight");
+          li.style.removeProperty("height");
           content.style.maxHeight = content.scrollHeight + "px";
-
-          // Attendre ~350ms que le contenu soit vraiment visible
           setTimeout(() => {
             const liTop = li.getBoundingClientRect().top + window.scrollY;
-            const offset = 80; // ta nav fait 8rem
+            const offset = 80;
+            console.log("🔎 scrollHeight:", content.scrollHeight);
             window.scrollTo({
               top: liTop - offset,
               behavior: "smooth",
