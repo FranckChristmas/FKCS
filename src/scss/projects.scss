@@ -260,7 +260,6 @@ ul#accordion li.accordion-item:hover .projects-date {
     justify-content: center;
     margin: 0 auto;
     padding: 0 3rem;
-
     width: 100%;
   }
   .projects-date {
@@ -273,7 +272,7 @@ ul#accordion li.accordion-item:hover .projects-date {
     transition: max-height 0.4s ease;
   }
   li.accordion-item.open .accordion-content {
-    max-height: 2500rem;
+    max-height: none !important;
     pointer-events: auto;
     padding-bottom: 5rem;
   }
@@ -288,6 +287,10 @@ ul#accordion li.accordion-item:hover .projects-date {
   ul#accordion li {
     line-height: 4rem;
   }
+
+  .projects-respo-item {
+    line-height: 3rem;
+  }
   ul#accordion li.accordion-item {
     width: 100% !important;
     height: auto !important;
@@ -301,6 +304,9 @@ ul#accordion li.accordion-item:hover .projects-date {
 
   .role {
     overflow: visible;
+  }
+  .role {
+    padding-top: 3rem;
   }
 
   ul#accordion li.open .projects-title,
