@@ -36,3 +36,12 @@
     box-shadow: 0.5rem 0.5rem 0 0 var(--almostgrey);
   }
 }
+
+// Safari 10.1+
+@mixin safari {
+  @media not all and (min-resolution: 0.001dpcm) {
+    @supports (-webkit-appearance: none) {
+      @content;
+    }
+  }
+}
