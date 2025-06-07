@@ -88,7 +88,32 @@ ul#accordion li:nth-child(even) {
   background-color: transparent;
 }
 
+ul.accordion.project-all-description-wrapper {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  display: flex;
+}
+
+.projects-title,
+.role,
+.projects-context,
+.projects-stack,
+.heading4-respo,
+.projects-respo-item,
+.projects-respo {
+  opacity: 0;
+  transition: font-size 0.5s ease, opacity 0.5s ease, transform 0.6s ease,
+    font-variation-settings 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s;
+  font-family: "Compressa-micro";
+}
+
 .projects-date {
+  transition: font-size 0.5s ease, opacity 0.5s ease, transform 0.6s ease,
+    //keep the same transition as the others because this one as opacity 1
+    font-variation-settings 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s;
+  font-family: "Compressa-micro";
   text-align: center;
   font-family: "Compressa-micro";
   font-variation-settings: "wght" 300, "wdth" 5, "ital" 1;
@@ -96,8 +121,6 @@ ul#accordion li:nth-child(even) {
   font-size: clamp(2rem, 2vw, 5rem);
   line-height: 1.2em;
   letter-spacing: 0.05em;
-  transition: font-size 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s,
-    font-variation-settings 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s;
 }
 
 .projects-respo {
@@ -105,11 +128,8 @@ ul#accordion li:nth-child(even) {
   font-variation-settings: "wght" 150, "wdth" 150, "ital" 1;
   text-rendering: optimizeSpeed;
   letter-spacing: 0.05em;
-  opacity: 0;
   padding-left: 2rem;
   padding-bottom: 0.2rem;
-  transition: font-size 0.5s ease, opacity 0.5s ease, transform 0.6s ease,
-    font-variation-settings 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s;
   font-size: clamp(2rem, 2vw, 3rem);
 }
 
@@ -118,12 +138,9 @@ ul#accordion li:nth-child(even) {
   padding-left: 5rem;
   max-width: 250ch;
   white-space: normal;
-  opacity: 0;
   line-height: 6rem;
   font-size: clamp(2rem, 2vw, 3rem);
-  transition: font-size 0.5s ease, opacity 0.5s ease, transform 0.6s ease,
-    font-variation-settings 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s;
-  transform: translateY(2rem);
+  // transform: translateY(2rem);
 
   &::before {
     content: "◆";
@@ -134,43 +151,25 @@ ul#accordion li:nth-child(even) {
     font-size: clamp(1rem, 1.5vw, 2rem);
   }
 }
-
-ul.accordion.project-all-description-wrapper {
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  display: flex;
-}
-
 .projects-title,
 .role {
-  font-family: "Compressa-micro";
   font-variation-settings: "wght" 800, "wdth" 100, "ital" 1;
   text-rendering: optimizeSpeed;
   font-size: 1vw;
   line-height: 1.2em;
   letter-spacing: 0.05em;
-  opacity: 0;
-  transition: font-size 0.5s ease, opacity 0.5s ease, transform 0.6s ease,
-    font-variation-settings 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s;
 }
 
 .projects-context,
 .projects-stack {
-  font-family: "Compressa-micro";
   font-variation-settings: "wght" 300, "wdth" 100, "ital" 1;
   text-rendering: optimizeSpeed;
   font-size: 1vw;
   line-height: 1.2em;
   letter-spacing: 0.05em;
-  opacity: 0;
-  transition: font-size 0.5s ease, opacity 0.5s ease, transform 0.6s ease,
-    font-variation-settings 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s;
 }
 
 .heading4-respo {
-  font-family: "Compressa-micro";
   font-variation-settings: "wght" 500, "wdth" 100, "ital" 1;
   text-rendering: optimizeSpeed;
   letter-spacing: 0.05em;
@@ -178,10 +177,6 @@ ul.accordion.project-all-description-wrapper {
   padding-top: 2rem;
   font-size: 2vw;
   padding-left: 2rem;
-  opacity: 0;
-  transition: opacity 0.5s ease, transform 0.6s ease, font-size 0.5s ease,
-    font-variation-settings 0.65s cubic-bezier(0.37, 0.07, 0.02, 1.01) 0.08s;
-
   pointer-events: none;
 }
 
@@ -235,6 +230,7 @@ ul#accordion li.accordion-item:hover .projects-date {
   font-size: 8vw;
   margin-top: 0;
   margin-bottom: 0;
+  opacity: 1;
 }
 
 // ul#accordion:hover li.accordion-item:not(:hover) h3 {
