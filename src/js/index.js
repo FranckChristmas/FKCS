@@ -3,9 +3,9 @@ import { makeSpans, colorHoverEffect } from "./spans.js";
 import { chevronAnimation } from "./chevronButton.js";
 import {
   animateVariableFont,
-  animateVariableFont2,
-  wordQualifiers,
-} from "./animateTitle.js";
+  animateVariableContactFont,
+} from "./animateContactBtn.js";
+import { wordQualifiers } from "./animateTitle.js";
 import { hover } from "./hoverEffect.js";
 import { fetchProjects, fetchAboutMe } from "./prismic.js";
 import { renderProjects } from "./renderProjects.js";
@@ -42,7 +42,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   makeSpans("h1");
   colorHoverEffect();
   animateVariableFont();
-  animateVariableFont2();
+  animateVariableContactFont(); // contact btn animation
 });
 document.querySelectorAll(".tooltip-animated").forEach((el) => {
   new Tooltip(el);
