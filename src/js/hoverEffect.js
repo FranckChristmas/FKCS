@@ -1,3 +1,4 @@
+// hovering all the social icons and the nav and footer
 export function hover() {
   const areas = [
     { selector: ".nav" },
