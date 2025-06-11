@@ -1,3 +1,4 @@
+// used for dates of the project part
 export function animateVariableFont() {
   const cursor = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
   const mouse = { x: cursor.x, y: cursor.y };
