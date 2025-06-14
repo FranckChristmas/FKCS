@@ -16,9 +16,11 @@ import { closeMenu } from "./navAnimation.js";
 import "./iconMenuAnimation.js";
 import { importSocialsLinks } from "./importTemplates.js";
 import { detectBrowser } from "./detectBrowser.js";
+import { startLoader } from "./preloader.js";
 
 document.addEventListener("DOMContentLoaded", async () => {
   detectBrowser();
+  startLoader();
   chevronAnimation();
   // animateButtonText();
   wordQualifiers();
