@@ -29,3 +29,11 @@
   font-size: 20vw;
   font-family: "compressa-micro";
 }
+
+@media (max-width: 600px) {
+  .counter {
+    font-size: 30vw;
+    justify-content: center;
+    align-items: center;
+  }
+}
