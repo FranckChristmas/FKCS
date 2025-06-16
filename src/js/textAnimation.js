@@ -14,9 +14,9 @@ function splitTextToChars(el, className = "char") {
   });
 }
 
-window.addEventListener(
-  "load",
-  () => {
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    // set a timeout there because there is a conflict with DOM to be loaded and the text animation
     const projectTitle = [
       ...document.querySelectorAll(".projects-section-title[data-projects]"),
     ];
@@ -53,12 +53,10 @@ window.addEventListener(
             start: window.innerWidth < 600 ? "top 95%" : "center 50%",
             end: "top 40%",
             scrub: true,
-            markers: true,
           },
         }
       );
     });
     ScrollTrigger.refresh();
-  },
-  300
-);
+  }, 300);
+});
