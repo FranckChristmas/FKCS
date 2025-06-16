@@ -1,5 +1,5 @@
 export function detectBrowser() {
-  console.log("Détection du navigateur en cours...");
+  // console.log("borwser detection");
   const userAgent = navigator.userAgent;
   const html = document.documentElement;
 
@@ -9,6 +9,6 @@ export function detectBrowser() {
     !/Chromium/.test(userAgent)
   ) {
     html.classList.add("safari");
-    console.log("Safari détecté");
+    // console.log("Safari browser detected");
   }
 }
