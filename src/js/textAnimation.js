@@ -23,12 +23,12 @@ window.addEventListener("load", () => {
 
     projectTitle.forEach((title) => {
       splitTextToChars(title);
-      console.log(
-        "ScrollTrigger applied to:",
-        title,
-        "with text:",
-        title.textContent
-      );
+      // console.log(
+      //   "ScrollTrigger applied to:",
+      //   title,
+      //   "with text:",
+      //   title.textContent
+      // );
 
       const chars = title.querySelectorAll(".char");
 
@@ -50,7 +50,7 @@ window.addEventListener("load", () => {
           stagger: 0.02,
           scrollTrigger: {
             trigger: title,
-            start: window.innerWidth < 600 ? "top 95%" : "center 50%",
+            start: "top 95%",
             end: "top 40%",
             scrub: true,
           },
