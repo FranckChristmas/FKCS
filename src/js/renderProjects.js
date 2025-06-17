@@ -101,7 +101,7 @@ export function renderProjects(projects) {
           setTimeout(() => {
             const liTop = li.getBoundingClientRect().top + window.scrollY;
             const offset = 80;
-            console.log("🔎 scrollHeight:", content.scrollHeight);
+            // console.log("🔎 scrollHeight:", content.scrollHeight);
             window.scrollTo({
               top: liTop - offset,
               behavior: "smooth",
